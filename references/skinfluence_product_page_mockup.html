@@ -1,0 +1,250 @@
+
+<h2 class="sr-only">Skinfluence Shopify product page mockup for the tretinoin + peptide protocol, showing all required sections from hero to FAQ.</h2>
+<style>
+.pg{padding:0;font-family:var(--font-sans);max-width:680px}
+.trust-bar{display:flex;gap:8px;flex-wrap:wrap;padding:8px 0;border-bottom:0.5px solid var(--color-border-tertiary);margin-bottom:20px}
+.trust-item{display:flex;align-items:center;gap:5px;font-size:11px;color:var(--color-text-secondary)}
+.trust-dot{width:5px;height:5px;border-radius:50%;background:#1D9E75;flex-shrink:0}
+.hero-grid{display:grid;grid-template-columns:1fr 1fr;gap:20px;margin-bottom:24px}
+@media(max-width:480px){.hero-grid{grid-template-columns:1fr}}
+.product-img{background:var(--color-background-secondary);border:0.5px solid var(--color-border-tertiary);border-radius:var(--border-radius-lg);aspect-ratio:1;display:flex;align-items:center;justify-content:center;flex-direction:column;gap:8px}
+.img-label{font-size:10px;color:var(--color-text-tertiary);letter-spacing:.06em;text-transform:uppercase}
+.img-name{font-size:13px;font-weight:500;color:var(--color-text-secondary)}
+.product-info{display:flex;flex-direction:column;gap:12px}
+.rx-badge{display:inline-flex;align-items:center;gap:5px;background:#E8F7F2;color:#0D5C43;font-size:10px;font-weight:500;padding:3px 9px;border-radius:20px;width:fit-content}
+.product-name{font-size:20px;font-weight:500;color:var(--color-text-primary);line-height:1.3}
+.product-tagline{font-size:13px;color:var(--color-text-secondary);line-height:1.6}
+.stars{color:#BA7517;font-size:13px}
+.price-row{display:flex;align-items:baseline;gap:8px}
+.price{font-size:22px;font-weight:500;color:var(--color-text-primary)}
+.price-sub{font-size:12px;color:var(--color-text-tertiary)}
+.tier-select{display:flex;flex-direction:column;gap:6px}
+.tier-opt{display:flex;align-items:center;justify-content:space-between;padding:8px 12px;border:0.5px solid var(--color-border-tertiary);border-radius:var(--border-radius-md);cursor:pointer;font-size:12px;color:var(--color-text-secondary)}
+.tier-opt.selected{border-color:#1D9E75;border-width:1.5px;color:var(--color-text-primary)}
+.tier-opt.selected .tier-name{font-weight:500}
+.tier-price{font-weight:500;color:var(--color-text-primary)}
+.tier-save{font-size:10px;color:#1D9E75;font-weight:500}
+.cta-btn{background:#2C2C2A;color:white;border:none;border-radius:var(--border-radius-md);padding:13px 20px;font-size:14px;font-weight:500;width:100%;cursor:pointer;font-family:var(--font-sans)}
+.secondary-btn{background:transparent;color:var(--color-text-primary);border:0.5px solid var(--color-border-secondary);border-radius:var(--border-radius-md);padding:11px 20px;font-size:13px;width:100%;cursor:pointer;font-family:var(--font-sans)}
+.compliance-note{font-size:10px;color:var(--color-text-tertiary);line-height:1.5;padding:8px;background:var(--color-background-secondary);border-radius:var(--border-radius-md)}
+.sec-title{font-size:9px;font-weight:500;letter-spacing:.09em;text-transform:uppercase;color:var(--color-text-tertiary);margin-bottom:12px}
+.divider{border:none;border-top:0.5px solid var(--color-border-tertiary);margin:24px 0}
+.how-steps{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
+@media(max-width:400px){.how-steps{grid-template-columns:1fr}}
+.step{text-align:center;padding:14px 10px}
+.step-num{width:28px;height:28px;border-radius:50%;background:#E8F7F2;color:#0D5C43;font-size:12px;font-weight:500;display:flex;align-items:center;justify-content:center;margin:0 auto 8px}
+.step-title{font-size:12px;font-weight:500;color:var(--color-text-primary);margin-bottom:4px}
+.step-desc{font-size:11px;color:var(--color-text-secondary);line-height:1.5}
+.ing-grid{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+@media(max-width:400px){.ing-grid{grid-template-columns:1fr}}
+.ing-card{border:0.5px solid var(--color-border-tertiary);border-radius:var(--border-radius-md);padding:12px}
+.ing-name{font-size:12px;font-weight:500;color:var(--color-text-primary);margin-bottom:2px}
+.ing-conc{font-size:10px;color:#1D9E75;font-weight:500;margin-bottom:5px}
+.ing-desc{font-size:11px;color:var(--color-text-secondary);line-height:1.5}
+.ing-cite{font-size:10px;color:var(--color-text-tertiary);margin-top:4px;font-style:italic}
+.proof-bar{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;text-align:center;padding:16px;background:var(--color-background-secondary);border-radius:var(--border-radius-md)}
+.proof-num{font-size:20px;font-weight:500;color:#1D9E75}
+.proof-label{font-size:10px;color:var(--color-text-secondary);margin-top:2px}
+.review-card{border:0.5px solid var(--color-border-tertiary);border-radius:var(--border-radius-md);padding:12px;margin-bottom:8px}
+.review-header{display:flex;align-items:center;gap:8px;margin-bottom:6px}
+.review-avatar{width:28px;height:28px;border-radius:50%;background:#E6F1FB;color:#0E3D6E;font-size:11px;font-weight:500;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.review-name{font-size:12px;font-weight:500;color:var(--color-text-primary)}
+.review-tag{font-size:10px;color:var(--color-text-tertiary)}
+.review-text{font-size:12px;color:var(--color-text-secondary);line-height:1.6}
+.review-verified{font-size:10px;color:#1D9E75;margin-top:4px}
+.faq-item{padding:12px 0;border-bottom:0.5px solid var(--color-border-tertiary)}
+.faq-item:last-child{border-bottom:none}
+.faq-q{font-size:12px;font-weight:500;color:var(--color-text-primary);margin-bottom:4px}
+.faq-a{font-size:12px;color:var(--color-text-secondary);line-height:1.6}
+.md-card{display:flex;align-items:center;gap:12px;padding:14px;border:0.5px solid var(--color-border-tertiary);border-radius:var(--border-radius-md)}
+.md-avatar{width:44px;height:44px;border-radius:50%;background:#E8F7F2;color:#0D5C43;font-size:14px;font-weight:500;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.md-name{font-size:13px;font-weight:500;color:var(--color-text-primary)}
+.md-creds{font-size:11px;color:var(--color-text-tertiary);margin-top:1px}
+.md-quote{font-size:12px;color:var(--color-text-secondary);line-height:1.55;margin-top:4px;font-style:italic}
+.comp-warn{font-size:10px;color:var(--color-text-tertiary);border:0.5px solid var(--color-border-tertiary);border-radius:var(--border-radius-md);padding:8px 10px;line-height:1.5}
+.ask-btn{display:inline-block;font-size:11px;padding:5px 12px;border-radius:var(--border-radius-md);border:0.5px solid var(--color-border-secondary);background:transparent;color:var(--color-text-primary);cursor:pointer;font-family:var(--font-sans);margin-top:10px;margin-right:6px}
+</style>
+
+<div class="pg">
+
+  <div class="trust-bar">
+    <div class="trust-item"><div class="trust-dot"></div>Physician-formulated</div>
+    <div class="trust-item"><div class="trust-dot"></div>PCAB-accredited pharmacy</div>
+    <div class="trust-item"><div class="trust-dot"></div>GMP-manufactured peptide SKUs</div>
+    <div class="trust-item"><div class="trust-dot"></div>Board-certified derm review</div>
+  </div>
+
+  <div class="hero-grid">
+    <div class="product-img">
+      <div class="img-label">The Protocol</div>
+      <div class="img-name">Tretinoin + Peptide System</div>
+      <div style="font-size:10px;color:var(--color-text-tertiary);margin-top:4px">[product photography here]</div>
+    </div>
+    <div class="product-info">
+      <div class="rx-badge">Rx + Cosmetic bundle</div>
+      <div class="product-name">The Skinfluence Protocol</div>
+      <div class="product-tagline">Prescription tretinoin with GHK-Cu peptide booster — formulated as a complete clinical system no competitor currently offers.</div>
+
+      <div><div class="stars">★★★★★</div><div style="font-size:11px;color:var(--color-text-tertiary)">4.9 · Founding member reviews</div></div>
+
+      <div class="tier-select">
+        <div class="tier-opt selected">
+          <span class="tier-name">Full Protocol</span>
+          <span><span class="tier-price">$95/mo</span> <span class="tier-save">most popular</span></span>
+        </div>
+        <div class="tier-opt">
+          <span class="tier-name">Rx + Peptide Serum</span>
+          <span class="tier-price">$75/mo</span>
+        </div>
+        <div class="tier-opt">
+          <span class="tier-name">Rx Only</span>
+          <span class="tier-price">$45/mo</span>
+        </div>
+      </div>
+
+      <div style="font-size:11px;color:var(--color-text-tertiary)">Includes async MD consultation · Cancel anytime</div>
+
+      <button class="cta-btn">Start your skin assessment ↗</button>
+      <button class="secondary-btn">See what's included</button>
+
+      <div class="compliance-note">This product contains a compounded prescription medication. Compounded medications are not FDA-approved. A licensed physician will review your intake before any prescription is issued. Results may vary.</div>
+    </div>
+  </div>
+
+  <hr class="divider">
+
+  <div class="sec-title">What's included in the full protocol</div>
+  <div class="ing-grid" style="margin-bottom:8px">
+    <div class="ing-card" style="border-left:2px solid #A32D2D">
+      <div class="ing-name">Compounded Tretinoin Formula</div>
+      <div class="ing-conc">Rx — 0.025–0.1% strength (physician-determined)</div>
+      <div class="ing-desc">Retinoid acid that increases cell turnover, reduces fine lines, and improves skin texture. The most clinically validated topical anti-aging ingredient in dermatology. Your concentration is set by your MD based on your intake photos and skin history.</div>
+      <div class="ing-cite">Established FDA-approved drug ingredient. Requires physician prescription.</div>
+    </div>
+    <div class="ing-card" style="border-left:2px solid #1D9E75">
+      <div class="ing-name">GHK-Cu Peptide Booster</div>
+      <div class="ing-conc">Cosmetic — 2% copper peptide complex</div>
+      <div class="ing-desc">A naturally occurring copper-binding tripeptide that supports collagen synthesis, reduces inflammation, and may counteract some irritation associated with retinoid initiation. Compounded into the base formula alongside tretinoin.</div>
+      <div class="ing-cite">Published in: Wound Repair and Regeneration, Journal of Peptide Science</div>
+    </div>
+    <div class="ing-card" style="border-left:2px solid #1D9E75">
+      <div class="ing-name">GHK-Cu Topical Serum</div>
+      <div class="ing-conc">Cosmetic — standalone 2% serum (Full Protocol only)</div>
+      <div class="ing-desc">A standalone GHK-Cu serum formulated to complement the tretinoin system. Used in the morning while tretinoin is applied at night. Ships separately from the compounded Rx as a cosmetic product.</div>
+      <div class="ing-cite">Manufactured by a GMP-certified cosmetic contract manufacturer.</div>
+    </div>
+    <div class="ing-card" style="border-left:2px solid #185FA5">
+      <div class="ing-name">Hair Peptide Scalp Treatment</div>
+      <div class="ing-conc">Cosmetic — palmitoyl tetrapeptide-4 + GHK-Cu (Full Protocol only)</div>
+      <div class="ing-desc">A topical scalp treatment targeting the hair follicle environment. Formulated with peptides shown to support scalp barrier function and follicle signaling pathways. Applied 3–4x per week to clean, dry scalp.</div>
+      <div class="ing-cite">Compliant cosmetic claims only. Not intended to diagnose or treat hair loss.</div>
+    </div>
+  </div>
+
+  <hr class="divider">
+
+  <div class="sec-title">How it works</div>
+  <div class="how-steps">
+    <div class="step">
+      <div class="step-num">1</div>
+      <div class="step-title">Take the skin assessment</div>
+      <div class="step-desc">5-minute quiz + photo upload. Share your skin history, concerns, and current routine.</div>
+    </div>
+    <div class="step">
+      <div class="step-num">2</div>
+      <div class="step-title">Physician review</div>
+      <div class="step-desc">A board-certified dermatologist reviews your intake within 48 hours and prescribes your formula.</div>
+    </div>
+    <div class="step">
+      <div class="step-num">3</div>
+      <div class="step-title">Protocol delivered monthly</div>
+      <div class="step-desc">Your Rx formula and peptide products ship together. Monthly check-ins adjust your protocol as your skin responds.</div>
+    </div>
+  </div>
+
+  <hr class="divider">
+
+  <div class="sec-title">Clinical evidence summary</div>
+  <div class="proof-bar">
+    <div><div class="proof-num">40+</div><div class="proof-label">years of tretinoin clinical research</div></div>
+    <div><div class="proof-num">87%</div><div class="proof-label">of patients see visible improvement at 12 weeks</div></div>
+    <div><div class="proof-num">2%</div><div class="proof-label">GHK-Cu — research-backed concentration</div></div>
+    <div><div class="proof-num">48hr</div><div class="proof-label">maximum physician review window</div></div>
+  </div>
+  <div style="font-size:10px;color:var(--color-text-tertiary);margin-top:6px">Clinical statistics refer to published ingredient research, not Skinfluence-specific trial data. Individual results vary.</div>
+
+  <hr class="divider">
+
+  <div class="sec-title">Formulated by</div>
+  <div class="md-card">
+    <div class="md-avatar">MD</div>
+    <div>
+      <div class="md-name">Dr. [Name], MD — Medical Director</div>
+      <div class="md-creds">Board-certified dermatologist · [Institution] · [Years] years clinical practice</div>
+      <div class="md-quote">"I designed the Skinfluence Protocol because no clinical brand has combined prescription-strength retinoids with a meaningful peptide adjunct in a single subscription. GHK-Cu isn't a marketing ingredient — it has genuine peer-reviewed support for collagen synthesis and barrier function."</div>
+    </div>
+  </div>
+
+  <hr class="divider">
+
+  <div class="sec-title">What patients are saying</div>
+  <div class="review-card">
+    <div class="review-header">
+      <div class="review-avatar">SL</div>
+      <div>
+        <div class="review-name">Sarah L.</div>
+        <div class="review-tag">Full Protocol · 90 days</div>
+      </div>
+      <div class="stars" style="margin-left:auto">★★★★★</div>
+    </div>
+    <div class="review-text">"The tretinoin + peptide combination made the biggest difference for my skin texture in years. I'd tried Curology before — this protocol felt more complete and the MD check-ins at 30 days made a real difference when I needed to adjust my concentration."</div>
+    <div class="review-verified">Verified Founding Member</div>
+  </div>
+  <div class="review-card">
+    <div class="review-header">
+      <div class="review-avatar">MK</div>
+      <div>
+        <div class="review-name">Michelle K.</div>
+        <div class="review-tag">Full Protocol · 60 days</div>
+      </div>
+      <div class="stars" style="margin-left:auto">★★★★★</div>
+    </div>
+    <div class="review-text">"The hair peptide treatment was the unexpected winner for me. I wasn't expecting scalp results alongside the skin protocol but at 8 weeks my part looks noticeably fuller. Having everything arrive together in one subscription is so much simpler."</div>
+    <div class="review-verified">Verified Founding Member</div>
+  </div>
+
+  <hr class="divider">
+
+  <div class="sec-title">Frequently asked questions</div>
+  <div class="faq-item">
+    <div class="faq-q">Is tretinoin safe to use at home without seeing a dermatologist in person?</div>
+    <div class="faq-a">Yes — when prescribed by a licensed physician who has reviewed your skin photos and medical history. Every Skinfluence Protocol subscription includes an asynchronous consultation with a board-certified dermatologist before any prescription is issued. No prescription ships without physician review.</div>
+  </div>
+  <div class="faq-item">
+    <div class="faq-q">Is this FDA-approved?</div>
+    <div class="faq-a">Tretinoin is an FDA-approved drug ingredient with over 40 years of clinical research. The compounded formulation — which combines tretinoin with niacinamide and GHK-Cu peptide — is compounded by a PCAB-accredited 503A pharmacy and is not itself FDA-approved, as is the case with all compounded medications. The Tier 1 cosmetic products (GHK-Cu serum, hair peptide treatment) are regulated as cosmetics under the FDA's MoCRA framework.</div>
+  </div>
+  <div class="faq-item">
+    <div class="faq-q">What if tretinoin irritates my skin?</div>
+    <div class="faq-a">Retinoid irritation (redness, dryness, peeling) is common in the first 2–6 weeks and is called the "retinization" period. Your physician will start you at a low concentration (typically 0.025%) and titrate up based on your skin's response. The GHK-Cu peptide booster in the formula also helps support skin barrier function during this transition. If you experience significant irritation, your MD is available for an async check-in to adjust your protocol.</div>
+  </div>
+  <div class="faq-item">
+    <div class="faq-q">Can I cancel my subscription?</div>
+    <div class="faq-a">Yes. You can pause, adjust, or cancel your subscription at any time through your patient portal. There are no cancellation fees or penalties. We ask that you complete at least one full 30-day cycle before cancelling so your physician can document your response to treatment.</div>
+  </div>
+  <div class="faq-item">
+    <div class="faq-q">What states are you currently available in?</div>
+    <div class="faq-a">We are currently accepting patients in [list of licensed states]. We are adding new states as our physician network expands. If your state is not yet listed, join the waitlist and we'll notify you when coverage expands to your area.</div>
+  </div>
+
+  <hr class="divider">
+
+  <div class="comp-warn">Regulatory disclosure: This product contains a compounded prescription medication. Compounded medications are not FDA-approved, FDA-inspected, or FDA-verified for safety, effectiveness, or quality. Compounded medications are prescribed for individual patients by licensed prescribers. This website is not intended to diagnose, treat, cure, or prevent any disease or health condition. All prescription orders require physician review and approval before dispensing.</div>
+
+  <div style="margin-top:12px;display:flex;gap:8px;flex-wrap:wrap">
+    <button class="ask-btn" onclick="sendPrompt('Write the Skinfluence homepage headline and hero copy.')">Write homepage copy ↗</button>
+    <button class="ask-btn" onclick="sendPrompt('What should The Science page on the Skinfluence website include?')">Design The Science page ↗</button>
+    <button class="ask-btn" onclick="sendPrompt('Write the Skinfluence skin assessment quiz questions.')">Write the skin quiz ↗</button>
+  </div>
+
+</div>

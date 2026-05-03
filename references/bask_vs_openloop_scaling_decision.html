@@ -1,0 +1,165 @@
+
+<h2 class="sr-only">Decision framework comparing Bask Health and OpenLoop for scaling Skinfluence, covering funding, scale, features, and a phased recommendation.</h2>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+.wrap{padding:1.5rem 0;font-family:var(--font-sans)}
+.verdict{display:flex;gap:16px;align-items:flex-start;background:var(--color-background-secondary);border:0.5px solid var(--color-border-tertiary);border-radius:var(--border-radius-lg);padding:1.25rem 1.5rem;margin-bottom:1.25rem;flex-wrap:wrap}
+.verdict-icon{font-size:36px;font-weight:500;flex-shrink:0;color:#1D9E75;line-height:1}
+.verdict-text{flex:1;min-width:160px}
+.v-label{font-size:9px;font-weight:500;letter-spacing:.09em;text-transform:uppercase;color:var(--color-text-tertiary);margin-bottom:4px}
+.v-title{font-size:15px;font-weight:500;color:var(--color-text-primary);margin-bottom:5px}
+.v-sub{font-size:13px;color:var(--color-text-secondary);line-height:1.65}
+.sec{font-size:9px;font-weight:500;letter-spacing:.09em;text-transform:uppercase;color:var(--color-text-tertiary);margin-bottom:10px;margin-top:18px}
+.alert{border-left:3px solid #A32D2D;background:#FCEBEB;border-radius:0 var(--border-radius-md) var(--border-radius-md) 0;padding:10px 14px;font-size:12px;color:#791F1F;line-height:1.65;margin:12px 0}
+.tip{border-left:3px solid #1D9E75;background:#E8F7F2;border-radius:0 var(--border-radius-md) var(--border-radius-md) 0;padding:10px 14px;font-size:12px;color:#0D5C43;line-height:1.65;margin:12px 0}
+.cols2{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:12px}
+@media(max-width:480px){.cols2{grid-template-columns:1fr}}
+.plat-card{border:0.5px solid var(--color-border-tertiary);border-radius:var(--border-radius-lg);overflow:hidden}
+.plat-hdr{padding:.85rem 1rem;display:flex;align-items:flex-start;justify-content:space-between;gap:8px}
+.plat-name{font-size:14px;font-weight:500;color:var(--color-text-primary)}
+.plat-sub{font-size:11px;color:var(--color-text-tertiary);margin-top:2px}
+.badge{font-size:10px;font-weight:500;padding:2px 9px;border-radius:20px;flex-shrink:0;margin-top:2px}
+.badge-green{background:#E8F7F2;color:#0D5C43}
+.badge-amber{background:#FDF3E3;color:#6B3E08}
+.plat-body{padding:.85rem 1rem;background:var(--color-background-secondary)}
+.row-item{display:flex;justify-content:space-between;align-items:baseline;padding:5px 0;border-bottom:0.5px solid var(--color-border-tertiary);font-size:12px}
+.row-item:last-child{border-bottom:none}
+.row-label{color:var(--color-text-tertiary)}
+.row-val{font-weight:500;color:var(--color-text-primary);text-align:right;max-width:55%}
+.green{color:#1D9E75}.red{color:#A32D2D}.amber{color:#BA7517}.blue{color:#185FA5}
+.phase-row{display:grid;grid-template-columns:90px 1fr;gap:12px;padding:10px 0;border-bottom:0.5px solid var(--color-border-tertiary);align-items:start}
+.phase-row:last-child{border-bottom:none}
+.phase-label{font-size:11px;font-weight:500;padding:3px 8px;border-radius:20px;text-align:center;line-height:1.4}
+.phase-desc{font-size:12px;color:var(--color-text-secondary);line-height:1.6}
+.ask-btn{display:inline-block;font-size:11px;padding:4px 11px;border-radius:var(--border-radius-md);border:0.5px solid var(--color-border-secondary);background:transparent;color:var(--color-text-primary);cursor:pointer;font-family:var(--font-sans);margin-top:10px;margin-right:6px}
+.bar-row{display:flex;align-items:center;gap:8px;margin-bottom:7px}
+.bar-label{font-size:11px;color:var(--color-text-secondary);width:150px;flex-shrink:0}
+.bar-track{flex:1;height:7px;background:var(--color-background-secondary);border-radius:4px;overflow:hidden;position:relative}
+.bar-b{height:100%;border-radius:4px;position:absolute;top:0;left:0;background:#1D9E75}
+.bar-o{height:100%;border-radius:4px;position:absolute;top:0;left:0;background:#185FA5;opacity:.7}
+.bar-score{font-size:11px;width:32px;text-align:right;flex-shrink:0;font-weight:500}
+.legend-row{display:flex;gap:16px;margin-bottom:12px}
+.legend-item{display:flex;align-items:center;gap:5px;font-size:11px;color:var(--color-text-secondary)}
+.legend-dot{width:10px;height:7px;border-radius:2px;flex-shrink:0}
+</style>
+
+<div class="wrap">
+
+  <div class="verdict">
+    <div class="verdict-icon">!</div>
+    <div class="verdict-text">
+      <div class="v-label">Critical finding — the research changed the answer</div>
+      <div class="v-title">The right choice is Bask for longer than originally planned</div>
+      <div class="v-sub">A key fact emerged from this research: Bask Health has raised only $760K in total funding with ~40 employees, while OpenLoop has raised $48.5M with 414 employees and just completed a major acquisition. That funding gap matters enormously for a brand betting its clinical infrastructure on a platform's long-term survival. The previous recommendation to migrate at Phase 2 needs to be re-evaluated.</div>
+    </div>
+  </div>
+
+  <div class="alert">
+    <strong>The funding gap is a platform risk, not just a feature comparison.</strong> Bask Health has raised $760K total (seed stage, ~40 employees). OpenLoop has raised $48.5M with 414 employees, 5x YoY growth, and a recent acquisition of Season Health (April 2026). This means Bask is a startup building infrastructure that your clinical business will depend on. If Bask struggles financially or pivots, you face a forced migration at the worst possible time — mid-scale, with thousands of patient records. This does not mean avoid Bask. It means plan around the risk deliberately.
+  </div>
+
+  <div class="sec">Side-by-side company profile</div>
+  <div class="cols2">
+    <div class="plat-card">
+      <div class="plat-hdr" style="background:var(--color-background-secondary)">
+        <div>
+          <div class="plat-name">Bask Health</div>
+          <div class="plat-sub">Founded 2021 · New York · Seed stage</div>
+        </div>
+        <span class="badge badge-green">Phase 0–1 launch</span>
+      </div>
+      <div class="plat-body">
+        <div class="row-item"><span class="row-label">Total funding</span><span class="row-val amber">$760K (seed only)</span></div>
+        <div class="row-item"><span class="row-label">Employees</span><span class="row-val">~40</span></div>
+        <div class="row-item"><span class="row-label">Clients powered</span><span class="row-val">Not publicly disclosed</span></div>
+        <div class="row-item"><span class="row-label">Recent news</span><span class="row-val">LegitScript partnership (Oct 2025)</span></div>
+        <div class="row-item"><span class="row-label">Platform type</span><span class="row-val">All-in-one · no-code + API</span></div>
+        <div class="row-item"><span class="row-label">DTC skincare fit</span><span class="row-val green">Excellent</span></div>
+        <div class="row-item"><span class="row-label">Launch speed</span><span class="row-val green">2–4 weeks</span></div>
+        <div class="row-item"><span class="row-label">Clinician network</span><span class="row-val">Nationwide (via partners)</span></div>
+        <div class="row-item"><span class="row-label">Platform stability risk</span><span class="row-val red">Medium-high (early stage)</span></div>
+      </div>
+    </div>
+    <div class="plat-card">
+      <div class="plat-hdr" style="background:var(--color-background-secondary)">
+        <div>
+          <div class="plat-name">OpenLoop Health</div>
+          <div class="plat-sub">Founded 2020 · Des Moines · Growth stage</div>
+        </div>
+        <span class="badge badge-amber">Phase 2+ scaling</span>
+      </div>
+      <div class="plat-body">
+        <div class="row-item"><span class="row-label">Total funding</span><span class="row-val green">$48.5M raised</span></div>
+        <div class="row-item"><span class="row-label">Employees</span><span class="row-val green">414 (255% growth in 2025)</span></div>
+        <div class="row-item"><span class="row-label">Clients powered</span><span class="row-val green">170+ organizations</span></div>
+        <div class="row-item"><span class="row-label">Recent news</span><span class="row-val">Acquired Season Health (Apr 2026)</span></div>
+        <div class="row-item"><span class="row-label">Platform type</span><span class="row-val">Managed infrastructure + API</span></div>
+        <div class="row-item"><span class="row-label">DTC skincare fit</span><span class="row-val amber">Good (not skincare-specific)</span></div>
+        <div class="row-item"><span class="row-label">Launch speed</span><span class="row-val amber">4–8 weeks (more config)</span></div>
+        <div class="row-item"><span class="row-label">Clinician network</span><span class="row-val green">20,000+ all 50 states</span></div>
+        <div class="row-item"><span class="row-label">Platform stability risk</span><span class="row-val green">Low (well-funded, scaling)</span></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="sec">Feature comparison — what matters for Skinfluence specifically</div>
+  <div class="legend-row">
+    <div class="legend-item"><div class="legend-dot" style="background:#1D9E75"></div>Bask Health</div>
+    <div class="legend-item"><div class="legend-dot" style="background:#185FA5;opacity:.7"></div>OpenLoop</div>
+  </div>
+
+  <div class="bar-row"><div class="bar-label">DTC skincare workflows</div><div class="bar-track"><div class="bar-b" style="width:92%"></div></div><div class="bar-score green">92</div><div class="bar-track"><div class="bar-o" style="width:62%"></div></div><div class="bar-score blue">62</div></div>
+  <div class="bar-row"><div class="bar-label">No-code launch speed</div><div class="bar-track"><div class="bar-b" style="width:95%"></div></div><div class="bar-score green">95</div><div class="bar-track"><div class="bar-o" style="width:50%"></div></div><div class="bar-score blue">50</div></div>
+  <div class="bar-row"><div class="bar-label">Clinician network depth</div><div class="bar-track"><div class="bar-b" style="width:68%"></div></div><div class="bar-score green">68</div><div class="bar-track"><div class="bar-o" style="width:95%"></div></div><div class="bar-score blue">95</div></div>
+  <div class="bar-row"><div class="bar-label">Platform financial stability</div><div class="bar-track"><div class="bar-b" style="width:38%"></div></div><div class="bar-score amber">38</div><div class="bar-track"><div class="bar-o" style="width:90%"></div></div><div class="bar-score blue">90</div></div>
+  <div class="bar-row"><div class="bar-label">Shopify / DTC integration</div><div class="bar-track"><div class="bar-b" style="width:90%"></div></div><div class="bar-score green">90</div><div class="bar-track"><div class="bar-o" style="width:65%"></div></div><div class="bar-score blue">65</div></div>
+  <div class="bar-row"><div class="bar-label">Patient analytics / LTV</div><div class="bar-track"><div class="bar-b" style="width:85%"></div></div><div class="bar-score green">85</div><div class="bar-track"><div class="bar-o" style="width:60%"></div></div><div class="bar-score blue">60</div></div>
+  <div class="bar-row"><div class="bar-label">Managed ops support</div><div class="bar-track"><div class="bar-b" style="width:55%"></div></div><div class="bar-score green">55</div><div class="bar-track"><div class="bar-o" style="width:92%"></div></div><div class="bar-score blue">92</div></div>
+  <div class="bar-row"><div class="bar-label">Scale to 10,000+ patients</div><div class="bar-track"><div class="bar-b" style="width:50%"></div></div><div class="bar-score amber">50</div><div class="bar-track"><div class="bar-o" style="width:95%"></div></div><div class="bar-score blue">95</div></div>
+  <div class="bar-row"><div class="bar-label">Overall cost at launch</div><div class="bar-track"><div class="bar-b" style="width:85%"></div></div><div class="bar-score green">Lower</div><div class="bar-track"><div class="bar-o" style="width:45%"></div></div><div class="bar-score blue">Higher</div></div>
+
+  <div class="sec">Revised phased recommendation — updated for funding reality</div>
+  <div style="border:0.5px solid var(--color-border-tertiary);border-radius:var(--border-radius-lg);padding:.85rem 1rem">
+    <div class="phase-row">
+      <div class="phase-label" style="background:#E8F7F2;color:#0D5C43">Phase 0–1<br>Months 1–12</div>
+      <div class="phase-desc"><strong>Bask Health — no change.</strong> Best DTC skincare fit, fastest launch, lowest cost. Negotiate data portability clause upfront. Use your own MD Director (not Bask's network) to keep clinical relationships portable. Document every custom workflow you build in Bask — this reduces migration work later if needed.</div>
+    </div>
+    <div class="phase-row">
+      <div class="phase-label" style="background:#FDF3E3;color:#6B3E08">Phase 2<br>Months 13–24</div>
+      <div class="phase-desc"><strong>Stay on Bask — but actively monitor.</strong> If Bask is serving your 400–2,000 patient volume reliably, there is no business case to migrate. Migration costs $15K–40K and takes 3–5 months — don't pay that unless Bask is genuinely limiting you. Begin a parallel OpenLoop evaluation: run a scoping call, understand their skincare/derm capabilities, and get a contract quote. Keep it in your back pocket.</div>
+    </div>
+    <div class="phase-row">
+      <div class="phase-label" style="background:#E6F1FB;color:#0E3D6E">Phase 3<br>Months 25–36</div>
+      <div class="phase-desc"><strong>Migration trigger point — evaluate three criteria:</strong> (1) Are you processing 2,000+ patient visits/month and hitting Bask capacity limits? (2) Do you need OpenLoop's 20,000+ clinician depth for aggressive multi-state expansion? (3) Has Bask shown any financial instability signals (leadership changes, support degradation, pricing hikes)? If two of three are true — migrate to OpenLoop. If not — stay on Bask and allocate the migration budget to patient acquisition instead.</div>
+    </div>
+    <div class="phase-row">
+      <div class="phase-label" style="background:#EEEDFE;color:#3C3489">Series A+<br>Year 3+</div>
+      <div class="phase-desc"><strong>OpenLoop is the right long-term partner.</strong> At Series A scale (3,000+ subscribers, $250K+ MRR), OpenLoop's managed infrastructure, 20,000+ clinician network, and institutional stability are worth the migration cost. The Season Health acquisition also signals OpenLoop is building toward full-stack virtual care — relevant if Skinfluence expands beyond skin into broader women's health or longevity protocols.</div>
+    </div>
+  </div>
+
+  <div class="sec">The three migration triggers — only move when 2 of 3 are true</div>
+  <div class="cols2">
+    <div style="border:0.5px solid var(--color-border-tertiary);border-radius:var(--border-radius-md);padding:.85rem 1rem">
+      <div style="font-size:12px;font-weight:500;color:var(--color-text-primary);margin-bottom:6px">Capacity trigger</div>
+      <div style="font-size:12px;color:var(--color-text-secondary);line-height:1.6">You are processing 2,000+ patient consultations per month and hitting queue delays or system performance issues on Bask. Not a concern at Phase 1 volumes — only relevant at scale.</div>
+    </div>
+    <div style="border:0.5px solid var(--color-border-tertiary);border-radius:var(--border-radius-md);padding:.85rem 1rem">
+      <div style="font-size:12px;font-weight:500;color:var(--color-text-primary);margin-bottom:6px">Clinician depth trigger</div>
+      <div style="font-size:12px;color:var(--color-text-secondary);line-height:1.6">You need rapid multi-state expansion with board-certified derm coverage in 40+ states simultaneously. OpenLoop's 20,000+ managed clinician network solves this; Bask's partner network may not scale as fast.</div>
+    </div>
+    <div style="border:0.5px solid var(--color-border-tertiary);border-radius:var(--border-radius-md);padding:.85rem 1rem">
+      <div style="font-size:12px;font-weight:500;color:var(--color-text-primary);margin-bottom:6px">Platform stability trigger</div>
+      <div style="font-size:12px;color:var(--color-text-secondary);line-height:1.6">Bask shows warning signs: pricing increases above 30%, support response times degrading, leadership changes, or failure to raise a Series A by mid-2026. Watch their funding news closely. A startup at $760K raised is still proving its model.</div>
+    </div>
+    <div style="border:0.5px solid var(--color-border-tertiary);border-radius:var(--border-radius-md);padding:.85rem 1rem">
+      <div style="font-size:12px;font-weight:500;color:var(--color-text-primary);margin-bottom:6px">Expansion trigger</div>
+      <div style="font-size:12px;color:var(--color-text-secondary);line-height:1.6">Skinfluence is expanding beyond skin/hair into adjacent protocols (GLP-1, HRT, longevity) where OpenLoop has proven managed infrastructure and OpenLoop's Season Health acquisition adds new capabilities Bask doesn't have.</div>
+    </div>
+  </div>
+
+  <div class="tip"><strong>The smartest move:</strong> Start on Bask, negotiate data portability day one, keep your MD Director relationship independent of the platform, and run an OpenLoop scoping call at month 12 — not to migrate, but to have a fully negotiated contract ready to sign within 30 days if a trigger fires. That's the hedge that costs nothing and protects everything.</div>
+
+  <button class="ask-btn" onclick="sendPrompt('What should I negotiate in my Bask Health contract to protect against platform risk?')">Contract protection clauses ↗</button>
+  <button class="ask-btn" onclick="sendPrompt('What questions should I ask OpenLoop Health in a scoping call at month 12?')">OpenLoop scoping call guide ↗</button>
+</div>

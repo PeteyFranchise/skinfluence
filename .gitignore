@@ -6,6 +6,10 @@ Thumbs.db
 ~$*.xlsx
 ~$*.pptx
 
+# Export artifacts
+*.docx
+*.pdf
+
 # Editor / OS noise
 .idea/
 .vscode/

@@ -8,8 +8,12 @@ This repository is the project workspace for strategy, architecture, storefront 
 
 - `docs/rules/`
   Project operating rules and workflow references used by future contributors and AI tools.
+- `references/`
+  Diff-friendly working reference files such as `.html` and `.svg`.
+- `exports/`
+  Polished export artifacts such as `.docx` and `.pdf`, kept in the project folder for convenience but ignored by Git by default.
 - project root
-  Current planning artifacts, visual references, and working deliverables already created for the project.
+  Core repo files such as `README.md`, `.gitignore`, and future implementation directories.
 
 ## Workflow rules
 
@@ -26,3 +30,19 @@ These rules should be treated as the baseline operating guidance for future proj
 - wireframes and visual direction
 - clinical-commerce systems planning
 - launch execution readiness
+
+## Git tracking policy
+
+Track by default:
+
+- `.md`
+- `.html`
+- `.svg`
+- future implementation files such as `.liquid`, `.css`, `.js`, and `.json`
+
+Ignore by default:
+
+- `.docx`
+- `.pdf`
+
+This keeps the repository centered on editable source files and implementation assets while leaving polished exports out of Git history.
