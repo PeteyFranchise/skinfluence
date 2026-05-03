@@ -5,8 +5,8 @@
     "footer": {
       "type": "footer",
       "settings": {
-        "footer_menu": "footer",
-        "legal_menu": "footer"
+        "footer_menu": "",
+        "legal_menu": ""
       }
     }
   },

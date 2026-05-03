@@ -5,7 +5,29 @@
     </a>
 
     {% assign main_menu = linklists[section.settings.menu] %}
-    {% if main_menu != blank %}
+    {% assign use_fallback_menu = false %}
+    {% if main_menu == blank or section.settings.menu == blank or section.settings.menu == 'main-menu' %}
+      {% assign use_fallback_menu = true %}
+    {% endif %}
+
+    {% if use_fallback_menu %}
+      <nav class="skinfluence-site-header__nav" aria-label="Primary">
+        <ul class="skinfluence-site-header__menu list-unstyled" role="list">
+          <li class="skinfluence-site-header__menu-item">
+            <a href="/pages/how-it-works" class="skinfluence-site-header__link">How It Works</a>
+          </li>
+          <li class="skinfluence-site-header__menu-item">
+            <a href="/pages/treatment" class="skinfluence-site-header__link">Treatment</a>
+          </li>
+          <li class="skinfluence-site-header__menu-item">
+            <a href="/pages/pricing" class="skinfluence-site-header__link">Pricing</a>
+          </li>
+          <li class="skinfluence-site-header__menu-item">
+            <a href="/pages/faq" class="skinfluence-site-header__link">FAQ</a>
+          </li>
+        </ul>
+      </nav>
+    {% elsif main_menu != blank %}
       <nav class="skinfluence-site-header__nav" aria-label="Primary">
         <ul class="skinfluence-site-header__menu list-unstyled" role="list">
           {% for link in main_menu.links %}

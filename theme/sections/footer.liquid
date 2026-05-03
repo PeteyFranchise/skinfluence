@@ -8,7 +8,26 @@
     </div>
 
     {% assign footer_menu = linklists[section.settings.footer_menu] %}
-    {% if footer_menu != blank %}
+    {% assign use_fallback_footer_menu = false %}
+    {% if footer_menu == blank or section.settings.footer_menu == blank or section.settings.footer_menu == 'footer' %}
+      {% assign use_fallback_footer_menu = true %}
+    {% endif %}
+
+    {% if use_fallback_footer_menu %}
+      <nav class="skinfluence-site-footer__nav" aria-label="Footer">
+        <ul class="skinfluence-site-footer__menu list-unstyled" role="list">
+          <li class="skinfluence-site-footer__menu-item">
+            <a href="/pages/about" class="skinfluence-site-footer__link">About</a>
+          </li>
+          <li class="skinfluence-site-footer__menu-item">
+            <a href="/pages/support" class="skinfluence-site-footer__link">Support</a>
+          </li>
+          <li class="skinfluence-site-footer__menu-item">
+            <a href="/pages/faq" class="skinfluence-site-footer__link">FAQ</a>
+          </li>
+        </ul>
+      </nav>
+    {% elsif footer_menu != blank %}
       <nav class="skinfluence-site-footer__nav" aria-label="Footer">
         <ul class="skinfluence-site-footer__menu list-unstyled" role="list">
           {% for link in footer_menu.links %}
@@ -23,7 +42,26 @@
     {% endif %}
 
     {% assign legal_menu = linklists[section.settings.legal_menu] %}
-    {% if legal_menu != blank %}
+    {% assign use_fallback_legal_menu = false %}
+    {% if legal_menu == blank or section.settings.legal_menu == blank or section.settings.legal_menu == 'footer' %}
+      {% assign use_fallback_legal_menu = true %}
+    {% endif %}
+
+    {% if use_fallback_legal_menu %}
+      <nav class="skinfluence-site-footer__nav skinfluence-site-footer__nav--legal" aria-label="Legal">
+        <ul class="skinfluence-site-footer__menu list-unstyled" role="list">
+          <li class="skinfluence-site-footer__menu-item">
+            <a href="/pages/privacy-policy" class="skinfluence-site-footer__link">Privacy Policy</a>
+          </li>
+          <li class="skinfluence-site-footer__menu-item">
+            <a href="/pages/terms-of-service" class="skinfluence-site-footer__link">Terms of Service</a>
+          </li>
+          <li class="skinfluence-site-footer__menu-item">
+            <a href="/pages/subscription-terms" class="skinfluence-site-footer__link">Subscription Terms</a>
+          </li>
+        </ul>
+      </nav>
+    {% elsif legal_menu != blank %}
       <nav class="skinfluence-site-footer__nav skinfluence-site-footer__nav--legal" aria-label="Legal">
         <ul class="skinfluence-site-footer__menu list-unstyled" role="list">
           {% for link in legal_menu.links %}
