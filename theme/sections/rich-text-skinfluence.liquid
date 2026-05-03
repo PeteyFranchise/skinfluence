@@ -1,0 +1,24 @@
+<section class="skinfluence-section skinfluence-rich-text">
+  <div class="page-width">
+    {% if section.settings.headline != blank %}
+      <h2 class="skinfluence-section__headline">{{ section.settings.headline }}</h2>
+    {% endif %}
+
+    {% if section.settings.body != blank %}
+      <div class="skinfluence-rich-text__body rte">{{ section.settings.body }}</div>
+    {% endif %}
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Skinfluence Rich Text",
+  "settings": [
+    { "type": "text", "id": "headline", "label": "Headline" },
+    { "type": "richtext", "id": "body", "label": "Body" }
+  ],
+  "presets": [
+    { "name": "Skinfluence Rich Text" }
+  ]
+}
+{% endschema %}

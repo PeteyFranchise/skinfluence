@@ -1,0 +1,49 @@
+<section class="skinfluence-section skinfluence-faq">
+  <div class="page-width">
+    {% if section.settings.headline != blank %}
+      <h2 class="skinfluence-section__headline">{{ section.settings.headline }}</h2>
+    {% endif %}
+
+    <div class="skinfluence-faq__items">
+      {% for block in section.blocks %}
+        <details class="skinfluence-faq__item" {{ block.shopify_attributes }}>
+          <summary class="skinfluence-faq__question">{{ block.settings.question }}</summary>
+
+          {% if block.settings.answer != blank %}
+            <div class="skinfluence-faq__answer rte">{{ block.settings.answer }}</div>
+          {% endif %}
+        </details>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Skinfluence FAQ",
+  "settings": [
+    { "type": "text", "id": "headline", "label": "Headline" }
+  ],
+  "blocks": [
+    {
+      "type": "item",
+      "name": "FAQ Item",
+      "settings": [
+        { "type": "text", "id": "question", "label": "Question" },
+        { "type": "richtext", "id": "answer", "label": "Answer" }
+      ]
+    }
+  ],
+  "max_blocks": 12,
+  "presets": [
+    {
+      "name": "Skinfluence FAQ",
+      "blocks": [
+        { "type": "item" },
+        { "type": "item" },
+        { "type": "item" }
+      ]
+    }
+  ]
+}
+{% endschema %}

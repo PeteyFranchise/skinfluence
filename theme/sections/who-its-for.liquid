@@ -1,0 +1,45 @@
+<section class="skinfluence-section skinfluence-who-its-for">
+  <div class="page-width">
+    {% if section.settings.headline != blank %}
+      <h2 class="skinfluence-section__headline">{{ section.settings.headline }}</h2>
+    {% endif %}
+
+    <div class="skinfluence-who-its-for__list">
+      {% for block in section.blocks %}
+        <div class="skinfluence-who-its-for__item" {{ block.shopify_attributes }}>
+          {{ block.settings.label }}
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Who It's For",
+  "settings": [
+    { "type": "text", "id": "headline", "label": "Headline" }
+  ],
+  "blocks": [
+    {
+      "type": "item",
+      "name": "Item",
+      "settings": [
+        { "type": "text", "id": "label", "label": "Label" }
+      ]
+    }
+  ],
+  "max_blocks": 6,
+  "presets": [
+    {
+      "name": "Who It's For",
+      "blocks": [
+        { "type": "item" },
+        { "type": "item" },
+        { "type": "item" },
+        { "type": "item" }
+      ]
+    }
+  ]
+}
+{% endschema %}

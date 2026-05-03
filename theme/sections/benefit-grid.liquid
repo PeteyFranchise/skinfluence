@@ -1,0 +1,45 @@
+<section class="skinfluence-section skinfluence-benefit-grid">
+  <div class="page-width">
+    {% if section.settings.headline != blank %}
+      <h2 class="skinfluence-section__headline">{{ section.settings.headline }}</h2>
+    {% endif %}
+
+    <div class="skinfluence-benefit-grid__items">
+      {% for block in section.blocks %}
+        <div class="skinfluence-benefit-grid__item" {{ block.shopify_attributes }}>
+          {{ block.settings.label }}
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Benefit Grid",
+  "settings": [
+    { "type": "text", "id": "headline", "label": "Headline" }
+  ],
+  "blocks": [
+    {
+      "type": "benefit",
+      "name": "Benefit",
+      "settings": [
+        { "type": "text", "id": "label", "label": "Label" }
+      ]
+    }
+  ],
+  "max_blocks": 8,
+  "presets": [
+    {
+      "name": "Benefit Grid",
+      "blocks": [
+        { "type": "benefit" },
+        { "type": "benefit" },
+        { "type": "benefit" },
+        { "type": "benefit" }
+      ]
+    }
+  ]
+}
+{% endschema %}

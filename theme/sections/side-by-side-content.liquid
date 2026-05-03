@@ -1,0 +1,55 @@
+<section class="skinfluence-section skinfluence-side-by-side skinfluence-side-by-side--{{ section.settings.image_position }}">
+  <div class="page-width">
+    <div class="skinfluence-side-by-side__grid">
+      <div class="skinfluence-side-by-side__content">
+        {% if section.settings.headline != blank %}
+          <h2 class="skinfluence-section__headline">{{ section.settings.headline }}</h2>
+        {% endif %}
+
+        {% if section.settings.body != blank %}
+          <div class="skinfluence-side-by-side__body rte">{{ section.settings.body }}</div>
+        {% endif %}
+
+        {% if section.settings.cta_label != blank and section.settings.cta_url != blank %}
+          <a class="button button--primary" href="{{ section.settings.cta_url }}">
+            {{ section.settings.cta_label }}
+          </a>
+        {% endif %}
+      </div>
+
+      <div class="skinfluence-side-by-side__media">
+        {% if section.settings.image != blank %}
+          {{ section.settings.image | image_url: width: 1200 | image_tag: loading: 'lazy', class: 'skinfluence-side-by-side__image' }}
+        {% else %}
+          <div class="skinfluence-side-by-side__placeholder">Image placeholder</div>
+        {% endif %}
+      </div>
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Side-by-Side Content",
+  "settings": [
+    { "type": "text", "id": "headline", "label": "Headline" },
+    { "type": "richtext", "id": "body", "label": "Body" },
+    { "type": "image_picker", "id": "image", "label": "Image" },
+    {
+      "type": "select",
+      "id": "image_position",
+      "label": "Image position",
+      "default": "right",
+      "options": [
+        { "value": "left", "label": "Left" },
+        { "value": "right", "label": "Right" }
+      ]
+    },
+    { "type": "text", "id": "cta_label", "label": "CTA label" },
+    { "type": "url", "id": "cta_url", "label": "CTA URL" }
+  ],
+  "presets": [
+    { "name": "Side-by-Side Content" }
+  ]
+}
+{% endschema %}

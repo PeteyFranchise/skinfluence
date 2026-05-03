@@ -1,0 +1,47 @@
+<section class="skinfluence-section skinfluence-hero">
+  <div class="page-width">
+    {% if section.settings.eyebrow != blank %}
+      <p class="skinfluence-hero__eyebrow">{{ section.settings.eyebrow }}</p>
+    {% endif %}
+
+    {% if section.settings.headline != blank %}
+      <h1 class="skinfluence-hero__headline">{{ section.settings.headline }}</h1>
+    {% endif %}
+
+    {% if section.settings.subhead != blank %}
+      <div class="skinfluence-hero__subhead rte">{{ section.settings.subhead }}</div>
+    {% endif %}
+
+    <div class="skinfluence-hero__actions">
+      {% if section.settings.primary_cta_label != blank and section.settings.primary_cta_url != blank %}
+        <a class="button button--primary" href="{{ section.settings.primary_cta_url }}">
+          {{ section.settings.primary_cta_label }}
+        </a>
+      {% endif %}
+
+      {% if section.settings.secondary_cta_label != blank and section.settings.secondary_cta_url != blank %}
+        <a class="button button--secondary" href="{{ section.settings.secondary_cta_url }}">
+          {{ section.settings.secondary_cta_label }}
+        </a>
+      {% endif %}
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Skinfluence Hero",
+  "settings": [
+    { "type": "text", "id": "eyebrow", "label": "Eyebrow" },
+    { "type": "text", "id": "headline", "label": "Headline" },
+    { "type": "richtext", "id": "subhead", "label": "Subhead" },
+    { "type": "text", "id": "primary_cta_label", "label": "Primary CTA label" },
+    { "type": "url", "id": "primary_cta_url", "label": "Primary CTA URL" },
+    { "type": "text", "id": "secondary_cta_label", "label": "Secondary CTA label" },
+    { "type": "url", "id": "secondary_cta_url", "label": "Secondary CTA URL" }
+  ],
+  "presets": [
+    { "name": "Skinfluence Hero" }
+  ]
+}
+{% endschema %}
