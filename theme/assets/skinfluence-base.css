@@ -152,6 +152,13 @@ a {
   box-shadow: 0 -16px 40px rgba(31, 37, 41, 0.08);
 }
 
+.skinfluence-sticky-mobile-cta__helper {
+  margin: 0 0 var(--sf-space-2);
+  text-align: center;
+  color: var(--sf-color-muted);
+  font-size: 0.85rem;
+}
+
 .skinfluence-sticky-mobile-cta__button {
   width: 100%;
 }

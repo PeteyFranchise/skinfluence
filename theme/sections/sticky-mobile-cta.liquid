@@ -1,5 +1,8 @@
 {% if section.settings.cta_label != blank and section.settings.cta_url != blank %}
   <div class="skinfluence-sticky-mobile-cta">
+    {% if section.settings.helper_text != blank %}
+      <p class="skinfluence-sticky-mobile-cta__helper">{{ section.settings.helper_text }}</p>
+    {% endif %}
     <a class="button button--primary skinfluence-sticky-mobile-cta__button" href="{{ section.settings.cta_url }}">
       {{ section.settings.cta_label }}
     </a>
@@ -20,6 +23,12 @@
       "type": "url",
       "id": "cta_url",
       "label": "CTA URL"
+    },
+    {
+      "type": "text",
+      "id": "helper_text",
+      "label": "Helper text",
+      "default": "Begin with provider-reviewed evaluation"
     }
   ]
 }

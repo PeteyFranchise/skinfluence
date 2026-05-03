@@ -38,6 +38,10 @@
         "default": "#ddd5ca"
       },
       {
+        "type": "header",
+        "content": "Default CTA labels"
+      },
+      {
         "type": "text",
         "id": "primary_cta_label",
         "label": "Default primary CTA label",
@@ -48,6 +52,12 @@
         "id": "secondary_cta_label",
         "label": "Default secondary CTA label",
         "default": "How It Works"
+      },
+      {
+        "type": "text",
+        "id": "mobile_cta_helper",
+        "label": "Sticky mobile CTA helper",
+        "default": "Begin with provider-reviewed evaluation"
       }
     ]
   }

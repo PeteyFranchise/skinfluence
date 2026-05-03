@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <meta name="theme-color" content="#f5f1eb">
+    <meta name="theme-color" content="{{ settings.color_background | default: '#f5f1eb' }}">
     <link rel="canonical" href="{{ canonical_url }}">
 
     {% if settings.favicon != blank %}
@@ -23,6 +23,16 @@
     {% endif %}
 
     {{ content_for_header }}
+
+    <style>
+      :root {
+        --sf-color-bg: {{ settings.color_background | default: '#f5f1eb' }};
+        --sf-color-surface: {{ settings.color_surface | default: '#fffdfa' }};
+        --sf-color-ink: {{ settings.color_text | default: '#1f2529' }};
+        --sf-color-accent: {{ settings.color_accent | default: '#2d556e' }};
+        --sf-color-border: {{ settings.color_border | default: '#ddd5ca' }};
+      }
+    </style>
 
     {{ 'skinfluence-base.css' | asset_url | stylesheet_tag }}
   </head>
