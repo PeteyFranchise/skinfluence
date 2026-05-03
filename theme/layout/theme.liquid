@@ -47,5 +47,23 @@
     </main>
 
     {% sections 'footer-group' %}
+
+    <script>
+      (() => {
+        const root = document.body;
+        const threshold = 220;
+
+        const syncScrollState = () => {
+          if (window.scrollY > threshold) {
+            root.classList.add('has-scrolled');
+          } else {
+            root.classList.remove('has-scrolled');
+          }
+        };
+
+        syncScrollState();
+        window.addEventListener('scroll', syncScrollState, { passive: true });
+      })();
+    </script>
   </body>
 </html>

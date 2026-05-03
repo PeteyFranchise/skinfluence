@@ -5,7 +5,7 @@
       "settings": {
         "eyebrow": "Provider-reviewed anti-aging care",
         "headline": "Prescription-led anti-aging care for women who expect more from skincare.",
-        "subhead": "A provider-reviewed monthly treatment designed to improve texture, tone, and fine lines through a simpler, more elevated experience than traditional skincare shopping.",
+        "subhead": "<p>A provider-reviewed monthly treatment designed to improve texture, tone, and fine lines through a simpler, more elevated experience than traditional skincare shopping.</p>",
         "primary_cta_label": "Start Evaluation",
         "primary_cta_url": "/pages/how-it-works",
         "secondary_cta_label": "How It Works",
@@ -74,21 +74,21 @@
           "type": "step",
           "settings": {
             "title": "Complete your evaluation",
-            "body": "Answer a few questions about your skin, goals, and history."
+            "body": "<p>Answer a few questions about your skin, goals, and history.</p>"
           }
         },
         "step_2": {
           "type": "step",
           "settings": {
             "title": "Receive provider review",
-            "body": "A licensed provider reviews your information and determines whether treatment is appropriate."
+            "body": "<p>A licensed provider reviews your information and determines whether treatment is appropriate.</p>"
           }
         },
         "step_3": {
           "type": "step",
           "settings": {
             "title": "Begin monthly care if approved",
-            "body": "If approved, your treatment is delivered to your door through a simple monthly maintenance model."
+            "body": "<p>If approved, your treatment is delivered to your door through a simple monthly maintenance model.</p>"
           }
         }
       },
@@ -244,7 +244,7 @@
       "type": "cta-banner-skinfluence",
       "settings": {
         "headline": "A more advanced anti-aging routine starts here.",
-        "subhead": "Start with evaluation, then move into monthly care if approved.",
+        "subhead": "<p>Start with evaluation, then move into monthly care if approved.</p>",
         "cta_label": "Start Evaluation",
         "cta_url": "/pages/how-it-works"
       }

@@ -5,7 +5,7 @@
       "settings": {
         "eyebrow": "Clear answers",
         "headline": "Questions, answered clearly.",
-        "subhead": "Everything you need to know about fit, provider review, treatment expectations, pricing, and subscription details.",
+        "subhead": "<p>Everything you need to know about fit, provider review, treatment expectations, pricing, and subscription details.</p>",
         "primary_cta_label": "Start Evaluation",
         "primary_cta_url": "/pages/how-it-works",
         "secondary_cta_label": "Pricing",
@@ -186,7 +186,7 @@
       "type": "cta-banner-skinfluence",
       "settings": {
         "headline": "Still deciding?",
-        "subhead": "Start with evaluation when you’re ready for a more guided anti-aging routine.",
+        "subhead": "<p>Start with evaluation when you’re ready for a more guided anti-aging routine.</p>",
         "cta_label": "Start Evaluation",
         "cta_url": "/pages/how-it-works"
       }

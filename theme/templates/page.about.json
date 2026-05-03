@@ -5,7 +5,7 @@
       "settings": {
         "eyebrow": "Why Skinfluence exists",
         "headline": "A more serious approach to anti-aging care.",
-        "subhead": "Skinfluence is built for women who want stronger anti-aging support, clearer guidance, and a more elevated experience than standard skincare shopping.",
+        "subhead": "<p>Skinfluence is built for women who want stronger anti-aging support, clearer guidance, and a more elevated experience than standard skincare shopping.</p>",
         "primary_cta_label": "Start Evaluation",
         "primary_cta_url": "/pages/how-it-works",
         "secondary_cta_label": "Treatment",
@@ -78,7 +78,7 @@
       "type": "cta-banner-skinfluence",
       "settings": {
         "headline": "A more advanced anti-aging routine starts here.",
-        "subhead": "Start with evaluation, then move into monthly care if approved.",
+        "subhead": "<p>Start with evaluation, then move into monthly care if approved.</p>",
         "cta_label": "Start Evaluation",
         "cta_url": "/pages/how-it-works"
       }

@@ -5,7 +5,7 @@
       "settings": {
         "eyebrow": "Pricing with clarity",
         "headline": "Premium anti-aging care, priced with clarity.",
-        "subhead": "Start with a one-time evaluation, then move into monthly treatment if approved.",
+        "subhead": "<p>Start with a one-time evaluation, then move into monthly treatment if approved.</p>",
         "primary_cta_label": "Start Evaluation",
         "primary_cta_url": "/pages/how-it-works",
         "secondary_cta_label": "Treatment",
@@ -96,7 +96,7 @@
       "type": "cta-banner-skinfluence",
       "settings": {
         "headline": "Start with evaluation, then move into treatment if approved.",
-        "subhead": "A simpler monthly model for provider-reviewed anti-aging care.",
+        "subhead": "<p>A simpler monthly model for provider-reviewed anti-aging care.</p>",
         "cta_label": "Start Evaluation",
         "cta_url": "/pages/how-it-works"
       }

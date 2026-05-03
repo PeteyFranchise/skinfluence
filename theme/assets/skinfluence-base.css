@@ -43,6 +43,12 @@ body.skinfluence-theme {
   line-height: 1.5;
 }
 
+@media screen and (max-width: 767px) {
+  body.skinfluence-theme {
+    padding-bottom: 7rem;
+  }
+}
+
 img {
   max-width: 100%;
   height: auto;
@@ -150,6 +156,16 @@ a {
   background: rgba(245, 241, 235, 0.96);
   border-top: 1px solid var(--sf-color-border);
   box-shadow: 0 -16px 40px rgba(31, 37, 41, 0.08);
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(100%);
+  transition: opacity 180ms ease, transform 180ms ease;
+}
+
+body.skinfluence-theme.has-scrolled .skinfluence-sticky-mobile-cta {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translateY(0);
 }
 
 .skinfluence-sticky-mobile-cta__helper {

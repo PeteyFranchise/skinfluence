@@ -5,7 +5,7 @@
       "settings": {
         "eyebrow": "Evaluation-first care",
         "headline": "A simpler way to start prescription-led anti-aging care.",
-        "subhead": "From evaluation to provider review to monthly maintenance, Skinfluence is designed to feel clear, premium, and easy to follow.",
+        "subhead": "<p>From evaluation to provider review to monthly maintenance, Skinfluence is designed to feel clear, premium, and easy to follow.</p>",
         "primary_cta_label": "Start Evaluation",
         "primary_cta_url": "/pages/how-it-works",
         "secondary_cta_label": "Pricing",
@@ -19,21 +19,21 @@
           "type": "step",
           "settings": {
             "title": "Complete your evaluation",
-            "body": "Answer a few questions about your skin, goals, history, and routine so a licensed provider can assess whether treatment may be appropriate."
+            "body": "<p>Answer a few questions about your skin, goals, history, and routine so a licensed provider can assess whether treatment may be appropriate.</p>"
           }
         },
         "step_2": {
           "type": "step",
           "settings": {
             "title": "Receive provider review",
-            "body": "Your evaluation is reviewed by a licensed provider. In some cases, additional information may be needed before a final decision is made."
+            "body": "<p>Your evaluation is reviewed by a licensed provider. In some cases, additional information may be needed before a final decision is made.</p>"
           }
         },
         "step_3": {
           "type": "step",
           "settings": {
             "title": "Begin monthly care if approved",
-            "body": "If approved, you’ll move into a monthly treatment model designed for consistency, maintenance, and ease."
+            "body": "<p>If approved, you’ll move into a monthly treatment model designed for consistency, maintenance, and ease.</p>"
           }
         }
       },
@@ -78,7 +78,7 @@
       "type": "cta-banner-skinfluence",
       "settings": {
         "headline": "Start your evaluation today.",
-        "subhead": "Provider-reviewed anti-aging care designed to feel clear and simple from the start.",
+        "subhead": "<p>Provider-reviewed anti-aging care designed to feel clear and simple from the start.</p>",
         "cta_label": "Start Evaluation",
         "cta_url": "/pages/how-it-works"
       }

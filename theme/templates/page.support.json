@@ -5,7 +5,7 @@
       "settings": {
         "eyebrow": "Support",
         "headline": "Help, with a clear path forward.",
-        "subhead": "Find support for billing, shipping, general questions, and treatment-related guidance in the right place.",
+        "subhead": "<p>Find support for billing, shipping, general questions, and treatment-related guidance in the right place.</p>",
         "primary_cta_label": "Start Evaluation",
         "primary_cta_url": "/pages/how-it-works",
         "secondary_cta_label": "View FAQs",
@@ -107,7 +107,7 @@
       "type": "cta-banner-skinfluence",
       "settings": {
         "headline": "Still exploring Skinfluence?",
-        "subhead": "Learn how the evaluation-first experience works before you begin.",
+        "subhead": "<p>Learn how the evaluation-first experience works before you begin.</p>",
         "cta_label": "How It Works",
         "cta_url": "/pages/how-it-works"
       }

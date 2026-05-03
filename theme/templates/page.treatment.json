@@ -5,7 +5,7 @@
       "settings": {
         "eyebrow": "Provider-reviewed anti-aging treatment",
         "headline": "A more advanced anti-aging routine, built around provider review.",
-        "subhead": "Skinfluence is designed for women ready to move beyond over-the-counter skincare and into a more guided, more consistent treatment model.",
+        "subhead": "<p>Skinfluence is designed for women ready to move beyond over-the-counter skincare and into a more guided, more consistent treatment model.</p>",
         "primary_cta_label": "Start Evaluation",
         "primary_cta_url": "/pages/how-it-works",
         "secondary_cta_label": "Pricing",
@@ -130,7 +130,7 @@
       "type": "cta-banner-skinfluence",
       "settings": {
         "headline": "See if Skinfluence is right for your skin.",
-        "subhead": "Start with evaluation, then move into monthly care if approved.",
+        "subhead": "<p>Start with evaluation, then move into monthly care if approved.</p>",
         "cta_label": "Start Evaluation",
         "cta_url": "/pages/how-it-works"
       }
