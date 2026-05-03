@@ -1,0 +1,149 @@
+{
+  "sections": {
+    "hero": {
+      "type": "hero-skinfluence",
+      "settings": {
+        "eyebrow": "Provider-reviewed anti-aging treatment",
+        "headline": "A more advanced anti-aging routine, built around provider review.",
+        "subhead": "Skinfluence is designed for women ready to move beyond over-the-counter skincare and into a more guided, more consistent treatment model.",
+        "primary_cta_label": "Start Evaluation",
+        "primary_cta_url": "/pages/how-it-works",
+        "secondary_cta_label": "Pricing",
+        "secondary_cta_url": "/pages/pricing"
+      }
+    },
+    "what_it_helps": {
+      "type": "rich-text-skinfluence",
+      "settings": {
+        "headline": "What it’s designed to help improve",
+        "body": "<p>Skinfluence is designed for women noticing the early signs that their routine is no longer doing enough, including fine lines, uneven-looking tone, rougher texture, dullness, and a complexion that looks more tired or less refined than it used to.</p>"
+      }
+    },
+    "why_different": {
+      "type": "side-by-side-content",
+      "settings": {
+        "headline": "Why this feels different",
+        "body": "<p>Most anti-aging skincare asks you to keep adding more products and hoping for better results. Skinfluence takes a different approach. It begins with evaluation, includes provider review, and turns anti-aging care into a more focused monthly routine built for consistency.</p>",
+        "image_position": "right",
+        "cta_label": "Start Evaluation",
+        "cta_url": "/pages/how-it-works"
+      }
+    },
+    "who_its_for": {
+      "type": "who-its-for",
+      "blocks": {
+        "fit_1": {
+          "type": "item",
+          "settings": {
+            "label": "Want stronger anti-aging support than standard skincare"
+          }
+        },
+        "fit_2": {
+          "type": "item",
+          "settings": {
+            "label": "Prefer a simpler routine over product stacking"
+          }
+        },
+        "fit_3": {
+          "type": "item",
+          "settings": {
+            "label": "Are ready for a more guided approach"
+          }
+        },
+        "fit_4": {
+          "type": "item",
+          "settings": {
+            "label": "Value visible progress over trend-driven skincare shopping"
+          }
+        }
+      },
+      "block_order": [
+        "fit_1",
+        "fit_2",
+        "fit_3",
+        "fit_4"
+      ],
+      "settings": {
+        "headline": "Who it’s for"
+      }
+    },
+    "whats_included": {
+      "type": "benefit-grid",
+      "blocks": {
+        "item_1": {
+          "type": "benefit",
+          "settings": {
+            "label": "Initial online evaluation"
+          }
+        },
+        "item_2": {
+          "type": "benefit",
+          "settings": {
+            "label": "Provider review"
+          }
+        },
+        "item_3": {
+          "type": "benefit",
+          "settings": {
+            "label": "Monthly treatment if approved"
+          }
+        },
+        "item_4": {
+          "type": "benefit",
+          "settings": {
+            "label": "Ongoing maintenance support"
+          }
+        },
+        "item_5": {
+          "type": "benefit",
+          "settings": {
+            "label": "Refill continuity through subscription"
+          }
+        }
+      },
+      "block_order": [
+        "item_1",
+        "item_2",
+        "item_3",
+        "item_4",
+        "item_5"
+      ],
+      "settings": {
+        "headline": "What’s included"
+      }
+    },
+    "what_to_expect": {
+      "type": "rich-text-skinfluence",
+      "settings": {
+        "headline": "What to expect",
+        "body": "<p>This is not overnight skincare. Anti-aging treatment works best when it is consistent, realistic, and easy to stay with. Some users may experience an adjustment period before settling into their routine. The goal is gradual, visible improvement in skin quality over time.</p>"
+      }
+    },
+    "safety": {
+      "type": "rich-text-skinfluence",
+      "settings": {
+        "headline": "Safety and side effects",
+        "body": "<p>Prescription-led skincare should come with clear expectations. Common adjustment effects may include dryness, sensitivity, peeling, or irritation. That is why provider review, instructions, and ongoing support are part of the experience.</p><p>Treatment is not appropriate for everyone, and eligibility is determined through the evaluation process.</p>"
+      }
+    },
+    "final_cta": {
+      "type": "cta-banner-skinfluence",
+      "settings": {
+        "headline": "See if Skinfluence is right for your skin.",
+        "subhead": "Start with evaluation, then move into monthly care if approved.",
+        "cta_label": "Start Evaluation",
+        "cta_url": "/pages/how-it-works"
+      }
+    }
+  },
+  "order": [
+    "hero",
+    "what_it_helps",
+    "why_different",
+    "who_its_for",
+    "whats_included",
+    "what_to_expect",
+    "safety",
+    "final_cta"
+  ]
+}

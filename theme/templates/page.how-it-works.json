@@ -1,0 +1,96 @@
+{
+  "sections": {
+    "hero": {
+      "type": "hero-skinfluence",
+      "settings": {
+        "eyebrow": "Evaluation-first care",
+        "headline": "A simpler way to start prescription-led anti-aging care.",
+        "subhead": "From evaluation to provider review to monthly maintenance, Skinfluence is designed to feel clear, premium, and easy to follow.",
+        "primary_cta_label": "Start Evaluation",
+        "primary_cta_url": "/pages/how-it-works",
+        "secondary_cta_label": "Pricing",
+        "secondary_cta_url": "/pages/pricing"
+      }
+    },
+    "steps": {
+      "type": "how-it-works-steps",
+      "blocks": {
+        "step_1": {
+          "type": "step",
+          "settings": {
+            "title": "Complete your evaluation",
+            "body": "Answer a few questions about your skin, goals, history, and routine so a licensed provider can assess whether treatment may be appropriate."
+          }
+        },
+        "step_2": {
+          "type": "step",
+          "settings": {
+            "title": "Receive provider review",
+            "body": "Your evaluation is reviewed by a licensed provider. In some cases, additional information may be needed before a final decision is made."
+          }
+        },
+        "step_3": {
+          "type": "step",
+          "settings": {
+            "title": "Begin monthly care if approved",
+            "body": "If approved, you’ll move into a monthly treatment model designed for consistency, maintenance, and ease."
+          }
+        }
+      },
+      "block_order": [
+        "step_1",
+        "step_2",
+        "step_3"
+      ],
+      "settings": {
+        "headline": "How it works"
+      }
+    },
+    "evaluation_details": {
+      "type": "rich-text-skinfluence",
+      "settings": {
+        "headline": "What the evaluation includes",
+        "body": "<p>The evaluation process is designed to understand your anti-aging goals, relevant skin history, your current routine, tolerance and sensitivity considerations, and factors that may affect treatment fit.</p>"
+      }
+    },
+    "possible_outcomes": {
+      "type": "rich-text-skinfluence",
+      "settings": {
+        "headline": "Possible outcomes",
+        "body": "<p>After review, your status may be approved, more information needed, or not eligible. The process should feel clear and predictable, not uncertain.</p>"
+      }
+    },
+    "after_approval": {
+      "type": "rich-text-skinfluence",
+      "settings": {
+        "headline": "What happens after approval",
+        "body": "<p>Approved users receive a treatment plan, instructions for use, a recurring monthly supply model, and ongoing support with refill continuity.</p>"
+      }
+    },
+    "support": {
+      "type": "rich-text-skinfluence",
+      "settings": {
+        "headline": "Ongoing support",
+        "body": "<p>Support should not stop at approval. Skinfluence should help users understand how to begin, what normal adjustment may look like, and when to reach out with questions.</p>"
+      }
+    },
+    "final_cta": {
+      "type": "cta-banner-skinfluence",
+      "settings": {
+        "headline": "Start your evaluation today.",
+        "subhead": "Provider-reviewed anti-aging care designed to feel clear and simple from the start.",
+        "cta_label": "Start Evaluation",
+        "cta_url": "/pages/how-it-works"
+      }
+    }
+  },
+  "order": [
+    "hero",
+    "steps",
+    "evaluation_details",
+    "possible_outcomes",
+    "after_approval",
+    "support",
+    "final_cta"
+  ]
+}

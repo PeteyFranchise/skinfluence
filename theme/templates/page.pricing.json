@@ -1,0 +1,115 @@
+{
+  "sections": {
+    "hero": {
+      "type": "hero-skinfluence",
+      "settings": {
+        "eyebrow": "Pricing with clarity",
+        "headline": "Premium anti-aging care, priced with clarity.",
+        "subhead": "Start with a one-time evaluation, then move into monthly treatment if approved.",
+        "primary_cta_label": "Start Evaluation",
+        "primary_cta_url": "/pages/how-it-works",
+        "secondary_cta_label": "Treatment",
+        "secondary_cta_url": "/pages/treatment"
+      }
+    },
+    "price_today": {
+      "type": "rich-text-skinfluence",
+      "settings": {
+        "headline": "What you pay today",
+        "body": "<p>Begin with a one-time evaluation fee. This covers review of your skin history, goals, and submitted information by a licensed provider.</p>"
+      }
+    },
+    "price_if_approved": {
+      "type": "rich-text-skinfluence",
+      "settings": {
+        "headline": "What you pay if approved",
+        "body": "<p>If approved, you’ll move into a monthly subscription for treatment. This recurring model is designed to support consistency, maintenance, and a simpler long-term routine.</p>"
+      }
+    },
+    "whats_included": {
+      "type": "benefit-grid",
+      "blocks": {
+        "item_1": {
+          "type": "benefit",
+          "settings": {
+            "label": "Initial evaluation"
+          }
+        },
+        "item_2": {
+          "type": "benefit",
+          "settings": {
+            "label": "Provider review"
+          }
+        },
+        "item_3": {
+          "type": "benefit",
+          "settings": {
+            "label": "Monthly treatment if approved"
+          }
+        },
+        "item_4": {
+          "type": "benefit",
+          "settings": {
+            "label": "Ongoing maintenance support"
+          }
+        },
+        "item_5": {
+          "type": "benefit",
+          "settings": {
+            "label": "Subscription continuity for refills"
+          }
+        }
+      },
+      "block_order": [
+        "item_1",
+        "item_2",
+        "item_3",
+        "item_4",
+        "item_5"
+      ],
+      "settings": {
+        "headline": "What’s included"
+      }
+    },
+    "why_premium": {
+      "type": "rich-text-skinfluence",
+      "settings": {
+        "headline": "Why this is priced differently than generic tretinoin",
+        "body": "<p>Skinfluence is not positioned as the cheapest online prescription option. It is positioned as premium anti-aging care with provider review, a more elevated treatment experience, and a routine designed for consistency rather than commodity shopping.</p>"
+      }
+    },
+    "not_eligible": {
+      "type": "rich-text-skinfluence",
+      "settings": {
+        "headline": "What if I’m not eligible?",
+        "body": "<p>Not every user will be a fit for treatment. If a provider determines treatment is not appropriate, Skinfluence will communicate that clearly and explain any next steps that may be available.</p>"
+      }
+    },
+    "subscription_details": {
+      "type": "rich-text-skinfluence",
+      "settings": {
+        "headline": "Subscription details",
+        "body": "<p>Your subscription is designed as a monthly maintenance model. Pricing and account policies should clearly explain when billing occurs, how recurring shipments work, whether pause or skip is available, how cancellation works, and where account settings can be managed.</p>"
+      }
+    },
+    "final_cta": {
+      "type": "cta-banner-skinfluence",
+      "settings": {
+        "headline": "Start with evaluation, then move into treatment if approved.",
+        "subhead": "A simpler monthly model for provider-reviewed anti-aging care.",
+        "cta_label": "Start Evaluation",
+        "cta_url": "/pages/how-it-works"
+      }
+    }
+  },
+  "order": [
+    "hero",
+    "price_today",
+    "price_if_approved",
+    "whats_included",
+    "why_premium",
+    "not_eligible",
+    "subscription_details",
+    "final_cta"
+  ]
+}
