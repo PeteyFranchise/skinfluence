@@ -1,0 +1,11 @@
+.DS_Store
+Thumbs.db
+
+# Office temp files
+~$*.docx
+~$*.xlsx
+~$*.pptx
+
+# Editor / OS noise
+.idea/
+.vscode/
