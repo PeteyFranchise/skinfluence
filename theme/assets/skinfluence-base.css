@@ -3,8 +3,10 @@
   --sf-color-muted: #5f676d;
   --sf-color-accent: #2d556e;
   --sf-color-accent-soft: #e6eef3;
+  --sf-color-accent-deep: #1f4256;
   --sf-color-bg: #f5f1eb;
   --sf-color-surface: #fffdfa;
+  --sf-color-surface-strong: #fffaf4;
   --sf-color-border: #ddd5ca;
   --sf-color-button: #24475d;
   --sf-color-button-text: #ffffff;
@@ -34,7 +36,9 @@ html {
 body.skinfluence-theme {
   margin: 0;
   color: var(--sf-color-ink);
-  background: var(--sf-color-bg);
+  background:
+    radial-gradient(circle at top left, rgba(230, 238, 243, 0.72), transparent 28%),
+    linear-gradient(180deg, #f8f4ee 0%, var(--sf-color-bg) 42%, #f2ede5 100%);
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   line-height: 1.5;
 }
@@ -111,6 +115,12 @@ a {
 .skinfluence-site-footer__link {
   text-decoration: none;
   color: var(--sf-color-ink);
+  transition: color 120ms ease, opacity 120ms ease;
+}
+
+.skinfluence-site-header__link:hover,
+.skinfluence-site-footer__link:hover {
+  color: var(--sf-color-accent-deep);
 }
 
 .skinfluence-site-header__actions {
@@ -121,7 +131,7 @@ a {
 .skinfluence-site-footer {
   margin-top: var(--sf-space-7);
   border-top: 1px solid var(--sf-color-border);
-  background: var(--sf-color-surface);
+  background: linear-gradient(180deg, rgba(255, 253, 250, 0.94), var(--sf-color-surface-strong));
 }
 
 .skinfluence-site-footer__copy {
@@ -139,6 +149,7 @@ a {
   padding: var(--sf-space-3);
   background: rgba(245, 241, 235, 0.96);
   border-top: 1px solid var(--sf-color-border);
+  box-shadow: 0 -16px 40px rgba(31, 37, 41, 0.08);
 }
 
 .skinfluence-sticky-mobile-cta__button {
@@ -147,6 +158,25 @@ a {
 
 .skinfluence-section {
   padding: var(--sf-space-7) 0;
+}
+
+.skinfluence-section:nth-of-type(even):not(.skinfluence-hero):not(.skinfluence-cta-banner) {
+  position: relative;
+}
+
+.skinfluence-section:nth-of-type(even):not(.skinfluence-hero):not(.skinfluence-cta-banner)::before {
+  content: "";
+  position: absolute;
+  inset: var(--sf-space-3) 0;
+  background: rgba(255, 253, 250, 0.55);
+  border-top: 1px solid rgba(221, 213, 202, 0.55);
+  border-bottom: 1px solid rgba(221, 213, 202, 0.55);
+  pointer-events: none;
+}
+
+.skinfluence-section > .page-width {
+  position: relative;
+  z-index: 1;
 }
 
 .skinfluence-section__headline,
@@ -185,6 +215,26 @@ a {
   max-width: 65ch;
 }
 
+.skinfluence-hero {
+  padding-top: calc(var(--sf-space-7) + var(--sf-space-2));
+}
+
+.skinfluence-hero .page-width {
+  position: relative;
+}
+
+.skinfluence-hero .page-width::after {
+  content: "";
+  position: absolute;
+  top: -1rem;
+  right: 0;
+  width: min(36vw, 320px);
+  height: min(36vw, 320px);
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(45, 85, 110, 0.1), transparent 68%);
+  pointer-events: none;
+}
+
 .skinfluence-hero__actions,
 .skinfluence-side-by-side__content .button {
   display: flex;
@@ -204,6 +254,7 @@ a {
   text-decoration: none;
   font-weight: 600;
   transition: transform 120ms ease, opacity 120ms ease, background 120ms ease;
+  box-shadow: 0 1px 0 rgba(31, 37, 41, 0.05);
 }
 
 .button:hover {
@@ -218,6 +269,7 @@ a {
 .button--secondary {
   background: var(--sf-color-button-secondary);
   color: var(--sf-color-button-secondary-text);
+  border-color: rgba(36, 71, 93, 0.24);
 }
 
 .skinfluence-trust-strip__items,
@@ -248,6 +300,7 @@ a {
   background: var(--sf-color-surface);
   border: 1px solid var(--sf-color-border);
   border-radius: var(--sf-radius);
+  box-shadow: 0 18px 45px rgba(31, 37, 41, 0.045);
 }
 
 .skinfluence-trust-strip__item,
@@ -258,6 +311,14 @@ a {
   padding: var(--sf-space-4);
 }
 
+.skinfluence-trust-strip__item,
+.skinfluence-benefit-grid__item,
+.skinfluence-who-its-for__item {
+  display: flex;
+  align-items: center;
+  min-height: 100%;
+}
+
 .skinfluence-side-by-side__grid {
   display: grid;
   gap: var(--sf-space-5);
@@ -266,6 +327,7 @@ a {
 
 .skinfluence-side-by-side__image {
   border-radius: calc(var(--sf-radius) + 6px);
+  box-shadow: 0 24px 60px rgba(31, 37, 41, 0.08);
 }
 
 .skinfluence-side-by-side__placeholder {
@@ -273,6 +335,9 @@ a {
   display: grid;
   place-items: center;
   color: var(--sf-color-muted);
+  background:
+    linear-gradient(135deg, rgba(230, 238, 243, 0.75), rgba(255, 250, 244, 0.8)),
+    var(--sf-color-surface);
 }
 
 .skinfluence-steps__title,
@@ -284,6 +349,7 @@ a {
 
 .skinfluence-faq__item {
   padding: var(--sf-space-3) var(--sf-space-4);
+  background: rgba(255, 253, 250, 0.9);
 }
 
 .skinfluence-faq__item + .skinfluence-faq__item {
@@ -306,6 +372,12 @@ a {
 .skinfluence-cta-banner__inner {
   padding: var(--sf-space-6);
   text-align: center;
+  background:
+    linear-gradient(135deg, rgba(230, 238, 243, 0.92), rgba(255, 250, 244, 0.94));
+}
+
+.skinfluence-cta-banner .skinfluence-section__headline {
+  margin-inline: auto;
 }
 
 .visually-hidden {
