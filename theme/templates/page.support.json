@@ -1,0 +1,119 @@
+{
+  "sections": {
+    "hero": {
+      "type": "hero-skinfluence",
+      "settings": {
+        "eyebrow": "Support",
+        "headline": "Help, with a clear path forward.",
+        "subhead": "Find support for billing, shipping, general questions, and treatment-related guidance in the right place.",
+        "primary_cta_label": "Start Evaluation",
+        "primary_cta_url": "/pages/how-it-works",
+        "secondary_cta_label": "View FAQs",
+        "secondary_cta_url": "/pages/faq"
+      }
+    },
+    "how_to_get_help": {
+      "type": "rich-text-skinfluence",
+      "settings": {
+        "headline": "How to get help",
+        "body": "<p>Skinfluence support is designed to help with subscription questions, order issues, and general guidance. If you have treatment-related concerns, you should be directed to the appropriate care pathway rather than a generic support inbox.</p>"
+      }
+    },
+    "support_categories": {
+      "type": "benefit-grid",
+      "blocks": {
+        "item_1": {
+          "type": "benefit",
+          "settings": {
+            "label": "Billing and subscription support"
+          }
+        },
+        "item_2": {
+          "type": "benefit",
+          "settings": {
+            "label": "Shipping and order updates"
+          }
+        },
+        "item_3": {
+          "type": "benefit",
+          "settings": {
+            "label": "General product and account questions"
+          }
+        },
+        "item_4": {
+          "type": "benefit",
+          "settings": {
+            "label": "Treatment-related guidance through the right care path"
+          }
+        }
+      },
+      "block_order": [
+        "item_1",
+        "item_2",
+        "item_3",
+        "item_4"
+      ],
+      "settings": {
+        "headline": "Support categories"
+      }
+    },
+    "support_entry": {
+      "type": "rich-text-skinfluence",
+      "settings": {
+        "headline": "Need help now?",
+        "body": "<p>Use the appropriate support contact method for billing, shipping, account access, or general questions. Avoid sharing detailed medical information in a generic contact form unless the workflow explicitly supports it.</p>"
+      }
+    },
+    "support_faq": {
+      "type": "faq-accordion-skinfluence",
+      "blocks": {
+        "faq_1": {
+          "type": "item",
+          "settings": {
+            "question": "How do I get help with my order?",
+            "answer": "<p>Use the support path provided for subscription, billing, and shipping questions.</p>"
+          }
+        },
+        "faq_2": {
+          "type": "item",
+          "settings": {
+            "question": "What if I have a question about treatment use?",
+            "answer": "<p>Treatment-related questions should be routed through the appropriate care support pathway.</p>"
+          }
+        },
+        "faq_3": {
+          "type": "item",
+          "settings": {
+            "question": "What information should I include when I contact support?",
+            "answer": "<p>Provide enough detail to identify your issue clearly, but avoid sharing sensitive medical information in a generic support channel unless specifically requested.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "faq_1",
+        "faq_2",
+        "faq_3"
+      ],
+      "settings": {
+        "headline": "Support FAQ"
+      }
+    },
+    "final_cta": {
+      "type": "cta-banner-skinfluence",
+      "settings": {
+        "headline": "Still exploring Skinfluence?",
+        "subhead": "Learn how the evaluation-first experience works before you begin.",
+        "cta_label": "How It Works",
+        "cta_url": "/pages/how-it-works"
+      }
+    }
+  },
+  "order": [
+    "hero",
+    "how_to_get_help",
+    "support_categories",
+    "support_entry",
+    "support_faq",
+    "final_cta"
+  ]
+}

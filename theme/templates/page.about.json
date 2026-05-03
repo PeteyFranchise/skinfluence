@@ -1,0 +1,95 @@
+{
+  "sections": {
+    "hero": {
+      "type": "hero-skinfluence",
+      "settings": {
+        "eyebrow": "Why Skinfluence exists",
+        "headline": "A more serious approach to anti-aging care.",
+        "subhead": "Skinfluence is built for women who want stronger anti-aging support, clearer guidance, and a more elevated experience than standard skincare shopping.",
+        "primary_cta_label": "Start Evaluation",
+        "primary_cta_url": "/pages/how-it-works",
+        "secondary_cta_label": "Treatment",
+        "secondary_cta_url": "/pages/treatment"
+      }
+    },
+    "mission": {
+      "type": "rich-text-skinfluence",
+      "settings": {
+        "headline": "Brand mission",
+        "body": "<p>Skinfluence exists to create a premium, clinically guided anti-aging path for women who have outgrown ordinary skincare and want something more focused, more consistent, and easier to trust.</p>"
+      }
+    },
+    "why_exists": {
+      "type": "side-by-side-content",
+      "settings": {
+        "headline": "Why Skinfluence exists",
+        "body": "<p>Many women spend heavily on skincare and still feel like their routine has plateaued. Skinfluence is designed for that moment when the next step should feel more advanced, more guided, and less fragmented.</p>",
+        "image_position": "right",
+        "cta_label": "How It Works",
+        "cta_url": "/pages/how-it-works"
+      }
+    },
+    "care_philosophy": {
+      "type": "rich-text-skinfluence",
+      "settings": {
+        "headline": "Provider review philosophy",
+        "body": "<p>Skinfluence is built around provider review, realistic expectations, and a monthly treatment model designed for consistency. The goal is visible improvement over time through a more considered anti-aging experience.</p>"
+      }
+    },
+    "trust_strip": {
+      "type": "trust-strip",
+      "blocks": {
+        "item_1": {
+          "type": "item",
+          "settings": {
+            "label": "Provider-reviewed care"
+          }
+        },
+        "item_2": {
+          "type": "item",
+          "settings": {
+            "label": "Premium monthly treatment"
+          }
+        },
+        "item_3": {
+          "type": "item",
+          "settings": {
+            "label": "Delivered to your door"
+          }
+        },
+        "item_4": {
+          "type": "item",
+          "settings": {
+            "label": "Ongoing maintenance support"
+          }
+        }
+      },
+      "block_order": [
+        "item_1",
+        "item_2",
+        "item_3",
+        "item_4"
+      ],
+      "settings": {
+        "headline": "What defines Skinfluence"
+      }
+    },
+    "final_cta": {
+      "type": "cta-banner-skinfluence",
+      "settings": {
+        "headline": "A more advanced anti-aging routine starts here.",
+        "subhead": "Start with evaluation, then move into monthly care if approved.",
+        "cta_label": "Start Evaluation",
+        "cta_url": "/pages/how-it-works"
+      }
+    }
+  },
+  "order": [
+    "hero",
+    "mission",
+    "why_exists",
+    "care_philosophy",
+    "trust_strip",
+    "final_cta"
+  ]
+}

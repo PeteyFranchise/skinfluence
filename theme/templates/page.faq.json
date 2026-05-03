@@ -1,0 +1,204 @@
+{
+  "sections": {
+    "hero": {
+      "type": "hero-skinfluence",
+      "settings": {
+        "eyebrow": "Clear answers",
+        "headline": "Questions, answered clearly.",
+        "subhead": "Everything you need to know about fit, provider review, treatment expectations, pricing, and subscription details.",
+        "primary_cta_label": "Start Evaluation",
+        "primary_cta_url": "/pages/how-it-works",
+        "secondary_cta_label": "Pricing",
+        "secondary_cta_url": "/pages/pricing"
+      }
+    },
+    "fit_faq": {
+      "type": "faq-accordion-skinfluence",
+      "blocks": {
+        "faq_1": {
+          "type": "item",
+          "settings": {
+            "question": "Who is Skinfluence for?",
+            "answer": "<p>Skinfluence is designed for women who want a more advanced anti-aging routine than standard over-the-counter skincare, especially those focused on texture, tone, fine lines, and overall skin quality.</p>"
+          }
+        },
+        "faq_2": {
+          "type": "item",
+          "settings": {
+            "question": "How is this different from regular skincare?",
+            "answer": "<p>Skinfluence is built around provider-reviewed prescription-led care rather than a self-directed retail skincare routine.</p>"
+          }
+        },
+        "faq_3": {
+          "type": "item",
+          "settings": {
+            "question": "Will everyone be approved?",
+            "answer": "<p>No. Treatment is not appropriate for everyone. Approval depends on provider review of the information submitted during evaluation.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "faq_1",
+        "faq_2",
+        "faq_3"
+      ],
+      "settings": {
+        "headline": "Fit and eligibility"
+      }
+    },
+    "review_faq": {
+      "type": "faq-accordion-skinfluence",
+      "blocks": {
+        "faq_1": {
+          "type": "item",
+          "settings": {
+            "question": "What happens during the evaluation?",
+            "answer": "<p>You’ll answer questions about your skin, goals, and history so a licensed provider can assess whether treatment may be appropriate.</p>"
+          }
+        },
+        "faq_2": {
+          "type": "item",
+          "settings": {
+            "question": "How long does review take?",
+            "answer": "<p>The site should give a clear expected review window and explain that some cases may require follow-up.</p>"
+          }
+        },
+        "faq_3": {
+          "type": "item",
+          "settings": {
+            "question": "What if more information is needed?",
+            "answer": "<p>If needed, Skinfluence may request additional information before a provider makes a final decision.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "faq_1",
+        "faq_2",
+        "faq_3"
+      ],
+      "settings": {
+        "headline": "Evaluation and provider review"
+      }
+    },
+    "expectations_faq": {
+      "type": "faq-accordion-skinfluence",
+      "blocks": {
+        "faq_1": {
+          "type": "item",
+          "settings": {
+            "question": "What is the treatment designed to improve?",
+            "answer": "<p>Skinfluence is designed to support improvement in texture, tone, fine lines, and overall skin quality.</p>"
+          }
+        },
+        "faq_2": {
+          "type": "item",
+          "settings": {
+            "question": "How long until I may see results?",
+            "answer": "<p>Anti-aging care takes time and consistency. Skinfluence is designed around realistic improvement over time.</p>"
+          }
+        },
+        "faq_3": {
+          "type": "item",
+          "settings": {
+            "question": "What side effects can happen?",
+            "answer": "<p>Some users may experience dryness, peeling, irritation, or sensitivity as they adjust.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "faq_1",
+        "faq_2",
+        "faq_3"
+      ],
+      "settings": {
+        "headline": "Treatment and expectations"
+      }
+    },
+    "pricing_faq": {
+      "type": "faq-accordion-skinfluence",
+      "blocks": {
+        "faq_1": {
+          "type": "item",
+          "settings": {
+            "question": "Why is there an evaluation fee?",
+            "answer": "<p>The evaluation fee covers provider review of your submitted information.</p>"
+          }
+        },
+        "faq_2": {
+          "type": "item",
+          "settings": {
+            "question": "Is this a subscription?",
+            "answer": "<p>Yes. If approved, treatment is designed as a recurring monthly maintenance model.</p>"
+          }
+        },
+        "faq_3": {
+          "type": "item",
+          "settings": {
+            "question": "Can I cancel or pause?",
+            "answer": "<p>Your subscription terms should explain exactly how cancellation, pause, or skip options work.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "faq_1",
+        "faq_2",
+        "faq_3"
+      ],
+      "settings": {
+        "headline": "Pricing and subscription"
+      }
+    },
+    "support_faq": {
+      "type": "faq-accordion-skinfluence",
+      "blocks": {
+        "faq_1": {
+          "type": "item",
+          "settings": {
+            "question": "How is treatment delivered?",
+            "answer": "<p>If approved, your monthly treatment is shipped to your door.</p>"
+          }
+        },
+        "faq_2": {
+          "type": "item",
+          "settings": {
+            "question": "How do I get help?",
+            "answer": "<p>Users should have a clear support path for subscription, order, and general treatment questions.</p>"
+          }
+        },
+        "faq_3": {
+          "type": "item",
+          "settings": {
+            "question": "When should I reach out about irritation or concerns?",
+            "answer": "<p>Skinfluence should clearly direct users to the appropriate support or care pathway if they have treatment concerns.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "faq_1",
+        "faq_2",
+        "faq_3"
+      ],
+      "settings": {
+        "headline": "Shipping and support"
+      }
+    },
+    "final_cta": {
+      "type": "cta-banner-skinfluence",
+      "settings": {
+        "headline": "Still deciding?",
+        "subhead": "Start with evaluation when you’re ready for a more guided anti-aging routine.",
+        "cta_label": "Start Evaluation",
+        "cta_url": "/pages/how-it-works"
+      }
+    }
+  },
+  "order": [
+    "hero",
+    "fit_faq",
+    "review_faq",
+    "expectations_faq",
+    "pricing_faq",
+    "support_faq",
+    "final_cta"
+  ]
+}
