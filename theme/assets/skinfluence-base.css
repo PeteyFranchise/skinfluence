@@ -54,6 +54,97 @@ a {
   margin-inline: auto;
 }
 
+.list-unstyled {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.skinfluence-announcement-bar {
+  border-bottom: 1px solid var(--sf-color-border);
+  background: var(--sf-color-accent-soft);
+}
+
+.skinfluence-announcement-bar__text {
+  margin: 0;
+  padding: 0.75rem 0;
+  text-align: center;
+  color: var(--sf-color-muted);
+  font-size: 0.92rem;
+}
+
+.skinfluence-site-header {
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  background: rgba(245, 241, 235, 0.92);
+  backdrop-filter: blur(14px);
+  border-bottom: 1px solid var(--sf-color-border);
+}
+
+.skinfluence-site-header__inner,
+.skinfluence-site-footer__inner {
+  display: grid;
+  gap: var(--sf-space-3);
+  align-items: center;
+  padding: var(--sf-space-3) 0;
+}
+
+.skinfluence-site-header__brand,
+.skinfluence-site-footer__brand {
+  color: var(--sf-color-accent);
+  text-decoration: none;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  font-size: 0.95rem;
+}
+
+.skinfluence-site-header__menu,
+.skinfluence-site-footer__menu {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--sf-space-3);
+}
+
+.skinfluence-site-header__link,
+.skinfluence-site-footer__link {
+  text-decoration: none;
+  color: var(--sf-color-ink);
+}
+
+.skinfluence-site-header__actions {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.skinfluence-site-footer {
+  margin-top: var(--sf-space-7);
+  border-top: 1px solid var(--sf-color-border);
+  background: var(--sf-color-surface);
+}
+
+.skinfluence-site-footer__copy {
+  max-width: 32ch;
+  margin: var(--sf-space-2) 0 0;
+  color: var(--sf-color-muted);
+}
+
+.skinfluence-sticky-mobile-cta {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 30;
+  padding: var(--sf-space-3);
+  background: rgba(245, 241, 235, 0.96);
+  border-top: 1px solid var(--sf-color-border);
+}
+
+.skinfluence-sticky-mobile-cta__button {
+  width: 100%;
+}
+
 .skinfluence-section {
   padding: var(--sf-space-7) 0;
 }
@@ -230,11 +321,32 @@ a {
 }
 
 @media screen and (min-width: 768px) {
+  .skinfluence-site-header__inner {
+    grid-template-columns: auto 1fr auto;
+  }
+
+  .skinfluence-site-header__nav {
+    justify-self: center;
+  }
+
+  .skinfluence-site-header__actions {
+    justify-content: flex-end;
+  }
+
+  .skinfluence-site-footer__inner {
+    grid-template-columns: minmax(0, 1.3fr) 1fr 1fr;
+    align-items: start;
+  }
+
   .skinfluence-side-by-side__grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
   .skinfluence-side-by-side--left .skinfluence-side-by-side__media {
     order: -1;
+  }
+
+  .skinfluence-sticky-mobile-cta {
+    display: none;
   }
 }

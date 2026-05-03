@@ -1,0 +1,58 @@
+<footer class="skinfluence-site-footer">
+  <div class="page-width skinfluence-site-footer__inner">
+    <div class="skinfluence-site-footer__brand-block">
+      <p class="skinfluence-site-footer__brand">{{ shop.name }}</p>
+      <p class="skinfluence-site-footer__copy">
+        Premium clinical skincare designed around provider-reviewed anti-aging care.
+      </p>
+    </div>
+
+    {% assign footer_menu = linklists[section.settings.footer_menu] %}
+    {% if footer_menu != blank %}
+      <nav class="skinfluence-site-footer__nav" aria-label="Footer">
+        <ul class="skinfluence-site-footer__menu list-unstyled" role="list">
+          {% for link in footer_menu.links %}
+            <li class="skinfluence-site-footer__menu-item">
+              <a href="{{ link.url }}" class="skinfluence-site-footer__link">
+                {{ link.title }}
+              </a>
+            </li>
+          {% endfor %}
+        </ul>
+      </nav>
+    {% endif %}
+
+    {% assign legal_menu = linklists[section.settings.legal_menu] %}
+    {% if legal_menu != blank %}
+      <nav class="skinfluence-site-footer__nav skinfluence-site-footer__nav--legal" aria-label="Legal">
+        <ul class="skinfluence-site-footer__menu list-unstyled" role="list">
+          {% for link in legal_menu.links %}
+            <li class="skinfluence-site-footer__menu-item">
+              <a href="{{ link.url }}" class="skinfluence-site-footer__link">
+                {{ link.title }}
+              </a>
+            </li>
+          {% endfor %}
+        </ul>
+      </nav>
+    {% endif %}
+  </div>
+</footer>
+
+{% schema %}
+{
+  "name": "Footer",
+  "settings": [
+    {
+      "type": "link_list",
+      "id": "footer_menu",
+      "label": "Footer menu"
+    },
+    {
+      "type": "link_list",
+      "id": "legal_menu",
+      "label": "Legal menu"
+    }
+  ]
+}
+{% endschema %}

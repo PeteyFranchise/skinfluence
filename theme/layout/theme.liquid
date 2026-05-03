@@ -30,8 +30,12 @@
   <body class="skinfluence-theme">
     <a class="skip-to-content-link visually-hidden" href="#MainContent">Skip to content</a>
 
+    {% sections 'header-group' %}
+
     <main id="MainContent" class="content-for-layout" role="main" tabindex="-1">
       {{ content_for_layout }}
     </main>
+
+    {% sections 'footer-group' %}
   </body>
 </html>

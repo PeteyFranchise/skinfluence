@@ -1,0 +1,32 @@
+{
+  "type": "header",
+  "name": "Header group",
+  "sections": {
+    "announcement_bar": {
+      "type": "announcement-bar",
+      "settings": {
+        "text": ""
+      }
+    },
+    "header": {
+      "type": "header",
+      "settings": {
+        "menu": "main-menu",
+        "cta_label": "Start Evaluation",
+        "cta_url": "/pages/how-it-works"
+      }
+    },
+    "sticky_mobile_cta": {
+      "type": "sticky-mobile-cta",
+      "settings": {
+        "cta_label": "Start Evaluation",
+        "cta_url": "/pages/how-it-works"
+      }
+    }
+  },
+  "order": [
+    "announcement_bar",
+    "header",
+    "sticky_mobile_cta"
+  ]
+}
