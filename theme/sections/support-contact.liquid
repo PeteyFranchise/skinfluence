@@ -1,0 +1,102 @@
+<section class="skinfluence-section skinfluence-support-contact">
+  <div class="page-width">
+    <div class="skinfluence-support-contact__grid">
+      <div class="skinfluence-support-contact__content">
+        {% if section.settings.headline != blank %}
+          <h2 class="skinfluence-section__headline">{{ section.settings.headline }}</h2>
+        {% endif %}
+
+        {% if section.settings.body != blank %}
+          <div class="skinfluence-support-contact__body rte">{{ section.settings.body }}</div>
+        {% endif %}
+
+        {% if section.settings.email_label != blank and section.settings.email_address != blank %}
+          <p class="skinfluence-support-contact__detail">
+            <strong>{{ section.settings.email_label }}:</strong>
+            <a href="mailto:{{ section.settings.email_address }}">{{ section.settings.email_address }}</a>
+          </p>
+        {% endif %}
+
+        {% if section.settings.support_note != blank %}
+          <p class="skinfluence-support-contact__note">{{ section.settings.support_note }}</p>
+        {% endif %}
+      </div>
+
+      <div class="skinfluence-support-contact__card">
+        {% form 'contact', class: 'skinfluence-contact-form' %}
+          {% if form.posted_successfully? %}
+            <div class="skinfluence-contact-form__success" tabindex="-1" autofocus>
+              Thanks. Your message has been received.
+            </div>
+          {% endif %}
+
+          {% if form.errors %}
+            <div class="skinfluence-contact-form__errors">
+              Please review the highlighted fields and try again.
+            </div>
+          {% endif %}
+
+          <div class="skinfluence-contact-form__field">
+            <label for="ContactFormName-{{ section.id }}">Name</label>
+            <input
+              id="ContactFormName-{{ section.id }}"
+              type="text"
+              name="contact[name]"
+              value="{{ form.name | escape }}"
+              autocomplete="name"
+            >
+          </div>
+
+          <div class="skinfluence-contact-form__field">
+            <label for="ContactFormEmail-{{ section.id }}">Email</label>
+            <input
+              id="ContactFormEmail-{{ section.id }}"
+              type="email"
+              name="contact[email]"
+              value="{{ form.email | escape }}"
+              autocomplete="email"
+              spellcheck="false"
+              autocapitalize="off"
+              required
+            >
+          </div>
+
+          <div class="skinfluence-contact-form__field">
+            <label for="ContactFormMessage-{{ section.id }}">How can we help?</label>
+            <textarea
+              rows="6"
+              id="ContactFormMessage-{{ section.id }}"
+              name="contact[body]"
+            >{{ form.body | escape }}</textarea>
+          </div>
+
+          {% if section.settings.form_note != blank %}
+            <p class="skinfluence-contact-form__note">{{ section.settings.form_note }}</p>
+          {% endif %}
+
+          <button class="button button--primary" type="submit">
+            {{ section.settings.button_label | default: 'Contact Support' }}
+          </button>
+        {% endform %}
+      </div>
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Support Contact",
+  "settings": [
+    { "type": "text", "id": "headline", "label": "Headline", "default": "Need help now?" },
+    { "type": "richtext", "id": "body", "label": "Body" },
+    { "type": "text", "id": "email_label", "label": "Email label", "default": "Support email" },
+    { "type": "text", "id": "email_address", "label": "Email address" },
+    { "type": "text", "id": "support_note", "label": "Support note" },
+    { "type": "text", "id": "button_label", "label": "Button label", "default": "Contact Support" },
+    { "type": "text", "id": "form_note", "label": "Form note" }
+  ],
+  "presets": [
+    { "name": "Support Contact" }
+  ]
+}
+{% endschema %}

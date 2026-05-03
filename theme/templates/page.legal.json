@@ -1,0 +1,27 @@
+{
+  "sections": {
+    "hero": {
+      "type": "hero-skinfluence",
+      "settings": {
+        "eyebrow": "Policies and disclosures",
+        "headline": "Important information, clearly presented.",
+        "subhead": "Use this template for privacy, terms, subscription, telehealth, refund, and other legal or policy content that should remain readable and easy to maintain.",
+        "primary_cta_label": "Support",
+        "primary_cta_url": "/pages/support",
+        "secondary_cta_label": "FAQ",
+        "secondary_cta_url": "/pages/faq"
+      }
+    },
+    "legal_content": {
+      "type": "rich-text-skinfluence",
+      "settings": {
+        "headline": "Page content",
+        "body": "<p>Replace this placeholder with the approved legal or policy copy for this page.</p>"
+      }
+    }
+  },
+  "order": [
+    "hero",
+    "legal_content"
+  ]
+}

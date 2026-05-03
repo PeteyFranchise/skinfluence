@@ -58,10 +58,15 @@
       }
     },
     "support_entry": {
-      "type": "rich-text-skinfluence",
+      "type": "support-contact",
       "settings": {
         "headline": "Need help now?",
-        "body": "<p>Use the appropriate support contact method for billing, shipping, account access, or general questions. Avoid sharing detailed medical information in a generic contact form unless the workflow explicitly supports it.</p>"
+        "body": "<p>Use the appropriate support path for billing, shipping, account access, or general questions. Avoid sharing detailed medical information in a generic support form unless the workflow explicitly supports it.</p>",
+        "email_label": "Support email",
+        "email_address": "support@skinfluence.com",
+        "support_note": "For treatment-related concerns, use the appropriate care support pathway instead of a generic order-support request.",
+        "button_label": "Contact Support",
+        "form_note": "Please avoid sharing detailed medical information in this general support form."
       }
     },
     "support_faq": {

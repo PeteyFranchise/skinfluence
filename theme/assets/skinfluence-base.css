@@ -210,7 +210,8 @@ a {
 .skinfluence-side-by-side__body,
 .skinfluence-steps__body,
 .skinfluence-faq__answer,
-.skinfluence-cta-banner__subhead {
+.skinfluence-cta-banner__subhead,
+.skinfluence-support-contact__body {
   color: var(--sf-color-muted);
   max-width: 65ch;
 }
@@ -380,6 +381,71 @@ a {
   margin-inline: auto;
 }
 
+.skinfluence-support-contact__grid {
+  display: grid;
+  gap: var(--sf-space-5);
+}
+
+.skinfluence-support-contact__card {
+  background: var(--sf-color-surface);
+  border: 1px solid var(--sf-color-border);
+  border-radius: var(--sf-radius);
+  box-shadow: 0 18px 45px rgba(31, 37, 41, 0.045);
+  padding: var(--sf-space-5);
+}
+
+.skinfluence-support-contact__detail,
+.skinfluence-support-contact__note,
+.skinfluence-contact-form__note {
+  color: var(--sf-color-muted);
+}
+
+.skinfluence-contact-form {
+  display: grid;
+  gap: var(--sf-space-3);
+}
+
+.skinfluence-contact-form__field {
+  display: grid;
+  gap: 0.5rem;
+}
+
+.skinfluence-contact-form__field label {
+  font-weight: 600;
+  color: var(--sf-color-accent);
+}
+
+.skinfluence-contact-form__field input,
+.skinfluence-contact-form__field textarea {
+  width: 100%;
+  border: 1px solid var(--sf-color-border);
+  border-radius: 14px;
+  background: rgba(255, 253, 250, 0.92);
+  padding: 0.9rem 1rem;
+  font: inherit;
+  color: var(--sf-color-ink);
+}
+
+.skinfluence-contact-form__field textarea {
+  resize: vertical;
+}
+
+.skinfluence-contact-form__success,
+.skinfluence-contact-form__errors {
+  border-radius: 14px;
+  padding: var(--sf-space-3);
+}
+
+.skinfluence-contact-form__success {
+  background: rgba(230, 244, 234, 0.9);
+  border: 1px solid rgba(120, 166, 132, 0.45);
+}
+
+.skinfluence-contact-form__errors {
+  background: rgba(252, 233, 231, 0.9);
+  border: 1px solid rgba(188, 113, 113, 0.35);
+}
+
 .visually-hidden {
   position: absolute !important;
   width: 1px;
@@ -412,6 +478,11 @@ a {
 
   .skinfluence-side-by-side__grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .skinfluence-support-contact__grid {
+    grid-template-columns: minmax(0, 1fr) minmax(320px, 0.9fr);
+    align-items: start;
   }
 
   .skinfluence-side-by-side--left .skinfluence-side-by-side__media {
