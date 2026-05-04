@@ -1,6 +1,6 @@
 # Shopify Local Workflow
 
-This note is the starting point for the future local development and preview workflow for the Skinfluence theme.
+This note documents the current local development and preview workflow for the Skinfluence theme.
 
 ## Current state
 
@@ -12,11 +12,26 @@ The repo now contains real theme files under:
 - `theme/assets/`
 - `theme/config/`
 
-The repository is not yet wired to a specific Shopify store from within project documentation.
+The repository is now wired in practice to a specific Shopify development store and theme, even though production launch details are still pending.
 
 ## Goal
 
 Use a development-store workflow where theme changes can be previewed locally before being pushed or published.
+
+## Active Shopify environment
+
+Development preview store:
+
+- `skinfluence-3060.myshopify.com`
+
+Permanent store-auth domain:
+
+- `ygvwh0-4i.myshopify.com`
+
+Current development theme:
+
+- `Development (68b794-Peters-MacBook-Pro)`
+- theme id: `155740799134`
 
 ## Recommended workflow shape
 
@@ -33,14 +48,14 @@ Once Shopify CLI is installed and authenticated:
 
 ```bash
 cd /Users/peterzora/Desktop/Skinfluence/theme
-shopify theme dev
+shopify theme dev --store=skinfluence-3060.myshopify.com
 ```
 
 Additional commands that will likely matter later:
 
 ```bash
-shopify theme pull
-shopify theme push
+shopify theme pull --store=skinfluence-3060.myshopify.com --theme=155740799134
+shopify theme push --store=skinfluence-3060.myshopify.com --theme=155740799134 --nodelete
 shopify theme publish
 ```
 
@@ -48,22 +63,17 @@ shopify theme publish
 
 Confirm:
 
-- which Shopify store will be used for development
-- whether a separate development theme should be used
-- which team members need access
-- whether menu and page handles should be created manually or via admin content setup
-
-## Current limitation
-
-This workflow note is intentionally lightweight because the actual Shopify store and auth setup have not yet been documented inside the repo.
+- the correct store account is authenticated
+- the correct development theme id is targeted before pushing
+- which team members need store access
+- whether page handles and menus are being managed in admin or through a content checklist
 
 ## Recommended next step
 
-Once the real store exists, expand this file with:
+Continue expanding this file with:
 
 - Shopify CLI installation notes
 - login steps
-- store URL
+- exact production-store workflow once that exists
 - theme naming conventions
-- preview-theme naming rule
 - push and publish rule

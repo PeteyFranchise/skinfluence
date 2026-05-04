@@ -27,6 +27,7 @@ The current template scaffolds assume these page handles:
 - `/pages/faq`
 - `/pages/about`
 - `/pages/support`
+- `/pages/start-evaluation`
 
 For legal pages, the theme assumes separate pages will exist for:
 
@@ -47,9 +48,13 @@ The launch CTA system currently assumes:
 - secondary CTA: `How It Works`
 - treatment CTA: `Start Evaluation`
 
-Current theme scaffolds often point the primary CTA to `/pages/how-it-works` as a placeholder.
+Current theme routing now assumes:
 
-That should eventually be replaced with the real evaluation-flow entry URL once the workflow is finalized.
+- shared evaluation destination via theme setting: `evaluation_url`
+- current value: `/pages/start-evaluation`
+- `Start Evaluation` page acts as the branded handoff into the real intake flow
+
+The real Bask URL is still pending and should eventually be connected through the evaluation handoff layer.
 
 ## Menu assumptions
 
@@ -70,7 +75,7 @@ Recommended items:
 
 - About
 - Support
-- Contact
+- FAQ
 
 ### Legal menu
 
@@ -79,6 +84,9 @@ Recommended items:
 - Privacy Policy
 - Terms of Service
 - Subscription Terms
+
+Optional later additions:
+
 - Telehealth Consent
 - Medical Disclaimer
 - Refund Policy
@@ -91,9 +99,7 @@ The footer group currently expects:
 
 - `footer`
 
-For both footer and legal slots.
-
-That is a placeholder assumption. In a more complete implementation, separate footer and legal menus should be configured explicitly.
+For both footer and legal slots by default, but the theme supports separate footer and legal menu assignments and should be configured that way in admin.
 
 ## Theme section assumptions
 
@@ -146,10 +152,14 @@ Suggested command pattern:
 
 ```bash
 cd /Users/peterzora/Desktop/Skinfluence/theme
-shopify theme dev
+shopify theme dev --store=skinfluence-3060.myshopify.com
 ```
 
-This repo does not yet include a formal local workflow note for Shopify CLI authentication or deployment targets. That should be added once the actual store environment is chosen.
+Current real environment assumptions:
+
+- preview store domain: `skinfluence-3060.myshopify.com`
+- permanent store auth domain: `ygvwh0-4i.myshopify.com`
+- current development theme id: `155740799134`
 
 ## Recommended next documentation step
 
@@ -160,3 +170,4 @@ Add a dedicated note for:
 - push or deploy workflow
 - theme naming conventions
 - development store assumptions
+- evaluation handoff workflow

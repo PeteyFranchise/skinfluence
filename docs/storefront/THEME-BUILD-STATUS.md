@@ -19,6 +19,9 @@ The repo now contains an early Shopify storefront foundation under `theme/` with
 
 - `theme/layout/theme.liquid`
 - `theme/assets/skinfluence-base.css`
+- `theme/assets/skinfluence-hero-art.svg`
+- `theme/assets/skinfluence-evaluation-art.svg`
+- `theme/assets/skinfluence-support-art.svg`
 
 Status:
 
@@ -26,6 +29,8 @@ Status:
 - wired to `content_for_layout`
 - includes header and footer section groups
 - includes theme setting color injection
+- includes evaluation CTA routing support
+- includes branded fallback artwork support
 
 ### Reusable sections
 
@@ -39,13 +44,16 @@ Status:
 - `theme/sections/faq-accordion-skinfluence.liquid`
 - `theme/sections/cta-banner-skinfluence.liquid`
 - `theme/sections/support-contact.liquid`
+- `theme/sections/legal-page-body.liquid`
+- `theme/sections/pricing-breakdown.liquid`
 
 Status:
 
 - implemented as first-pass scaffolds
 - schema exists
 - content is editable
-- styling is partially refined
+- styling is substantially refined
+- image fallback and editor-upload workflows exist for key sections
 
 ### Header and footer shell
 
@@ -72,30 +80,34 @@ Status:
 - `theme/templates/page.about.json`
 - `theme/templates/page.support.json`
 - `theme/templates/page.legal.json`
+- `theme/templates/page.evaluation.json`
+- `theme/templates/page.json`
 
 Status:
 
 - implemented as launch-page scaffolds
-- populated with initial structure and draft content assumptions
-- ready for refinement and live content replacement
+- populated with live scaffold content and dedicated handoff pages
+- custom page templates are actively assigned in the dev store
 
 ### Theme configuration
 
 - `theme/config/settings_schema.json`
+- `theme/config/settings_data.json`
 
 Status:
 
 - implemented as an early scaffold
 - supports basic color settings
-- supports basic CTA helper settings
+- supports shared evaluation destination routing
+- supports current dev-theme defaults
 
 ## Not yet implemented
 
 ### Shopify runtime and deployment tooling
 
-- local Shopify theme development workflow
-- theme pull/push workflow
-- deploy or preview process documentation
+- documented local Shopify theme development workflow
+- documented theme push workflow
+- deploy or production publish workflow still pending
 
 ### More complete global theme structure
 
@@ -113,15 +125,13 @@ Status:
 
 ### Visual maturity
 
-- more refined typography system
-- more differentiated section variants
-- better imagery handling and placeholders
+- more differentiated section variants for all content types
 - richer mobile polish
-- tighter accordion and card interactions
+- stronger final production art direction
 
 ### Functional maturity
 
-- actual evaluation-flow URL strategy
+- actual Bask evaluation URL connection
 - support form routing and operational integration
 - legal-page content replacement with approved final copy
 - pricing-page exact policy and billing language
@@ -133,17 +143,17 @@ The theme is no longer just planning work. It is now a real early storefront sca
 It is best described as:
 
 - structurally strong for a first implementation pass
-- visually promising but still early
-- content-rich enough to keep moving
+- visually cohesive with branded fallback artwork
+- content-rich enough to keep moving without blocking on final vendor setup
 - not yet production-ready
 
 ## Recommended next steps
 
-1. document Shopify menu and page assumptions
-2. define the local preview and deployment workflow
-3. refine section schemas and settings coverage
-4. tighten visual polish on the highest-traffic templates
-5. replace placeholder URLs and assumptions with real admin/page mappings
+1. connect the final Bask intake URL
+2. upload/select final photography or illustration assets in Shopify
+3. replace placeholder legal text with approved final copy
+4. validate menus and final admin content setup
+5. finalize operational support and billing language
 
 ## Commit milestone summary
 

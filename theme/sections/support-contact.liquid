@@ -23,12 +23,12 @@
 
         <div class="skinfluence-support-contact__routing">
           <div class="skinfluence-support-contact__route">
-            <p class="skinfluence-support-contact__route-label">Best for</p>
-            <p class="skinfluence-support-contact__route-copy">Billing questions, shipment issues, account access, and general order support.</p>
+            <p class="skinfluence-support-contact__route-label">{{ section.settings.route_primary_label }}</p>
+            <p class="skinfluence-support-contact__route-copy">{{ section.settings.route_primary_copy }}</p>
           </div>
           <div class="skinfluence-support-contact__route">
-            <p class="skinfluence-support-contact__route-label">Use a care pathway for</p>
-            <p class="skinfluence-support-contact__route-copy">Irritation, treatment use concerns, refill suitability, or anything that may require provider follow-up.</p>
+            <p class="skinfluence-support-contact__route-label">{{ section.settings.route_secondary_label }}</p>
+            <p class="skinfluence-support-contact__route-copy">{{ section.settings.route_secondary_copy }}</p>
           </div>
         </div>
       </div>
@@ -124,11 +124,19 @@
   "settings": [
     { "type": "text", "id": "headline", "label": "Headline", "default": "Need help now?" },
     { "type": "richtext", "id": "body", "label": "Body" },
+    { "type": "header", "content": "Visual" },
     { "type": "image_picker", "id": "visual_image", "label": "Support visual" },
     { "type": "checkbox", "id": "show_default_visual", "label": "Show default visual when no image is selected", "default": true },
+    { "type": "header", "content": "Contact details" },
     { "type": "text", "id": "email_label", "label": "Email label", "default": "Support email" },
     { "type": "text", "id": "email_address", "label": "Email address" },
     { "type": "text", "id": "support_note", "label": "Support note" },
+    { "type": "header", "content": "Routing guidance" },
+    { "type": "text", "id": "route_primary_label", "label": "Primary route label", "default": "Best for" },
+    { "type": "text", "id": "route_primary_copy", "label": "Primary route copy", "default": "Billing questions, shipment issues, account access, and general order support." },
+    { "type": "text", "id": "route_secondary_label", "label": "Secondary route label", "default": "Use a care pathway for" },
+    { "type": "text", "id": "route_secondary_copy", "label": "Secondary route copy", "default": "Irritation, treatment use concerns, refill suitability, or anything that may require provider follow-up." },
+    { "type": "header", "content": "Form" },
     { "type": "text", "id": "button_label", "label": "Button label", "default": "Contact Support" },
     { "type": "text", "id": "form_note", "label": "Form note" }
   ],

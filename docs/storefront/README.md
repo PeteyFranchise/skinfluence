@@ -9,3 +9,5 @@ Suggested contents:
 - section inventory
 - content implementation notes
 - design-to-build handoff notes
+- evaluation handoff notes
+- live-store setup and operations notes

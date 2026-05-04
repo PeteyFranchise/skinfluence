@@ -65,6 +65,10 @@
         "email_label": "Support email",
         "email_address": "support@skinfluence.com",
         "support_note": "For treatment-related concerns, use the appropriate care support pathway instead of a generic order-support request.",
+        "route_primary_label": "Best for",
+        "route_primary_copy": "Billing questions, shipment issues, account access, and general order support.",
+        "route_secondary_label": "Use a care pathway for",
+        "route_secondary_copy": "Irritation, treatment use concerns, refill suitability, or anything that may require provider follow-up.",
         "button_label": "Contact Support",
         "form_note": "Please avoid sharing detailed medical information in this general support form."
       }
