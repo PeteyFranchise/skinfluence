@@ -111,7 +111,6 @@ Status:
 
 ### More complete global theme structure
 
-- `settings_data.json` starter assumptions
 - menu setup documentation
 - header mobile-nav interaction logic beyond the current shell
 - more complete footer content variants
