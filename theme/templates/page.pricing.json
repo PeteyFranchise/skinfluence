@@ -12,6 +12,20 @@
         "secondary_cta_url": "/pages/treatment"
       }
     },
+    "pricing_breakdown": {
+      "type": "pricing-breakdown",
+      "settings": {
+        "headline": "A simpler pricing model",
+        "intro": "<p>Start with evaluation, then move into a provider-reviewed monthly treatment plan if approved.</p>",
+        "card_one_eyebrow": "Today",
+        "card_one_price": "One-time evaluation",
+        "card_one_body": "<p>Submit your information for provider review before treatment begins.</p>",
+        "card_two_eyebrow": "If approved",
+        "card_two_price": "$65-$95 / month",
+        "card_two_body": "<p>Move into a premium monthly treatment model designed for consistency and maintenance.</p>",
+        "note": "Exact billing, subscription timing, and account policies should always be presented clearly at checkout and in account settings."
+      }
+    },
     "price_today": {
       "type": "rich-text-skinfluence",
       "settings": {
@@ -104,6 +118,7 @@
   },
   "order": [
     "hero",
+    "pricing_breakdown",
     "price_today",
     "price_if_approved",
     "whats_included",

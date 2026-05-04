@@ -1,0 +1,55 @@
+<section class="skinfluence-section skinfluence-pricing-breakdown">
+  <div class="page-width">
+    {% if section.settings.headline != blank %}
+      <h2 class="skinfluence-section__headline">{{ section.settings.headline }}</h2>
+    {% endif %}
+
+    {% if section.settings.intro != blank %}
+      <div class="skinfluence-pricing-breakdown__intro rte">
+        {{ section.settings.intro }}
+      </div>
+    {% endif %}
+
+    <div class="skinfluence-pricing-breakdown__grid">
+      <article class="skinfluence-pricing-breakdown__card">
+        <p class="skinfluence-pricing-breakdown__eyebrow">{{ section.settings.card_one_eyebrow }}</p>
+        <h3 class="skinfluence-pricing-breakdown__price">{{ section.settings.card_one_price }}</h3>
+        <div class="skinfluence-pricing-breakdown__body rte">
+          {{ section.settings.card_one_body }}
+        </div>
+      </article>
+
+      <article class="skinfluence-pricing-breakdown__card skinfluence-pricing-breakdown__card--accent">
+        <p class="skinfluence-pricing-breakdown__eyebrow">{{ section.settings.card_two_eyebrow }}</p>
+        <h3 class="skinfluence-pricing-breakdown__price">{{ section.settings.card_two_price }}</h3>
+        <div class="skinfluence-pricing-breakdown__body rte">
+          {{ section.settings.card_two_body }}
+        </div>
+      </article>
+    </div>
+
+    {% if section.settings.note != blank %}
+      <p class="skinfluence-pricing-breakdown__note">{{ section.settings.note }}</p>
+    {% endif %}
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Pricing Breakdown",
+  "settings": [
+    { "type": "text", "id": "headline", "label": "Headline", "default": "A simpler pricing model" },
+    { "type": "richtext", "id": "intro", "label": "Intro" },
+    { "type": "text", "id": "card_one_eyebrow", "label": "Card one eyebrow", "default": "Today" },
+    { "type": "text", "id": "card_one_price", "label": "Card one price", "default": "One-time evaluation" },
+    { "type": "richtext", "id": "card_one_body", "label": "Card one body" },
+    { "type": "text", "id": "card_two_eyebrow", "label": "Card two eyebrow", "default": "If approved" },
+    { "type": "text", "id": "card_two_price", "label": "Card two price", "default": "$65-$95 / month" },
+    { "type": "richtext", "id": "card_two_body", "label": "Card two body" },
+    { "type": "text", "id": "note", "label": "Note", "default": "Exact billing, subscription timing, and account policies should always be presented clearly at checkout and in account settings." }
+  ],
+  "presets": [
+    { "name": "Pricing Breakdown" }
+  ]
+}
+{% endschema %}
