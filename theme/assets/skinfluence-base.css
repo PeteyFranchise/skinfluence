@@ -431,7 +431,14 @@ body.skinfluence-theme.has-scrolled .skinfluence-sticky-mobile-cta {
   border: 1px solid var(--sf-color-button);
   text-decoration: none;
   font-weight: 600;
-  transition: transform 120ms ease, opacity 120ms ease, background 120ms ease;
+  letter-spacing: 0.01em;
+  transition:
+    transform 120ms ease,
+    opacity 120ms ease,
+    background 120ms ease,
+    border-color 120ms ease,
+    color 120ms ease,
+    box-shadow 120ms ease;
   box-shadow: 0 1px 0 rgba(31, 37, 41, 0.05);
 }
 
@@ -447,7 +454,15 @@ body.skinfluence-theme.has-scrolled .skinfluence-sticky-mobile-cta {
 .button--secondary {
   background: var(--sf-color-button-secondary);
   color: var(--sf-color-button-secondary-text);
-  border-color: rgba(36, 71, 93, 0.24);
+  border-width: 1.5px;
+  border-color: rgba(36, 71, 93, 0.42);
+  box-shadow: 0 10px 26px rgba(31, 37, 41, 0.035);
+}
+
+.button--secondary:hover {
+  background: rgba(230, 238, 243, 0.46);
+  color: var(--sf-color-accent-deep);
+  border-color: rgba(36, 71, 93, 0.6);
 }
 
 .skinfluence-trust-strip__items,
@@ -462,8 +477,23 @@ body.skinfluence-theme.has-scrolled .skinfluence-sticky-mobile-cta {
   grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
 }
 
+.skinfluence-trust-strip {
+  padding-block: clamp(2.4rem, 5vw, 4rem);
+  background:
+    linear-gradient(180deg, rgba(34, 63, 82, 0.98), rgba(29, 55, 72, 0.98)),
+    radial-gradient(circle at top right, rgba(120, 154, 179, 0.22), transparent 26%);
+  color: rgba(255, 250, 244, 0.92);
+}
+
 .skinfluence-trust-strip .skinfluence-section__headline {
   margin-bottom: var(--sf-space-4);
+  color: #f7f2eb;
+}
+
+.skinfluence-trust-strip .skinfluence-section__headline,
+.skinfluence-trust-strip .skinfluence-trust-strip__item {
+  position: relative;
+  z-index: 1;
 }
 
 .skinfluence-benefit-grid__items,
@@ -506,7 +536,7 @@ body.skinfluence-theme.has-scrolled .skinfluence-sticky-mobile-cta {
   padding-top: calc(var(--sf-space-4) + 0.35rem);
   font-weight: 600;
   background:
-    linear-gradient(180deg, rgba(255, 253, 250, 0.96), rgba(255, 250, 244, 0.9));
+    linear-gradient(180deg, rgba(255, 253, 250, 0.96), rgba(246, 240, 232, 0.94));
 }
 
 .skinfluence-trust-strip__item::before {

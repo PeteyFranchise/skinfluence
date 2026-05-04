@@ -5,9 +5,9 @@
       "settings": {
         "eyebrow": "Evaluation",
         "headline": "Begin your Skinfluence evaluation.",
-        "subhead": "<p>Start with a provider-reviewed intake designed to understand your goals, skin history, and treatment fit before anything moves forward. This page is the branded handoff into the Skinfluence intake experience.</p>",
-        "primary_cta_label": "Evaluation Link Pending",
-        "primary_cta_url": "#",
+        "subhead": "<p>Start with a provider-reviewed intake designed to understand your goals, skin history, and treatment fit before anything moves forward.</p>",
+        "primary_cta_label": "",
+        "primary_cta_url": "",
         "secondary_cta_label": "How It Works",
         "secondary_cta_url": "/pages/how-it-works"
       }
