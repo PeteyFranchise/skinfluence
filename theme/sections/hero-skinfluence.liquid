@@ -1,15 +1,42 @@
+{% liquid
+  assign hero_eyebrow = section.settings.eyebrow
+  assign hero_headline = section.settings.headline
+  assign hero_subhead = section.settings.subhead
+
+  if page != blank and hero_headline == blank
+    assign hero_headline = page.title
+  endif
+
+  if request.page_type == 'page' and template.suffix == 'legal'
+    case page.handle
+      when 'privacy-policy'
+        assign hero_eyebrow = 'Privacy and data use'
+        assign hero_headline = 'Privacy Policy'
+        assign hero_subhead = '<p>How Skinfluence collects, uses, and protects the information shared through the storefront and evaluation process.</p>'
+      when 'terms-of-service'
+        assign hero_eyebrow = 'Website and service terms'
+        assign hero_headline = 'Terms of Service'
+        assign hero_subhead = '<p>The rules, limitations, and general conditions that govern use of the Skinfluence website and related services.</p>'
+      when 'subscription-terms'
+        assign hero_eyebrow = 'Billing and continuity'
+        assign hero_headline = 'Subscription Terms'
+        assign hero_subhead = '<p>How recurring billing, shipments, account management, and subscription-related expectations should work for Skinfluence users.</p>'
+    endcase
+  endif
+%}
+
 <section class="skinfluence-section skinfluence-hero">
   <div class="page-width">
-    {% if section.settings.eyebrow != blank %}
-      <p class="skinfluence-hero__eyebrow">{{ section.settings.eyebrow }}</p>
+    {% if hero_eyebrow != blank %}
+      <p class="skinfluence-hero__eyebrow">{{ hero_eyebrow }}</p>
     {% endif %}
 
-    {% if section.settings.headline != blank %}
-      <h1 class="skinfluence-hero__headline">{{ section.settings.headline }}</h1>
+    {% if hero_headline != blank %}
+      <h1 class="skinfluence-hero__headline">{{ hero_headline }}</h1>
     {% endif %}
 
-    {% if section.settings.subhead != blank %}
-      <div class="skinfluence-hero__subhead rte">{{ section.settings.subhead }}</div>
+    {% if hero_subhead != blank %}
+      <div class="skinfluence-hero__subhead rte">{{ hero_subhead }}</div>
     {% endif %}
 
     <div class="skinfluence-hero__actions">

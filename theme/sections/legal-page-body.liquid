@@ -1,0 +1,91 @@
+{% liquid
+  assign page_content = page.content
+%}
+
+<section class="skinfluence-section skinfluence-legal-page">
+  <div class="page-width">
+    <div class="skinfluence-legal-page__inner">
+      {% if page_content != blank %}
+        <div class="skinfluence-legal-page__content rte">{{ page_content }}</div>
+      {% else %}
+        <div class="skinfluence-legal-page__content rte">
+          {% case page.handle %}
+            {% when 'privacy-policy' %}
+              <p>Skinfluence should explain what information is collected through the storefront, evaluation flow, and support interactions, how that information is used, and what choices users have regarding access, communications, and retention.</p>
+
+              <h2>Information you may collect</h2>
+              <ul>
+                <li>Contact details such as name, email address, shipping address, and account information.</li>
+                <li>Order, subscription, and payment-related metadata needed to process storefront transactions.</li>
+                <li>Information submitted during intake, evaluation, or support workflows, including health-related information when applicable.</li>
+                <li>Usage, device, and analytics information associated with website performance and account activity.</li>
+              </ul>
+
+              <h2>How that information is used</h2>
+              <p>The final policy should describe how Skinfluence uses submitted information to operate the storefront, process orders, support provider review workflows, manage subscriptions, communicate with users, and improve the experience over time.</p>
+
+              <h2>Important policy points to finalize</h2>
+              <ul>
+                <li>Whether and how information is shared with providers, pharmacies, processors, analytics vendors, and operational partners.</li>
+                <li>Retention practices for health-related or subscription-related records.</li>
+                <li>User rights around access, correction, deletion, marketing preferences, and privacy requests.</li>
+                <li>How cookies, tracking tools, and any state-specific privacy rights are handled.</li>
+              </ul>
+            {% when 'terms-of-service' %}
+              <p>Skinfluence should clearly state the general rules for using the site, any important limitations, and how the storefront, evaluation process, and support channels are intended to function.</p>
+
+              <h2>What the terms should cover</h2>
+              <ul>
+                <li>Who may use the website and what constitutes acceptable use.</li>
+                <li>The relationship between storefront content, educational content, and any provider-reviewed treatment workflow.</li>
+                <li>Disclaimers around medical advice, outcomes, product availability, and eligibility.</li>
+                <li>Ownership of site content, trademarks, and restrictions on copying or misuse.</li>
+              </ul>
+
+              <h2>Operational expectations to match</h2>
+              <p>The final terms should remain consistent with the storefront’s live behavior, including pricing presentation, support flow, subscription logic, provider review language, and any refund or cancellation rules described elsewhere on the site.</p>
+
+              <h2>Before launch</h2>
+              <ul>
+                <li>Confirm governing law, dispute language, limitation of liability, and indemnity provisions with counsel.</li>
+                <li>Make sure the terms align with any recurring billing disclosures and telehealth-related documents.</li>
+                <li>Verify that all linked policies and contact methods are active and current.</li>
+              </ul>
+            {% when 'subscription-terms' %}
+              <p>Skinfluence should explain recurring billing and fulfillment expectations in plain language so users understand what happens after approval, how they are charged, and how to manage their subscription.</p>
+
+              <h2>Core subscription points</h2>
+              <ul>
+                <li>When recurring billing begins and how often charges occur.</li>
+                <li>How refill cadence, shipment timing, and account renewal work.</li>
+                <li>Whether pauses, skips, or cancellations are supported and when they take effect.</li>
+                <li>What happens if treatment is no longer appropriate or a provider determines continuation is not advised.</li>
+              </ul>
+
+              <h2>Customer communication expectations</h2>
+              <p>The final policy should explain clearly how subscribers are informed about renewals, order changes, failed payments, cancellations, and any material changes to pricing or terms.</p>
+
+              <h2>Before launch</h2>
+              <ul>
+                <li>Match this page to the actual recurring billing flow, reminder timing, and account settings users see.</li>
+                <li>Coordinate the language with the pricing page, FAQ, checkout disclosures, and support workflow.</li>
+                <li>Have counsel confirm compliance with recurring subscription disclosure requirements in relevant jurisdictions.</li>
+              </ul>
+            {% else %}
+              <p>Replace this placeholder with approved legal content for the policy assigned to this page.</p>
+            {% endcase %}
+        </div>
+      {% endif %}
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Legal Page Body",
+  "settings": [],
+  "presets": [
+    { "name": "Legal Page Body" }
+  ]
+}
+{% endschema %}

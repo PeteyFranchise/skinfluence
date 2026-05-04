@@ -304,6 +304,55 @@ body.skinfluence-theme.has-scrolled .skinfluence-sticky-mobile-cta {
   margin-top: var(--sf-space-2);
 }
 
+.skinfluence-legal-page .page-width {
+  max-width: 980px;
+}
+
+.skinfluence-legal-page__inner {
+  padding: clamp(2rem, 4vw, 3.25rem);
+  border: 1px solid rgba(221, 213, 202, 0.88);
+  border-radius: calc(var(--sf-radius) + 6px);
+  background:
+    linear-gradient(180deg, rgba(255, 253, 250, 0.96), rgba(255, 250, 244, 0.92));
+  box-shadow: 0 24px 60px rgba(31, 37, 41, 0.05);
+}
+
+.skinfluence-legal-page__content {
+  color: var(--sf-color-muted);
+  font-size: 1.02rem;
+  line-height: 1.72;
+}
+
+.skinfluence-legal-page__content > p:first-child {
+  margin-top: 0;
+  margin-bottom: var(--sf-space-5);
+  color: var(--sf-color-accent);
+  font-size: clamp(1.15rem, 2vw, 1.35rem);
+  line-height: 1.45;
+}
+
+.skinfluence-legal-page__content h2 {
+  margin: var(--sf-space-6) 0 var(--sf-space-2);
+  color: var(--sf-color-accent);
+  line-height: 1.16;
+  font-size: clamp(1.4rem, 2vw, 1.75rem);
+}
+
+.skinfluence-legal-page__content p,
+.skinfluence-legal-page__content ul,
+.skinfluence-legal-page__content ol {
+  margin: 0 0 var(--sf-space-3);
+}
+
+.skinfluence-legal-page__content ul,
+.skinfluence-legal-page__content ol {
+  padding-left: 1.25rem;
+}
+
+.skinfluence-legal-page__content li + li {
+  margin-top: 0.45rem;
+}
+
 .skinfluence-hero {
   padding-top: calc(var(--sf-space-7) + var(--sf-space-2));
 }

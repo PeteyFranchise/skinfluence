@@ -13,11 +13,8 @@
       }
     },
     "legal_content": {
-      "type": "rich-text-skinfluence",
-      "settings": {
-        "headline": "How to use this page",
-        "body": "<p>Use this template for privacy, terms, subscription, telehealth, refund, and other policy content that should remain easy to review and maintain. Replace the placeholder copy below with approved legal language for the specific page.</p><p>If you are still drafting, keep the content clear, readable, and consistent with the actual product, subscription, and care workflows described on the site.</p>"
-      }
+      "type": "legal-page-body",
+      "settings": {}
     },
     "policy_sections": {
       "type": "faq-accordion-skinfluence",
@@ -50,14 +47,14 @@
         "policy_3"
       ],
       "settings": {
-        "headline": "Legal page guidance"
+        "headline": "Before launch, review carefully"
       }
     },
     "legal_cta": {
       "type": "cta-banner-skinfluence",
       "settings": {
-        "headline": "Need help understanding a policy?",
-        "subhead": "<p>Use the support page for general questions or consult counsel before publishing final legal language.</p>",
+        "headline": "Questions about a policy?",
+        "subhead": "<p>Use the support page for general customer questions. Final legal language should still be reviewed and approved by counsel before launch.</p>",
         "cta_label": "Support",
         "cta_url": "/pages/support"
       }
