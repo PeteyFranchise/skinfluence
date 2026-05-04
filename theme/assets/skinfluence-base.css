@@ -373,12 +373,28 @@ body.skinfluence-theme.has-scrolled .skinfluence-sticky-mobile-cta {
   pointer-events: none;
 }
 
+.skinfluence-hero .page-width::before {
+  content: "";
+  position: absolute;
+  right: 8%;
+  bottom: -2.75rem;
+  width: min(44vw, 420px);
+  height: 1px;
+  background: linear-gradient(90deg, rgba(45, 85, 110, 0.34), transparent 78%);
+  pointer-events: none;
+}
+
 .skinfluence-hero__actions,
 .skinfluence-side-by-side__content .button {
   display: flex;
   flex-wrap: wrap;
   gap: var(--sf-space-3);
   margin-top: var(--sf-space-4);
+}
+
+.skinfluence-hero__subhead {
+  font-size: clamp(1.05rem, 1.6vw, 1.28rem);
+  line-height: 1.62;
 }
 
 .button {
@@ -422,6 +438,10 @@ body.skinfluence-theme.has-scrolled .skinfluence-sticky-mobile-cta {
   grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
 }
 
+.skinfluence-trust-strip .skinfluence-section__headline {
+  margin-bottom: var(--sf-space-4);
+}
+
 .skinfluence-benefit-grid__items,
 .skinfluence-who-its-for__list,
 .skinfluence-steps__grid {
@@ -457,6 +477,23 @@ body.skinfluence-theme.has-scrolled .skinfluence-sticky-mobile-cta {
   min-height: 100%;
 }
 
+.skinfluence-trust-strip__item {
+  position: relative;
+  padding-top: calc(var(--sf-space-4) + 0.35rem);
+  font-weight: 600;
+  background:
+    linear-gradient(180deg, rgba(255, 253, 250, 0.96), rgba(255, 250, 244, 0.9));
+}
+
+.skinfluence-trust-strip__item::before {
+  content: "";
+  position: absolute;
+  inset: 0 auto auto 0;
+  width: 100%;
+  height: 3px;
+  background: linear-gradient(90deg, rgba(45, 85, 110, 0.94), rgba(88, 121, 146, 0.22));
+}
+
 .skinfluence-benefit-grid__item {
   gap: 0.85rem;
   align-items: flex-start;
@@ -476,6 +513,15 @@ body.skinfluence-theme.has-scrolled .skinfluence-sticky-mobile-cta {
   display: grid;
   gap: var(--sf-space-5);
   align-items: center;
+}
+
+.skinfluence-side-by-side__content .skinfluence-section__headline {
+  max-width: 13ch;
+}
+
+.skinfluence-side-by-side__body {
+  font-size: 1.06rem;
+  line-height: 1.68;
 }
 
 .skinfluence-side-by-side__image {
@@ -540,6 +586,15 @@ body.skinfluence-theme.has-scrolled .skinfluence-sticky-mobile-cta {
   height: 0.45rem;
   border-radius: 50%;
   background: var(--sf-color-accent);
+}
+
+.skinfluence-rich-text__body {
+  font-size: 1.05rem;
+  line-height: 1.72;
+}
+
+.skinfluence-rich-text__body > p:first-child {
+  margin-top: 0;
 }
 
 .skinfluence-steps__title,
@@ -808,7 +863,7 @@ body.skinfluence-theme.has-scrolled .skinfluence-sticky-mobile-cta {
   }
 
   .skinfluence-side-by-side__grid {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-template-columns: minmax(0, 0.96fr) minmax(0, 1.04fr);
   }
 
   .skinfluence-pricing-breakdown__grid {

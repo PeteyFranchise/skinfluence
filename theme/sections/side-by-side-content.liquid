@@ -1,3 +1,14 @@
+{% liquid
+  assign section_cta_url = section.settings.cta_url
+  assign evaluation_url = settings.evaluation_url | default: '/pages/start-evaluation'
+
+  if section.settings.cta_label contains 'Evaluation'
+    if section_cta_url == blank or section_cta_url == '/pages/how-it-works'
+      assign section_cta_url = evaluation_url
+    endif
+  endif
+%}
+
 <section class="skinfluence-section skinfluence-side-by-side skinfluence-side-by-side--{{ section.settings.image_position }}">
   <div class="page-width">
     <div class="skinfluence-side-by-side__grid">
@@ -10,8 +21,8 @@
           <div class="skinfluence-side-by-side__body rte">{{ section.settings.body }}</div>
         {% endif %}
 
-        {% if section.settings.cta_label != blank and section.settings.cta_url != blank %}
-          <a class="button button--primary" href="{{ section.settings.cta_url }}">
+        {% if section.settings.cta_label != blank and section_cta_url != blank %}
+          <a class="button button--primary" href="{{ section_cta_url }}">
             {{ section.settings.cta_label }}
           </a>
         {% endif %}
