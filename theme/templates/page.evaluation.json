@@ -5,18 +5,56 @@
       "settings": {
         "eyebrow": "Evaluation",
         "headline": "Begin your Skinfluence evaluation.",
-        "subhead": "<p>Start with a provider-reviewed intake designed to understand your goals, skin history, and treatment fit before anything moves forward.</p>",
-        "primary_cta_label": "Continue to Evaluation",
+        "subhead": "<p>Start with a provider-reviewed intake designed to understand your goals, skin history, and treatment fit before anything moves forward. This page is the branded handoff into the Skinfluence intake experience.</p>",
+        "primary_cta_label": "Evaluation Link Pending",
         "primary_cta_url": "#",
         "secondary_cta_label": "How It Works",
         "secondary_cta_url": "/pages/how-it-works"
+      }
+    },
+    "prep_highlights": {
+      "type": "benefit-grid",
+      "blocks": {
+        "item_1": {
+          "type": "benefit",
+          "settings": {
+            "label": "Provider-reviewed intake before treatment begins"
+          }
+        },
+        "item_2": {
+          "type": "benefit",
+          "settings": {
+            "label": "Designed to feel clear, simple, and easy to complete"
+          }
+        },
+        "item_3": {
+          "type": "benefit",
+          "settings": {
+            "label": "Approval depends on fit, not everyone will be eligible"
+          }
+        }
+      },
+      "block_order": [
+        "item_1",
+        "item_2",
+        "item_3"
+      ],
+      "settings": {
+        "headline": "What to expect before you begin"
       }
     },
     "entry_notes": {
       "type": "rich-text-skinfluence",
       "settings": {
         "headline": "What happens here",
-        "body": "<p>This destination should hand users into the real evaluation workflow once your intake, form, or external provider flow is ready.</p><ul><li>Collect goals, history, and treatment context</li><li>Make it clear what information users will be asked to provide</li><li>Set expectations for provider review and next steps</li></ul>"
+        "body": "<p>Once the live intake is connected, this page will hand users into the secure evaluation flow.</p><ul><li>Share treatment goals, skin background, and any relevant context</li><li>Understand what information may be needed for provider review</li><li>Know what happens next if approved, or if more information is needed</li></ul>"
+      }
+    },
+    "before_you_start": {
+      "type": "rich-text-skinfluence",
+      "settings": {
+        "headline": "Before you start",
+        "body": "<p>Skinfluence should use this page to set calm, realistic expectations before the intake begins.</p><ul><li>The evaluation should feel clear and straightforward</li><li>Users should know not everyone will be eligible for treatment</li><li>Questions about the process should have an obvious support path</li></ul>"
       }
     },
     "steps": {
@@ -25,22 +63,22 @@
         "step_1": {
           "type": "step",
           "settings": {
-            "title": "Share your background",
-            "body": "<p>Users should complete the intake with the information needed for review, including skin goals and relevant history.</p>"
+            "title": "Complete the intake",
+            "body": "<p>Users should provide the information needed for review, including goals, relevant skin background, and any context that may affect treatment fit.</p>"
           }
         },
         "step_2": {
           "type": "step",
           "settings": {
             "title": "Receive provider review",
-            "body": "<p>A licensed provider reviews the submission to determine whether treatment is appropriate.</p>"
+            "body": "<p>A licensed provider reviews the submission and determines whether treatment is appropriate or whether more information is needed.</p>"
           }
         },
         "step_3": {
           "type": "step",
           "settings": {
             "title": "Move into care if approved",
-            "body": "<p>If approved, users move forward into the monthly treatment model and ongoing support experience.</p>"
+            "body": "<p>If approved, users move into the monthly treatment model, onboarding guidance, and the ongoing Skinfluence support experience.</p>"
           }
         }
       },
@@ -56,16 +94,18 @@
     "cta": {
       "type": "cta-banner-skinfluence",
       "settings": {
-        "headline": "Connect this page to your real evaluation flow.",
-        "subhead": "<p>Once the intake or external evaluation experience is ready, point the theme’s evaluation URL setting here or directly to that destination.</p>",
-        "cta_label": "How It Works",
-        "cta_url": "/pages/how-it-works"
+        "headline": "Questions before the evaluation opens?",
+        "subhead": "<p>Use the FAQ or support page if you want more clarity on pricing, treatment fit, or what the process will involve.</p>",
+        "cta_label": "View FAQs",
+        "cta_url": "/pages/faq"
       }
     }
   },
   "order": [
     "hero",
+    "prep_highlights",
     "entry_notes",
+    "before_you_start",
     "steps",
     "cta"
   ]
