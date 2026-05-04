@@ -408,6 +408,21 @@ body.skinfluence-theme.has-scrolled .skinfluence-sticky-mobile-cta {
   min-height: 100%;
 }
 
+.skinfluence-benefit-grid__item {
+  gap: 0.85rem;
+  align-items: flex-start;
+}
+
+.skinfluence-benefit-grid__marker {
+  flex: 0 0 auto;
+  width: 0.7rem;
+  height: 0.7rem;
+  margin-top: 0.42rem;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--sf-color-accent), #587992);
+  box-shadow: 0 0 0 6px rgba(45, 85, 110, 0.09);
+}
+
 .skinfluence-side-by-side__grid {
   display: grid;
   gap: var(--sf-space-5);
@@ -591,6 +606,10 @@ body.skinfluence-theme.has-scrolled .skinfluence-sticky-mobile-cta {
   text-align: center;
   background:
     linear-gradient(135deg, rgba(230, 238, 243, 0.92), rgba(255, 250, 244, 0.94));
+}
+
+.skinfluence-cta-banner .button {
+  min-width: min(100%, 280px);
 }
 
 .skinfluence-cta-banner .skinfluence-section__headline {
