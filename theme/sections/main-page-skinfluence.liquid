@@ -1,17 +1,148 @@
 <section class="skinfluence-section skinfluence-main-page">
   <div class="page-width">
-    {% if page.title != blank %}
-      <h1 class="skinfluence-section__headline">{{ page.title }}</h1>
-    {% endif %}
+    {% assign fallback_handle = page.handle | default: '' %}
 
     {% if page.content != blank %}
+      {% if page.title != blank %}
+        <h1 class="skinfluence-section__headline">{{ page.title }}</h1>
+      {% endif %}
+
       <div class="skinfluence-main-page__body rte">
         {{ page.content }}
       </div>
     {% else %}
-      <div class="skinfluence-main-page__body rte">
-        <p>Add page content in Shopify admin to replace this placeholder.</p>
-      </div>
+      {% case fallback_handle %}
+        {% when 'how-it-works' %}
+          <h1 class="skinfluence-section__headline">How It Works</h1>
+          <div class="skinfluence-main-page__body rte">
+            <p>A simpler way to start prescription-led anti-aging care.</p>
+            <h2>1. Complete your evaluation</h2>
+            <p>Answer a few questions about your skin, goals, and history so a licensed provider can assess whether treatment may be appropriate.</p>
+            <h2>2. Receive provider review</h2>
+            <p>Your evaluation is reviewed by a licensed provider. In some cases, additional information may be needed before a final decision is made.</p>
+            <h2>3. Begin monthly care if approved</h2>
+            <p>If approved, you’ll move into a monthly treatment model designed for consistency, maintenance, and ease.</p>
+            <h2>What the evaluation includes</h2>
+            <p>Your evaluation is designed to help us understand your anti-aging goals, relevant skin history, current routine, sensitivity considerations, and any factors that may affect treatment fit.</p>
+            <h2>Possible outcomes</h2>
+            <ul>
+              <li>Approved</li>
+              <li>More information needed</li>
+              <li>Not eligible</li>
+            </ul>
+            <h2>What happens after approval</h2>
+            <p>Approved users receive treatment guidance, usage instructions, and a recurring monthly care model designed for long-term consistency.</p>
+            <h2>Ongoing support</h2>
+            <p>Skinfluence is built to support you beyond the first shipment. That includes clearer expectations, guidance during the adjustment period, and a more consistent anti-aging routine over time.</p>
+          </div>
+        {% when 'treatment' %}
+          <h1 class="skinfluence-section__headline">Treatment</h1>
+          <div class="skinfluence-main-page__body rte">
+            <p>A more advanced anti-aging routine, built around provider review.</p>
+            <h2>What it’s designed to help improve</h2>
+            <ul>
+              <li>Fine lines</li>
+              <li>Uneven-looking tone</li>
+              <li>Rougher texture</li>
+              <li>Dullness</li>
+              <li>A complexion that looks more tired or less refined than it used to</li>
+            </ul>
+            <h2>Why this feels different</h2>
+            <p>Most anti-aging skincare asks you to keep adding more products and hoping for better results. Skinfluence takes a different approach. It begins with evaluation, includes provider review, and turns anti-aging care into a more focused monthly routine built for consistency.</p>
+            <h2>Who it’s for</h2>
+            <p>This treatment may be a fit if you want stronger anti-aging support than standard skincare, prefer a simpler routine over product stacking, and value visible progress over trend-driven skincare shopping.</p>
+            <h2>What’s included</h2>
+            <ul>
+              <li>An initial online evaluation</li>
+              <li>Provider review</li>
+              <li>A monthly treatment if approved</li>
+              <li>Ongoing maintenance support</li>
+              <li>Refill continuity through subscription</li>
+            </ul>
+            <h2>What to expect</h2>
+            <p>This is not overnight skincare. Anti-aging treatment works best when it is consistent, realistic, and easy to stay with. Some users may experience an adjustment period before settling into their routine. The goal is gradual, visible improvement in skin quality over time.</p>
+            <h2>Safety and side effects</h2>
+            <p>Prescription-led skincare should come with clear expectations. Common adjustment effects may include dryness, sensitivity, peeling, or irritation. Treatment is not appropriate for everyone, and eligibility is determined through the evaluation process.</p>
+          </div>
+        {% when 'pricing' %}
+          <h1 class="skinfluence-section__headline">Pricing</h1>
+          <div class="skinfluence-main-page__body rte">
+            <p>Premium anti-aging care, priced with clarity.</p>
+            <h2>What you pay today</h2>
+            <p>Begin with a one-time evaluation fee. This covers review of your skin history, goals, and submitted information by a licensed provider.</p>
+            <h2>What you pay if approved</h2>
+            <p>If approved, you’ll move into a monthly subscription for treatment. This recurring model is designed to support consistency, maintenance, and a simpler long-term routine.</p>
+            <h2>What’s included</h2>
+            <ul>
+              <li>An initial evaluation</li>
+              <li>Provider review</li>
+              <li>A monthly treatment if approved</li>
+              <li>Ongoing maintenance support</li>
+              <li>Subscription continuity for refills</li>
+            </ul>
+            <h2>Why this is priced differently than generic tretinoin</h2>
+            <p>Skinfluence is not positioned as the cheapest online prescription option. It is positioned as premium anti-aging care with provider review, a more elevated treatment experience, and a routine designed for consistency rather than commodity shopping.</p>
+            <h2>What if I’m not eligible?</h2>
+            <p>Not every user will be a fit for treatment. If a provider determines treatment is not appropriate, Skinfluence will communicate that clearly and explain any next steps that may be available.</p>
+            <h2>Subscription details</h2>
+            <p>Your subscription is designed as a monthly maintenance model. Billing timing, shipment cadence, and account management details should always be presented clearly.</p>
+          </div>
+        {% when 'faq' %}
+          <h1 class="skinfluence-section__headline">FAQ</h1>
+          <div class="skinfluence-main-page__body rte">
+            <p>Questions, answered clearly.</p>
+            <h2>Who is Skinfluence for?</h2>
+            <p>Skinfluence is designed for women who want a more advanced anti-aging routine than standard over-the-counter skincare, especially those focused on texture, tone, fine lines, and overall skin quality.</p>
+            <h2>How is this different from regular skincare?</h2>
+            <p>Skinfluence is built around provider-reviewed prescription-led care rather than a self-directed retail skincare routine.</p>
+            <h2>Will everyone be approved?</h2>
+            <p>No. Treatment is not appropriate for everyone. Approval depends on provider review of the information submitted during evaluation.</p>
+            <h2>What happens during the evaluation?</h2>
+            <p>You’ll answer questions about your skin, goals, and history so a licensed provider can assess whether treatment may be appropriate.</p>
+            <h2>How long until I may see results?</h2>
+            <p>Anti-aging care takes time and consistency. Skinfluence is designed around realistic expectations, not instant transformation.</p>
+            <h2>What side effects can happen?</h2>
+            <p>Some users may experience dryness, peeling, irritation, or sensitivity as they adjust.</p>
+            <h2>Is this a subscription?</h2>
+            <p>Yes. If approved, treatment is designed as a recurring monthly maintenance model.</p>
+            <h2>What if I’m not approved?</h2>
+            <p>If treatment is not appropriate, Skinfluence will communicate that clearly and provide next-step guidance where applicable.</p>
+          </div>
+        {% when 'about' %}
+          <h1 class="skinfluence-section__headline">About</h1>
+          <div class="skinfluence-main-page__body rte">
+            <p>A more serious approach to anti-aging care.</p>
+            <p>Skinfluence exists for women who have outgrown ordinary skincare and want something more focused, more guided, and easier to trust.</p>
+            <p>Many women spend heavily on skincare and still feel like their routine has plateaued. Skinfluence is designed for that moment when the next step should feel more advanced, more considered, and less fragmented.</p>
+            <p>Our approach is built around provider review, realistic expectations, and a monthly treatment model designed for consistency over time.</p>
+            <p>Skinfluence is not about adding more products for the sake of complexity. It is about creating a premium anti-aging experience that feels clinically grounded, easier to maintain, and more aligned with visible skin quality improvement.</p>
+          </div>
+        {% when 'support' %}
+          <h1 class="skinfluence-section__headline">Support</h1>
+          <div class="skinfluence-main-page__body rte">
+            <p>Help, with a clear path forward.</p>
+            <p>Skinfluence support is designed to help with subscription questions, order issues, and general guidance.</p>
+            <h2>Support categories</h2>
+            <ul>
+              <li>Billing and subscription support</li>
+              <li>Shipping and order updates</li>
+              <li>General product and account questions</li>
+              <li>Treatment-related guidance through the appropriate care path</li>
+            </ul>
+            <h2>Need help now?</h2>
+            <p>Use the appropriate support path for billing, shipping, account access, or general questions. Avoid sharing detailed medical information in a generic support form unless the workflow explicitly supports it.</p>
+            <h2>Treatment-related questions</h2>
+            <p>If you have concerns about treatment use, irritation, or care-related issues, use the appropriate care support pathway rather than a general order-support request.</p>
+          </div>
+        {% else %}
+          {% if page.title != blank %}
+            <h1 class="skinfluence-section__headline">{{ page.title }}</h1>
+          {% endif %}
+
+          <div class="skinfluence-main-page__body rte">
+            <p>Add page content in Shopify admin to replace this placeholder.</p>
+          </div>
+      {% endcase %}
     {% endif %}
   </div>
 </section>
