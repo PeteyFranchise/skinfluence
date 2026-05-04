@@ -21,7 +21,17 @@
         {% if section.settings.image != blank %}
           {{ section.settings.image | image_url: width: 1200 | image_tag: loading: 'lazy', class: 'skinfluence-side-by-side__image' }}
         {% else %}
-          <div class="skinfluence-side-by-side__placeholder">Image placeholder</div>
+          <div class="skinfluence-side-by-side__placeholder">
+            <div class="skinfluence-side-by-side__placeholder-panel">
+              <p class="skinfluence-side-by-side__placeholder-eyebrow">Skin quality, elevated</p>
+              <h3 class="skinfluence-side-by-side__placeholder-title">Designed to feel clinical, premium, and easy to stay consistent with.</h3>
+              <ul class="skinfluence-side-by-side__placeholder-list list-unstyled" role="list">
+                <li>Provider-reviewed care model</li>
+                <li>Monthly maintenance rhythm</li>
+                <li>Premium treatment experience</li>
+              </ul>
+            </div>
+          </div>
         {% endif %}
       </div>
     </div>

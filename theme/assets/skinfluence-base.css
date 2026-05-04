@@ -357,11 +357,60 @@ body.skinfluence-theme.has-scrolled .skinfluence-sticky-mobile-cta {
 .skinfluence-side-by-side__placeholder {
   min-height: 320px;
   display: grid;
-  place-items: center;
+  align-items: end;
   color: var(--sf-color-muted);
   background:
+    radial-gradient(circle at top right, rgba(45, 85, 110, 0.16), transparent 28%),
     linear-gradient(135deg, rgba(230, 238, 243, 0.75), rgba(255, 250, 244, 0.8)),
     var(--sf-color-surface);
+  padding: var(--sf-space-4);
+}
+
+.skinfluence-side-by-side__placeholder-panel {
+  max-width: 26rem;
+  padding: var(--sf-space-4);
+  border-radius: calc(var(--sf-radius) - 2px);
+  background: rgba(255, 253, 250, 0.78);
+  border: 1px solid rgba(221, 213, 202, 0.9);
+  box-shadow: 0 18px 45px rgba(31, 37, 41, 0.06);
+  backdrop-filter: blur(10px);
+}
+
+.skinfluence-side-by-side__placeholder-eyebrow {
+  margin: 0 0 var(--sf-space-2);
+  color: var(--sf-color-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  font-size: 0.78rem;
+}
+
+.skinfluence-side-by-side__placeholder-title {
+  margin: 0 0 var(--sf-space-3);
+  color: var(--sf-color-accent);
+  line-height: 1.15;
+  font-size: clamp(1.3rem, 2vw, 1.85rem);
+}
+
+.skinfluence-side-by-side__placeholder-list {
+  display: grid;
+  gap: 0.7rem;
+  margin: 0;
+}
+
+.skinfluence-side-by-side__placeholder-list li {
+  position: relative;
+  padding-left: 1.2rem;
+}
+
+.skinfluence-side-by-side__placeholder-list li::before {
+  content: "";
+  position: absolute;
+  top: 0.55rem;
+  left: 0;
+  width: 0.45rem;
+  height: 0.45rem;
+  border-radius: 50%;
+  background: var(--sf-color-accent);
 }
 
 .skinfluence-steps__title,
