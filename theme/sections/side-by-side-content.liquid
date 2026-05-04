@@ -33,6 +33,14 @@
           {{ section.settings.image | image_url: width: 1200 | image_tag: loading: 'lazy', class: 'skinfluence-side-by-side__image' }}
         {% else %}
           <div class="skinfluence-side-by-side__placeholder">
+            <img
+              class="skinfluence-side-by-side__placeholder-art"
+              src="{{ 'skinfluence-hero-art.svg' | asset_url }}"
+              alt=""
+              loading="lazy"
+              width="960"
+              height="960"
+            >
             <div class="skinfluence-side-by-side__placeholder-panel">
               <p class="skinfluence-side-by-side__placeholder-eyebrow">Skin quality, elevated</p>
               <h3 class="skinfluence-side-by-side__placeholder-title">Designed to feel clinical, premium, and easy to stay consistent with.</h3>

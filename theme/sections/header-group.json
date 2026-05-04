@@ -13,14 +13,14 @@
       "settings": {
         "menu": "",
         "cta_label": "Start Evaluation",
-        "cta_url": "/pages/how-it-works"
+        "cta_url": "/pages/start-evaluation"
       }
     },
     "sticky_mobile_cta": {
       "type": "sticky-mobile-cta",
       "settings": {
         "cta_label": "Start Evaluation",
-        "cta_url": "/pages/how-it-works",
+        "cta_url": "/pages/start-evaluation",
         "helper_text": "Begin with provider-reviewed evaluation"
       }
     }

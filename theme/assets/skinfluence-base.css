@@ -361,6 +361,12 @@ body.skinfluence-theme.has-scrolled .skinfluence-sticky-mobile-cta {
   position: relative;
 }
 
+.skinfluence-hero__layout {
+  display: grid;
+  gap: var(--sf-space-5);
+  align-items: center;
+}
+
 .skinfluence-hero .page-width::after {
   content: "";
   position: absolute;
@@ -395,6 +401,24 @@ body.skinfluence-theme.has-scrolled .skinfluence-sticky-mobile-cta {
 .skinfluence-hero__subhead {
   font-size: clamp(1.05rem, 1.6vw, 1.28rem);
   line-height: 1.62;
+}
+
+.skinfluence-hero__copy {
+  position: relative;
+  z-index: 1;
+}
+
+.skinfluence-hero__art {
+  position: relative;
+  z-index: 1;
+}
+
+.skinfluence-hero__art-image {
+  width: 100%;
+  height: auto;
+  border-radius: calc(var(--sf-radius) + 12px);
+  box-shadow: 0 28px 70px rgba(31, 37, 41, 0.1);
+  background: rgba(255, 253, 250, 0.72);
 }
 
 .button {
@@ -530,6 +554,8 @@ body.skinfluence-theme.has-scrolled .skinfluence-sticky-mobile-cta {
 }
 
 .skinfluence-side-by-side__placeholder {
+  position: relative;
+  overflow: hidden;
   min-height: 320px;
   display: grid;
   align-items: end;
@@ -541,7 +567,18 @@ body.skinfluence-theme.has-scrolled .skinfluence-sticky-mobile-cta {
   padding: var(--sf-space-4);
 }
 
+.skinfluence-side-by-side__placeholder-art {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.95;
+}
+
 .skinfluence-side-by-side__placeholder-panel {
+  position: relative;
+  z-index: 1;
   max-width: 26rem;
   padding: var(--sf-space-4);
   border-radius: calc(var(--sf-radius) - 2px);
@@ -756,6 +793,20 @@ body.skinfluence-theme.has-scrolled .skinfluence-sticky-mobile-cta {
   padding: var(--sf-space-5);
 }
 
+.skinfluence-support-contact__visual {
+  margin: calc(var(--sf-space-5) * -1) calc(var(--sf-space-5) * -1) var(--sf-space-4);
+  overflow: hidden;
+  border-top-left-radius: var(--sf-radius);
+  border-top-right-radius: var(--sf-radius);
+  background: linear-gradient(180deg, rgba(230, 238, 243, 0.55), rgba(255, 250, 244, 0.78));
+}
+
+.skinfluence-support-contact__visual-image {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
 .skinfluence-support-contact__detail,
 .skinfluence-support-contact__note,
 .skinfluence-contact-form__note {
@@ -845,6 +896,10 @@ body.skinfluence-theme.has-scrolled .skinfluence-sticky-mobile-cta {
 }
 
 @media screen and (min-width: 768px) {
+  .skinfluence-hero__layout {
+    grid-template-columns: minmax(0, 1.02fr) minmax(300px, 0.98fr);
+  }
+
   .skinfluence-site-header__inner {
     grid-template-columns: auto 1fr auto;
   }

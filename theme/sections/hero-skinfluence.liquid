@@ -5,9 +5,14 @@
   assign primary_cta_url = section.settings.primary_cta_url
   assign secondary_cta_url = section.settings.secondary_cta_url
   assign evaluation_url = settings.evaluation_url | default: '/pages/start-evaluation'
+  assign hero_art_asset = ''
 
   if page != blank and hero_headline == blank
     assign hero_headline = page.title
+  endif
+
+  if request.page_type == 'index'
+    assign hero_art_asset = 'skinfluence-hero-art.svg'
   endif
 
   if request.page_type == 'page' and template.suffix == 'legal'
@@ -27,6 +32,15 @@
     endcase
   endif
 
+  if request.page_type == 'page'
+    case template.suffix
+      when 'evaluation'
+        assign hero_art_asset = 'skinfluence-evaluation-art.svg'
+      when 'support'
+        assign hero_art_asset = 'skinfluence-support-art.svg'
+    endcase
+  endif
+
   if section.settings.primary_cta_label contains 'Evaluation'
     if primary_cta_url == blank or primary_cta_url == '/pages/how-it-works'
       assign primary_cta_url = evaluation_url
@@ -42,29 +56,46 @@
 
 <section class="skinfluence-section skinfluence-hero">
   <div class="page-width">
-    {% if hero_eyebrow != blank %}
-      <p class="skinfluence-hero__eyebrow">{{ hero_eyebrow }}</p>
-    {% endif %}
+    <div class="skinfluence-hero__layout">
+      <div class="skinfluence-hero__copy">
+        {% if hero_eyebrow != blank %}
+          <p class="skinfluence-hero__eyebrow">{{ hero_eyebrow }}</p>
+        {% endif %}
 
-    {% if hero_headline != blank %}
-      <h1 class="skinfluence-hero__headline">{{ hero_headline }}</h1>
-    {% endif %}
+        {% if hero_headline != blank %}
+          <h1 class="skinfluence-hero__headline">{{ hero_headline }}</h1>
+        {% endif %}
 
-    {% if hero_subhead != blank %}
-      <div class="skinfluence-hero__subhead rte">{{ hero_subhead }}</div>
-    {% endif %}
+        {% if hero_subhead != blank %}
+          <div class="skinfluence-hero__subhead rte">{{ hero_subhead }}</div>
+        {% endif %}
 
-    <div class="skinfluence-hero__actions">
-      {% if section.settings.primary_cta_label != blank and primary_cta_url != blank %}
-        <a class="button button--primary" href="{{ primary_cta_url }}">
-          {{ section.settings.primary_cta_label }}
-        </a>
-      {% endif %}
+        <div class="skinfluence-hero__actions">
+          {% if section.settings.primary_cta_label != blank and primary_cta_url != blank %}
+            <a class="button button--primary" href="{{ primary_cta_url }}">
+              {{ section.settings.primary_cta_label }}
+            </a>
+          {% endif %}
 
-      {% if section.settings.secondary_cta_label != blank and secondary_cta_url != blank %}
-        <a class="button button--secondary" href="{{ secondary_cta_url }}">
-          {{ section.settings.secondary_cta_label }}
-        </a>
+          {% if section.settings.secondary_cta_label != blank and secondary_cta_url != blank %}
+            <a class="button button--secondary" href="{{ secondary_cta_url }}">
+              {{ section.settings.secondary_cta_label }}
+            </a>
+          {% endif %}
+        </div>
+      </div>
+
+      {% if hero_art_asset != blank %}
+        <div class="skinfluence-hero__art">
+          <img
+            class="skinfluence-hero__art-image"
+            src="{{ hero_art_asset | asset_url }}"
+            alt=""
+            loading="lazy"
+            width="960"
+            height="960"
+          >
+        </div>
       {% endif %}
     </div>
   </div>

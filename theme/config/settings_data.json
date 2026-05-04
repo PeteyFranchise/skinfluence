@@ -1,0 +1,15 @@
+{
+  "current": {
+    "favicon": "",
+    "color_background": "#f5f1eb",
+    "color_surface": "#fffdfa",
+    "color_text": "#1f2529",
+    "color_accent": "#2d556e",
+    "color_border": "#ddd5ca",
+    "evaluation_url": "/pages/start-evaluation",
+    "primary_cta_label": "Start Evaluation",
+    "secondary_cta_label": "How It Works",
+    "mobile_cta_helper": "Begin with provider-reviewed evaluation"
+  },
+  "presets": {}
+}
