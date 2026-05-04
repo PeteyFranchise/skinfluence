@@ -244,6 +244,66 @@ body.skinfluence-theme.has-scrolled .skinfluence-sticky-mobile-cta {
   margin-top: 0;
 }
 
+.skinfluence-main-page .page-width {
+  max-width: 940px;
+}
+
+.skinfluence-main-page__inner {
+  padding: clamp(2rem, 4vw, 3.25rem);
+  border: 1px solid rgba(221, 213, 202, 0.88);
+  border-radius: calc(var(--sf-radius) + 6px);
+  background:
+    radial-gradient(circle at top right, rgba(230, 238, 243, 0.45), transparent 28%),
+    rgba(255, 253, 250, 0.84);
+  box-shadow: 0 24px 60px rgba(31, 37, 41, 0.06);
+  backdrop-filter: blur(10px);
+}
+
+.skinfluence-main-page .skinfluence-section__headline {
+  max-width: 14ch;
+  margin-bottom: var(--sf-space-4);
+}
+
+.skinfluence-main-page__body {
+  font-size: 1.05rem;
+  line-height: 1.7;
+}
+
+.skinfluence-main-page__body > p:first-child {
+  margin-top: 0;
+  margin-bottom: var(--sf-space-5);
+  color: var(--sf-color-accent);
+  font-size: clamp(1.2rem, 2vw, 1.45rem);
+  line-height: 1.45;
+}
+
+.skinfluence-main-page__body h2 {
+  margin: var(--sf-space-6) 0 var(--sf-space-2);
+  color: var(--sf-color-accent);
+  line-height: 1.12;
+  font-size: clamp(1.45rem, 2.2vw, 1.9rem);
+}
+
+.skinfluence-main-page__body p,
+.skinfluence-main-page__body ul,
+.skinfluence-main-page__body ol {
+  margin: 0 0 var(--sf-space-3);
+}
+
+.skinfluence-main-page__body ul,
+.skinfluence-main-page__body ol {
+  padding-left: 1.25rem;
+}
+
+.skinfluence-main-page__body li + li {
+  margin-top: 0.45rem;
+}
+
+.skinfluence-main-page__body h2 + ul,
+.skinfluence-main-page__body h2 + ol {
+  margin-top: var(--sf-space-2);
+}
+
 .skinfluence-hero {
   padding-top: calc(var(--sf-space-7) + var(--sf-space-2));
 }
