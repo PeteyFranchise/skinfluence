@@ -1,3 +1,14 @@
+{% liquid
+  assign banner_cta_url = section.settings.cta_url
+  assign evaluation_url = settings.evaluation_url | default: '/pages/start-evaluation'
+
+  if section.settings.cta_label contains 'Evaluation'
+    if banner_cta_url == blank or banner_cta_url == '/pages/how-it-works'
+      assign banner_cta_url = evaluation_url
+    endif
+  endif
+%}
+
 <section class="skinfluence-section skinfluence-cta-banner">
   <div class="page-width">
     <div class="skinfluence-cta-banner__inner">
@@ -9,8 +20,8 @@
         <div class="skinfluence-cta-banner__subhead rte">{{ section.settings.subhead }}</div>
       {% endif %}
 
-      {% if section.settings.cta_label != blank and section.settings.cta_url != blank %}
-        <a class="button button--primary" href="{{ section.settings.cta_url }}">
+      {% if section.settings.cta_label != blank and banner_cta_url != blank %}
+        <a class="button button--primary" href="{{ banner_cta_url }}">
           {{ section.settings.cta_label }}
         </a>
       {% endif %}

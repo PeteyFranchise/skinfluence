@@ -42,6 +42,11 @@
         "content": "Default CTA labels"
       },
       {
+        "type": "url",
+        "id": "evaluation_url",
+        "label": "Evaluation destination URL"
+      },
+      {
         "type": "text",
         "id": "primary_cta_label",
         "label": "Default primary CTA label",

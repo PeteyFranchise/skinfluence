@@ -2,6 +2,9 @@
   assign hero_eyebrow = section.settings.eyebrow
   assign hero_headline = section.settings.headline
   assign hero_subhead = section.settings.subhead
+  assign primary_cta_url = section.settings.primary_cta_url
+  assign secondary_cta_url = section.settings.secondary_cta_url
+  assign evaluation_url = settings.evaluation_url | default: '/pages/start-evaluation'
 
   if page != blank and hero_headline == blank
     assign hero_headline = page.title
@@ -23,6 +26,18 @@
         assign hero_subhead = '<p>How recurring billing, shipments, account management, and subscription-related expectations should work for Skinfluence users.</p>'
     endcase
   endif
+
+  if section.settings.primary_cta_label contains 'Evaluation'
+    if primary_cta_url == blank or primary_cta_url == '/pages/how-it-works'
+      assign primary_cta_url = evaluation_url
+    endif
+  endif
+
+  if section.settings.secondary_cta_label contains 'Evaluation'
+    if secondary_cta_url == blank or secondary_cta_url == '/pages/how-it-works'
+      assign secondary_cta_url = evaluation_url
+    endif
+  endif
 %}
 
 <section class="skinfluence-section skinfluence-hero">
@@ -40,14 +55,14 @@
     {% endif %}
 
     <div class="skinfluence-hero__actions">
-      {% if section.settings.primary_cta_label != blank and section.settings.primary_cta_url != blank %}
-        <a class="button button--primary" href="{{ section.settings.primary_cta_url }}">
+      {% if section.settings.primary_cta_label != blank and primary_cta_url != blank %}
+        <a class="button button--primary" href="{{ primary_cta_url }}">
           {{ section.settings.primary_cta_label }}
         </a>
       {% endif %}
 
-      {% if section.settings.secondary_cta_label != blank and section.settings.secondary_cta_url != blank %}
-        <a class="button button--secondary" href="{{ section.settings.secondary_cta_url }}">
+      {% if section.settings.secondary_cta_label != blank and secondary_cta_url != blank %}
+        <a class="button button--secondary" href="{{ secondary_cta_url }}">
           {{ section.settings.secondary_cta_label }}
         </a>
       {% endif %}

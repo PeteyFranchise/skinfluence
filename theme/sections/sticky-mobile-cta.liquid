@@ -1,9 +1,20 @@
-{% if section.settings.cta_label != blank and section.settings.cta_url != blank %}
+{% liquid
+  assign mobile_cta_url = section.settings.cta_url
+  assign evaluation_url = settings.evaluation_url | default: '/pages/start-evaluation'
+
+  if section.settings.cta_label contains 'Evaluation'
+    if mobile_cta_url == blank or mobile_cta_url == '/pages/how-it-works'
+      assign mobile_cta_url = evaluation_url
+    endif
+  endif
+%}
+
+{% if section.settings.cta_label != blank and mobile_cta_url != blank %}
   <div class="skinfluence-sticky-mobile-cta">
     {% if section.settings.helper_text != blank %}
       <p class="skinfluence-sticky-mobile-cta__helper">{{ section.settings.helper_text }}</p>
     {% endif %}
-    <a class="button button--primary skinfluence-sticky-mobile-cta__button" href="{{ section.settings.cta_url }}">
+    <a class="button button--primary skinfluence-sticky-mobile-cta__button" href="{{ mobile_cta_url }}">
       {{ section.settings.cta_label }}
     </a>
   </div>
