@@ -50,14 +50,14 @@
       "type": "rich-text-skinfluence",
       "settings": {
         "headline": "What the evaluation includes",
-        "body": "<p>The evaluation process is designed to understand your anti-aging goals, relevant skin history, your current routine, tolerance and sensitivity considerations, and factors that may affect treatment fit.</p>"
+        "body": "<p>The evaluation process is designed to build a clear picture of fit before treatment begins.</p><ul><li>Your anti-aging goals and the concerns you want to address</li><li>Relevant skin history and current routine</li><li>Tolerance and sensitivity considerations</li><li>Any factors that may affect treatment fit or provider review</li></ul>"
       }
     },
     "possible_outcomes": {
       "type": "rich-text-skinfluence",
       "settings": {
         "headline": "Possible outcomes",
-        "body": "<p>After review, your status may be approved, more information needed, or not eligible. The process should feel clear and predictable, not uncertain.</p>"
+        "body": "<p>After review, your status may be one of three outcomes:</p><ul><li><strong>Approved</strong> so you can move into monthly care</li><li><strong>More information needed</strong> before a final decision is made</li><li><strong>Not eligible</strong> if treatment is not appropriate</li></ul><p>The process should feel clear and predictable, not uncertain.</p>"
       }
     },
     "after_approval": {
@@ -77,7 +77,7 @@
     "final_cta": {
       "type": "cta-banner-skinfluence",
       "settings": {
-        "headline": "Start your evaluation today.",
+        "headline": "Know what to expect before you begin.",
         "subhead": "<p>Provider-reviewed anti-aging care designed to feel clear and simple from the start.</p>",
         "cta_label": "Start Evaluation",
         "cta_url": "/pages/how-it-works"

@@ -7,6 +7,8 @@
     <div class="skinfluence-steps__grid">
       {% for block in section.blocks %}
         <div class="skinfluence-steps__card" {{ block.shopify_attributes }}>
+          <p class="skinfluence-steps__eyebrow">Step {{ forloop.index }}</p>
+
           {% if block.settings.title != blank %}
             <h3 class="skinfluence-steps__title">{{ block.settings.title }}</h3>
           {% endif %}

@@ -16,7 +16,7 @@
       "type": "rich-text-skinfluence",
       "settings": {
         "headline": "How to get help",
-        "body": "<p>Skinfluence support is designed to help with subscription questions, order issues, and general guidance. If you have treatment-related concerns, you should be directed to the appropriate care pathway rather than a generic support inbox.</p>"
+        "body": "<p>Skinfluence support is designed to help with subscription questions, order issues, and general guidance without making users guess where to go next.</p><p>If you have treatment-related concerns, you should be directed to the appropriate care pathway rather than a generic support inbox.</p>"
       }
     },
     "support_categories": {
@@ -54,7 +54,7 @@
         "item_4"
       ],
       "settings": {
-        "headline": "Support categories"
+        "headline": "Choose the right support path"
       }
     },
     "support_entry": {
@@ -106,7 +106,7 @@
     "final_cta": {
       "type": "cta-banner-skinfluence",
       "settings": {
-        "headline": "Still exploring Skinfluence?",
+        "headline": "New to Skinfluence?",
         "subhead": "<p>Learn how the evaluation-first experience works before you begin.</p>",
         "cta_label": "How It Works",
         "cta_url": "/pages/how-it-works"

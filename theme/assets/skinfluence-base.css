@@ -549,6 +549,29 @@ body.skinfluence-theme.has-scrolled .skinfluence-sticky-mobile-cta {
   color: var(--sf-color-accent);
 }
 
+.skinfluence-steps__card {
+  position: relative;
+  padding-top: calc(var(--sf-space-5) + 0.4rem);
+  overflow: hidden;
+}
+
+.skinfluence-steps__card::before {
+  content: "";
+  position: absolute;
+  inset: 0 auto auto 0;
+  width: 100%;
+  height: 4px;
+  background: linear-gradient(90deg, var(--sf-color-accent), rgba(88, 121, 146, 0.25));
+}
+
+.skinfluence-steps__eyebrow {
+  margin: 0 0 var(--sf-space-2);
+  color: var(--sf-color-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  font-size: 0.78rem;
+}
+
 .skinfluence-faq__item {
   padding: var(--sf-space-3) var(--sf-space-4);
   background: rgba(255, 253, 250, 0.9);
@@ -681,6 +704,30 @@ body.skinfluence-theme.has-scrolled .skinfluence-sticky-mobile-cta {
 .skinfluence-support-contact__detail,
 .skinfluence-support-contact__note,
 .skinfluence-contact-form__note {
+  color: var(--sf-color-muted);
+}
+
+.skinfluence-support-contact__routing {
+  display: grid;
+  gap: var(--sf-space-3);
+  margin-top: var(--sf-space-4);
+}
+
+.skinfluence-support-contact__route {
+  padding: var(--sf-space-3);
+  border: 1px solid rgba(221, 213, 202, 0.88);
+  border-radius: 16px;
+  background: rgba(255, 253, 250, 0.76);
+}
+
+.skinfluence-support-contact__route-label {
+  margin: 0 0 var(--sf-space-1);
+  color: var(--sf-color-accent);
+  font-weight: 600;
+}
+
+.skinfluence-support-contact__route-copy {
+  margin: 0;
   color: var(--sf-color-muted);
 }
 
