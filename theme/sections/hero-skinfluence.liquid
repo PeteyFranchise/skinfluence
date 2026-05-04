@@ -6,6 +6,8 @@
   assign secondary_cta_url = section.settings.secondary_cta_url
   assign evaluation_url = settings.evaluation_url | default: '/pages/start-evaluation'
   assign hero_art_asset = ''
+  assign hero_image = section.settings.image
+  assign hero_image_alt = section.settings.image_alt | escape
 
   if page != blank and hero_headline == blank
     assign hero_headline = page.title
@@ -85,16 +87,27 @@
         </div>
       </div>
 
-      {% if hero_art_asset != blank %}
+      {% if hero_image != blank or hero_art_asset != blank %}
         <div class="skinfluence-hero__art">
-          <img
-            class="skinfluence-hero__art-image"
-            src="{{ hero_art_asset | asset_url }}"
-            alt=""
-            loading="lazy"
-            width="960"
-            height="960"
-          >
+          {% if hero_image != blank %}
+            {{
+              hero_image
+              | image_url: width: 1400
+              | image_tag:
+                class: 'skinfluence-hero__art-image',
+                loading: 'lazy',
+                alt: hero_image_alt
+            }}
+          {% else %}
+            <img
+              class="skinfluence-hero__art-image"
+              src="{{ hero_art_asset | asset_url }}"
+              alt=""
+              loading="lazy"
+              width="960"
+              height="960"
+            >
+          {% endif %}
         </div>
       {% endif %}
     </div>
@@ -108,6 +121,8 @@
     { "type": "text", "id": "eyebrow", "label": "Eyebrow" },
     { "type": "text", "id": "headline", "label": "Headline" },
     { "type": "richtext", "id": "subhead", "label": "Subhead" },
+    { "type": "image_picker", "id": "image", "label": "Hero image" },
+    { "type": "text", "id": "image_alt", "label": "Hero image alt text" },
     { "type": "text", "id": "primary_cta_label", "label": "Primary CTA label" },
     { "type": "url", "id": "primary_cta_url", "label": "Primary CTA URL" },
     { "type": "text", "id": "secondary_cta_label", "label": "Secondary CTA label" },

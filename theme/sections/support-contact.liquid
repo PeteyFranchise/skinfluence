@@ -34,16 +34,29 @@
       </div>
 
       <div class="skinfluence-support-contact__card">
-        <div class="skinfluence-support-contact__visual" aria-hidden="true">
-          <img
-            class="skinfluence-support-contact__visual-image"
-            src="{{ 'skinfluence-support-art.svg' | asset_url }}"
-            alt=""
-            loading="lazy"
-            width="960"
-            height="960"
-          >
-        </div>
+        {% if section.settings.visual_image != blank or section.settings.show_default_visual %}
+          <div class="skinfluence-support-contact__visual" aria-hidden="true">
+            {% if section.settings.visual_image != blank %}
+              {{
+                section.settings.visual_image
+                | image_url: width: 1400
+                | image_tag:
+                  class: 'skinfluence-support-contact__visual-image',
+                  loading: 'lazy',
+                  alt: ''
+              }}
+            {% else %}
+              <img
+                class="skinfluence-support-contact__visual-image"
+                src="{{ 'skinfluence-support-art.svg' | asset_url }}"
+                alt=""
+                loading="lazy"
+                width="960"
+                height="960"
+              >
+            {% endif %}
+          </div>
+        {% endif %}
 
         {% form 'contact', class: 'skinfluence-contact-form' %}
           {% if form.posted_successfully? %}
@@ -111,6 +124,8 @@
   "settings": [
     { "type": "text", "id": "headline", "label": "Headline", "default": "Need help now?" },
     { "type": "richtext", "id": "body", "label": "Body" },
+    { "type": "image_picker", "id": "visual_image", "label": "Support visual" },
+    { "type": "checkbox", "id": "show_default_visual", "label": "Show default visual when no image is selected", "default": true },
     { "type": "text", "id": "email_label", "label": "Email label", "default": "Support email" },
     { "type": "text", "id": "email_address", "label": "Email address" },
     { "type": "text", "id": "support_note", "label": "Support note" },
