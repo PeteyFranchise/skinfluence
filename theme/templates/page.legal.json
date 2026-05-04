@@ -15,13 +15,58 @@
     "legal_content": {
       "type": "rich-text-skinfluence",
       "settings": {
-        "headline": "Page content",
-        "body": "<p>Replace this placeholder with the approved legal or policy copy for this page.</p>"
+        "headline": "How to use this page",
+        "body": "<p>Use this template for privacy, terms, subscription, telehealth, refund, and other policy content that should remain easy to review and maintain. Replace the placeholder copy below with approved legal language for the specific page.</p><p>If you are still drafting, keep the content clear, readable, and consistent with the actual product, subscription, and care workflows described on the site.</p>"
+      }
+    },
+    "policy_sections": {
+      "type": "faq-accordion-skinfluence",
+      "blocks": {
+        "policy_1": {
+          "type": "item",
+          "settings": {
+            "question": "What this page should cover",
+            "answer": "<p>This page should explain the applicable policy in plain language first, then provide the complete legal language approved for your business and care model.</p>"
+          }
+        },
+        "policy_2": {
+          "type": "item",
+          "settings": {
+            "question": "What should stay consistent across the site",
+            "answer": "<p>Pricing, subscription terms, provider review language, treatment eligibility, support expectations, and refund logic should always match what appears on the main storefront pages.</p>"
+          }
+        },
+        "policy_3": {
+          "type": "item",
+          "settings": {
+            "question": "What should be reviewed before launch",
+            "answer": "<p>Have counsel review privacy, telehealth, subscription, refund, and medical disclaimer language before launch, especially if the workflow includes prescriptions, provider review, or recurring billing.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "policy_1",
+        "policy_2",
+        "policy_3"
+      ],
+      "settings": {
+        "headline": "Legal page guidance"
+      }
+    },
+    "legal_cta": {
+      "type": "cta-banner-skinfluence",
+      "settings": {
+        "headline": "Need help understanding a policy?",
+        "subhead": "<p>Use the support page for general questions or consult counsel before publishing final legal language.</p>",
+        "cta_label": "Support",
+        "cta_url": "/pages/support"
       }
     }
   },
   "order": [
     "hero",
-    "legal_content"
+    "legal_content",
+    "policy_sections",
+    "legal_cta"
   ]
 }
