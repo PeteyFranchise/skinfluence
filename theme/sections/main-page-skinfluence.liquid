@@ -1,0 +1,24 @@
+<section class="skinfluence-section skinfluence-main-page">
+  <div class="page-width">
+    {% if page.title != blank %}
+      <h1 class="skinfluence-section__headline">{{ page.title }}</h1>
+    {% endif %}
+
+    {% if page.content != blank %}
+      <div class="skinfluence-main-page__body rte">
+        {{ page.content }}
+      </div>
+    {% else %}
+      <div class="skinfluence-main-page__body rte">
+        <p>Add page content in Shopify admin to replace this placeholder.</p>
+      </div>
+    {% endif %}
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Skinfluence Main Page",
+  "settings": []
+}
+{% endschema %}

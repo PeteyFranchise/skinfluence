@@ -230,6 +230,7 @@ body.skinfluence-theme.has-scrolled .skinfluence-sticky-mobile-cta {
 
 .skinfluence-hero__subhead,
 .skinfluence-rich-text__body,
+.skinfluence-main-page__body,
 .skinfluence-side-by-side__body,
 .skinfluence-steps__body,
 .skinfluence-faq__answer,
@@ -237,6 +238,10 @@ body.skinfluence-theme.has-scrolled .skinfluence-sticky-mobile-cta {
 .skinfluence-support-contact__body {
   color: var(--sf-color-muted);
   max-width: 65ch;
+}
+
+.skinfluence-main-page__body > :first-child {
+  margin-top: 0;
 }
 
 .skinfluence-hero {
