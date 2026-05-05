@@ -69,6 +69,8 @@
         "route_primary_copy": "Billing questions, shipment issues, account access, and general order support.",
         "route_secondary_label": "Use a care pathway for",
         "route_secondary_copy": "Irritation, treatment use concerns, refill suitability, or anything that may require provider follow-up.",
+        "topic_label": "What do you need help with?",
+        "topic_note": "If your concern may require provider follow-up, choose Treatment-related concern so the message can be routed appropriately.",
         "button_label": "Contact Support",
         "form_note": "Please avoid sharing detailed medical information in this general support form."
       }

@@ -975,7 +975,8 @@ body.skinfluence-theme.has-scrolled .skinfluence-sticky-mobile-cta {
 }
 
 .skinfluence-contact-form__field input,
-.skinfluence-contact-form__field textarea {
+.skinfluence-contact-form__field textarea,
+.skinfluence-contact-form__field select {
   width: 100%;
   border: 1px solid var(--sf-color-border);
   border-radius: 14px;
@@ -987,6 +988,19 @@ body.skinfluence-theme.has-scrolled .skinfluence-sticky-mobile-cta {
 
 .skinfluence-contact-form__field textarea {
   resize: vertical;
+}
+
+.skinfluence-contact-form__field select {
+  appearance: none;
+  background-image:
+    linear-gradient(45deg, transparent 50%, rgba(36, 71, 93, 0.7) 50%),
+    linear-gradient(135deg, rgba(36, 71, 93, 0.7) 50%, transparent 50%);
+  background-position:
+    calc(100% - 1.1rem) calc(50% - 0.12rem),
+    calc(100% - 0.8rem) calc(50% - 0.12rem);
+  background-size: 0.35rem 0.35rem, 0.35rem 0.35rem;
+  background-repeat: no-repeat;
+  padding-right: 2.6rem;
 }
 
 .skinfluence-contact-form__success,
@@ -1003,6 +1017,12 @@ body.skinfluence-theme.has-scrolled .skinfluence-sticky-mobile-cta {
 .skinfluence-contact-form__errors {
   background: rgba(252, 233, 231, 0.9);
   border: 1px solid rgba(188, 113, 113, 0.35);
+}
+
+.skinfluence-contact-form__topic-note {
+  margin: -0.35rem 0 0;
+  color: var(--sf-color-muted);
+  font-size: 0.92rem;
 }
 
 .visually-hidden {

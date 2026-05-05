@@ -97,6 +97,24 @@
           </div>
 
           <div class="skinfluence-contact-form__field">
+            <label for="ContactFormTopic-{{ section.id }}">{{ section.settings.topic_label | default: 'What do you need help with?' }}</label>
+            <select
+              id="ContactFormTopic-{{ section.id }}"
+              name="contact[Support topic]"
+            >
+              <option value="Billing and subscription support">Billing and subscription support</option>
+              <option value="Shipping and order updates">Shipping and order updates</option>
+              <option value="Account access">Account access</option>
+              <option value="General product question">General product question</option>
+              <option value="Treatment-related concern">Treatment-related concern</option>
+            </select>
+          </div>
+
+          {% if section.settings.topic_note != blank %}
+            <p class="skinfluence-contact-form__topic-note">{{ section.settings.topic_note }}</p>
+          {% endif %}
+
+          <div class="skinfluence-contact-form__field">
             <label for="ContactFormMessage-{{ section.id }}">How can we help?</label>
             <textarea
               rows="6"
@@ -137,6 +155,8 @@
     { "type": "text", "id": "route_secondary_label", "label": "Secondary route label", "default": "Use a care pathway for" },
     { "type": "text", "id": "route_secondary_copy", "label": "Secondary route copy", "default": "Irritation, treatment use concerns, refill suitability, or anything that may require provider follow-up." },
     { "type": "header", "content": "Form" },
+    { "type": "text", "id": "topic_label", "label": "Topic field label", "default": "What do you need help with?" },
+    { "type": "text", "id": "topic_note", "label": "Topic field note", "default": "If your concern may require provider follow-up, choose Treatment-related concern so the message can be routed appropriately." },
     { "type": "text", "id": "button_label", "label": "Button label", "default": "Contact Support" },
     { "type": "text", "id": "form_note", "label": "Form note" }
   ],
