@@ -30,7 +30,14 @@
 
       <div class="skinfluence-side-by-side__media">
         {% if section.settings.image != blank %}
-          {{ section.settings.image | image_url: width: 1200 | image_tag: loading: 'lazy', class: 'skinfluence-side-by-side__image' }}
+          {{
+            section.settings.image
+            | image_url: width: 1200
+            | image_tag:
+              loading: 'lazy',
+              class: 'skinfluence-side-by-side__image',
+              alt: section.settings.image_alt
+          }}
         {% else %}
           <div class="skinfluence-side-by-side__placeholder">
             <img
@@ -64,6 +71,7 @@
     { "type": "text", "id": "headline", "label": "Headline" },
     { "type": "richtext", "id": "body", "label": "Body" },
     { "type": "image_picker", "id": "image", "label": "Image" },
+    { "type": "text", "id": "image_alt", "label": "Image alt text" },
     {
       "type": "select",
       "id": "image_position",
