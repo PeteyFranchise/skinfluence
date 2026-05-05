@@ -8,6 +8,7 @@
   assign hero_art_asset = ''
   assign hero_image = section.settings.image
   assign hero_image_alt = section.settings.image_alt | escape
+  assign hero_modifier = 'default'
 
   if page != blank and hero_headline == blank
     assign hero_headline = page.title
@@ -15,9 +16,11 @@
 
   if request.page_type == 'index'
     assign hero_art_asset = 'skinfluence-hero-art.svg'
+    assign hero_modifier = 'home'
   endif
 
   if request.page_type == 'page' and template.suffix == 'legal'
+    assign hero_modifier = 'legal'
     case page.handle
       when 'privacy-policy'
         assign hero_eyebrow = 'Privacy and data use'
@@ -36,10 +39,22 @@
 
   if request.page_type == 'page'
     case template.suffix
-      when 'evaluation'
-        assign hero_art_asset = 'skinfluence-evaluation-art.svg'
+      when 'about'
+        assign hero_modifier = 'about'
+      when 'faq'
+        assign hero_modifier = 'faq'
+      when 'how-it-works'
+        assign hero_modifier = 'how-it-works'
+      when 'pricing'
+        assign hero_modifier = 'pricing'
       when 'support'
         assign hero_art_asset = 'skinfluence-support-art.svg'
+        assign hero_modifier = 'support'
+      when 'treatment'
+        assign hero_modifier = 'treatment'
+      when 'evaluation'
+        assign hero_art_asset = 'skinfluence-evaluation-art.svg'
+        assign hero_modifier = 'evaluation'
     endcase
   endif
 
@@ -54,9 +69,13 @@
       assign secondary_cta_url = evaluation_url
     endif
   endif
+  assign hero_has_art = false
+  if hero_image != blank or hero_art_asset != blank
+    assign hero_has_art = true
+  endif
 %}
 
-<section class="skinfluence-section skinfluence-hero">
+<section class="skinfluence-section skinfluence-hero skinfluence-hero--{{ hero_modifier }}{% if hero_has_art %} skinfluence-hero--has-art{% endif %}">
   <div class="page-width">
     <div class="skinfluence-hero__layout">
       <div class="skinfluence-hero__copy">
