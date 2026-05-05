@@ -1,4 +1,8 @@
-<section class="skinfluence-section skinfluence-rich-text">
+{% liquid
+  assign rich_text_tone = section.settings.tone | default: 'default'
+%}
+
+<section class="skinfluence-section skinfluence-rich-text skinfluence-rich-text--{{ rich_text_tone }}">
   <div class="page-width">
     {% if section.settings.headline != blank %}
       <h2 class="skinfluence-section__headline">{{ section.settings.headline }}</h2>
@@ -15,7 +19,18 @@
   "name": "Skinfluence Rich Text",
   "settings": [
     { "type": "text", "id": "headline", "label": "Headline" },
-    { "type": "richtext", "id": "body", "label": "Body" }
+    { "type": "richtext", "id": "body", "label": "Body" },
+    {
+      "type": "select",
+      "id": "tone",
+      "label": "Section style",
+      "default": "default",
+      "options": [
+        { "value": "default", "label": "Default" },
+        { "value": "highlight", "label": "Highlight panel" },
+        { "value": "editorial", "label": "Editorial split band" }
+      ]
+    }
   ],
   "presets": [
     { "name": "Skinfluence Rich Text" }

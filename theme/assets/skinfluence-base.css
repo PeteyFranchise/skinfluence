@@ -752,6 +752,43 @@ body.skinfluence-theme.has-scrolled .skinfluence-sticky-mobile-cta {
   line-height: 1.72;
 }
 
+.skinfluence-rich-text--highlight .page-width,
+.skinfluence-rich-text--editorial .page-width {
+  position: relative;
+  max-width: 980px;
+}
+
+.skinfluence-rich-text--highlight .page-width {
+  padding: clamp(1.8rem, 3vw, 2.6rem);
+  border: 1px solid rgba(221, 213, 202, 0.86);
+  border-radius: calc(var(--sf-radius) + 8px);
+  background:
+    radial-gradient(circle at top right, rgba(45, 85, 110, 0.1), transparent 30%),
+    rgba(255, 253, 250, 0.82);
+  box-shadow: 0 24px 56px rgba(31, 37, 41, 0.055);
+}
+
+.skinfluence-rich-text--editorial {
+  padding-block: clamp(4rem, 7vw, 5.5rem);
+  background:
+    linear-gradient(180deg, rgba(33, 60, 78, 0.98), rgba(28, 51, 67, 0.98)),
+    radial-gradient(circle at top right, rgba(120, 154, 179, 0.18), transparent 26%);
+}
+
+.skinfluence-rich-text--editorial .skinfluence-section__headline,
+.skinfluence-rich-text--editorial .skinfluence-rich-text__body,
+.skinfluence-rich-text--editorial .skinfluence-rich-text__body > p:first-child {
+  color: rgba(247, 242, 235, 0.94);
+}
+
+.skinfluence-rich-text--editorial .skinfluence-rich-text__body {
+  max-width: 56ch;
+}
+
+.skinfluence-rich-text--editorial .skinfluence-rich-text__body > p:first-child {
+  font-size: clamp(1.18rem, 2vw, 1.38rem);
+}
+
 .skinfluence-rich-text__body > p:first-child {
   margin-top: 0;
 }

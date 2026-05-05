@@ -54,7 +54,8 @@
       "type": "rich-text-skinfluence",
       "settings": {
         "headline": "When your routine stops feeling worth it.",
-        "body": "<p>There comes a point when another serum, another cream, and another expensive routine stop feeling like progress. Skinfluence is for women who want a more serious anti-aging approach without turning skincare into a second job or navigating the friction of traditional dermatology.</p>"
+        "body": "<p>There comes a point when another serum, another cream, and another expensive routine stop feeling like progress. Skinfluence is for women who want a more serious anti-aging approach without turning skincare into a second job or navigating the friction of traditional dermatology.</p>",
+        "tone": "highlight"
       }
     },
     "what_is_skinfluence": {
@@ -188,14 +189,16 @@
       "type": "rich-text-skinfluence",
       "settings": {
         "headline": "More guided than skincare. Easier than traditional dermatology.",
-        "body": "<p>Skinfluence is not built like a crowded product line or a generic prescription checkout. It is designed as a premium, provider-reviewed care experience for women who want stronger anti-aging support in a format they can actually stay consistent with.</p><p>This is not about adding more products. It is about moving into a more effective anti-aging routine with greater clarity, support, and consistency.</p>"
+        "body": "<p>Skinfluence is not built like a crowded product line or a generic prescription checkout. It is designed as a premium, provider-reviewed care experience for women who want stronger anti-aging support in a format they can actually stay consistent with.</p><p>This is not about adding more products. It is about moving into a more effective anti-aging routine with greater clarity, support, and consistency.</p>",
+        "tone": "editorial"
       }
     },
     "safety_expectations": {
       "type": "rich-text-skinfluence",
       "settings": {
         "headline": "Real treatment should come with real guidance.",
-        "body": "<p>Prescription-led skincare should never rely on hype alone. Skinfluence is built around provider review, realistic expectations, and support through the normal adjustment period that can come with treatment, including dryness, peeling, or irritation.</p><p>The goal is visible improvement over time, not overnight transformation.</p>"
+        "body": "<p>Prescription-led skincare should never rely on hype alone. Skinfluence is built around provider review, realistic expectations, and support through the normal adjustment period that can come with treatment, including dryness, peeling, or irritation.</p><p>The goal is visible improvement over time, not overnight transformation.</p>",
+        "tone": "highlight"
       }
     },
     "faq_preview": {
