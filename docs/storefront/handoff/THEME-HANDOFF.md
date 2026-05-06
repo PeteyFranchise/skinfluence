@@ -95,7 +95,7 @@ Important:
 
 See:
 
-- `docs/storefront/EVALUATION-HANDOFF.md`
+- `docs/storefront/handoff/EVALUATION-HANDOFF.md`
 
 ## Current image workflow
 

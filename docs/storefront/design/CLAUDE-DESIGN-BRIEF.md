@@ -223,8 +223,8 @@ Use something like:
 
 Also give Claude:
 
-- `docs/storefront/THEME-HANDOFF.md`
-- `docs/storefront/EVALUATION-HANDOFF.md`
+- `docs/storefront/handoff/THEME-HANDOFF.md`
+- `docs/storefront/handoff/EVALUATION-HANDOFF.md`
 - screenshots of homepage, start-evaluation, support, pricing, and FAQ
 
 ## Best working model

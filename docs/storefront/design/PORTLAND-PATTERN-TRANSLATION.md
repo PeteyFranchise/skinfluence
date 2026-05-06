@@ -48,7 +48,7 @@ Current status:
 - fallback SVGs still appear where no real image is uploaded
 
 Next improvement:
-- upload real images through the theme editor using `IMAGE-SLOT-GUIDE.md`
+- upload real images through the theme editor using `docs/storefront/design/IMAGE-SLOT-GUIDE.md`
 
 ## 3. Pattern: Distinct page openings
 
