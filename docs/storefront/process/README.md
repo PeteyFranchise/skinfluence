@@ -11,3 +11,9 @@ Suggested contents:
 - design-to-build handoff notes
 - evaluation handoff notes
 - live-store setup and operations notes
+
+For the current storefront doc structure, use:
+
+- `design/` for visual direction, image-slot, and critique docs
+- `handoff/` for implementation-facing source-of-truth docs
+- `process/` for workflow, checklists, and operational notes

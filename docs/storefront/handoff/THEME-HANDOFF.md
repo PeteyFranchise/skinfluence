@@ -74,6 +74,12 @@ The official launch product and subscription model is documented here:
 
 - `docs/storefront/handoff/PRODUCT-SUBSCRIPTION-MODEL.md`
 
+## Content reference
+
+The current operational content baseline is documented here:
+
+- `docs/storefront/handoff/CONTENT-SOURCE-OF-TRUTH.md`
+
 ## Theme settings currently important
 
 Global:
