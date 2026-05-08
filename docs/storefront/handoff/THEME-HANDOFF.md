@@ -68,6 +68,12 @@ Fallback:
 - theme-editor image controls for hero and support sections
 - built-in branded SVG artwork fallbacks
 
+## Product model reference
+
+The official launch product and subscription model is documented here:
+
+- `docs/storefront/handoff/PRODUCT-SUBSCRIPTION-MODEL.md`
+
 ## Theme settings currently important
 
 Global:
@@ -143,7 +149,7 @@ Support form visual:
 ## Recommended next priorities
 
 1. connect the Bask intake URL through `page.evaluation`
-2. choose final photography/visual assets in Shopify editor
-3. replace placeholder legal text with approved legal copy
-4. validate footer menus and legal menus in Shopify admin
-5. decide whether to split a public storefront repo later
+2. finalize the launch product/subscription model details
+3. choose final photography/visual assets in Shopify editor
+4. replace placeholder legal text with approved legal copy
+5. validate footer menus and legal menus in Shopify admin

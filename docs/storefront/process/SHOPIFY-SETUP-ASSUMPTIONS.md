@@ -125,6 +125,10 @@ The theme assumes a launch model with:
 
 It does not assume a large multi-product catalog at launch.
 
+See:
+
+- `docs/storefront/handoff/PRODUCT-SUBSCRIPTION-MODEL.md`
+
 ## Support assumptions
 
 The support page currently assumes:
