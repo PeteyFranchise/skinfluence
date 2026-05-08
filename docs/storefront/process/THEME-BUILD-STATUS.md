@@ -13,6 +13,12 @@ The repo now contains an early Shopify storefront foundation under `theme/` with
 - header and footer shell scaffolding
 - early theme settings wiring
 
+Important current split:
+
+- the custom theme under `theme/` is the stable engineering and content reference
+- Portland is the active migration target for future storefront design work
+- until Portland catches up on the core experience, the custom theme remains the implemented source of truth for route logic, CTA architecture, and reusable content structure
+
 ## Implemented
 
 ### Layout and assets
@@ -148,11 +154,11 @@ It is best described as:
 
 ## Recommended next steps
 
-1. connect the final Bask intake URL
-2. upload/select final photography or illustration assets in Shopify
-3. replace placeholder legal text with approved final copy
-4. validate menus and final admin content setup
-5. finalize operational support and billing language
+1. rebuild Portland homepage
+2. rebuild Portland start-evaluation, pricing, FAQ, and support pages
+3. connect the final Bask intake URL
+4. replace placeholder legal text with approved final copy
+5. validate menus and final admin content setup
 
 ## Commit milestone summary
 

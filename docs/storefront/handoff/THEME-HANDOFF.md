@@ -14,6 +14,12 @@ Current development theme:
 - name: `Development (68b794-Peters-MacBook-Pro)`
 - theme id: `155740799134`
 
+Portland migration target:
+
+- Portland trial preview theme exists in the same Shopify store
+- Portland is the active visual migration target for future storefront design work
+- the current custom development theme remains the engineering and content reference until Portland catches up on the core pages
+
 ## Active GitHub repository
 
 - repo: `https://github.com/PeteyFranchise/skinfluence`
@@ -67,6 +73,15 @@ Fallback:
 - pricing breakdown section
 - theme-editor image controls for hero and support sections
 - built-in branded SVG artwork fallbacks
+
+## Official theme-target rule
+
+Use this rule for future storefront work:
+
+- the current custom development theme remains the stable engineering reference
+- Portland is the active migration target for new major storefront design work
+- no major new visual work should go into the old custom theme unless it supports migration planning, preserves source material, or documents existing logic
+- Portland becomes the primary storefront target once homepage, start-evaluation, pricing, FAQ, and support are rebuilt there with the locked CTA architecture preserved
 
 ## Product model reference
 

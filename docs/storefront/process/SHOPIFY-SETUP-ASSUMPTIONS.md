@@ -17,6 +17,15 @@ The Shopify store is assumed to act as the public storefront shell for:
 
 It is not assumed to be the clinical system of record.
 
+## Theme-target assumptions
+
+Current operating assumption:
+
+- the existing custom development theme remains the reference implementation for content structure, template mapping, and locked CTA logic
+- Portland is the active migration target for future storefront design work
+- until Portland catches up on the core pages, it should be treated as a rebuild track rather than the primary implemented storefront
+- once Portland has homepage, start-evaluation, pricing, FAQ, and support rebuilt with the locked CTA architecture preserved, it can become the primary storefront target
+
 ## Page-handle assumptions
 
 The current template scaffolds assume these page handles:
