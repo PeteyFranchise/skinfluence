@@ -95,6 +95,12 @@ The current operational content baseline is documented here:
 
 - `docs/storefront/handoff/CONTENT-SOURCE-OF-TRUTH.md`
 
+## Support operations reference
+
+The current storefront support routing model is documented here:
+
+- `docs/storefront/handoff/SUPPORT-OPERATING-MODEL.md`
+
 ## Theme settings currently important
 
 Global:

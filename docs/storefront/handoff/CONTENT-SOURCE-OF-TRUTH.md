@@ -142,6 +142,9 @@ Working source:
 - `theme/templates/page.support.json`
 - `theme/sections/support-contact.liquid`
 
+Supporting rule:
+- see `docs/storefront/handoff/SUPPORT-OPERATING-MODEL.md`
+
 ### About
 
 Current role:
@@ -218,5 +221,6 @@ as the working source of truth.
 
 - `docs/storefront/handoff/EVALUATION-HANDOFF.md`
 - `docs/storefront/handoff/PRODUCT-SUBSCRIPTION-MODEL.md`
+- `docs/storefront/handoff/SUPPORT-OPERATING-MODEL.md`
 - `docs/storefront/handoff/THEME-HANDOFF.md`
 - `docs/storefront/process/SHOPIFY-SETUP-ASSUMPTIONS.md`

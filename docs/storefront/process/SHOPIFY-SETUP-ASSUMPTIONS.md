@@ -148,6 +148,10 @@ The support page currently assumes:
 
 This should be validated against the actual support and care operating model before launch.
 
+See:
+
+- `docs/storefront/handoff/SUPPORT-OPERATING-MODEL.md`
+
 ## Legal assumptions
 
 The legal template is a clean shell only.
