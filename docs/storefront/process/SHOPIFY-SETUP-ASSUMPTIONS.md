@@ -53,8 +53,14 @@ Current theme routing now assumes:
 - shared evaluation destination via theme setting: `evaluation_url`
 - current value: `/pages/start-evaluation`
 - `Start Evaluation` page acts as the branded handoff into the real intake flow
+- this is the official CTA architecture for launch unless deliberately changed later
 
 The real Bask URL is still pending and should eventually be connected through the evaluation handoff layer.
+
+Official rule:
+
+- public evaluation CTAs go to `/pages/start-evaluation`
+- only the final CTA on the evaluation handoff page should point to Bask
 
 ## Menu assumptions
 

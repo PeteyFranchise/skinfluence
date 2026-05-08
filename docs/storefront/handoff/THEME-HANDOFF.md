@@ -90,8 +90,10 @@ Shared evaluation destination:
 
 Important:
 
+- this is a locked architecture decision for the storefront
 - keep all major evaluation CTAs pointed to the shared destination
 - connect Bask later through the evaluation handoff page instead of hardcoding the vendor URL everywhere
+- public pages should not link directly to Bask unless there is a deliberate documented exception
 
 See:
 
@@ -140,7 +142,7 @@ Support form visual:
 
 ## Recommended next priorities
 
-1. connect the Bask intake URL
+1. connect the Bask intake URL through `page.evaluation`
 2. choose final photography/visual assets in Shopify editor
 3. replace placeholder legal text with approved legal copy
 4. validate footer menus and legal menus in Shopify admin

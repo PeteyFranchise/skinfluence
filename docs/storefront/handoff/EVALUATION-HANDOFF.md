@@ -12,6 +12,26 @@ The storefront now uses a dedicated public page as the evaluation handoff:
 
 All major `Start Evaluation` CTAs are designed to resolve through the shared evaluation destination rather than pointing directly to an informational page.
 
+## Locked architecture decision
+
+This is now the official Skinfluence CTA rule:
+
+- all major public evaluation CTAs must point to `/pages/start-evaluation`
+- the final CTA on `/pages/start-evaluation` should point to Bask once the real intake URL exists
+
+This rule should apply across:
+
+- homepage
+- header
+- sticky mobile CTA
+- treatment page
+- pricing page
+- FAQ page
+- support page where applicable
+- footer CTA surfaces where applicable
+
+Direct Bask links should not be scattered across public storefront templates unless there is a deliberate exception.
+
 ## Why this structure exists
 
 The storefront should keep a branded handoff layer between marketing content and the real evaluation/intake flow.
@@ -41,14 +61,9 @@ Current placeholder button state on `page.evaluation`:
 
 Once the real Bask intake URL exists, update the handoff in this order:
 
-1. Decide whether the final user flow should be:
-   - storefront CTA -> `/pages/start-evaluation` -> Bask
-   - or storefront CTA -> Bask directly
-
-Recommended structure:
-
 - keep storefront CTAs pointed to `/pages/start-evaluation`
 - update the primary hero CTA on `page.evaluation` to the Bask intake URL
+- leave Bask out of homepage, nav, pricing, FAQ, and support CTAs
 
 ## Recommended launch configuration
 
