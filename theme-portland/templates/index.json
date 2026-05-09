@@ -121,6 +121,35 @@
         "padding_bottom": 0
       }
     },
+    "rich_text_core_problem": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_core_problem": {
+          "type": "heading",
+          "settings": {
+            "heading": "<p>When your routine stops feeling worth it.</p>",
+            "heading_size": "large"
+          }
+        },
+        "text_core_problem": {
+          "type": "text",
+          "settings": {
+            "text": "<p>There comes a point when another serum, another cream, and another expensive routine stop feeling like progress. Skinfluence is for women who want a more serious anti-aging approach without turning skincare into a second job or navigating the friction of traditional dermatology.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "heading_core_problem",
+        "text_core_problem"
+      ],
+      "name": "Core problem",
+      "settings": {
+        "color_scheme": "background-1",
+        "full_width": true,
+        "padding_top": 120,
+        "padding_bottom": 120
+      }
+    },
     "multicolumn": {
       "type": "multicolumn",
       "blocks": {
@@ -544,6 +573,7 @@
   "order": [
     "4a48dd22-7a83-42ba-ae14-de6aaae18074",
     "trust_marquee_Skinfluence",
+    "rich_text_core_problem",
     "multicolumn",
     "298afee1-8616-4ea9-a596-6524a56b29c0",
     "9aea4a13-404f-4ffd-9d00-150415e26ab3",
