@@ -32,6 +32,73 @@
         "padding_bottom": 80
       }
     },
+    "process_rail": {
+      "type": "multicolumn",
+      "blocks": {
+        "column_1": {
+          "type": "column",
+          "settings": {
+            "subheading": "Evaluation first",
+            "text": "<p>The process begins with intake before treatment decisions are made.</p>",
+            "button_label": "",
+            "button_link": ""
+          }
+        },
+        "column_2": {
+          "type": "column",
+          "settings": {
+            "subheading": "Provider-reviewed",
+            "text": "<p>A licensed provider reviews your submission before monthly care can begin.</p>",
+            "button_label": "",
+            "button_link": ""
+          }
+        },
+        "column_3": {
+          "type": "column",
+          "settings": {
+            "subheading": "Monthly if approved",
+            "text": "<p>Users move into the recurring care model only if treatment is appropriate.</p>",
+            "button_label": "",
+            "button_link": ""
+          }
+        }
+      },
+      "block_order": [
+        "column_1",
+        "column_2",
+        "column_3"
+      ],
+      "name": "Process rail",
+      "settings": {
+        "multicolumn_to_show": 3,
+        "object_fit": "contain",
+        "swipe_on_mobile": true,
+        "button_style": "primary",
+        "border_top": true,
+        "border_bottom": true,
+        "padding_top": 50,
+        "padding_bottom": 70,
+        "margin_top": 0,
+        "margin_bottom": 0
+      }
+    },
+    "process_overview": {
+      "type": "premium-split",
+      "name": "Process overview",
+      "settings": {
+        "eyebrow": "How the process works",
+        "heading": "<p>A more guided experience than ordinary skincare shopping.</p>",
+        "body": "<p>Skinfluence is designed to make advanced anti-aging treatment feel more understandable from the beginning. The process starts with evaluation, moves through provider review, and only turns into monthly care if treatment is approved.</p><p>The goal is to make the path into care feel clearer, calmer, and easier to trust.</p>",
+        "button_label": "Start Evaluation",
+        "button_link": "/pages/start-evaluation",
+        "button_style": "primary",
+        "placeholder_label": "Process overview visual",
+        "background": "#f3efe7",
+        "text_color": "#24352f",
+        "padding_top": 80,
+        "padding_bottom": 120
+      }
+    },
     "steps": {
       "type": "steps",
       "blocks": {
@@ -119,6 +186,58 @@
         "margin_bottom": 0
       }
     },
+    "process_questions": {
+      "type": "collapsible-content",
+      "blocks": {
+        "accordion_1": {
+          "type": "accordion",
+          "settings": {
+            "question": "What does evaluation actually do?",
+            "question_heading_tag": "h3",
+            "answer": "<p>Evaluation gives the provider the context needed to review treatment fit before anything moves into monthly care.</p>"
+          }
+        },
+        "accordion_2": {
+          "type": "accordion",
+          "settings": {
+            "question": "What if I need to provide more information?",
+            "question_heading_tag": "h3",
+            "answer": "<p>In some cases, additional information may be needed before a final treatment decision is made. Skinfluence should make that step feel clear, not confusing.</p>"
+          }
+        },
+        "accordion_3": {
+          "type": "accordion",
+          "settings": {
+            "question": "What if I am not approved?",
+            "question_heading_tag": "h3",
+            "answer": "<p>Not every user will be eligible. If treatment is not appropriate, Skinfluence should communicate that clearly rather than leaving users uncertain about what happened.</p>"
+          }
+        },
+        "accordion_4": {
+          "type": "accordion",
+          "settings": {
+            "question": "When does the monthly model actually begin?",
+            "question_heading_tag": "h3",
+            "answer": "<p>Only after evaluation and provider review confirm that treatment is appropriate.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "accordion_1",
+        "accordion_2",
+        "accordion_3",
+        "accordion_4"
+      ],
+      "name": "Process questions",
+      "settings": {
+        "heading": "Process questions, answered clearly",
+        "heading_size": "h2",
+        "heading_tag": "h2",
+        "text": "A more structured explanation of the Skinfluence care path for users who want clarity before they begin.",
+        "padding_top": 120,
+        "padding_bottom": 140
+      }
+    },
     "possible_outcomes": {
       "type": "rich-text",
       "blocks": {
@@ -203,8 +322,11 @@
   },
   "order": [
     "hero",
+    "process_rail",
+    "process_overview",
     "steps",
     "evaluation_includes",
+    "process_questions",
     "possible_outcomes",
     "closing_cta"
   ]
