@@ -1,0 +1,176 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "hero": {
+      "type": "image-banner",
+      "name": "Support hero",
+      "settings": {
+        "full_width": true,
+        "header_overlay": false,
+        "mobile_content_overlay": false,
+        "subheading": "Support",
+        "heading": "<p>Help, with a clear path forward.</p>",
+        "heading_size": "large",
+        "text_information": "Find support for billing, shipping, general questions, and treatment-related guidance — each in the right channel.",
+        "text_align": "left",
+        "text_order": "column",
+        "show_view_all": true,
+        "button_label": "View FAQs",
+        "button_link": "/pages/faq",
+        "button_style": "primary",
+        "opacity_overlay": 0.18,
+        "image_ratio": "adapt",
+        "padding_top": 40,
+        "padding_bottom": 80
+      }
+    },
+    "routing_overview": {
+      "type": "multicolumn",
+      "blocks": {
+        "general_support": {
+          "type": "column",
+          "settings": {
+            "subheading": "Billing and general support",
+            "text": "<p>Use this path for billing, shipping, account access, order questions, and general product questions.</p>",
+            "button_label": "",
+            "button_link": ""
+          }
+        },
+        "treatment_support": {
+          "type": "column",
+          "settings": {
+            "subheading": "Treatment-related concerns",
+            "text": "<p>Questions about irritation, treatment use, or care-related issues should follow the appropriate treatment support path.</p>",
+            "button_label": "",
+            "button_link": ""
+          }
+        }
+      },
+      "block_order": [
+        "general_support",
+        "treatment_support"
+      ],
+      "name": "Routing overview",
+      "settings": {
+        "multicolumn_to_show": 2,
+        "object_fit": "contain",
+        "swipe_on_mobile": true,
+        "button_style": "primary",
+        "border_top": false,
+        "border_bottom": false,
+        "padding_top": 80,
+        "padding_bottom": 120,
+        "margin_top": 0,
+        "margin_bottom": 0
+      }
+    },
+    "contact_intro": {
+      "type": "rich-text",
+      "blocks": {
+        "subheading": {
+          "type": "subheading",
+          "settings": {
+            "subheading": "Support intake"
+          }
+        },
+        "heading": {
+          "type": "heading",
+          "settings": {
+            "heading": "<p>Use the right support path for the right question.</p>",
+            "heading_size": "large"
+          }
+        },
+        "text": {
+          "type": "text",
+          "settings": {
+            "text": "<p>The general support form should be treated as an intake for billing, shipping, account access, and non-clinical questions. Treatment-related concerns may still need a separate care-support path even if they first appear through a standard form.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "subheading",
+        "heading",
+        "text"
+      ],
+      "name": "Contact intro",
+      "settings": {
+        "color_scheme": "background-1",
+        "full_width": true,
+        "padding_top": 120,
+        "padding_bottom": 100
+      }
+    },
+    "contact_form": {
+      "type": "contact-form",
+      "name": "Contact form",
+      "settings": {
+        "heading": "<p>General support</p>",
+        "text": "Use this contact form for billing, shipping, account access, and general questions.",
+        "additional_text": "<p>Treatment-related concerns may still need a more appropriate care-support path.</p>",
+        "button_label": "Send message",
+        "padding_top": 0,
+        "padding_bottom": 120
+      }
+    },
+    "closing_cta": {
+      "type": "rich-text",
+      "blocks": {
+        "subheading": {
+          "type": "subheading",
+          "settings": {
+            "subheading": "Need more clarity?"
+          }
+        },
+        "heading": {
+          "type": "heading",
+          "settings": {
+            "heading": "<p>Review pricing, FAQ, and evaluation details before moving forward.</p>",
+            "heading_size": "large"
+          }
+        },
+        "text": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Use the FAQ, pricing page, and Start Evaluation page to understand what the process involves before treatment begins.</p>"
+          }
+        },
+        "button": {
+          "type": "button",
+          "settings": {
+            "button_label": "Start Evaluation",
+            "button_link": "/pages/start-evaluation",
+            "button_style": "primary"
+          }
+        }
+      },
+      "block_order": [
+        "subheading",
+        "heading",
+        "text",
+        "button"
+      ],
+      "name": "Closing CTA",
+      "settings": {
+        "color_scheme": "background-3",
+        "full_width": true,
+        "padding_top": 140,
+        "padding_bottom": 140
+      }
+    }
+  },
+  "order": [
+    "hero",
+    "routing_overview",
+    "contact_intro",
+    "contact_form",
+    "closing_cta"
+  ]
+}
