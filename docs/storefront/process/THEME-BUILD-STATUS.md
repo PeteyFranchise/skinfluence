@@ -169,6 +169,10 @@ It is best described as:
 4. validate menus and final admin content setup
 5. decide when the legacy `theme/` folder should be archived more explicitly
 
+Archive policy reference:
+
+- `docs/storefront/handoff/LEGACY-THEME-ARCHIVAL-PLAN.md`
+
 ## Commit milestone summary
 
 The following implementation milestones now exist in Git history:

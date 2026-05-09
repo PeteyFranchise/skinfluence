@@ -87,6 +87,7 @@ Use this rule for future storefront work:
 Architecture and deployment reference:
 
 - `docs/storefront/handoff/PORTLAND-ARCHITECTURE-AND-DEPLOYMENT.md`
+- `docs/storefront/handoff/LEGACY-THEME-ARCHIVAL-PLAN.md`
 
 ## Product model reference
 

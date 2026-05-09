@@ -207,6 +207,7 @@ The highest-priority backend items still remaining are:
 ## Related documents
 
 - `docs/storefront/handoff/THEME-HANDOFF.md`
+- `docs/storefront/handoff/LEGACY-THEME-ARCHIVAL-PLAN.md`
 - `docs/storefront/handoff/EVALUATION-HANDOFF.md`
 - `docs/storefront/handoff/TEMPORARY-EVALUATION-LAUNCH-STATE.md`
 - `docs/storefront/handoff/PRODUCT-SUBSCRIPTION-MODEL.md`
