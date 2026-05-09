@@ -1,0 +1,210 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "hero": {
+      "type": "image-banner",
+      "name": "About hero",
+      "settings": {
+        "full_width": true,
+        "header_overlay": false,
+        "mobile_content_overlay": false,
+        "subheading": "About",
+        "heading": "<p>A more serious approach to anti-aging care.</p>",
+        "heading_size": "large",
+        "text_information": "Skinfluence exists for women who have outgrown ordinary skincare and want something more focused, more guided, and easier to trust.",
+        "text_align": "left",
+        "text_order": "column",
+        "show_view_all": true,
+        "button_label": "Start Evaluation",
+        "button_link": "/pages/start-evaluation",
+        "button_style": "primary",
+        "opacity_overlay": 0.18,
+        "image_ratio": "adapt",
+        "padding_top": 40,
+        "padding_bottom": 80
+      }
+    },
+    "origin_story": {
+      "type": "rich-text",
+      "blocks": {
+        "subheading": {
+          "type": "subheading",
+          "settings": {
+            "subheading": "Why Skinfluence exists"
+          }
+        },
+        "heading": {
+          "type": "heading",
+          "settings": {
+            "heading": "<p>For the moment when ordinary skincare stops feeling like progress.</p>",
+            "heading_size": "large"
+          }
+        },
+        "text": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Many women spend heavily on skincare and still feel like their routine has plateaued. Skinfluence is designed for that moment when the next step should feel more advanced, more considered, and less fragmented.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "subheading",
+        "heading",
+        "text"
+      ],
+      "name": "Origin story",
+      "settings": {
+        "color_scheme": "background-1",
+        "full_width": true,
+        "padding_top": 120,
+        "padding_bottom": 120
+      }
+    },
+    "brand_principles": {
+      "type": "multicolumn",
+      "blocks": {
+        "principle_1": {
+          "type": "column",
+          "settings": {
+            "subheading": "Provider review",
+            "text": "<p>Built around a more clinically grounded anti-aging experience rather than trend-driven product stacking.</p>",
+            "button_label": "",
+            "button_link": ""
+          }
+        },
+        "principle_2": {
+          "type": "column",
+          "settings": {
+            "subheading": "Realistic expectations",
+            "text": "<p>Focused on consistency, maintenance, and visible skin quality improvement over time.</p>",
+            "button_label": "",
+            "button_link": ""
+          }
+        },
+        "principle_3": {
+          "type": "column",
+          "settings": {
+            "subheading": "Less fragmentation",
+            "text": "<p>Designed to feel easier to trust and easier to maintain than ordinary skincare shopping.</p>",
+            "button_label": "",
+            "button_link": ""
+          }
+        }
+      },
+      "block_order": [
+        "principle_1",
+        "principle_2",
+        "principle_3"
+      ],
+      "name": "Brand principles",
+      "settings": {
+        "multicolumn_to_show": 3,
+        "object_fit": "contain",
+        "swipe_on_mobile": true,
+        "button_style": "primary",
+        "border_top": false,
+        "border_bottom": false,
+        "padding_top": 80,
+        "padding_bottom": 120,
+        "margin_top": 0,
+        "margin_bottom": 0
+      }
+    },
+    "positioning": {
+      "type": "rich-text",
+      "blocks": {
+        "subheading": {
+          "type": "subheading",
+          "settings": {
+            "subheading": "What it is not"
+          }
+        },
+        "heading": {
+          "type": "heading",
+          "settings": {
+            "heading": "<p>Not more products for the sake of complexity.</p>",
+            "heading_size": "large"
+          }
+        },
+        "text": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Skinfluence is not about adding more products for the sake of complexity. It is about creating a premium anti-aging experience that feels clinically grounded, easier to maintain, and more aligned with visible skin quality improvement.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "subheading",
+        "heading",
+        "text"
+      ],
+      "name": "Positioning",
+      "settings": {
+        "color_scheme": "background-3",
+        "full_width": true,
+        "padding_top": 140,
+        "padding_bottom": 140
+      }
+    },
+    "closing_cta": {
+      "type": "rich-text",
+      "blocks": {
+        "subheading": {
+          "type": "subheading",
+          "settings": {
+            "subheading": "Ready to begin?"
+          }
+        },
+        "heading": {
+          "type": "heading",
+          "settings": {
+            "heading": "<p>Move from ordinary skincare into a more guided routine.</p>",
+            "heading_size": "large"
+          }
+        },
+        "text": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Start with evaluation, then move into care if approved.</p>"
+          }
+        },
+        "button": {
+          "type": "button",
+          "settings": {
+            "button_label": "Start Evaluation",
+            "button_link": "/pages/start-evaluation",
+            "button_style": "primary"
+          }
+        }
+      },
+      "block_order": [
+        "subheading",
+        "heading",
+        "text",
+        "button"
+      ],
+      "name": "Closing CTA",
+      "settings": {
+        "color_scheme": "background-1",
+        "full_width": true,
+        "padding_top": 140,
+        "padding_bottom": 140
+      }
+    }
+  },
+  "order": [
+    "hero",
+    "origin_story",
+    "brand_principles",
+    "positioning",
+    "closing_cta"
+  ]
+}
