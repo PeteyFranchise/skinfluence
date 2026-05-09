@@ -32,14 +32,14 @@
         "padding_bottom": 80
       }
     },
-    "expectations": {
+    "expectation_rail": {
       "type": "multicolumn",
       "blocks": {
         "column_1": {
           "type": "column",
           "settings": {
-            "subheading": "Provider-reviewed intake",
-            "text": "<p>Treatment does not begin until a licensed provider reviews the information submitted during evaluation.</p>",
+            "subheading": "Evaluation first",
+            "text": "<p>This is the first step into the Skinfluence care path before treatment decisions are made.</p>",
             "button_label": "",
             "button_link": ""
           }
@@ -47,8 +47,8 @@
         "column_2": {
           "type": "column",
           "settings": {
-            "subheading": "Simple to complete",
-            "text": "<p>The evaluation should feel clear, guided, and easy to move through before anything else happens.</p>",
+            "subheading": "Provider-reviewed",
+            "text": "<p>A licensed provider reviews what you submit before monthly treatment can begin.</p>",
             "button_label": "",
             "button_link": ""
           }
@@ -56,8 +56,8 @@
         "column_3": {
           "type": "column",
           "settings": {
-            "subheading": "Approval depends on fit",
-            "text": "<p>Not everyone will be eligible. Provider review determines whether treatment is appropriate.</p>",
+            "subheading": "Fit matters",
+            "text": "<p>Not everyone will be eligible. Approval depends on treatment fit, not automatic checkout.</p>",
             "button_label": "",
             "button_link": ""
           }
@@ -68,53 +68,34 @@
         "column_2",
         "column_3"
       ],
-      "name": "What to expect",
+      "name": "Expectation rail",
       "settings": {
         "multicolumn_to_show": 3,
         "object_fit": "contain",
         "swipe_on_mobile": true,
         "button_style": "primary",
-        "border_top": false,
-        "border_bottom": false,
-        "padding_top": 60,
-        "padding_bottom": 100,
+        "border_top": true,
+        "border_bottom": true,
+        "padding_top": 50,
+        "padding_bottom": 70,
         "margin_top": 0,
         "margin_bottom": 0
       }
     },
     "what_happens_here": {
-      "type": "rich-text",
-      "blocks": {
-        "subheading": {
-          "type": "subheading",
-          "settings": {
-            "subheading": "What happens here"
-          }
-        },
-        "heading": {
-          "type": "heading",
-          "settings": {
-            "heading": "<p>A calm handoff before intake begins.</p>",
-            "heading_size": "large"
-          }
-        },
-        "text": {
-          "type": "text",
-          "settings": {
-            "text": "<p>This page is the branded handoff into the secure evaluation flow. Users should understand what they are about to complete, what kind of information may be needed, and what happens next if more information is required or treatment is approved.</p>"
-          }
-        }
-      },
-      "block_order": [
-        "subheading",
-        "heading",
-        "text"
-      ],
+      "type": "premium-split",
       "name": "What happens here",
       "settings": {
-        "color_scheme": "background-1",
-        "full_width": true,
-        "padding_top": 120,
+        "eyebrow": "What happens here",
+        "heading": "<p>A calm handoff before intake begins.</p>",
+        "body": "<p>This page is the branded handoff into the secure evaluation flow. Its job is to explain what the user is about to complete, what kind of information may be needed, and what happens next if treatment is approved or more information is required.</p><p>It should feel clear, calm, and intentional rather than abrupt.</p>",
+        "button_label": "How It Works",
+        "button_link": "/pages/how-it-works",
+        "button_style": "secondary",
+        "placeholder_label": "Evaluation handoff visual",
+        "background": "#f3efe7",
+        "text_color": "#24352f",
+        "padding_top": 80,
         "padding_bottom": 120
       }
     },
@@ -127,23 +108,31 @@
             "subheading": "Before you start"
           }
         },
+        "heading": {
+          "type": "heading",
+          "settings": {
+            "heading": "<p>The process should feel straightforward, not high-pressure.</p>",
+            "heading_size": "large"
+          }
+        },
         "text": {
           "type": "text",
           "settings": {
-            "text": "<p>The evaluation should feel straightforward and intentional. Not everyone will be eligible, and treatment-related questions should still follow the right support path if you need more clarity before intake is live.</p>"
+            "text": "<p>The evaluation should feel clear and easy to move through. Not everyone will be eligible, and treatment-related questions should still follow the right support path if you need more clarity before intake is live.</p>"
           }
         }
       },
       "block_order": [
         "subheading",
+        "heading",
         "text"
       ],
       "name": "Before you start",
       "settings": {
-        "color_scheme": "background-3",
+        "color_scheme": "background-1",
         "full_width": true,
-        "padding_top": 100,
-        "padding_bottom": 100
+        "padding_top": 120,
+        "padding_bottom": 120
       }
     },
     "steps": {
@@ -181,6 +170,58 @@
         "color_scheme": "background-3",
         "heading": "What to expect before treatment begins.",
         "heading_tag": "h2"
+      }
+    },
+    "evaluation_questions": {
+      "type": "collapsible-content",
+      "blocks": {
+        "accordion_1": {
+          "type": "accordion",
+          "settings": {
+            "question": "What kind of information will be needed?",
+            "question_heading_tag": "h3",
+            "answer": "<p>Users should expect to share treatment goals, relevant skin background, and any context that may affect treatment fit.</p>"
+          }
+        },
+        "accordion_2": {
+          "type": "accordion",
+          "settings": {
+            "question": "Does evaluation mean treatment is guaranteed?",
+            "question_heading_tag": "h3",
+            "answer": "<p>No. Evaluation is the review step before treatment. Approval depends on fit and provider judgment.</p>"
+          }
+        },
+        "accordion_3": {
+          "type": "accordion",
+          "settings": {
+            "question": "What happens if more information is needed?",
+            "question_heading_tag": "h3",
+            "answer": "<p>If a provider needs more information, Skinfluence should communicate that clearly before anything moves forward.</p>"
+          }
+        },
+        "accordion_4": {
+          "type": "accordion",
+          "settings": {
+            "question": "Where should questions go before intake is live?",
+            "question_heading_tag": "h3",
+            "answer": "<p>Use the FAQ or support page if you want more clarity on pricing, treatment fit, or how the process works before intake fully opens.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "accordion_1",
+        "accordion_2",
+        "accordion_3",
+        "accordion_4"
+      ],
+      "name": "Evaluation questions",
+      "settings": {
+        "heading": "Evaluation questions, answered clearly",
+        "heading_size": "h2",
+        "heading_tag": "h2",
+        "text": "A calmer, more structured explanation of the pre-intake step before Bask is connected and before treatment begins.",
+        "padding_top": 120,
+        "padding_bottom": 140
       }
     },
     "closing_cta": {
@@ -222,7 +263,7 @@
       ],
       "name": "Closing CTA",
       "settings": {
-        "color_scheme": "background-1",
+        "color_scheme": "background-3",
         "full_width": true,
         "padding_top": 140,
         "padding_bottom": 140
@@ -231,10 +272,11 @@
   },
   "order": [
     "hero",
-    "expectations",
+    "expectation_rail",
     "what_happens_here",
     "before_you_start",
     "steps",
+    "evaluation_questions",
     "closing_cta"
   ]
 }
