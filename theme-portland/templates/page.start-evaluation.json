@@ -1,0 +1,240 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "hero": {
+      "type": "image-banner",
+      "name": "Evaluation hero",
+      "settings": {
+        "full_width": true,
+        "header_overlay": false,
+        "mobile_content_overlay": false,
+        "subheading": "Evaluation",
+        "heading": "<p>Begin your Skinfluence evaluation.</p>",
+        "heading_size": "large",
+        "text_information": "Start with a provider-reviewed intake designed to understand your goals, skin history, and treatment fit before anything moves forward.",
+        "text_align": "left",
+        "text_order": "column",
+        "show_view_all": true,
+        "button_label": "How It Works",
+        "button_link": "/pages/how-it-works",
+        "button_style": "primary",
+        "opacity_overlay": 0.18,
+        "image_ratio": "adapt",
+        "padding_top": 40,
+        "padding_bottom": 80
+      }
+    },
+    "expectations": {
+      "type": "multicolumn",
+      "blocks": {
+        "column_1": {
+          "type": "column",
+          "settings": {
+            "subheading": "Provider-reviewed intake",
+            "text": "<p>Treatment does not begin until a licensed provider reviews the information submitted during evaluation.</p>",
+            "button_label": "",
+            "button_link": ""
+          }
+        },
+        "column_2": {
+          "type": "column",
+          "settings": {
+            "subheading": "Simple to complete",
+            "text": "<p>The evaluation should feel clear, guided, and easy to move through before anything else happens.</p>",
+            "button_label": "",
+            "button_link": ""
+          }
+        },
+        "column_3": {
+          "type": "column",
+          "settings": {
+            "subheading": "Approval depends on fit",
+            "text": "<p>Not everyone will be eligible. Provider review determines whether treatment is appropriate.</p>",
+            "button_label": "",
+            "button_link": ""
+          }
+        }
+      },
+      "block_order": [
+        "column_1",
+        "column_2",
+        "column_3"
+      ],
+      "name": "What to expect",
+      "settings": {
+        "multicolumn_to_show": 3,
+        "object_fit": "contain",
+        "swipe_on_mobile": true,
+        "button_style": "primary",
+        "border_top": false,
+        "border_bottom": false,
+        "padding_top": 60,
+        "padding_bottom": 100,
+        "margin_top": 0,
+        "margin_bottom": 0
+      }
+    },
+    "what_happens_here": {
+      "type": "rich-text",
+      "blocks": {
+        "subheading": {
+          "type": "subheading",
+          "settings": {
+            "subheading": "What happens here"
+          }
+        },
+        "heading": {
+          "type": "heading",
+          "settings": {
+            "heading": "<p>A calm handoff before intake begins.</p>",
+            "heading_size": "large"
+          }
+        },
+        "text": {
+          "type": "text",
+          "settings": {
+            "text": "<p>This page is the branded handoff into the secure evaluation flow. Users should understand what they are about to complete, what kind of information may be needed, and what happens next if more information is required or treatment is approved.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "subheading",
+        "heading",
+        "text"
+      ],
+      "name": "What happens here",
+      "settings": {
+        "color_scheme": "background-1",
+        "full_width": true,
+        "padding_top": 120,
+        "padding_bottom": 120
+      }
+    },
+    "before_you_start": {
+      "type": "rich-text",
+      "blocks": {
+        "subheading": {
+          "type": "subheading",
+          "settings": {
+            "subheading": "Before you start"
+          }
+        },
+        "text": {
+          "type": "text",
+          "settings": {
+            "text": "<p>The evaluation should feel straightforward and intentional. Not everyone will be eligible, and treatment-related questions should still follow the right support path if you need more clarity before intake is live.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "subheading",
+        "text"
+      ],
+      "name": "Before you start",
+      "settings": {
+        "color_scheme": "background-3",
+        "full_width": true,
+        "padding_top": 100,
+        "padding_bottom": 100
+      }
+    },
+    "steps": {
+      "type": "steps",
+      "blocks": {
+        "step_1": {
+          "type": "section_slide",
+          "settings": {
+            "slide_heading": "Step 1",
+            "slide_text": "<p><strong>Complete the intake</strong><br>Provide the information needed for review, including goals, relevant skin background, and any context that may affect treatment fit.</p>"
+          }
+        },
+        "step_2": {
+          "type": "section_slide",
+          "settings": {
+            "slide_heading": "Step 2",
+            "slide_text": "<p><strong>Receive provider review</strong><br>A licensed provider reviews the submission and determines whether treatment is appropriate or whether more information is needed.</p>"
+          }
+        },
+        "step_3": {
+          "type": "section_slide",
+          "settings": {
+            "slide_heading": "Step 3",
+            "slide_text": "<p><strong>Move into care if approved</strong><br>If approved, users move into the monthly treatment model, onboarding guidance, and the ongoing Skinfluence support experience.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "step_1",
+        "step_2",
+        "step_3"
+      ],
+      "name": "Evaluation steps",
+      "settings": {
+        "color_scheme": "background-3",
+        "heading": "What to expect before treatment begins.",
+        "heading_tag": "h2"
+      }
+    },
+    "closing_cta": {
+      "type": "rich-text",
+      "blocks": {
+        "subheading": {
+          "type": "subheading",
+          "settings": {
+            "subheading": "Questions before intake opens?"
+          }
+        },
+        "heading": {
+          "type": "heading",
+          "settings": {
+            "heading": "<p>Get clarity before anything moves forward.</p>",
+            "heading_size": "large"
+          }
+        },
+        "text": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Use the FAQ or support page if you want more clarity on pricing, treatment fit, or what the process will involve.</p>"
+          }
+        },
+        "button": {
+          "type": "button",
+          "settings": {
+            "button_label": "View FAQs",
+            "button_link": "/pages/faq",
+            "button_style": "primary"
+          }
+        }
+      },
+      "block_order": [
+        "subheading",
+        "heading",
+        "text",
+        "button"
+      ],
+      "name": "Closing CTA",
+      "settings": {
+        "color_scheme": "background-1",
+        "full_width": true,
+        "padding_top": 140,
+        "padding_bottom": 140
+      }
+    }
+  },
+  "order": [
+    "hero",
+    "expectations",
+    "what_happens_here",
+    "before_you_start",
+    "steps",
+    "closing_cta"
+  ]
+}
