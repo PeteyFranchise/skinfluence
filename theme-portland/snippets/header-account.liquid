@@ -1,0 +1,196 @@
+{%- if shop.customer_accounts_enabled
+	and section.settings.enable_account_btn
+-%}
+	{% if in_drawer %}
+		{%- if customer -%}
+			<div class='menu-drawer__utility-account'>
+				<div class='menu-drawer__utility-account-header'>
+					{% if section.settings.account_modal_type == 'shopify_based' %}
+						<shopify-account
+							menu='{{ section.settings.customer_account_menu | default: "customer-account-main-menu" }}'
+							style='display: flex; align-items: center; justify-content: flex-start; margin-right: auto;'
+						>
+							<div slot='signed-out-avatar'>
+								<div class='header__button header__button--{{ button_type }} header__button--account button button--primary menu-drawer__account link focus-inset'>
+									<div class='button__content'>
+										<span
+											class='button__label header-label '
+											data-label='{{- 'customer.log_in' | t -}}'
+										>
+											{%- liquid
+												if customer
+													echo 'customer.account_fallback' | t
+												else
+													echo 'customer.log_in' | t
+												endif
+											-%}
+										</span>
+									</div>
+								</div>
+							</div>
+						</shopify-account>
+					{% else %}
+						<span class='menu-drawer__utility-name'>{{ customer.name }}</span>
+					{% endif %}
+
+					<a
+						class='menu-drawer__utility-logout'
+						href='{{ routes.account_logout_url }}'
+					>
+						{{- 'customer.log_out' | t -}}
+					</a>
+				</div>
+				<ul class='menu-drawer__utility-account-body'>
+					<li class='menu-drawer__utility-account-cart'>
+						<a href='{{ routes.cart_url }}'>
+							{{- 'customer.account.shopping_cart' | t -}}
+						</a>
+						{%- if cart != empty -%}
+							<div class='cart-count-bubble'>
+								{%- if cart.item_count < 100 -%}
+									<span aria-hidden='true'>{{ cart.item_count }}</span>
+								{%- endif -%}
+								<span class='visually-hidden'>
+									{{-
+										'sections.header.cart_count'
+										| t: count: cart.item_count
+									-}}
+								</span>
+							</div>
+						{%- endif -%}
+					</li>
+					<li class='menu-drawer__utility-account-link'>
+						<a href='{{ routes.account_profile_url }}'>
+							{{ 'customer.account.title_1' | t }}
+							{{ 'customer.account.title_2' | t }}
+						</a>
+					</li>
+				</ul>
+			</div>
+		{%- else -%}
+			{% if section.settings.account_modal_type == 'shopify_based' %}
+				<shopify-account
+					menu='{{ section.settings.customer_account_menu | default: "customer-account-main-menu" }}'
+					style='display: flex; align-items: center; justify-content: flex-start; margin-right: auto;'
+				>
+					<div slot='signed-out-avatar'>
+						<div
+							class='header__button header__button--{{ button_type }}'
+							style='min-width: calc(100vw - 4rem);'
+						>
+							<div class='button__content'>
+								<span
+									class='button__label button button--primary menu-drawer__account link focus-inset '
+									data-label='{{- 'customer.log_in' | t -}}'
+								>
+									{% render 'icon-account' %}
+									{%- liquid
+										if customer
+											echo 'customer.account_fallback' | t
+										else
+											echo 'customer.log_in' | t
+										endif
+									-%}
+								</span>
+							</div>
+						</div>
+					</div>
+				</shopify-account>
+			{% else %}
+				<a
+					href='{%- if customer -%}{{ routes.account_profile_url }}{%- else -%}{{ routes.account_login_url }}{%- endif -%}'
+					class='button button--primary menu-drawer__account link focus-inset'
+				>
+					{% render 'icon-account' %}
+					{%- liquid
+						if customer
+							echo 'customer.account_fallback' | t
+						else
+							echo 'customer.log_in' | t
+						endif
+					-%}
+				</a>
+			{%- endif -%}
+		{%- endif -%}
+	{% else %}
+		{% if section.settings.account_modal_type == 'shopify_based' %}
+			<shopify-account
+				menu='{{ section.settings.customer_account_menu | default: "customer-account-main-menu" }}'
+				class='header__account'
+			>
+				<div slot='signed-out-avatar'>
+					<div class='header__icon header__icon--account link--text focus-inset modal__toggle'>
+						{% render 'icon-account' %}
+					</div>
+				</div>
+			</shopify-account>
+		{% else %}
+			<details-disclosure class='header__account'>
+				<details>
+					<summary
+						class='header__icon header__icon--account link--text  header__icon--summary focus-inset modal__toggle'
+						aria-haspopup='dialog'
+						role='button'
+					>
+						{% render 'icon-account' %}
+					</summary>
+					<div
+						class='header__account-modal modal__toggle'
+						role='dialog'
+						aria-modal='true'
+					>
+						{%- if customer -%}
+							<div class='header__account__account'>
+								<div class='header__account__name'>{{ customer.name }}</div>
+								<ul class='header__account__body'>
+									<li class='header__account__link'>
+										<a href='{{ routes.account_profile_url }}'>
+											{{ 'customer.account.title' | t }}
+										</a>
+									</li>
+								</ul>
+								<a
+									class='header__account__logout button button--primary'
+									href='{{ routes.account_logout_url }}'
+								>
+									<span>
+										<span>{{ 'customer.log_out' | t }}</span>
+										<span>{{ 'customer.log_out' | t }}</span>
+									</span>
+								</a>
+							</div>
+						{%- else -%}
+							<a
+								href='{%- if customer -%}{{ routes.account_profile_url }}{%- else -%}{{ routes.account_login_url }}{%- endif -%}'
+								class='button button--primary header__account__login link  focus-inset'
+							>
+								<span>
+									<span>
+										{% render 'icon-account' %}
+										{%- liquid
+											if customer
+												echo 'customer.account_fallback' | t
+											else
+												echo 'customer.log_in' | t
+											endif
+										-%}
+									</span>
+									<span>
+										{% render 'icon-account' %}
+										{%- liquid
+											if customer
+												echo 'customer.account_fallback' | t
+											else
+												echo 'customer.log_in' | t
+											endif
+										-%}
+									</span>
+								</span>
+							</a>
+						{%- endif -%}
+					</div>
+				</details>
+			</details-disclosure>
+		{% endif %}
+	{% endif %}
+{% endif %}

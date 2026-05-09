@@ -1,0 +1,208 @@
+.compare__box {
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;
+  gap: 2rem;
+}
+@media screen and (max-width: 1099px) {
+  .compare__box {
+    gap: 3rem;
+    flex-direction: column;
+  }
+}
+.compare__content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 100%;
+}
+@media screen and (min-width: 1100px) {
+  .compare__content {
+    width: 25%;
+    flex: 1;
+  }
+}
+@media screen and (min-width: 1360px) {
+  .compare__content {
+    width: 25%;
+    flex: unset;
+  }
+}
+.compare__slide {
+  width: 66%;
+  position: relative;
+}
+@media screen and (max-width: 1099px) {
+  .compare__slide {
+    width: 100%;
+  }
+}
+.compare .title-wrapper {
+  margin-bottom: 1.6rem;
+}
+.compare .title-wrapper:last-child {
+  margin-bottom: 0;
+}
+.compare .compare__description {
+  margin-bottom: 2.4rem;
+}
+.compare .compare__description:last-child {
+  margin-bottom: 0;
+}
+.compare__title {
+  width: 100%;
+  margin-top: auto;
+  margin-bottom: 0.8rem;
+}
+@media screen and (min-width: 1100px) {
+  .compare__title {
+    max-width: 74.2rem;
+  }
+}
+.compare__text {
+  width: 100%;
+  margin: 0;
+}
+@media screen and (min-width: 1100px) {
+  .compare__text {
+    max-width: 44.4rem;
+  }
+}
+.compare__product {
+  max-width: 47.5rem;
+  margin-top: auto;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  place-content: flex-end;
+}
+.compare__default {
+  height: 47.7rem;
+  display: flex;
+  gap: 0.5rem;
+}
+@media screen and (max-width: 989px) {
+  .compare__default {
+    max-height: 30rem;
+  }
+}
+@media screen and (min-width: 750px) {
+  .compare__button {
+    max-width: 44.3rem;
+  }
+}
+.compare__content--left {
+  position: absolute;
+  bottom: 1rem;
+  left: 1rem;
+  text-align: left;
+}
+.compare__content--right {
+  position: absolute;
+  bottom: 1rem;
+  right: 1rem;
+}
+.compare__content--right .button {
+  text-align: right;
+}
+.compare__content--right, .compare__content--left {
+  width: 45%;
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+  background: none;
+}
+.compare__content--right .content__button--label, .compare__content--left .content__button--label {
+  text-decoration-color: rgb(var(--color-foreground));
+}
+.compare__content--right .icon, .compare__content--left .icon {
+  color: rgb(var(--color-foreground));
+}
+.compare__content-heading.right {
+  text-align: right;
+}
+@media screen and (min-width: 750px) {
+  .compare__content--left {
+    bottom: 3rem;
+    left: 3rem;
+  }
+  .compare .compare__content--right {
+    bottom: 3rem;
+    right: 3rem;
+  }
+}
+.compare-wrapper--full-width {
+  gap: 3rem;
+  flex-direction: column;
+}
+.compare-wrapper--full-width .compare__content, .compare-wrapper--full-width .compare__slide, .compare-wrapper--full-width .placeholder-svg {
+  width: 100%;
+}
+
+.twentytwenty-container {
+  max-height: 47.7rem;
+}
+@media screen and (max-width: 989px) {
+  .twentytwenty-container {
+    max-height: 30rem;
+  }
+}
+.twentytwenty-container img {
+  width: 100%;
+  height: 47.7rem;
+  object-fit: cover;
+  border-radius: 0.3rem;
+}
+@media screen and (max-width: 989px) {
+  .twentytwenty-container img {
+    height: 30rem;
+  }
+}
+.twentytwenty-container .img-container {
+  position: absolute;
+  width: 100%;
+  height: 47.7rem;
+}
+@media screen and (max-width: 989px) {
+  .twentytwenty-container .img-container {
+    height: 30rem;
+  }
+}
+.twentytwenty-container svg {
+  width: 100%;
+  height: 47.7rem;
+  object-fit: cover;
+}
+@media screen and (max-width: 989px) {
+  .twentytwenty-container svg {
+    height: 30rem;
+  }
+}
+.twentytwenty-container .twentytwenty-handle {
+  width: 5rem;
+  height: 5rem;
+  margin-left: -2.5rem;
+  background: var(--bg-color, #ffffff);
+  border: none;
+  box-shadow: none;
+}
+.twentytwenty-container .twentytwenty-handle::before, .twentytwenty-container .twentytwenty-handle::after {
+  box-shadow: none;
+}
+.twentytwenty-container .twentytwenty-overlay {
+  display: none;
+}
+.twentytwenty-container .twentytwenty-left-arrow {
+  width: 2rem;
+  height: 2rem;
+  top: 20px;
+  left: 32px;
+  background-image: url("burger-icon.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: auto;
+  border: none;
+}
+.twentytwenty-container .twentytwenty-right-arrow {
+  display: none;
+}

@@ -1,0 +1,66 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+	"sections": {
+		"main": {
+			"type": "main-page",
+			"settings": {
+				"padding_top": 0,
+				"padding_bottom": 0
+			}
+		},
+		"0ac10b87-7e62-4245-adfa-e453464b5570": {
+			"type": "steps",
+			"blocks": {
+				"template--17031623213330__0ac10b87-7e62-4245-adfa-e453464b5570-1669294571ec71033f-0": {
+					"type": "section_slide",
+					"settings": {
+						"slide_heading": "Step 1",
+						"slide_text": "<p>How? \nWe’ve streamlined our processes, ensuring each piece goes through rigorous quality checks; from ideation, to manufacturing, and perfection.</p>",
+					}
+				},
+				"template--17031623213330__0ac10b87-7e62-4245-adfa-e453464b5570-1669294571ec71033f-1": {
+					"type": "section_slide",
+					"settings": {
+						"slide_heading": "Step 2",
+						"slide_text": "<p>We're driven by the motivation to coerce courageous reformations in the industry to encourage people to shop sustainable.</p>",
+					}
+				},
+				"template--17031623213330__0ac10b87-7e62-4245-adfa-e453464b5570-1669294571ec71033f-2": {
+					"type": "section_slide",
+					"settings": {
+						"slide_heading": "Step 3",
+						"slide_text": "<p>To us, people matter more than the business. We make it transparent, accessible, and affordable for everyone around the world.</p>",
+					}
+				}
+			},
+			"block_order": [
+				"template--17031623213330__0ac10b87-7e62-4245-adfa-e453464b5570-1669294571ec71033f-0",
+				"template--17031623213330__0ac10b87-7e62-4245-adfa-e453464b5570-1669294571ec71033f-1",
+				"template--17031623213330__0ac10b87-7e62-4245-adfa-e453464b5570-1669294571ec71033f-2"
+			],
+			"settings": {
+				"color_scheme": "background-3",
+				"heading": "We have got a vision to uphold the culture of responsible manufacturing, and creating infinite products that inspire everyone."
+			}
+		},
+		"form": {
+			"type": "contact-form",
+			"settings": {
+				"heading": "<p>Feel Free to Contact Us</p>",
+				"text": "We’re culture-driven, and we’re obsessed with values that everyday people like you find positive. Studying your needs deeply, we strive to engineer products that you can feel proud of — to make them your companions for everyday days and hours.",
+				"additional_text": "<p>By pressing the button “Subscribe”, you confirm that you have read and are agreeing to our <a href=\"https://portland-demo-balance.myshopify.com/pages/contact#\" title=\"#\">Terms of Use</a> regarding the storage of the data submitted through this form.</p>",
+				"padding_top": 160,
+				"padding_bottom": 160
+			}
+		}
+	},
+	"order": ["main", "0ac10b87-7e62-4245-adfa-e453464b5570", "form"]
+}

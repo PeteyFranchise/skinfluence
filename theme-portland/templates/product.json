@@ -1,0 +1,216 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+	"sections": {
+		"main": {
+			"type": "main-product",
+			"blocks": {
+				"title": {
+					"type": "title",
+					"settings": {}
+				},
+				"price": {
+					"type": "price",
+					"settings": {}
+				},
+				"variant_picker": {
+					"type": "variant_picker",
+					"settings": {
+						"picker_type": "dropdown"
+					}
+				},
+				"63607d0d-e530-4a6f-af51-3f97f907ade5": {
+					"type": "inventory",
+					"settings": {}
+				},
+				"popup": {
+					"type": "popup",
+					"settings": {
+						"label": "Shipping Information",
+						"heading": "Shipping Information",
+						"text": "<p>We accept returns. You can return unopened items in the original packaging within 30 days of your purchase with receipt or proof of purchase. If 30 days or more have passed since your purchase, we cannot offer you a refund or an exchange.<br/><br/>Upon receipt of the returned item, we will fully examine it and notify you via email, within a reasonable period of time, whether you are entitled to a return. If you are entitled to a return, we will refund your purchase price and a credit will automatically be applied to your original method of payment.<br/><br/>Only regular priced items may be refunded. Sale items are non-refundable.</p>",
+						"page": ""
+					}
+				},
+				"buy_buttons": {
+					"type": "buy_buttons",
+					"settings": {
+						"show_dynamic_checkout": true,
+						"show_quantity": false,
+						"show_gift_card_recipient": false
+					}
+				},
+				"pickup_availability": {
+					"type": "pickup_availability",
+					"settings": {}
+				},
+				"share": {
+					"type": "share",
+					"settings": {
+						"show_share_facebook": true,
+						"show_share_twitter": true,
+						"show_share_pinterest": true,
+						"show_share_copy": true
+					}
+				}
+			},
+			"block_order": [
+				"title",
+				"price",
+				"variant_picker",
+				"63607d0d-e530-4a6f-af51-3f97f907ade5",
+				"popup",
+				"buy_buttons",
+				"pickup_availability",
+				"share"
+			],
+			"settings": {
+				"desktop_alignment": "left",
+				"mobile_alignment": "after",
+				"image_fit": "cover",
+				"enable_autoheight": true,
+				"padding_top": 0,
+				"padding_bottom": 0
+			}
+		},
+		"about": {
+			"type": "about",
+			"blocks": {
+				"additional_1": {
+					"type": "additional",
+					"settings": {
+						"heading": "Return policy",
+						"content": "<p>We accept returns. You can return unopened items in the original packaging within 30 days of your purchase with receipt or proof of purchase. If 30 days or more have passed since your purchase, we cannot offer you a refund or an exchange.<br/><br/>Upon receipt of the returned item, we will fully examine it and notify you via email, within a reasonable period of time, whether you are entitled to a return. If you are entitled to a return, we will refund your purchase price and a credit will automatically be applied to your original method of payment.<br/><br/>Only regular priced items may be refunded. Sale items are non-refundable.</p>"
+					}
+				},
+				"additional_2": {
+					"type": "additional",
+					"settings": {
+						"heading": "Customer Service",
+						"content": "<p>Refunds do not include any shipping and handling charges shown on the packaging slip or invoice. Shipping charges for all returns must be prepaid and insured by you.<br/><br/>You are responsible for any loss or damage to hardware during shipment.<br/><br/>We do not guarantee that we will receive your returned item. Shipping and handling charges are not refundable. Any amounts refunded will not include the cost of shipping.</p>"
+					}
+				}
+			},
+			"block_order": ["additional_1", "additional_2"],
+			"settings": {
+				"subheading": "About",
+				"heading": "<p>We’re online and offline. Find us nearby in your area or shop online.</p>",
+				"padding_top": 160,
+				"padding_bottom": 160
+			}
+		},
+		"0ac10b87-7e62-4245-adfa-e453464b5570": {
+			"type": "steps",
+			"blocks": {
+				"template--17031623213330__0ac10b87-7e62-4245-adfa-e453464b5570-1669294571ec71033f-0": {
+					"type": "section_slide",
+					"settings": {
+						"slide_heading": "Step 1",
+						"slide_text": "<p>How? We’ve streamlined our processes, ensuring each piece goes through rigorous quality checks; from ideation, to manufacturing, and perfection.</p>",
+					}
+				},
+				"template--17031623213330__0ac10b87-7e62-4245-adfa-e453464b5570-1669294571ec71033f-1": {
+					"type": "section_slide",
+					"settings": {
+						"slide_heading": "Step 2",
+						"slide_text": "<p>We're driven by the motivation to coerce courageous reformations in the industry to encourage people to shop sustainable.</p>",
+					}
+				},
+				"template--17031623213330__0ac10b87-7e62-4245-adfa-e453464b5570-1669294571ec71033f-2": {
+					"type": "section_slide",
+					"settings": {
+						"slide_heading": "Step 3",
+						"slide_text": "<p>To us, people matter more than the business. We make it transparent, accessible, and affordable for everyone around the world.</p>",
+					}
+				}
+			},
+			"block_order": [
+				"template--17031623213330__0ac10b87-7e62-4245-adfa-e453464b5570-1669294571ec71033f-0",
+				"template--17031623213330__0ac10b87-7e62-4245-adfa-e453464b5570-1669294571ec71033f-1",
+				"template--17031623213330__0ac10b87-7e62-4245-adfa-e453464b5570-1669294571ec71033f-2"
+			],
+			"settings": {
+				"color_scheme": "background-3",
+				"heading": "We have got a vision to uphold the culture that inspires everyone."
+			}
+		},
+		"product-recommendations": {
+			"type": "product-recommendations",
+			"settings": {
+				"heading": "<p>You May Also Like</p>",
+				"link": "Explore",
+				"products_limit": 4,
+				"border_top": false,
+				"border_bottom": true,
+				"image_ratio": "portrait",
+				"image_fit": "cover",
+				"show_secondary_image": true,
+				"show_vendor": true,
+				"show_desc": false,
+				"show_sku": false,
+				"columns_mobile": "1",
+				"padding_top": 160,
+				"padding_bottom": 160,
+				"margin_top": 0,
+				"margin_bottom": 0
+			}
+		},
+		"instagram-collage": {
+			"type": "instagram-collage",
+			"blocks": {
+				"be42a297-ccec-4546-b711-7a393aecc81c": {
+					"type": "instagram-collage_image",
+					"settings": {
+						"image_width": 100
+					}
+				},
+				"0070c6f6-c885-45e8-a3cf-1ea320a393c3": {
+					"type": "instagram-collage_image",
+					"settings": {
+						"image_width": 130
+					}
+				},
+				"cfde012e-449f-48e7-853f-8bb9b5adb492": {
+					"type": "instagram-collage_image",
+					"settings": {
+						"image_width": 70
+					}
+				}
+			},
+			"block_order": [
+				"be42a297-ccec-4546-b711-7a393aecc81c",
+				"0070c6f6-c885-45e8-a3cf-1ea320a393c3",
+				"cfde012e-449f-48e7-853f-8bb9b5adb492"
+			],
+			"settings": {
+				"color_scheme": "background-1",
+				"border_top": false,
+				"subheading": "Instagram",
+				"heading": "<p>Follow @portland on Instagram</p>",
+				"description": "Follow to receive tips and tricks to make the most out of this theme.",
+				"account": true,
+				"name_account": "@portland",
+				"desc_account": "150k Followers",
+				"button_label": "Follow Us on Instagram",
+				"button_link": "#",
+				"button_style": "primary",
+				"padding_top": 160,
+				"padding_bottom": 160
+			}
+		}
+	},
+	"order": [
+		"main",
+		"about",
+		"0ac10b87-7e62-4245-adfa-e453464b5570",
+		"product-recommendations",
+		"instagram-collage"
+	]
+}

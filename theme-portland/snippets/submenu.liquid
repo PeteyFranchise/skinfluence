@@ -1,0 +1,53 @@
+<ul
+  class="header__submenu list-menu list-menu--disclosure caption-large motion-reduce color-background-1"
+  role="list"
+  tabindex="-1"
+>
+  {%- for childlink in link.links -%}
+    <li tabindex="-1">
+      {%- if childlink.links == blank -%}
+        <a
+          href="{{ childlink.url }}"
+          class="header__menu-item list-menu__item link link--text focus-inset link-hover-line-outer caption-large{% if childlink.current %} header__menu-item--active{% endif %}"
+          {% if childlink.current %}
+            aria-current="page"
+          {% endif %}
+        >
+          <span>
+            {{ childlink.title | escape }}
+          </span>
+        </a>
+      {%- else -%}
+        <span class="header__menu-item link link--text link-hover-line-outer list-menu__item focus-inset caption-large">
+          <span>
+            {% if section.settings.enable_menu_item_first_level %}
+              <a class="header__menu-link" href="{{childlink.url}}">
+                {{ childlink.title | escape }}
+              </a>
+            {% else %}
+              {{ childlink.title | escape }}
+            {% endif %}
+          </span>
+          {% render 'icon-caret' %}
+        </span>
+        <ul class="header__submenu list-menu--disclosure list-menu motion-reduce color-background-1" tabindex="-1">
+          {%- for grandchildlink in childlink.links -%}
+            <li>
+              <a
+                href="{{ grandchildlink.url }}"
+                class="header__menu-item list-menu__item link link--text focus-inset link-hover-line-outer caption-large{% if grandchildlink.current %} header__menu-item--active{% endif %}"
+                {% if grandchildlink.current %}
+                  aria-current="page"
+                {% endif %}
+              >
+                <span>
+                  {{ grandchildlink.title | escape }}
+                </span>
+              </a>
+            </li>
+          {%- endfor -%}
+        </ul>
+      {%- endif -%}
+    </li>
+  {%- endfor -%}
+</ul>

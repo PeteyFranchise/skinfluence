@@ -1,0 +1,165 @@
+{% comment %}
+  Renders product variant-picker
+
+  Accepts:
+  - product: {Object} product object.
+  - block: {Object} passing the block information.
+  - product_form_id: {String} Id of the product form to which the variant picker is associated.
+  - update_url: {Boolean} whether or not to update url when changing variants. If false, the url isn't updated. Default: true (optional).
+  Usage:
+  {% render 'product-variant-picker', product: product, block: block, product_form_id: product_form_id %}
+{% endcomment %}
+
+<div class="product-parameters">
+	{%- unless product.has_only_default_variant -%}
+		<div class="product-parameters__item product-parameters__variant">
+			{%- if block.settings.picker_type == 'button' -%}
+				<variant-radios
+					id="variant-radios-{{ section.id }}"
+					class="no-js-hidden {% if class %} {{ class }} {% endif %}"
+					data-section="{{ section.id }}"
+					data-url="{{ product.url }}"
+					{% if update_url == false %}
+						data-update-url="false"
+					{% endif %}
+					{{ block.shopify_attributes }}
+					data-variant-media-display="{{ section.settings.variant_media_display }}"
+				>
+					{%- for option in product.options_with_values -%}
+						{%- liquid
+							assign color_swatch = false
+
+							assign color_trigger = settings.trigger_swatch | append: '<br />' | append: settings.trigger_swatch_other | strip | newline_to_br | split: '<br />' 
+							assign name_option = option.name | handle | strip
+
+							for item in color_trigger
+								assign item_temp = item | handle | strip
+								if name_option == item_temp
+									assign color_swatch = true
+								endif
+							endfor
+							assign is_color_option = false
+							# for custom swatch type
+							if settings.type_color_swatch == 'custom'
+								if color_swatch
+									assign is_color_option = true
+								endif
+							endif
+
+							# for standart swatch type
+							if settings.type_color_swatch == 'standart'
+								for value in option.values
+									if value.swatch.color != blank
+										assign is_color_option = true
+									endif
+								endfor
+							endif
+						-%}
+						<fieldset class="product-form__input product-form__input--radios" id="SingleOptionSelector-{{ forloop.index0 }}">
+							<legend class="product-form__group-name">{{ option.name }}:</legend>
+							<div class="product-form__controls-group">
+								{% render 'product-variant-options',
+									product: product,
+									option: option,
+									block: block,
+									show_color_swatch: is_color_option
+								%}
+							</div>
+						</fieldset>
+					{%- endfor -%}
+
+					<script type="application/json">
+					{{ product.variants | json }}
+				</script>
+				</variant-radios>
+			{% else %}
+				<variant-selects
+					id="variant-selects-{{ section.id }}"
+					class="no-js-hidden {% if class %} {{ class }} {% endif %}"
+					data-section="{{ section.id }}"
+					data-url="{{ product.url }}"
+					{% if update_url == false %}
+						data-update-url="false"
+					{% endif %}
+					{{ block.shopify_attributes }}
+					data-variant-media-display="{{ section.settings.variant_media_display }}"
+				>
+					{%- for option in product.options_with_values -%}
+						{% comment %}
+							{% liquid
+								assign color_trigger = settings.trigger_swatch | append: settings.trigger_swatch_other | handle | strip
+								assign name_option = option.name | handle | strip
+							%}
+							!!! Color swatches are no longer supported in Dropdown type, as there was an error when selecting options in some situations
+						{% endcomment %}
+
+						<fieldset class="product-form__input product-form__input--dropdown">
+							<legend class="product-form__group-name">{{ option.name }}</legend>
+							<div class="select">
+								<select id="Option-{{ section.id }}-{{ forloop.index0 }}" class="select__select" name="options[{{ option.name | escape }}]" form="{{ product_form_id }}">
+									{% render 'product-variant-options', product: product, option: option, block: block %}
+								</select>
+								{% render 'icon-button-arrow' %}
+							</div>
+						</fieldset>
+					{% endfor %}
+					<script type="application/json">
+					{{ product.variants | json }}
+				</script>
+				</variant-selects>
+			{% endif %}
+		</div>
+	{% endunless %}
+
+	<noscript class="product-form__noscript-wrapper-{{ section.id }}">
+		<variant-selects data-variant-media-display="{{ section.settings.variant_media_display }}">
+			{%- for option in product.options_with_values -%}
+				<fieldset class="product-form__input product-form__input--dropdown {% if product.has_only_default_variant %} hidden{% endif %}">
+					<p class="product-form__group-name">{{ option.name }}</p>
+					<div class="select">
+						<select
+							name="id"
+							id="Variants-{{ section.id }}"
+							class="select__select"
+							form="{{ product_form_id }}"
+						>
+							{%- for variant in product.variants -%}
+								<option
+									{% if variant == product.selected_or_first_available_variant %}
+										selected="selected"
+									{% endif %}
+									{% if variant.available == false %}
+										disabled
+									{% endif %}
+									value="{{ variant.id }}"
+								>
+									{%- liquid
+										echo variant.title
+										echo variant.price | money | strip_html | prepend: ' - '
+										if variant.available == false
+											echo 'products.product.sold_out' | t | prepend: ' - '
+										endif
+										if variant.quantity_rule.increment > 1
+											echo 'products.product.quantity.multiples_of' | t: quantity: variant.quantity_rule.increment | prepend: ' - '
+										endif
+										if variant.quantity_rule.min > 1
+											echo 'products.product.quantity.minimum_of' | t: quantity: variant.quantity_rule.min | prepend: ' - '
+										endif
+										if variant.quantity_rule.max != null
+											echo 'products.product.quantity.maximum_of' | t: quantity: variant.quantity_rule.max | prepend: ' - '
+										endif
+										assign cart_quantity = cart | item_count_for_variant: variant.id
+										if cart_quantity > 0
+											echo 'products.product.quantity.in_cart_html' | t: quantity: cart_quantity | prepend: ' - '
+										endif
+									-%}
+								</option>
+							{%- endfor -%}
+						</select>
+						{% render 'icon-button-arrow' %}
+					</div>
+				</fieldset>
+			{%- endfor -%}
+		</variant-selects>
+	</noscript>
+</div>

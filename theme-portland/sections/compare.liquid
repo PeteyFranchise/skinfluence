@@ -1,0 +1,532 @@
+{{ 'twentytwenty.css' | asset_url | stylesheet_tag }}
+{{ 'section-compare.css' | asset_url | stylesheet_tag }}
+
+<script src="{{ 'jquery.event.move.js' | asset_url }}" defer="defer"></script>
+<script src="{{ 'jquery.twentytwenty.js' | asset_url }}" defer="defer"></script>
+<script src="{{ 'compare.js' | asset_url }}" defer="defer"></script>
+
+{% style %}
+  .section-{{ section.id }}-padding {
+    padding-top: {{ section.settings.padding_top | times: 0.25 | round: 0 }}px;
+    padding-bottom: {{ section.settings.padding_bottom | times: 0.25 | round: 0 }}px;
+  }
+
+  @media screen and (min-width: 990px) {
+    .section-{{ section.id }}-padding {
+			padding-top: {{ section.settings.padding_top | times: 0.6 | round: 0 }}px;
+    	padding-bottom: {{ section.settings.padding_bottom | times: 0.6 | round: 0 }}px;
+    }
+  }
+
+  @media screen and (min-width: 1360px) {
+    .section-{{ section.id }}-padding {
+      padding-top: {{ section.settings.padding_top }}px;
+      padding-bottom: {{ section.settings.padding_bottom }}px;
+    }
+  }
+{% endstyle %}
+
+{% liquid
+  if section.settings.image_before != blank and section.settings.mobile_image_before == blank
+    assign image_before = section.settings.image_before
+  elsif section.settings.image_before == blank and section.settings.mobile_image_before != blank
+    assign image_before = section.settings.mobile_image_before
+  elsif section.settings.image_before == blank and section.settings.mobile_image_before == blank
+    assign image_before = blank
+  elsif section.settings.image_before != blank and section.settings.mobile_image_before != blank
+    assign image_before = 1
+  endif
+
+   if section.settings.image_after != blank and section.settings.mobile_image_after == blank
+    assign image_after = section.settings.image_after
+  elsif section.settings.image_after == blank and section.settings.mobile_image_after != blank
+    assign image_after = section.settings.mobile_image_after
+  elsif section.settings.image_after == blank and section.settings.mobile_image_after == blank
+    assign image_after = blank
+  elsif section.settings.image_after != blank and section.settings.mobile_image_after != blank
+    assign image_after = 1
+  endif
+
+%}
+
+<section class="compare section-{{ section.id }}-padding">
+  <div class="container">
+    <div class="compare__box{% if section.settings.layout_type == 'full-width' %} compare-wrapper--full-width{% endif %}">
+      {%- if section.settings.heading != blank
+        or section.settings.title != blank
+        or section.settings.text != blank
+        or section.settings.show_button
+        and section.settings.button_label != blank
+      -%}
+        <div class="compare__content">
+          {%- if section.settings.heading != blank -%}
+            <div class="compare__subtitle subtitle">
+              {{ section.settings.heading }}
+            </div>
+          {%- endif -%}
+          {%- if section.settings.title != blank -%}
+            <{{ section.settings.title_heading_tag }} class="compare__title h2">{{ section.settings.title }}</{{ section.settings.title_heading_tag }}>
+          {%- endif -%}
+
+          {%- if section.settings.text != blank -%}
+            <div class="compare__description">
+              <p class="compare__text">{{ section.settings.text }}</p>
+            </div>
+          {%- endif -%}
+
+          {% if section.settings.show_button and section.settings.button_label != blank -%}
+            <a
+              {% if section.settings.button_link.url != blank %}
+                href="{{ section.settings.button_link }}"
+              {% endif %}
+              class="compare__button button button--{{ section.settings.button_style }} button--primary-size"
+              {% if section.settings.button_link.url == blank %}
+                aria-disabled="true"
+              {% endif %}
+            >
+              <span>
+                <span>
+                  {{ section.settings.button_label | escape }}
+                  {% render 'icon-button-arrow' %}
+                </span>
+                <span>
+                  {{ section.settings.button_label | escape }}
+                  {% render 'icon-button-arrow' %}
+                </span>
+              </span>
+            </a>
+          {% endif %}
+        </div>
+      {%- endif -%}
+      <div class="compare__slide">
+        {%- if image_before != blank and image_after != blank -%}
+          <div class="twentytwenty-wrapper twentytwenty-horizontal">
+            <div class="twentytwenty-container">
+              <div class="img-container">
+                {% if image_before != 1 %}
+                  {{
+                    image_before
+                    | image_url: width: 1790
+                    | image_tag: loading: 'lazy', widths: '553, 895, 1790'
+                  }}
+                {% elsif image_before == 1 %}
+                  {% assign desktop_image_before = section.settings.image_before %}
+                  {% assign mobile_image_before = section.settings.mobile_image_before %}
+
+                  <picture class="featured-products__item-image">
+                      <source
+                        srcset="
+                          {{ mobile_image_before | image_url: width: 375 }} 375w, {{ mobile_image_before | image_url: width: 425 }} 425w, {{ mobile_image_before | image_url: width: 575 }} 575w,
+                          {{ mobile_image_before | image_url: width: 750 }} 750w
+                        "
+                        media="(max-width: 750px) "
+                      >
+                      <img
+                        src="{{ desktop_image_before | image_url: width: desktop_image_before.width }}"
+                        loading="lazy"
+                        alt="{{ desktop_image_before.alt | escape }}"
+                        width="{{ desktop_image_before.width }}"
+                        height="{{ desktop_image_before.width | divided_by: desktop_image_before.aspect_ratio }}"
+                        style="--focal_point_desktop: {{ desktop_image_before.presentation.focal_point }}; --focal_point_mobile: {{ mobile_image_before.presentation.focal_point }};  {% if section.settings.enable_image_parallax %} height: calc(100% + 100px); {% endif %}"
+                      >
+                    </picture>
+                {% endif %}
+                <div class="compare__content--left color-{{- section.settings.color_content_left -}}">
+                  {%- if section.settings.text_content_left -%}
+                    <div class='compare__content-heading h5'>
+                      {{ section.settings.text_content_left }}
+                    </div>
+                  {%- endif -%}
+                  <a
+                    {% if section.settings.button_link_content_left.url != blank %}
+                      href="{{ section.settings.button_link_content_left }}"
+                    {% endif %}
+                    class="button button--simple-move"
+                    {% if section.settings.button_link_content_left.url == blank %}
+                      aria-disabled="true"
+                    {% endif %}
+                  >
+                    {%- if section.settings.show_button_content_left -%}
+                      <div>
+                        <span class="content__button--label">{{ section.settings.button_label_content_left | escape }}</span>
+                        {% render 'icon-button-arrow' %}
+                      </div>
+                    {% endif %}
+                  </a>
+                </div>
+              </div>
+              <div class="img-container">
+                {% if image_after != 1 %}
+                  {{
+                    image_after
+                    | image_url: width: 1790
+                    | image_tag: loading: 'lazy', widths: '553, 895, 1790'
+                  }}
+                {% elsif image_after == 1%}
+                    {% assign desktop_image_after = section.settings.image_after %}
+                    {% assign mobile_image_after = section.settings.mobile_image_after %}
+
+                    <picture class="featured-products__item-image">
+                      <source
+                        srcset="
+                          {{ mobile_image_after | image_url: width: 375 }} 375w, {{ mobile_image_after | image_url: width: 425 }} 425w, {{ mobile_image_after | image_url: width: 575 }} 575w,
+                          {{ mobile_image_after | image_url: width: 750 }} 750w
+                        "
+                        media="(max-width: 750px) "
+                      >
+                      <img
+                        src="{{ desktop_image_after | image_url: width: desktop_image_after.width }}"
+                        loading="lazy"
+                        alt="{{ desktop_image_after.alt | escape }}"
+                        width="{{ desktop_image_after.width }}"
+                        height="{{ desktop_image_after.width | divided_by: desktop_image_after.aspect_ratio }}"
+                        style="--focal_point_desktop: {{ desktop_image_after.presentation.focal_point }}; --focal_point_mobile: {{ mobile_image_after.presentation.focal_point }};  {% if section.settings.enable_image_parallax %} height: calc(100% + 100px); {% endif %}"
+                      >
+                    </picture>
+                {% endif %}
+
+                <div class="compare__content--right color-{{- section.settings.color_content_right -}}">
+                  {%- if section.settings.text_content_right -%}
+                    <div class='compare__content-heading right h5'>
+                      {{ section.settings.text_content_right }}
+                    </div>
+                  {%- endif -%}
+                  <a
+                    {% if section.settings.button_link_content_right.url != blank %}
+                      href="{{ section.settings.button_link_content_right }}"
+                    {% endif %}
+                    class="button button--simple-move"
+                    {% if section.settings.button_link_content_right.url == blank %}
+                      aria-disabled="true"
+                    {% endif %}
+                  >
+                    {%- if section.settings.show_button_content_right -%}
+                      <div>
+                        <span class="content__button--label">{{ section.settings.button_label_content_right | escape }}</span>
+                        {% render 'icon-button-arrow' %}
+                      </div>
+                    {% endif %}
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        {%- else -%}
+          <div class="compare__default">
+            {{ 'product-1' | placeholder_svg_tag: 'placeholder-svg placeholder' }}
+            {{ 'product-2' | placeholder_svg_tag: 'placeholder-svg placeholder' }}
+            <div class="compare__content--left color-{{- section.settings.color_content_left -}}">
+              {%- if section.settings.text_content_left -%}
+                <div class='compare__content-heading h5'>
+                  {{ section.settings.text_content_left }}
+                </div>
+              {%- endif -%}
+              <a
+                {% if section.settings.button_link_content_left.url != blank %}
+                  href="{{ section.settings.button_link_content_left }}"
+                {% endif %}
+                class="button button--simple-move"
+                {% if section.settings.button_link_content_left.url == blank %}
+                  aria-disabled="true"
+                {% endif %}
+              >
+                {%- if section.settings.show_button_content_left -%}
+                  <div>
+                    <span class="content__button--label">{{ section.settings.button_label_content_left | escape }}</span>
+                    {% render 'icon-button-arrow' %}
+                  </div>
+                {% endif %}
+              </a>
+            </div>
+            <div class="compare__content--right color-{{- section.settings.color_content_right -}}">
+              {%- if section.settings.text_content_right -%}
+                <div class='compare__content-heading right h5'>
+                  {{ section.settings.text_content_right }}
+                </div>
+              {%- endif -%}
+              <a
+                {% if section.settings.button_link_content_right.url != blank %}
+                  href="{{ section.settings.button_link_content_right }}"
+                {% endif %}
+                class="button button--simple-move"
+                {% if section.settings.button_link_content_right.url == blank %}
+                  aria-disabled="true"
+                {% endif %}
+              >
+                {%- if section.settings.show_button_content_right -%}
+                  <div>
+                    <span class="content__button--label">{{ section.settings.button_label_content_right | escape }}</span>
+                    {% render 'icon-button-arrow' %}
+                  </div>
+                {% endif %}
+              </a>
+            </div>
+          </div>
+        {%- endif -%}
+      </div>
+    </div>
+  </div>
+</section>
+{% schema %}
+{
+  "name": "t:sections.compare-block.name",
+  "tag": "section",
+  "class": "section-compare",
+  "enabled_on": {
+    "templates": ["*"]
+  },
+  "settings": [
+    {
+			"type": "select",
+			"id": "layout_type",
+			"options": [
+				{
+					"value": "default",
+					"label": "t:sections.compare-block.settings.layout_type.options__1.label"
+				},
+				{
+					"value": "full-width",
+					"label": "t:sections.compare-block.settings.layout_type.options__2.label"
+				}
+			],
+			"default": "default",
+			"label": "t:sections.compare-block.settings.layout_type.label"
+		},
+    {
+      "type": "text",
+      "id": "heading",
+      "default": "t:sections.compare-block.settings.heading.default",
+      "label": "t:sections.compare-block.settings.heading.label"
+    },
+    {
+      "type": "textarea",
+      "id": "title",
+      "default": "t:sections.compare-block.settings.title.default",
+      "label": "t:sections.compare-block.settings.title.label"
+    },
+    {
+      "type": "select",
+      "id": "title_heading_tag",
+      "options": [
+        {
+          "value": "h1",
+          "label": "t:all.heading_tag.options__1.label"
+        },
+        {
+          "value": "h2",
+          "label": "t:all.heading_tag.options__2.label"
+        },
+        {
+          "value": "h3",
+          "label": "t:all.heading_tag.options__3.label"
+        },
+        {
+          "value": "h4",
+          "label": "t:all.heading_tag.options__4.label"
+        },
+        {
+          "value": "h5",
+          "label": "t:all.heading_tag.options__5.label"
+        },
+        {
+          "value": "h6",
+          "label": "t:all.heading_tag.options__6.label"
+        },
+        {
+          "value": "div",
+          "label": "t:all.heading_tag.options__7.label"
+        },
+        {
+          "value": "p",
+          "label": "t:all.heading_tag.options__8.label"
+        }
+      ],
+      "default": "h2",
+      "label": "t:all.heading_tag.label",
+      "info": "t:all.heading_tag.info"
+    },
+    {
+      "type": "textarea",
+      "id": "text",
+      "default": "t:sections.compare-block.settings.text.default",
+      "label": "t:sections.compare-block.settings.text.label"
+    },
+    {
+      "type": "header",
+      "content": "t:all.button.header_button.content"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_button",
+      "default": false,
+      "label": "t:all.button.button_show.label"
+    },
+    {
+      "type": "select",
+      "id": "button_style",
+      "options": [
+        {
+          "value": "primary",
+          "label": "t:all.button.button_style.options__1.label"
+        },
+        {
+          "value": "secondary",
+          "label": "t:all.button.button_style.options__2.label"
+        },
+        {
+          "value": "tertiary",
+          "label": "t:all.button.button_style.options__3.label"
+        }
+      ],
+      "default": "primary",
+      "label": "t:all.button.button_style.label"
+    },
+    {
+      "type": "text",
+      "id": "button_label",
+      "default": "t:sections.compare-block.settings.button_label.default",
+      "label": "t:all.button.button_label.label"
+    },
+    {
+      "type": "url",
+      "id": "button_link",
+      "label": "t:all.button.button_link.label"
+    },
+    {
+      "type": "image_picker",
+      "id": "image_before",
+      "label": "t:sections.compare-block.settings.desktop_image_before.label",
+      "info": "t:sections.compare-block.settings.desktop_image_before.info"
+    },
+    {
+      "type": "image_picker",
+      "id": "mobile_image_before",
+      "label": "t:sections.compare-block.settings.mobile_image_before.label"
+    },
+    {
+      "type": "image_picker",
+      "id": "image_after",
+      "label": "t:sections.compare-block.settings.desktop_image_after.label",
+      "info": "t:sections.compare-block.settings.desktop_image_before.info"
+    },
+    {
+      "type": "image_picker",
+      "id": "mobile_image_after",
+      "label": "t:sections.compare-block.settings.mobile_image_after.label"
+    },
+    {
+			"type": "header",
+			"content": "t:sections.compare-block.settings.header_content_left.content"
+		},
+    {
+      "type": "select",
+      "id": "color_content_left",
+      "options": [
+        {
+          "value": "background-1",
+          "label": "t:sections.compare-block.settings.color_scheme.options__1.label"
+        },
+        {
+          "value": "background-3",
+          "label": "t:sections.compare-block.settings.color_scheme.options__2.label"
+        }
+      ],
+      "default": "background-1",
+      "label": "t:sections.compare-block.settings.color_scheme.label"
+    },
+     {
+      "type": "text",
+      "id": "text_content_left",
+      "label": "t:sections.compare-block.settings.text_content.label"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_button_content_left",
+      "default": false,
+      "label": "t:all.button.button_show.label"
+    },
+    {
+      "type": "text",
+      "id": "button_label_content_left",
+      "default": "t:sections.compare-block.settings.button_label_content_left.default",
+      "label": "t:all.button.button_label.label"
+    },
+    {
+      "type": "url",
+      "id": "button_link_content_left",
+      "label": "t:all.button.button_link.label"
+    },
+    {
+			"type": "header",
+			"content": "t:sections.compare-block.settings.header_content_right.content"
+		},
+    {
+      "type": "select",
+      "id": "color_content_right",
+      "options": [
+        {
+          "value": "background-1",
+          "label": "t:sections.compare-block.settings.color_scheme.options__1.label"
+        },
+        {
+          "value": "background-3",
+          "label": "t:sections.compare-block.settings.color_scheme.options__2.label"
+        }
+      ],
+      "default": "background-1",
+      "label": "t:sections.compare-block.settings.color_scheme.label"
+    },
+    {
+      "type": "text",
+      "id": "text_content_right",
+      "label": "t:sections.compare-block.settings.text_content.label"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_button_content_right",
+      "default": false,
+      "label": "t:all.button.button_show.label"
+    },
+    {
+      "type": "text",
+      "id": "button_label_content_right",
+      "default": "t:sections.compare-block.settings.button_label_content_right.default",
+      "label": "t:all.button.button_label.label"
+    },
+    {
+      "type": "url",
+      "id": "button_link_content_right",
+      "label": "t:all.button.button_link.label"
+    },
+    {
+      "type": "header",
+      "content": "t:all.section-padding.header.content"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 200,
+      "step": 10,
+      "default": 160,
+      "unit": "px",
+      "label": "t:all.section-padding.padding_top.label"
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 200,
+      "step": 10,
+      "default": 160,
+      "unit": "px",
+      "label": "t:all.section-padding.padding_bottom.label"
+    }
+  ],
+  "presets": [
+    {
+      "name": "t:sections.compare-block.presets.name"
+    }
+  ]
+}
+{% endschema %}

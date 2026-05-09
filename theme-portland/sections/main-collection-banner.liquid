@@ -1,0 +1,219 @@
+{{ 'component-card.css' | asset_url | stylesheet_tag }}
+{{ 'component-card-extended.css' | asset_url | stylesheet_tag }}
+{{ 'component-collection-hero.css' | asset_url | stylesheet_tag }}
+
+<script src="{{ 'main-collection-banner.js' | asset_url }}" defer="defer"></script>
+
+{% liquid
+  assign featured_products_none = true
+  for featured_product in section.settings.product_list
+    assign featured_products_collection = featured_product.collections | where: 'id', collection.id
+    if featured_products_collection[0] != blank
+      assign featured_products_none = false
+    endif
+  endfor
+%}
+
+<div
+  class="
+    collection-hero collection-hero--{{- section.settings.layout -}}
+    {% if section.settings.layout == 'overlay' %} section--has-overlay {% endif %}
+    {% if section.settings.product_list != blank and section.settings.layout == 'overlay' and featured_products_none != true %} collection-hero--has-products {% endif %}
+  "
+>
+  <div class="container">
+    {% if settings.show_breadcrumbs %}
+      <nav class="breadcrumb" role="navigation" aria-label="breadcrumbs">
+        <a href="{{ routes.root_url }}" title="{{ 'general.breadcrumbs.home' | t }}" class="link-hover-line">
+          {{ 'general.breadcrumbs.home' | t }}
+        </a>
+        <div class="breadcrumb__delimiter"></div>
+        <span>{{ collection.title }}</span>
+      </nav>
+    {% endif %}
+    <div class="collection-hero__inner">
+      <div class="collection-hero__text-wrapper">
+        <h1 class="collection-hero__title title--page">
+          <span class="visually-hidden">{{ 'sections.collection_template.title' | t }}: </span>
+          {{- collection.title | escape -}}
+        </h1>
+
+        {%- if section.settings.show_collection_description and collection.description != blank -%}
+          <div class="collection-hero__description rte{%if settings.rte_type == 'custom'%} rte__container{% endif %}">{{ collection.description }}</div>
+        {%- endif -%}
+      </div>
+
+      {%- liquid
+        assign collection_image = collection.image
+        if collection_image == blank and collection.id == blank
+          assign collection_image = section.settings.image_products
+        endif
+      -%}
+      {%- if section.settings.show_collection_image and collection_image -%}
+        <div class="collection-hero__image-wrapper">
+          <div class="collection-hero__image-container media">
+            <img
+              srcset="
+                {%- if collection_image.width >= 165 -%}{{ collection_image | img_url: '165x' }} 165w,{%- endif -%}
+                {%- if collection_image.width >= 360 -%}{{ collection_image | img_url: '360x' }} 360w,{%- endif -%}
+                {%- if collection_image.width >= 535 -%}{{ collection_image | img_url: '535x' }} 535w,{%- endif -%}
+                {%- if collection_image.width >= 720 -%}{{ collection_image | img_url: '720x' }} 720w,{%- endif -%}
+                {%- if collection_image.width >= 940 -%}{{ collection_image | img_url: '940x' }} 940w,{%- endif -%}
+                {%- if collection_image.width >= 1070 -%}{{ collection_image | img_url: '1070x' }} 1070w,{%- endif -%}
+                {%- if collection_image.width >= 1100 -%}{{ collection_image | img_url: '1100x' }} 1100w,{%- endif -%}
+                {%- if collection_image.width >= 1290 -%}{{ collection_image | img_url: '1290x' }} 1290w,{%- endif -%}
+                {%- if collection_image.width >= 1440 -%}{{ collection_image | img_url: '1440x' }} 1440w,{%- endif -%}
+                {%- if collection_image.width >= 1600 -%}{{ collection_image | img_url: '1600x' }} 1600w,{%- endif -%}
+                {%- if collection_image.width >= 1920 -%}{{ collection_image | img_url: '1920x' }} 1920w{%- endif -%}
+              "
+              src="{{ collection_image | img_url: '533x' }}"
+              alt="{{ collection.title | escape }}"
+              loading="lazy"
+              width="{{ collection_image.width }}"
+              height="{{ collection_image.height }}"
+            >
+          </div>
+        </div>
+      {%- endif -%}
+    </div>
+
+    {% if section.settings.product_list != blank
+      and section.settings.layout == 'overlay'
+      and featured_products_none != true
+    %}
+      <ul class="collection-hero__featured-products container">
+        {% assign i = 0 %}
+        {% for product in section.settings.product_list %}
+          {% assign product_collections = product.collections | where: 'id', collection.id %}
+          {% if product_collections[0] != blank %}
+            {% assign i = i | plus: 1 %}
+            {% if i < 4 %}
+              <li class="collection-hero__product-card">
+                {% render 'product-card-extended',
+                  product_card_product: product,
+                  media_size: section.settings.image_ratio,
+                  media_fit: section.settings.image_fit,
+                  show_secondary_image: section.settings.show_secondary_image,
+                  show_vendor: section.settings.show_vendor,
+                  show_sku: section.settings.show_sku
+                %}
+              </li>
+            {% endif %}
+          {% endif %}
+        {% endfor %}
+      </ul>
+    {% endif %}
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "t:sections.main-collection-banner.name",
+  "class": "collection-banner-section spaced-section--full-width section-template--overlay",
+  "settings": [
+    {
+      "type": "paragraph",
+      "content": "t:sections.main-collection-banner.settings.paragraph.content"
+    },
+    {
+      "type": "select",
+      "id": "layout",
+      "options": [
+        {
+          "value": "column",
+          "label": "t:sections.main-collection-banner.settings.layout.options__1.label"
+        },
+        {
+          "value": "overlay",
+          "label": "t:sections.main-collection-banner.settings.layout.options__2.label"
+        }
+      ],
+      "label": "t:sections.main-collection-banner.settings.layout.label",
+      "default": "column"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_collection_description",
+      "default": false,
+      "label": "t:sections.main-collection-banner.settings.show_collection_description.label"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_collection_image",
+      "default": false,
+      "label": "t:sections.main-collection-banner.settings.show_collection_image.label",
+      "info": "t:sections.main-collection-banner.settings.show_collection_image.info"
+    },
+    {
+      "type": "image_picker",
+      "id": "image_products",
+      "label": "t:sections.main-collection-banner.settings.image_products.label",
+      "info": "t:sections.main-collection-banner.settings.image_products.info"
+    },
+    {
+      "type": "product_list",
+      "id": "product_list",
+      "label": "t:sections.main-collection-banner.settings.product_list.label",
+      "info": "t:sections.main-collection-banner.settings.product_list.info"
+    },
+    {
+      "type": "header",
+      "content": "t:sections.featured-products.settings.header.content"
+    },
+    {
+      "type": "select",
+      "id": "image_ratio",
+      "options": [
+        {
+          "value": "landscape",
+          "label": "t:sections.featured-products.settings.image_ratio.options__1.label"
+        },
+        {
+          "value": "portrait",
+          "label": "t:sections.featured-products.settings.image_ratio.options__2.label"
+        },
+        {
+          "value": "square",
+          "label": "t:sections.featured-products.settings.image_ratio.options__3.label"
+        }
+      ],
+      "default": "portrait",
+      "label": "t:sections.featured-products.settings.image_ratio.label"
+    },
+    {
+      "type": "select",
+      "id": "image_fit",
+      "label": "t:sections.featured-products.settings.image_fit.label",
+      "options": [
+        {
+          "value": "contain",
+          "label": "t:sections.featured-products.settings.image_fit.options__1.label"
+        },
+        {
+          "value": "cover",
+          "label": "t:sections.featured-products.settings.image_fit.options__2.label"
+        }
+      ],
+      "default": "cover"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_secondary_image",
+      "default": false,
+      "label": "t:sections.featured-products.settings.show_secondary_image.label"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_vendor",
+      "default": true,
+      "label": "t:sections.featured-products.settings.show_vendor.label"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_sku",
+      "default": false,
+      "label": "t:sections.featured-products.settings.show_sku.label"
+    }
+  ]
+}
+{% endschema %}

@@ -1,0 +1,223 @@
+{{ 'section-steps.css' | asset_url | stylesheet_tag }}
+
+<script src='{{ 'steps.js' | asset_url }}' defer='defer'></script>
+<script src='{{ 'parallax.js' | asset_url }}' defer='defer'></script>
+
+<div class="steps no-js-hidden color-{{- section.settings.color_scheme -}}">
+	<div class="steps-anim">
+		<div class="container steps__container">
+			<div class="steps__wrapper">
+				<div class="steps__left">
+					<{{ section.settings.heading_tag }} class="steps__title h2">{{ section.settings.heading }}<{{ section.settings.heading_tag }}>
+					<div class="steps__slides">
+						{%- for block in section.blocks -%}
+							<div class="steps__slide-item steps__slide-item--desktop {% if forloop.first == true %} active{% endif %}" {{ block.shopify_attributes }}>
+								<div class="steps__slide-item-wrapper">
+									<div class="steps__num subtitle">{{ block.settings.slide_heading }}</div>
+									<div class="steps__text">{{ block.settings.slide_text }}</div>
+								</div>
+							</div>
+						{% endfor %}
+					</div>
+				</div>
+				<div class="steps__right">
+					<div class="steps__scroll">
+						{%- for block in section.blocks -%}
+							<div class="steps__slide-item steps__slide-item--mobile" {{ block.shopify_attributes }}>
+								<div class="steps__num subtitle">{{ block.settings.slide_heading }}</div>
+								<div class="steps__text">{{ block.settings.slide_text }}</div>
+							</div>
+
+							{%- if block.settings.image != blank -%}
+								<div class="steps__image">
+									<div class="steps__scroll-parallax js-parallax"
+											 data-parallax-property="translateY"
+											 data-parallax-property-value="-40"
+											 data-parallax-steps="0, 40"
+									>
+										<img srcset="{%- if block.settings.image.width >= 165 -%}{{ block.settings.image | img_url: '165x' }} 165w,{%- endif -%}
+									{%- if block.settings.image.width >= 360 -%}{{ block.settings.image | img_url: '360x' }} 360w,{%- endif -%}
+									{%- if block.settings.image.width >= 535 -%}{{ block.settings.image | img_url: '535x' }} 535w,{%- endif -%}
+									{%- if block.settings.image.width >= 720 -%}{{ block.settings.image | img_url: '720x' }} 720w,{%- endif -%}
+									{%- if block.settings.image.width >= 967 -%}{{ block.settings.image | img_url: '967x' }} 967w,{%- endif -%}
+									{%- if block.settings.image.width >= 1070 -%}{{ block.settings.image | img_url: '1070x' }} 1070w{%- endif -%}"
+												 src="{{ block.settings.image | img_url: '967x' }}"
+												 alt="{{ block.settings.image.alt | escape }}"
+												 loading="lazy"
+												 style="object-position: {{ block.settings.image.presentation.focal_point }};"
+										>
+									</div>
+								</div>
+							{%- else -%}
+								{% assign placeholder_index = forloop.index | modulo: 3 | plus: 1 %} 
+							
+								<div class="steps__image steps__image--placeholder" {{ block.shopify_attributes }}>
+									{{ 'collection-' |  append: placeholder_index | placeholder_svg_tag }}
+								</div>
+							{%- endif -%}
+						{%- endfor -%}
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="steps no-js color-{{- section.settings.color_scheme -}}">
+	<div class="container">
+		<{{ section.settings.heading_tag }} class="steps__title h2">{{ section.settings.heading }}</{{ section.settings.heading_tag }}>
+
+		<div class="steps__wrapper">
+			{%- for block in section.blocks -%}
+				<div class="steps__slide-item" {{ block.shopify_attributes }}>
+					<div>
+						<div class="steps__num subtitle">{{ block.settings.slide_heading }}</div>
+						<div class="steps__text">{{ block.settings.slide_text }}</div>
+					</div>
+
+					{%- if block.settings.image != blank -%}
+						<div class="steps__image">
+							<div class="steps__scroll-parallax">
+								<img srcset="{%- if block.settings.image.width >= 165 -%}{{ block.settings.image | img_url: '165x' }} 165w,{%- endif -%}
+									{%- if block.settings.image.width >= 360 -%}{{ block.settings.image | img_url: '360x' }} 360w,{%- endif -%}
+									{%- if block.settings.image.width >= 535 -%}{{ block.settings.image | img_url: '535x' }} 535w,{%- endif -%}
+									{%- if block.settings.image.width >= 720 -%}{{ block.settings.image | img_url: '720x' }} 720w,{%- endif -%}
+									{%- if block.settings.image.width >= 967 -%}{{ block.settings.image | img_url: '967x' }} 967w,{%- endif -%}
+									{%- if block.settings.image.width >= 1070 -%}{{ block.settings.image | img_url: '1070x' }} 1070w{%- endif -%}"
+										 src="{{ block.settings.image | img_url: '967x' }}"
+										 alt="{{ block.settings.image.alt | escape }}"
+										 loading="lazy"
+										 style="object-position: {{ block.settings.image.presentation.focal_point }};"
+								>
+							</div>
+						</div>
+					{%- else -%}
+						{% assign placeholder_index = forloop.index | modulo: 3 | plus: 1 %} 
+						<div class="steps__image steps__image--placeholder" {{ block.shopify_attributes }}>
+							{{ 'collection-' |  append: placeholder_index | placeholder_svg_tag }}
+						</div>
+					{%- endif -%}
+				</div>
+			{%- endfor -%}
+		</div>
+	</div>
+</div>
+
+{% schema %}
+{
+	"name": "t:sections.steps.name",
+	"tag": "section",
+	"class": "steps-section spaced-section",
+	"enabled_on": {
+    "templates": ["*"]
+  },
+	"settings": [
+		{
+			"type": "select",
+			"id": "color_scheme",
+			"options": [
+				{
+					"value": "background-2",
+					"label": "t:sections.steps.settings.color_scheme.options__1.label"
+				},
+				{
+					"value": "background-3",
+					"label": "t:sections.steps.settings.color_scheme.options__2.label"
+				}
+			],
+			"default": "background-3",
+			"label": "t:sections.steps.settings.color_scheme.label"
+		},
+		{
+			"type": "text",
+			"id": "heading",
+			"default": "t:sections.steps.settings.heading.default",
+			"label": "t:sections.steps.settings.heading.label"
+		},
+		{
+			"type": "select",
+			"id": "heading_tag",
+			"options": [
+				{
+					"value": "h1",
+					"label": "t:all.heading_tag.options__1.label"
+				},
+				{
+					"value": "h2",
+					"label": "t:all.heading_tag.options__2.label"
+				},
+				{
+					"value": "h3",
+					"label": "t:all.heading_tag.options__3.label"
+				},
+				{
+					"value": "h4",
+					"label": "t:all.heading_tag.options__4.label"
+				},
+				{
+					"value": "h5",
+					"label": "t:all.heading_tag.options__5.label"
+				},
+				{
+					"value": "h6",
+					"label": "t:all.heading_tag.options__6.label"
+				},
+				{
+					"value": "div",
+					"label": "t:all.heading_tag.options__7.label"
+				},
+				{
+					"value": "p",
+					"label": "t:all.heading_tag.options__8.label"
+				}
+			],
+			"default": "h2",
+			"label": "t:all.heading_tag.label",
+			"info": "t:all.heading_tag.info"
+		}
+	],
+	"blocks": [
+		{
+			"type": "section_slide",
+			"name": "t:sections.steps.blocks.steps_slide.name",
+			"limit": 5,
+			"settings": [
+				{
+					"type": "text",
+					"id": "slide_heading",
+					"default": "t:sections.steps.blocks.steps_slide.settings.slide_heading.default",
+					"label": "t:sections.steps.blocks.steps_slide.settings.slide_heading.label"
+				},
+				{
+					"type": "richtext",
+					"id": "slide_text",
+					"default": "t:sections.steps.blocks.steps_slide.settings.slide_text.default",
+					"label": "t:sections.steps.blocks.steps_slide.settings.slide_text.label"
+				},
+				{
+					"type": "image_picker",
+					"id": "image",
+					"label": "t:sections.steps.blocks.steps_slide.settings.image.label",
+					"info": "t:sections.steps.blocks.steps_slide.settings.image.info"
+				}
+			]
+		}
+	],
+	"presets": [
+		{
+			"name": "t:sections.steps.presets.name",
+			"blocks": [
+				{
+					"type": "section_slide"
+				},
+				{
+					"type": "section_slide"
+				},
+				{
+					"type": "section_slide"
+				}
+			]
+		}
+	]
+}
+{% endschema %}

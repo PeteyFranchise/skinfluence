@@ -1,0 +1,77 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "type": "header",
+  "name": "t:sections.header.settings.header-group.label",
+  "sections": {
+    "announcement-bar": {
+      "type": "announcement-bar",
+      "settings": {
+        "height": 40,
+        "color_scheme": "1",
+        "text": "<p>Use this space for a store update or special offer</p>"
+      }
+    },
+    "header": {
+      "type": "header",
+      "blocks": {
+        "header-1": {
+          "type": "aside",
+          "settings": {
+            "show_social": true,
+            "heading": "Special Promotion Just for You",
+            "description": "Enjoy exclusive discounts and limited-time perks designed to give you more value.",
+            "button_link": "",
+            "button_label": "Explore More",
+            "button_style": "secondary",
+            "show_articles": false,
+            "blog": "",
+            "show_image": true,
+            "show_date": true,
+            "show_author": true,
+            "blog_link": ""
+          }
+        }
+      },
+      "block_order": [
+        "header-1"
+      ],
+      "settings": {
+        "height": 130,
+        "logo_width": 90,
+        "logo_position": "left",
+        "menu": "main-menu",
+        "enable_fullscreen_menu": true,
+        "menu_2": "main-menu",
+        "enable_country_selector": true,
+        "enable_language_selector": true,
+        "enable_menu_item_first_level": false,
+        "sticky_header_type": "on-scroll-up",
+        "enable_account_btn": true,
+        "account_modal_type": "shopify_based",
+        "customer_account_menu": "customer-account-main-menu",
+        "enable_search": true,
+        "show_collection_card": true,
+        "collection_list": [],
+        "show_items": false,
+        "product_list": [],
+        "image_ratio": "portrait",
+        "image_fit": "cover",
+        "show_secondary_image": false,
+        "show_vendor": false,
+        "show_sku": false
+      }
+    }
+  },
+  "order": [
+    "announcement-bar",
+    "header"
+  ]
+}

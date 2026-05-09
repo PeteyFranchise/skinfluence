@@ -1,0 +1,362 @@
+{{ 'section-image-collage.css' | asset_url | stylesheet_tag }}
+
+<script src="{{ "parallax.js" | asset_url }}" defer="defer"></script>
+<script src="{{ "image-collage.js" | asset_url }}" defer="defer"></script>
+
+{%- style -%}
+	.section-{{ section.id }}-padding {
+	  padding-top: {{ section.settings.padding_top | times: 0.25 | round: 0 }}px;
+	  padding-bottom: {{ section.settings.padding_bottom | times: 0.25 | round: 0 }}px;
+	}
+
+	@media screen and (min-width: 990px) {
+    .section-{{ section.id }}-padding {
+			padding-top: {{ section.settings.padding_top | times: 0.6 | round: 0 }}px;
+    	padding-bottom: {{ section.settings.padding_bottom | times: 0.6 | round: 0 }}px;
+    }
+  }
+
+	@media screen and (min-width: 1360px) {
+	  .section-{{ section.id }}-padding {
+	    padding-top: {{ section.settings.padding_top }}px;
+	    padding-bottom: {{ section.settings.padding_bottom }}px;
+	  }
+	}
+{%- endstyle -%}
+
+<div class="image-collage parallax-img-container image-collage{%- if section.settings.border_top -%}--border{% endif %} section-{{ section.id }}-padding color-{{- section.settings.color_scheme -}}">
+	<div class="image-collage__wrapper">
+		<div class="container">
+			<div class="image-collage__item">
+				{%- if section.settings.subheading != blank -%}
+					<div class="subtitle">{{ section.settings.subheading | escape }}</div>
+				{% endif %}
+
+				{%- if section.settings.heading != blank -%}
+					<h2 class="image-collage__title title--section h2">
+						{{ section.settings.heading }}
+					</h2>
+				{% endif %}
+
+				{%- if section.settings.description != blank -%}
+					<div class="rte">{{ section.settings.description }}</div>
+				{% endif %}
+
+				{%- if section.settings.account -%}
+					<div class="image-collage__follow">
+						<div class="image-collage__account">
+							{%- if section.settings.image_account != blank -%}
+								<a
+									{% if section.settings.button_link != blank %}
+										href="{{ section.settings.button_link }}"
+									{% endif %}
+									{% if section.settings.button_link == blank %}
+										aria-disabled="true"
+									{% endif %}
+									aria-label="{{ section.settings.button_label | escape }}"
+								>
+									<figure class="image-collage__photo">
+										<img
+											srcset="
+												{%- if section.settings.image_account.width >= 65 -%}{{ section.settings.image_account | img_url: "65x" }} 65w,{%- endif -%}
+												{%- if section.settings.image_account.width >= 130 -%}{{ section.settings.image_account | img_url: "130x" }} 130w,{%- endif -%}
+												{{ section.settings.image_account | img_url: "master" }} {{ section.settings.image_account.width }}w
+											"
+											src="{{ section.settings.image_account | img_url: "65x" }}"
+											loading="lazy"
+											alt="{{ section.settings.image_account.alt | escape }}"
+											width="{{ section.settings.image_account.width }}"
+											height="{{ section.settings.image_account.width | divided_by: section.settings.image_account.aspect_ratio }}"
+											style="object-position: {{ section.settings.image_account.presentation.focal_point }}"
+										>
+									</figure>
+								</a>
+							{%- endif -%}
+
+							{%- if section.settings.name_account != blank
+								or section.settings.desc_account != blank
+							-%}
+								<div class="image-collage__info">
+									{%- if section.settings.name_account != blank -%}
+										<a
+											{% if section.settings.button_link != blank %}
+												href="{{ section.settings.button_link }}"
+											{% endif %}
+											{% if section.settings.button_link == blank %}
+												aria-disabled="true"
+											{% endif %}
+											aria-label="{{ section.settings.button_label | escape }}"
+										>
+											<span class="image-collage__name">
+												{{- section.settings.name_account | escape -}}
+											</span>
+										</a>
+									{% endif %}
+
+									{%- if section.settings.desc_account != blank -%}
+										<span class="image-collage__text">
+											{{- section.settings.desc_account | escape -}}
+										</span>
+									{% endif %}
+								</div>
+							{% endif %}
+						</div>
+
+						{%- if section.settings.button_label != blank -%}
+							<a
+								{% if section.settings.button_link != blank %}
+									href="{{ section.settings.button_link }}"
+								{% endif %}
+								class="image-collage__link button button--primary button--primary-size button--{{ section.settings.button_style }}"
+								{% if section.settings.button_link == blank %}
+									aria-disabled="true"
+								{% endif %}
+								aria-label="{{ section.settings.button_label | escape }}"
+							>
+								<span>
+									<span>
+										{% render 'icon-instagram' %}
+										{{ section.settings.button_label | escape }}
+									</span>
+									<span>
+										{% render 'icon-instagram' %}
+										{{ section.settings.button_label | escape }}
+									</span>
+								</span>
+							</a>
+						{%- endif -%}
+					</div>
+				{% endif %}
+			</div>
+
+			<div class="image-collage__images">
+				<div
+					class="image-collage__main-image js-parallax"
+					data-parallax-property="translateY"
+					data-parallax-property-value="-70"
+					data-parallax-steps="0, 100"
+				>
+					{%- assign image_size = section.settings.main_image.width
+						| append: 'x'
+					-%}
+					{%- if section.settings.main_image != blank -%}
+						<img
+							srcset="{{ section.settings.main_image | img_url: image_size }} 1x, {{ section.settings.main_image | img_url: image_size, scale: 2 }} 2x"
+							src="{{ section.settings.main_image | img_url: image_size }}"
+							alt="{{ section.settings.main_image.alt | escape }}"
+							width="{{ section.settings.main_image.width }}"
+							height="{{ section.settings.main_image.height }}"
+							loading="lazy"
+							style="object-position: {{ section.settings.main_image.presentation.focal_point }}"
+						>
+					{%- else -%}
+						{{ 'collection-1' | placeholder_svg_tag }}
+					{%- endif -%}
+				</div>
+				<div class="image-collage__image-list">
+					{%- for block in section.blocks -%}
+						<div
+							class="image-collage__image js-parallax"
+							data-parallax-property="translateY"
+							data-parallax-property-value="-150"
+							data-parallax-steps="0, 100"
+							{{ block.shopify_attributes }}
+						>
+							{%- if block.settings.image != blank -%}
+								{%- assign image_size = block.settings.image_width
+									| append: 'x'
+								-%}
+								<img
+									srcset="{{ block.settings.image | img_url: image_size }} 1x, {{ block.settings.image | img_url: image_size, scale: 2 }} 2x"
+									src="{{ block.settings.image | img_url: image_size }}"
+									alt="{{ block.settings.image.alt | escape }}"
+									width="{{ block.settings.image_width }}"
+									height="{{ block.settings.image.height }}"
+									loading="lazy"
+									style="object-position: {{ block.settings.image.presentation.focal_point }}"
+								>
+							{%- endif -%}
+						</div>
+					{%- endfor -%}
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+{% schema %}
+{
+	"name": "t:sections.instagram-collage.name",
+	"tag": "section",
+	"class": "image-collage-section spaced-section",
+	"max_blocks": 3,
+	"enabled_on": {
+    "templates": ["*"]
+  },
+	"settings": [
+		{
+			"type": "select",
+			"id": "color_scheme",
+			"options": [
+				{
+					"value": "background-1",
+					"label": "t:sections.instagram-collage.settings.color_scheme.options__1.label"
+				},
+				{
+					"value": "background-2",
+					"label": "t:sections.instagram-collage.settings.color_scheme.options__2.label"
+				}
+			],
+			"default": "background-1",
+			"label": "t:sections.instagram-collage.settings.color_scheme.label"
+		},
+		{
+			"type": "checkbox",
+			"id": "border_top",
+			"default": false,
+			"label": "t:sections.instagram-collage.settings.border_top.label"
+		},
+		{
+			"type": "text",
+			"id": "subheading",
+			"default": "t:sections.instagram-collage.settings.subheading.default",
+			"label": "t:sections.instagram-collage.settings.subheading.label"
+		},
+		{
+			"type": "richtext",
+			"id": "heading",
+			"default": "t:sections.instagram-collage.settings.heading.default",
+			"label": "t:sections.instagram-collage.settings.heading.label"
+		},
+		{
+			"type": "text",
+			"id": "description",
+			"default": "t:sections.instagram-collage.settings.description.default",
+			"label": "t:sections.instagram-collage.settings.description.label"
+		},
+		{
+			"type": "image_picker",
+			"id": "main_image",
+			"label": "t:sections.instagram-collage.settings.main_image.label"
+		},
+		{
+			"type": "checkbox",
+			"id": "account",
+			"default": true,
+			"label": "t:sections.instagram-collage.settings.account.label"
+		},
+		{
+			"type": "image_picker",
+			"id": "image_account",
+			"label": "t:sections.instagram-collage.settings.image_account.label"
+		},
+		{
+			"type": "text",
+			"id": "name_account",
+			"default": "t:sections.instagram-collage.settings.name_account.default",
+			"label": "t:sections.instagram-collage.settings.name_account.label"
+		},
+		{
+			"type": "text",
+			"id": "desc_account",
+			"default": "t:sections.instagram-collage.settings.desc_account.default",
+			"label": "t:sections.instagram-collage.settings.desc_account.label"
+		},
+		{
+			"type": "text",
+			"id": "button_label",
+			"default": "t:sections.instagram-collage.settings.button_label.default",
+			"label": "t:sections.instagram-collage.settings.button_label.label"
+		},
+		{
+			"type": "url",
+			"id": "button_link",
+			"label": "t:sections.instagram-collage.settings.button_link.label"
+		},
+		{
+			"type": "select",
+			"id": "button_style",
+			"options": [
+				{
+					"value": "primary",
+					"label": "t:sections.instagram-collage.settings.button_style.options__1.label"
+				},
+				{
+					"value": "secondary",
+					"label": "t:sections.instagram-collage.settings.button_style.options__2.label"
+				},
+				{
+          "value": "tertiary",
+          "label": "t:all.button.button_style.options__3.label"
+        }
+			],
+			"default": "primary",
+			"label": "t:sections.instagram-collage.settings.button_style.label"
+		},
+		{
+			"type": "header",
+			"content": "t:all.section-padding.header.content"
+		},
+		{
+			"type": "range",
+			"id": "padding_top",
+			"min": 0,
+			"max": 200,
+			"step": 10,
+			"default": 160,
+			"unit": "px",
+			"label": "t:all.section-padding.padding_top.label"
+		},
+		{
+			"type": "range",
+			"id": "padding_bottom",
+			"min": 0,
+			"max": 200,
+			"step": 10,
+			"default": 160,
+			"unit": "px",
+			"label": "t:all.section-padding.padding_bottom.label"
+		}
+	],
+	"blocks": [
+		{
+			"type": "instagram-collage_image",
+			"name": "t:sections.instagram-collage.blocks.instagram-collage_image.name",
+			"settings": [
+				{
+					"type": "image_picker",
+					"id": "image",
+					"label": "t:sections.instagram-collage.blocks.instagram-collage_image.settings.image.label"
+				},
+				{
+					"type": "range",
+					"id": "image_width",
+					"min": 70,
+					"max": 140,
+					"step": 10,
+					"default": 120,
+					"unit": "t:sections.instagram-collage.blocks.instagram-collage_image.settings.image_width.unit",
+					"label": "t:sections.instagram-collage.blocks.instagram-collage_image.settings.image_width.label",
+					"info": "t:sections.instagram-collage.blocks.instagram-collage_image.settings.image_width.info"
+				}
+			]
+		}
+	],
+	"presets": [
+		{
+			"name": "t:sections.instagram-collage.presets.name",
+			"blocks": [
+				{
+					"type": "instagram-collage_image"
+				},
+				{
+					"type": "instagram-collage_image"
+				},
+				{
+					"type": "instagram-collage_image"
+				}
+			]
+		}
+	]
+}
+{% endschema %}

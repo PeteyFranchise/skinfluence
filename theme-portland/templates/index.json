@@ -1,0 +1,559 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "4a48dd22-7a83-42ba-ae14-de6aaae18074": {
+      "type": "interactive-section",
+      "blocks": {
+        "40501e6e-b3db-40a2-a272-336dbdef623b": {
+          "type": "column",
+          "settings": {}
+        },
+        "0d468cd0-2939-4112-9c34-ce57f2eafa35": {
+          "type": "column",
+          "settings": {}
+        },
+        "802bedc2-704d-43f9-9a59-abc32f6ff62c": {
+          "type": "column",
+          "settings": {}
+        },
+        "88f6bf1d-80c1-45b7-8aa2-cd36e5cff3a8": {
+          "type": "column",
+          "settings": {}
+        },
+        "0b0b14b3-3692-471c-b669-49be1d563899": {
+          "type": "column",
+          "settings": {}
+        },
+        "1225bc37-4514-41f8-ab6c-f69607d7eb20": {
+          "type": "column",
+          "settings": {}
+        }
+      },
+      "block_order": [
+        "40501e6e-b3db-40a2-a272-336dbdef623b",
+        "0d468cd0-2939-4112-9c34-ce57f2eafa35",
+        "802bedc2-704d-43f9-9a59-abc32f6ff62c",
+        "88f6bf1d-80c1-45b7-8aa2-cd36e5cff3a8",
+        "0b0b14b3-3692-471c-b669-49be1d563899",
+        "1225bc37-4514-41f8-ab6c-f69607d7eb20"
+      ],
+      "name": "Hero Banner",
+      "settings": {
+        "color_scheme": "background-1",
+        "overlay": false,
+        "opacity_overlay": 0.5,
+        "collage_type": "on-cursor",
+        "heading_size": "h1",
+        "subheading": "Prescription-led anti-aging care",
+        "heading": "<p>Expect more from skincare</p>",
+        "show_view_all": true,
+        "button_label": "Start Evaluation",
+        "button_bg_color": "#000000",
+        "button_text_color": "#ffffff",
+        "button_link": "/pages/start-evaluation",
+        "second_show_view_all": false,
+        "second_button_label": "Shop now",
+        "second_button_bg_color": "#ffffff",
+        "second_button_text_color": "#000000",
+        "second_button_link": ""
+      }
+    },
+    "trust_marquee_Skinfluence": {
+      "type": "trust-marquee",
+      "blocks": {
+        "item_1": {
+          "type": "item",
+          "settings": {
+            "text": "Provider-reviewed care"
+          }
+        },
+        "item_2": {
+          "type": "item",
+          "settings": {
+            "text": "Premium anti-aging treatment"
+          }
+        },
+        "item_3": {
+          "type": "item",
+          "settings": {
+            "text": "Monthly care if approved"
+          }
+        },
+        "item_4": {
+          "type": "item",
+          "settings": {
+            "text": "Delivered to your door"
+          }
+        },
+        "item_5": {
+          "type": "item",
+          "settings": {
+            "text": "Ongoing maintenance support"
+          }
+        }
+      },
+      "block_order": [
+        "item_1",
+        "item_2",
+        "item_3",
+        "item_4",
+        "item_5"
+      ],
+      "name": "Trust marquee",
+      "settings": {
+        "accessibility_label": "Skinfluence trust highlights",
+        "background": "#F1ECE6",
+        "text_color": "#20332C",
+        "separator": "\u2022",
+        "speed": 30,
+        "text_size": 13,
+        "item_gap": 44,
+        "separator_gap": 12,
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "multicolumn": {
+      "type": "multicolumn",
+      "blocks": {
+        "column-1": {
+          "type": "column",
+          "settings": {
+            "subheading": "Who We Are",
+            "text": "<p>We’re a clothing brand producing pieces perfect for comfort and style.</p>",
+            "button_label": "Read Story",
+            "button_link": ""
+          }
+        },
+        "column-2": {
+          "type": "column",
+          "settings": {
+            "subheading": "Read Story",
+            "text": "<p>We’re consciously putting efforts to go carbon-free in upcoming years.</p>",
+            "button_label": "Read More",
+            "button_link": ""
+          }
+        },
+        "column-3": {
+          "type": "column",
+          "settings": {
+            "subheading": "Where To Find",
+            "text": "<p>We’re online and offline. Find us nearby in your area or shop online.</p>",
+            "button_label": "Shop Now",
+            "button_link": ""
+          }
+        }
+      },
+      "block_order": [
+        "column-1",
+        "column-2",
+        "column-3"
+      ],
+      "disabled": true,
+      "settings": {
+        "multicolumn_to_show": 3,
+        "object_fit": "cover",
+        "swipe_on_mobile": true,
+        "button_style": "primary",
+        "border_top": false,
+        "border_bottom": false,
+        "padding_top": 160,
+        "padding_bottom": 160,
+        "margin_top": 0,
+        "margin_bottom": 0
+      }
+    },
+    "298afee1-8616-4ea9-a596-6524a56b29c0": {
+      "type": "popular-products",
+      "disabled": true,
+      "settings": {
+        "heading": "<p>Popular Items</p>",
+        "link": "View All",
+        "button_link": "",
+        "product_list": [],
+        "filter": true,
+        "border_top": false,
+        "columns_mobile": "1",
+        "image_ratio": "portrait",
+        "image_fit": "cover",
+        "show_secondary_image": true,
+        "show_vendor": true,
+        "show_desc": false,
+        "show_sku": false,
+        "padding_top": 0,
+        "padding_bottom": 160
+      }
+    },
+    "9aea4a13-404f-4ffd-9d00-150415e26ab3": {
+      "type": "product-slider",
+      "blocks": {
+        "5be58c94-dc1c-47f9-859b-f35c94a87228": {
+          "type": "product_slide",
+          "settings": {
+            "product": ""
+          }
+        },
+        "template--14734319485009__9aea4a13-404f-4ffd-9d00-150415e26ab3-1668754172b01ccbc4-0": {
+          "type": "product_slide",
+          "settings": {
+            "product": ""
+          }
+        },
+        "template--14734319485009__9aea4a13-404f-4ffd-9d00-150415e26ab3-1668754172b01ccbc4-1": {
+          "type": "product_slide",
+          "settings": {
+            "product": ""
+          }
+        }
+      },
+      "block_order": [
+        "5be58c94-dc1c-47f9-859b-f35c94a87228",
+        "template--14734319485009__9aea4a13-404f-4ffd-9d00-150415e26ab3-1668754172b01ccbc4-0",
+        "template--14734319485009__9aea4a13-404f-4ffd-9d00-150415e26ab3-1668754172b01ccbc4-1"
+      ],
+      "disabled": true,
+      "settings": {
+        "color_scheme": "light",
+        "subheading": "1000+  Top clothing items in One Place",
+        "heading": "Update Your Wardrobe with Highlights from the Latest Streetwear and Accessories Essentials",
+        "heading_tag": "h2",
+        "description": "Get this seasonless design, purely hand-made to keep the true elegance of the material. Experience a new wave of emotions. Feel comfortable and confident, wearing the gaze-stopping designs.",
+        "heading_size": "h2",
+        "product_image": "first",
+        "opacity_overlay": 0.7,
+        "image_ratio": "portrait",
+        "image_fit": "cover",
+        "show_vendor": true,
+        "show_sku": false
+      }
+    },
+    "testimonials": {
+      "type": "testimonials",
+      "blocks": {
+        "testimonials_slide_1": {
+          "type": "testimonials_slide",
+          "settings": {
+            "rating": 5,
+            "slide_text": "“Your packaging and products are so unique and beautiful. I’m simply amazed how gorgeous this thing looks. Best value ever.”",
+            "slide_name": "Sharon S.",
+            "slide_position": "Stylist"
+          }
+        },
+        "testimonials_slide_2": {
+          "type": "testimonials_slide",
+          "settings": {
+            "rating": 4,
+            "slide_text": "“I’ve been so pleased with your brand. The product looks so durable. I think it will stay with me for years. Thank you so much.”",
+            "slide_name": "Sharon S.",
+            "slide_position": "Stylist"
+          }
+        },
+        "testimonials_slide_3": {
+          "type": "testimonials_slide",
+          "settings": {
+            "rating": 5,
+            "slide_text": "“Could not be any happier. Honestly, I think this is the best money I’ve ever spent online. You’re my new favorite brand for life.”",
+            "slide_name": "John S.",
+            "slide_position": "Stylist"
+          }
+        }
+      },
+      "block_order": [
+        "testimonials_slide_1",
+        "testimonials_slide_2",
+        "testimonials_slide_3"
+      ],
+      "disabled": true,
+      "settings": {
+        "color_scheme": "background-2",
+        "button_style": "secondary",
+        "padding_top": 160,
+        "padding_bottom": 160
+      }
+    },
+    "promo-images": {
+      "type": "promo-images",
+      "blocks": {
+        "block_1": {
+          "type": "promo-images_image",
+          "settings": {}
+        },
+        "block_2": {
+          "type": "promo-images_image",
+          "settings": {}
+        },
+        "block_3": {
+          "type": "promo-images_image",
+          "settings": {}
+        }
+      },
+      "block_order": [
+        "block_1",
+        "block_2",
+        "block_3"
+      ],
+      "disabled": true,
+      "settings": {
+        "heading": "Exploring the Unknown: The Fresh New Styles",
+        "heading_tag": "h2",
+        "heading_size": "h2",
+        "heading_transform": "none",
+        "button_label": "Explore Our Store",
+        "button_link": "",
+        "button_style": "primary",
+        "padding_top": 0,
+        "padding_bottom": 160
+      }
+    },
+    "449ffe0c-9257-471b-a192-74d7600c91e1": {
+      "type": "countdown",
+      "disabled": true,
+      "settings": {
+        "section_type": "with_overlay",
+        "enable_mock_timer": false,
+        "date_picker": "2025-09-19",
+        "time_picker": "00:00",
+        "cursive_date": false,
+        "countdown_block_font": 60,
+        "completed_countdown": "hide_section",
+        "countdown_heading": "<p>Header after countdown</p>",
+        "opacity_overlay": 0.4,
+        "heading": "Limited-Time Deals On!",
+        "heading_tag": "h2",
+        "text": "Ready for the ultimate shopping spree? Our countdown event is on, with incredible deals on the latest fashion trends.",
+        "show_link": true,
+        "button_label": "Shop now",
+        "button_style": "primary",
+        "button_link": "",
+        "padding_top": 160,
+        "padding_bottom": 110
+      }
+    },
+    "0ac10b87-7e62-4245-adfa-e453464b5570": {
+      "type": "steps",
+      "blocks": {
+        "template--17031623213330__0ac10b87-7e62-4245-adfa-e453464b5570-1669294571ec71033f-0": {
+          "type": "section_slide",
+          "settings": {
+            "slide_heading": "Step 1",
+            "slide_text": "<p>How? <br/>We’ve streamlined our processes, ensuring each piece goes through rigorous quality checks; from ideation, to manufacturing, and perfection.</p>"
+          }
+        },
+        "template--17031623213330__0ac10b87-7e62-4245-adfa-e453464b5570-1669294571ec71033f-1": {
+          "type": "section_slide",
+          "settings": {
+            "slide_heading": "Step 2",
+            "slide_text": "<p>We're driven by the motivation to coerce courageous reformations in the industry to encourage people to shop sustainable.</p>"
+          }
+        },
+        "template--17031623213330__0ac10b87-7e62-4245-adfa-e453464b5570-1669294571ec71033f-2": {
+          "type": "section_slide",
+          "settings": {
+            "slide_heading": "Step 3",
+            "slide_text": "<p>To us, people matter more than the business. We make it transparent, accessible, and affordable for everyone around the world.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "template--17031623213330__0ac10b87-7e62-4245-adfa-e453464b5570-1669294571ec71033f-0",
+        "template--17031623213330__0ac10b87-7e62-4245-adfa-e453464b5570-1669294571ec71033f-1",
+        "template--17031623213330__0ac10b87-7e62-4245-adfa-e453464b5570-1669294571ec71033f-2"
+      ],
+      "disabled": true,
+      "settings": {
+        "color_scheme": "background-2",
+        "heading": "We have got a vision to uphold the culture that inspires everyone.",
+        "heading_tag": "h2"
+      }
+    },
+    "8dd7ce02-46fa-4a0b-91b8-60c82ad7607d": {
+      "type": "collapsible-content",
+      "blocks": {
+        "template--18844073754898__8dd7ce02-46fa-4a0b-91b8-60c82ad7607d-1683196039d50807de-0": {
+          "type": "accordion",
+          "settings": {
+            "question": "What payment methods are accepted at your store?",
+            "question_heading_tag": "h3",
+            "answer": "<p>Our online store accepts a variety of payment methods to ensure a convenient shopping experience for our customers. We accept major credit cards, such as Visa, MasterCard, American Express, and Discover, as well as debit cards. Additionally, we offer support for digital payment platforms like PayPal, Apple Pay, and Google Pay. We are constantly working to expand our payment options to accommodate our customers' needs.</p>"
+          }
+        },
+        "template--18844073754898__8dd7ce02-46fa-4a0b-91b8-60c82ad7607d-1683196039d50807de-1": {
+          "type": "accordion",
+          "settings": {
+            "question": "How long does it take to process and ship my order?",
+            "question_heading_tag": "h3",
+            "answer": "<p>Answer: We strive to process and ship orders as quickly as possible. Generally, orders are processed within 1-2 business days after being placed. Shipping times vary depending on the chosen shipping method and the destination of the package. Standard shipping typically takes 3-7 business days within the continental United States, while expedited shipping options are available for faster delivery. International shipping times vary depending on the country and customs processing times.</p>"
+          }
+        },
+        "template--18844073754898__8dd7ce02-46fa-4a0b-91b8-60c82ad7607d-1683196039d50807de-2": {
+          "type": "accordion",
+          "settings": {
+            "question": "Can I return or exchange an item I've purchased from your online store?",
+            "question_heading_tag": "h3",
+            "answer": "<p>Our online store offers a hassle-free return and exchange policy. You can return or exchange any eligible items within 30 days of the delivery date, provided they are in their original, unused condition with all tags and packaging intact. To initiate a return or exchange, please contact our customer support team through our website or email, and they will guide you through the process. Please note that return shipping costs are the responsibility of the customer unless the item is faulty or an error has been made on our part.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "template--18844073754898__8dd7ce02-46fa-4a0b-91b8-60c82ad7607d-1683196039d50807de-0",
+        "template--18844073754898__8dd7ce02-46fa-4a0b-91b8-60c82ad7607d-1683196039d50807de-1",
+        "template--18844073754898__8dd7ce02-46fa-4a0b-91b8-60c82ad7607d-1683196039d50807de-2"
+      ],
+      "disabled": true,
+      "settings": {
+        "heading": "FAQ",
+        "heading_size": "h2",
+        "heading_tag": "h2",
+        "text": "Have a question? Check out our FAQ section for answers to common inquiries.",
+        "padding_top": 160,
+        "padding_bottom": 0
+      }
+    },
+    "featured_blog": {
+      "type": "featured-blog",
+      "disabled": true,
+      "settings": {
+        "post_layout": "column",
+        "heading": "<p>Latest Articles</p>",
+        "blog": "",
+        "post_limit": 3,
+        "show_image": true,
+        "show_tags": true,
+        "show_date": true,
+        "show_author": true,
+        "show_excerpt": false,
+        "show_view_all": true,
+        "padding_top": 160,
+        "padding_bottom": 0
+      }
+    },
+    "instagram-collage": {
+      "type": "instagram-collage",
+      "blocks": {
+        "be42a297-ccec-4546-b711-7a393aecc81c": {
+          "type": "instagram-collage_image",
+          "settings": {
+            "image_width": 100
+          }
+        },
+        "0070c6f6-c885-45e8-a3cf-1ea320a393c3": {
+          "type": "instagram-collage_image",
+          "settings": {
+            "image_width": 120
+          }
+        },
+        "cfde012e-449f-48e7-853f-8bb9b5adb492": {
+          "type": "instagram-collage_image",
+          "settings": {
+            "image_width": 70
+          }
+        }
+      },
+      "block_order": [
+        "be42a297-ccec-4546-b711-7a393aecc81c",
+        "0070c6f6-c885-45e8-a3cf-1ea320a393c3",
+        "cfde012e-449f-48e7-853f-8bb9b5adb492"
+      ],
+      "disabled": true,
+      "settings": {
+        "color_scheme": "background-1",
+        "border_top": false,
+        "subheading": "Instagram",
+        "heading": "<p>Follow @portland on Instagram</p>",
+        "description": "Follow to receive tips and tricks to make the most out of this theme.",
+        "account": true,
+        "name_account": "@portland",
+        "desc_account": "150k Followers",
+        "button_label": "Follow Us on Instagram",
+        "button_link": "#",
+        "button_style": "primary",
+        "padding_top": 160,
+        "padding_bottom": 160
+      }
+    },
+    "multicolumn_PdCyU6": {
+      "type": "multicolumn",
+      "blocks": {
+        "column_YDpfTq": {
+          "type": "column",
+          "settings": {
+            "subheading": "Provider-reviewed care",
+            "text": "<p>Showcase craftsmanship, product benefits, or an exclusive offer.</p>",
+            "button_label": "Explore More",
+            "button_link": ""
+          }
+        },
+        "column_eJTUWC": {
+          "type": "column",
+          "settings": {
+            "subheading": "Premium monthly treatment",
+            "text": "<p>Showcase craftsmanship, product benefits, or an exclusive offer.</p>",
+            "button_label": "Explore More",
+            "button_link": ""
+          }
+        },
+        "column_JN3Bw6": {
+          "type": "column",
+          "settings": {
+            "subheading": "Delivered to your door",
+            "text": "<p>Showcase craftsmanship, product benefits, or an exclusive offer.</p>",
+            "button_label": "Explore More",
+            "button_link": ""
+          }
+        },
+        "column_qXRAQe": {
+          "type": "column",
+          "settings": {
+            "subheading": "Ongoing maintenance support",
+            "text": "<p>Showcase craftsmanship, product benefits, or an exclusive offer.</p>",
+            "button_label": "Explore More",
+            "button_link": ""
+          }
+        }
+      },
+      "block_order": [
+        "column_YDpfTq",
+        "column_eJTUWC",
+        "column_JN3Bw6",
+        "column_qXRAQe"
+      ],
+      "disabled": true,
+      "name": "t:sections.multicolumn.name",
+      "settings": {
+        "multicolumn_to_show": 3,
+        "object_fit": "contain",
+        "swipe_on_mobile": true,
+        "button_style": "primary",
+        "border_top": false,
+        "border_bottom": false,
+        "padding_top": 160,
+        "padding_bottom": 160,
+        "margin_top": 0,
+        "margin_bottom": 0
+      }
+    }
+  },
+  "order": [
+    "4a48dd22-7a83-42ba-ae14-de6aaae18074",
+    "trust_marquee_Skinfluence",
+    "multicolumn",
+    "298afee1-8616-4ea9-a596-6524a56b29c0",
+    "9aea4a13-404f-4ffd-9d00-150415e26ab3",
+    "testimonials",
+    "promo-images",
+    "449ffe0c-9257-471b-a192-74d7600c91e1",
+    "0ac10b87-7e62-4245-adfa-e453464b5570",
+    "8dd7ce02-46fa-4a0b-91b8-60c82ad7607d",
+    "featured_blog",
+    "instagram-collage",
+    "multicolumn_PdCyU6"
+  ]
+}

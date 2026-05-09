@@ -1,0 +1,83 @@
+<link
+	rel="stylesheet"
+	href="{{ 'section-main-page.css' | asset_url }}"
+	media="print"
+	onload="this.media='all'"
+>
+<link
+	rel="stylesheet"
+	href="{{ 'component-rte.css' | asset_url }}"
+	media="print"
+	onload="this.media='all'"
+>
+
+<noscript>{{ 'section-main-page.css' | asset_url | stylesheet_tag }}</noscript>
+<noscript>{{ 'component-rte.css' | asset_url | stylesheet_tag }}</noscript>
+
+{%- style -%}
+	.section-{{ section.id }}-padding {
+	  padding-top: {{ section.settings.padding_top | times: 0.25 | round: 0 }}px;
+	  padding-bottom: {{ section.settings.padding_bottom | times: 0.25 | round: 0 }}px;
+	}
+
+	@media screen and (min-width: 990px) {
+    .section-{{ section.id }}-padding {
+			padding-top: {{ section.settings.padding_top | times: 0.6 | round: 0 }}px;
+    	padding-bottom: {{ section.settings.padding_bottom | times: 0.6 | round: 0 }}px;
+    }
+  }
+
+	@media screen and (min-width: 1360px) {
+	  .section-{{ section.id }}-padding {
+	    padding-top: {{ section.settings.padding_top }}px;
+	    padding-bottom: {{ section.settings.padding_bottom }}px;
+	  }
+	}
+{%- endstyle -%}
+
+<div class="container section-{{ section.id }}-padding">
+	<div class="page-header">
+		<div class="page-header__inner">
+			<h1 class="main-page-title page-title title--page">
+				{{ page.title | escape }}
+			</h1>
+		</div>
+	</div>
+	<div class="rte">
+		{{ page.content }}
+	</div>
+</div>
+
+{% schema %}
+{
+	"name": "t:sections.main-page.name",
+	"tag": "section",
+	"class": "page-section",
+	"settings": [
+		{
+			"type": "header",
+			"content": "t:all.section-padding.header.content"
+		},
+		{
+			"type": "range",
+			"id": "padding_top",
+			"min": 0,
+			"max": 200,
+			"step": 10,
+			"default": 0,
+			"unit": "px",
+			"label": "t:all.section-padding.padding_top.label"
+		},
+		{
+			"type": "range",
+			"id": "padding_bottom",
+			"min": 0,
+			"max": 200,
+			"step": 10,
+			"default": 0,
+			"unit": "px",
+			"label": "t:all.section-padding.padding_bottom.label"
+		}
+	]
+}
+{% endschema %}

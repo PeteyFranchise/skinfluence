@@ -1,0 +1,114 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+	"sections": {
+		"main": {
+			"type": "main-article",
+			"blocks": {
+				"title": {
+					"type": "article-header",
+					"settings": {
+						"blog_show_tags": false,
+						"blog_show_excerpt": false,
+						"blog_show_date": true,
+						"blog_show_author": true,
+						"image_height": "large",
+						"show_share_facebook": true,
+						"show_share_twitter": true,
+						"show_share_pinterest": true,
+						"show_share_copy": true
+					}
+				},
+				"content": {
+					"type": "content",
+					"settings": {}
+				},
+				"article_footer": {
+					"type": "article-footer",
+					"settings": {
+						"blog_show_date": true,
+						"blog_show_author": true,
+						"show_share_facebook": true,
+						"show_share_twitter": true,
+						"show_share_pinterest": true,
+						"show_share_copy": true
+					}
+				}
+			},
+			"block_order": ["title", "content", "article_footer"],
+			"settings": {
+				"header_variant": "overlay",
+				"padding_top": 0,
+				"padding_bottom": 0
+			}
+		},
+		"featured_blog": {
+			"type": "featured-blog",
+			"settings": {
+				"post_layout": "column",
+				"heading": "<p>Latest Articles</p>",
+				"blog": "journal",
+				"post_limit": 3,
+				"show_image": true,
+				"show_tags": true,
+				"show_date": true,
+				"show_author": true,
+				"show_excerpt": false,
+				"show_view_all": true,
+				"padding_top": 160,
+				"padding_bottom": 160
+			}
+		},
+		"instagram-collage": {
+			"type": "instagram-collage",
+			"blocks": {
+				"be42a297-ccec-4546-b711-7a393aecc81c": {
+					"type": "instagram-collage_image",
+					"settings": {
+						"image_width": 100
+					}
+				},
+				"0070c6f6-c885-45e8-a3cf-1ea320a393c3": {
+					"type": "instagram-collage_image",
+					"settings": {
+						"image_width": 120
+					}
+				},
+				"cfde012e-449f-48e7-853f-8bb9b5adb492": {
+					"type": "instagram-collage_image",
+					"settings": {
+						"image_width": 70
+					}
+				}
+			},
+			"block_order": [
+				"be42a297-ccec-4546-b711-7a393aecc81c",
+				"0070c6f6-c885-45e8-a3cf-1ea320a393c3",
+				"cfde012e-449f-48e7-853f-8bb9b5adb492"
+			],
+			"settings": {
+				"color_scheme": "background-1",
+				"border_top": false,
+				"subheading": "Instagram",
+				"heading": "<p>Follow @portland on Instagram</p>",
+				"description": "Follow to receive tips and tricks to make the most out of this theme.",
+				"account": true,
+				"name_account": "@portland",
+				"desc_account": "150k Followers",
+				"button_label": "Follow Us on Instagram",
+				"button_link": "#",
+				"button_style": "primary",
+				"padding_top": 160,
+				"padding_bottom": 160
+			}
+		}
+	},
+	"order": ["main", "featured_blog", "instagram-collage"]
+}

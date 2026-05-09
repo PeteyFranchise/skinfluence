@@ -1,0 +1,441 @@
+<div class="header__offcanvas">
+  <div class="header__offcanvas-toggle">
+    <a
+      href="#"
+      class="header__offcanvas-toggle-link"
+      aria-label="{{ "accessibility.toggle" | t }}"
+    >
+      {% render 'icon-hamburger' %}
+    </a>
+  </div>
+  <div class="header__offcanvas-menu">
+    <div class="header__offcanvas-menu-wrapper">
+      <div class="container--header">
+        <div class="header__offcanvas-menu-top">
+          <a
+            href="#"
+            class="header__offcanvas-toggle-link header__offcanvas-toggle-link--close modal-close-button"
+          >
+            {% render 'icon-close' %}
+          </a>
+          {%- if request.page_type == 'index' -%}
+            <h2 class="h1 header__heading">
+          {%- endif -%}
+          <a
+            href="{{ routes.root_url }}"
+            class="header__heading-link link link--text focus-inset"
+            aria-label="{{ shop.name }}"
+          >
+            {%- if section.settings.logo != blank -%}
+              {%- assign logo_height = section.settings.logo_width | divided_by: section.settings.logo.aspect_ratio -%}
+              {%- assign logo_alt = section.settings.logo.alt | default: shop.name | escape -%}
+              {%- assign image_size_2x = section.settings.logo_width | times: 2 -%}
+              {% capture srcset %}
+										{{ section.settings.logo | image_url: width: section.settings.logo_width }}, {{ section.settings.logo | image_url: width: image_size_2x }} 2x
+									{% endcapture %}
+              {{
+                section.settings.logo
+                | image_url: width: section.settings.logo_width
+                | image_tag:
+                  class: 'header__heading-logo',
+                  srcset: srcset,
+                  height: logo_height,
+                  width: section.settings.logo_width,
+                  alt: logo_alt
+              }}
+              {%- if section.settings.logo_2 != blank -%}
+                {% capture srcset %}
+											{{ section.settings.logo_2 | image_url: width: section.settings.logo_width }}, {{ section.settings.logo_2 | image_url: width: image_size_2x }} 2x
+										{% endcapture %}
+                {{
+                  section.settings.logo_2
+                  | image_url: width: section.settings.logo_width
+                  | image_tag:
+                    class: 'header__heading-logo header__heading-logo--overlay',
+                    srcset: srcset,
+                    height: logo_height,
+                    width: section.settings.logo_width,
+                    alt: logo_alt
+                }}
+              {%- endif -%}
+            {%- else -%}
+              <span class="h5" style="max-width: {{ section.settings.logo_width }}px">{{ shop.name }}</span>
+            {%- endif -%}
+          </a>
+          {%- if request.page_type == 'index' -%}
+            </h2>
+          {%- endif -%}
+        </div>
+        <div class="header__offcanvas-container">
+          <div class="header__offcanvas-wrapper">
+            <div class="header__offcanvas-fullscreen-menu">
+              <ul class="header__offcanvas-list">
+                {%- if section.settings.menu_2.links != blank -%}
+                  {%- for link in section.settings.menu_2.links -%}
+                    <li class="header__offcanvas-item">
+                      {% if link.links != blank %}
+                        <a
+                          href="{{ link.url }}"
+                          class="h3 header__offcanvas-link"
+                          aria-label="{{ link.title }}"
+                        >
+                          {{- link.title }}
+                          <span class="header__offcanvas-link-arrows">
+                            {%- render 'icon-button-arrow' -%}
+                            {%- render 'icon-button-arrow' -%}
+                          </span>
+                        </a>
+                        <ul class="header__offcanvas-submenu list-unstyled" role="list">
+                          {%- for childlink in link.links -%}
+                            <li>
+                              {%- if childlink.links == blank -%}
+                                <a
+                                  href="{{ childlink.url }}"
+                                  class="header__offcanvas-submenu-link link link--text focus-inset link-hover-line-outer caption-large{% if childlink.current %} header__offcanvas-submenu-link--active{% endif %}"
+                                  {% if childlink.current %}
+                                    aria-current="page"
+                                  {% endif %}
+                                >
+                                  <span>
+                                    {{ childlink.title | escape }}
+                                  </span>
+                                </a>
+                              {%- else -%}
+                                <a
+                                  href="{{ childlink.url }}"
+                                  class="header__offcanvas-submenu-link link link--text focus-inset link-hover-line-outer caption-large{% if childlink.current %} header__offcanvas-submenu-link--active{% endif %}"
+                                  {% if childlink.current %}
+                                    aria-current="page"
+                                  {% endif %}
+                                >
+                                  <span>
+                                    {{ childlink.title | escape }}
+                                  </span>
+                                </a>
+                                <ul class="header__offcanvas-submenu list-unstyled">
+                                  {%- for grandchildlink in childlink.links -%}
+                                    <li>
+                                      <a
+                                        href="{{ grandchildlink.url }}"
+                                        class="header__offcanvas-submenu-link link link--text focus-inset link-hover-line-outer caption-large{% if grandchildlink.current %} header__offcanvas-submenu-link--active{% endif %}"
+                                        {% if grandchildlink.current %}
+                                          aria-current="page"
+                                        {% endif %}
+                                      >
+                                        <span>
+                                          {{ grandchildlink.title | escape }}
+                                        </span>
+                                      </a>
+                                    </li>
+                                  {%- endfor -%}
+                                </ul>
+                              {%- endif -%}
+                            </li>
+                          {%- endfor -%}
+                        </ul>
+                      {% else %}
+                        <a
+                          href="{{ link.url }}"
+                          class="h3 header__offcanvas-link"
+                          aria-label="{{ link.title }}"
+                        >
+                          {{- link.title }}
+                          <span class="header__offcanvas-link-arrows">
+                            {%- render 'icon-button-arrow' -%}
+                            {%- render 'icon-button-arrow' -%}
+                          </span>
+                        </a>
+                      {% endif %}
+                    </li>
+                  {%- endfor -%}
+                {%- else -%}
+                  {%- for collection in collections -%}
+                    <li class="header__offcanvas-item">
+                      <a
+                        href="{{ collection.url }}"
+                        class="h3 header__offcanvas-link"
+                        aria-label="{{ collection.title }}"
+                      >
+                        {{- collection.title }}
+                        <span class="header__offcanvas-link-arrows">
+                          {%- render 'icon-button-arrow' -%}
+                          {%- render 'icon-button-arrow' -%}
+                        </span>
+                      </a>
+                    </li>
+                  {%- endfor -%}
+                {%- endif -%}
+              </ul>
+            </div>
+            {%- for block in section.blocks -%}
+              {% case block.type %}
+                {% when 'aside' %}
+                  {% if block.settings.heading != blank
+                    or block.settings.description != blank
+                    or block.settings.image != blank
+                    or block.settings.button_label != blank
+                    or block.settings.button_link.url != blank
+                  %}
+                    <div
+                      class="header__promo header__promo--{% if block.settings.show_articles %}articles{% endif %}"
+                      {{ block.shopify_attributes }}
+                    >
+                      <div class="header__promo-image media">
+                        {% if block.settings.image != blank %}
+                          <img
+                            srcset="
+                              {%- if block.settings.image.src.width >= 165 -%}{{ block.settings.image.src | img_url: '165x' }} 165w,{%- endif -%}
+                              {%- if block.settings.image.src.width >= 360 -%}{{ block.settings.image.src | img_url: '360x' }} 360w,{%- endif -%}
+                              {%- if block.settings.image.src.width >= 533 -%}{{ block.settings.image.src | img_url: '533x' }} 533w,{%- endif -%}
+                              {%- if block.settings.image.src.width >= 720 -%}{{ block.settings.image.src | img_url: '720x' }} 720w,{%- endif -%}
+                              {%- if block.settings.image.src.width >= 940 -%}{{ block.settings.image.src | img_url: '940x' }} 940w,{%- endif -%}
+                              {%- if block.settings.image.src.width >= 1066 -%}{{ block.settings.image.src | img_url: '1066x' }} 1066w{%- endif -%}
+                            "
+                            src="{{ block.settings.image.src | img_url: '533x' }}"
+                            sizes="(min-width: 1100px) 535px, (min-width: 750px) calc((100vw - 130px) / 2), calc((100vw - 50px) / 2)"
+                            alt="{{ block.settings.image.src.alt | escape }}"
+                            width="{{ block.settings.image.width }}"
+                            height="{{ block.settings.image.height }}"
+                            loading="lazy"
+                            class="motion-reduce"
+                            style="object-position: {{ block.settings.image.presentation.focal_point }}"
+                          >
+                        {% endif %}
+                      </div>
+                      <div class="header__promo-info">
+                        {% if block.settings.heading != blank or block.settings.description != blank %}
+                          <div class="header__promo-text">
+                            {% if block.settings.heading != blank %}
+                              <div class="header__promo-heading h1">
+                                {{ block.settings.heading | strip_html | truncate: 30 }}
+                              </div>
+                            {% endif %}
+                            {% if block.settings.description != blank %}
+                              <div class="header__promo-description">
+                                {{ block.settings.description | strip_html | truncate: 100 }}
+                              </div>
+                            {% endif %}
+                          </div>
+                        {% endif %}
+                        {% if block.settings.button_label != blank %}
+                          <a
+                            {% if block.settings.button_link.url != blank %}
+                              href="{{ block.settings.button_link }}"
+                            {% endif %}
+                            class="header__promo-button button button--arrow button--{{ block.settings.button_style }}"
+                            {% if block.settings.button_link.url == blank %}
+                              aria-disabled="true"
+                            {% endif %}
+                            aria-label="{{ block.settings.button_label | escape }}"
+                          >
+                            <span>
+                              <span>
+                                {{- block.settings.button_label | escape }}
+                                {%- render 'icon-button-arrow' -%}
+                              </span>
+                              <span>
+                                {{- block.settings.button_label | escape }}
+                                {%- render 'icon-button-arrow' -%}
+                              </span>
+                            </span>
+                          </a>
+                        {% endif %}
+                      </div>
+                    </div>
+                  {%- endif -%}
+                  {%- if block.settings.show_articles != blank -%}
+                    {%- if block.settings.blog.articles != blank -%}
+                      <div
+                        class="header__articles"
+                        {{ block.shopify_attributes }}
+                      >
+                        <div class="header__subtitle subtitle">
+                          {{ 'sections.header.popular_articles' | t }}
+                        </div>
+                        <div class="header__articles-list">
+                          {%- for article in block.settings.blog.articles limit: 3 -%}
+                            <div class="header__article">
+                              {% render 'article-card-small',
+                                blog: block.settings.blog,
+                                article: article,
+                                show_image: block.settings.show_image,
+                                show_date: block.settings.show_date,
+                                show_author: block.settings.show_author
+                              %}
+                            </div>
+                          {%- endfor -%}
+                        </div>
+                        {%- if block.settings.blog_link.url != blank -%}
+                          <a
+                            href="{{ block.settings.blog_link }}"
+                            class="header__article-button button button--simple"
+                            aria-label="{{ 'sections.featured_blog.view_all' | t }}"
+                          >
+                            <span>
+                              {{- 'sections.featured_blog.view_all' | t -}}
+                            </span>
+                            {% render 'icon-button-arrow' %}
+                          </a>
+                        {%- endif -%}
+                      </div>
+                    {%- endif -%}
+                  {%- endif -%}
+                  {%- if block.settings.show_social != blank -%}
+                    <ul
+                      class="header__social list list-social list-unstyled"
+                      role="list"
+                    >
+                      {%- if settings.social_twitter_link != blank -%}
+                        <li class="list-social__item">
+                          <a
+                            {% if settings.new_tab %}
+                              target="_blank"
+                            {% endif %}
+                            href="{{ settings.social_twitter_link }}"
+                            class="link link--text list-social__link"
+                          >
+                            {%- render 'icon-twitter' -%}
+                            <span class="visually-hidden">
+                              {{- 'general.social.links.twitter' | t -}}
+                            </span>
+                          </a>
+                        </li>
+                      {%- endif -%}
+                      {%- if settings.social_facebook_link != blank -%}
+                        <li class="list-social__item">
+                          <a
+                            {% if settings.new_tab %}
+                              target="_blank"
+                            {% endif %}
+                            href="{{ settings.social_facebook_link }}"
+                            class="link link--text list-social__link"
+                          >
+                            {%- render 'icon-facebook' -%}
+                            <span class="visually-hidden">
+                              {{- 'general.social.links.facebook' | t -}}
+                            </span>
+                          </a>
+                        </li>
+                      {%- endif -%}
+                      {%- if settings.social_pinterest_link != blank -%}
+                        <li class="list-social__item">
+                          <a
+                            {% if settings.new_tab %}
+                              target="_blank"
+                            {% endif %}
+                            href="{{ settings.social_pinterest_link }}"
+                            class="link link--text list-social__link"
+                          >
+                            {%- render 'icon-pinterest' -%}
+                            <span class="visually-hidden">
+                              {{- 'general.social.links.pinterest' | t -}}
+                            </span>
+                          </a>
+                        </li>
+                      {%- endif -%}
+                      {%- if settings.social_instagram_link != blank -%}
+                        <li class="list-social__item">
+                          <a
+                            {% if settings.new_tab %}
+                              target="_blank"
+                            {% endif %}
+                            href="{{ settings.social_instagram_link }}"
+                            class="link link--text list-social__link"
+                          >
+                            {%- render 'icon-instagram' -%}
+                            <span class="visually-hidden">
+                              {{- 'general.social.links.instagram' | t -}}
+                            </span>
+                          </a>
+                        </li>
+                      {%- endif -%}
+                      {%- if settings.social_tiktok_link != blank -%}
+                        <li class="list-social__item">
+                          <a
+                            {% if settings.new_tab %}
+                              target="_blank"
+                            {% endif %}
+                            href="{{ settings.social_tiktok_link }}"
+                            class="link link--text list-social__link"
+                          >
+                            {%- render 'icon-tiktok' -%}
+                            <span class="visually-hidden">
+                              {{- 'general.social.links.tiktok' | t -}}
+                            </span>
+                          </a>
+                        </li>
+                      {%- endif -%}
+                      {%- if settings.social_tumblr_link != blank -%}
+                        <li class="list-social__item">
+                          <a
+                            {% if settings.new_tab %}
+                              target="_blank"
+                            {% endif %}
+                            href="{{ settings.social_tumblr_link }}"
+                            class="link link--text list-social__link"
+                          >
+                            {%- render 'icon-tumblr' -%}
+                            <span class="visually-hidden">
+                              {{- 'general.social.links.tumblr' | t -}}
+                            </span>
+                          </a>
+                        </li>
+                      {%- endif -%}
+                      {%- if settings.social_snapchat_link != blank -%}
+                        <li class="list-social__item">
+                          <a
+                            {% if settings.new_tab %}
+                              target="_blank"
+                            {% endif %}
+                            href="{{ settings.social_snapchat_link }}"
+                            class="link link--text list-social__link"
+                          >
+                            {%- render 'icon-snapchat' -%}
+                            <span class="visually-hidden">
+                              {{- 'general.social.links.snapchat' | t -}}
+                            </span>
+                          </a>
+                        </li>
+                      {%- endif -%}
+                      {%- if settings.social_youtube_link != blank -%}
+                        <li class="list-social__item">
+                          <a
+                            {% if settings.new_tab %}
+                              target="_blank"
+                            {% endif %}
+                            href="{{ settings.social_youtube_link }}"
+                            class="link link--text list-social__link"
+                          >
+                            {%- render 'icon-youtube' -%}
+                            <span class="visually-hidden">
+                              {{- 'general.social.links.youtube' | t -}}
+                            </span>
+                          </a>
+                        </li>
+                      {%- endif -%}
+                      {%- if settings.social_vimeo_link != blank -%}
+                        <li class="list-social__item">
+                          <a
+                            {% if settings.new_tab %}
+                              target="_blank"
+                            {% endif %}
+                            href="{{ settings.social_vimeo_link }}"
+                            class="link link--text list-social__link"
+                          >
+                            {%- render 'icon-vimeo' -%}
+                            <span class="visually-hidden">
+                              {{- 'general.social.links.vimeo' | t -}}
+                            </span>
+                          </a>
+                        </li>
+                      {%- endif -%}
+                    </ul>
+                  {%- endif -%}
+              {% endcase %}
+            {%- endfor -%}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

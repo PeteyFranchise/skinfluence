@@ -1,0 +1,57 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+	"type": "footer",
+	"name": "t:sections.footer.settings.footer-group.label",
+	"sections": {
+		"footer": {
+			"type": "footer",
+			"blocks": {
+				"footer-0": {
+					"type": "logo_info",
+					"settings": {
+						"logo_width": 90
+					}
+				},
+				"footer-1": {
+					"type": "link_list",
+					"settings": {}
+				},
+				"footer-2": {
+					"type": "link_list",
+					"settings": {}
+				},
+				"footer-3": {
+					"type": "link_list",
+					"settings": {}
+				},
+				"footer-4": {
+					"type": "subscribe",
+					"settings": {}
+				}
+			},
+			"block_order": [
+				"footer-0",
+				"footer-1",
+				"footer-2",
+				"footer-3",
+				"footer-4"
+			],
+			"settings": {
+				"color_scheme": "background-2",
+				"show_border": false,
+				"bottom_menu": "footer",
+				"show_social": true,
+				"payment_enable": true
+			}
+		}
+	},
+	"order": ["footer"]
+}

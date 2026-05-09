@@ -1,0 +1,702 @@
+{{ 'section-image.css' | asset_url | stylesheet_tag }}
+{{ 'section-interactive-section.css' | asset_url | stylesheet_tag }}
+
+<script src="{{ 'interactive-section.js' | asset_url }}" defer="defer"></script>
+
+{% style %}
+	.image-parallax__button {
+		background-color: {{ section.settings.button_bg_color }};
+		color: {{ section.settings.button_text_color }};
+	}
+
+	.second_image-parallax__button {
+		background-color: {{ section.settings.second_button_bg_color }};
+		color: {{ section.settings.second_button_text_color }};
+	}
+
+	[data-scheme='dark'] .image-parallax__button {
+		background-color: #fff;
+		color: #000;
+	}
+	
+	@media (prefers-color-scheme: dark) {
+		[data-scheme="auto"] .image-parallax__button {
+			background-color: #fff;
+			color: #000;
+		}
+	}
+{% endstyle %}
+
+<div class="image-parallax color-{{- section.settings.color_scheme -}}">
+	<div class="image-parallax__bg-outer">
+		<div class="image-parallax__bg-inner">
+			<div class="image-parallax__bg image-parallax__bg--{{ section.settings.collage_type }} {%- if section.settings.collage_type == 'on-cursor' -%}parallax{% endif %}">
+				{%- if section.settings.collage_type == 'on-cursor' -%}
+					{%- for block in section.blocks limit: 8 -%}
+						<div class="parallax-layer image-parallax__bg-image" {% if forloop.index == 1 or forloop.index == 3 or forloop.index == 5 or forloop.index == 7 %} data-parallax-deep="80" {% else %} data-parallax-deep="160" {% endif %} {{ block.shopify_attributes }}>
+							<div class="image-parallax__scroll-parallax js-parallax"
+									 data-parallax-property="translateY"
+									 data-parallax-property-value="{% if forloop.index == 1 or forloop.index == 3 or forloop.index == 5 or forloop.index == 7 %} -80 {% else %} -115 {% endif %}"
+									 data-parallax-steps="0, 100"
+							>
+								{%- if block.settings.image != blank -%}
+
+									{%- capture style -%}
+										object-position: {{ block.settings.image.presentation.focal_point }};
+									{%- endcapture -%}
+
+									{{
+										block.settings.image.preview_image | image_url: width: 1946 | image_tag:
+										class: 'image-parallax__image',
+										loading: 'lazy',
+										widths: '246, 493, 600, 713, 823, 990, 1100, 1206, 1346, 1426, 1646, 1946',
+										style: style
+									}}
+
+								{%- endif -%}
+							</div>
+						</div>
+					{%- endfor -%}
+				{% else %}
+				{%- capture sizes -%}
+					(min-width: 749px) 20vw,
+					33vw
+				{%- endcapture -%}
+				{% assign widths = '300, 600' %}
+					{%- for block in section.blocks -%}
+						{% capture style %}
+							object-position: {{ block.settings.image.presentation.focal_point }};
+							aspect-ratio: {{ block.settings.image.aspect_ratio }};
+						{% endcapture %}
+						{%- assign height = 300 | divided_by: block.settings.image.aspect_ratio | round: 2 -%}
+
+						{% case forloop.index %}
+							{% when 1 %}
+								<div class="image-parallax__marquee swiper js-marquee">
+								<div class="swiper-wrapper">
+							{% when 1 %}
+								<div class="image-parallax__bg-image swiper-slide" {{ block.shopify_attributes }} >
+									{%- if block.settings.image != blank -%}
+										{{
+											block.settings.image
+											| image_url: width: block.settings.image.width
+											| image_tag:
+												loading: 'lazy',
+												sizes: sizes,
+												widths: widths,
+												width: 300,
+												height: height,
+												style: style,
+												class: "image-parallax__image",
+												data-shopify: block.shopify_attributes
+										}}
+									{%- endif -%}
+								</div>
+							{% when 2 %}
+								<div class="image-parallax__bg-image swiper-slide" {{ block.shopify_attributes }}>
+									{%- if block.settings.image != blank -%}
+										{{
+											block.settings.image
+											| image_url: width: block.settings.image.width
+											| image_tag:
+												loading: 'lazy',
+												sizes: sizes,
+												widths: widths,
+												width: 300,
+												height: height,
+												style: style,
+												class: "image-parallax__image",
+												data-shopify: block.shopify_attributes
+										}}
+									{%- endif -%}
+								</div>
+							{% when 1 %}
+								<div class="image-parallax__bg-image swiper-slide" {{ block.shopify_attributes }}>
+									{%- if block.settings.image != blank -%}
+										{{
+											block.settings.image
+											| image_url: width: block.settings.image.width
+											| image_tag:
+												loading: 'lazy',
+												sizes: sizes,
+												widths: widths,
+												width: 300,
+												height: height,
+												style: style,
+												class: "image-parallax__image",
+												data-shopify: block.shopify_attributes
+										}}
+									{%- endif -%}
+								</div>
+							{% when 2 %}
+								<div class="image-parallax__bg-image swiper-slide" {{ block.shopify_attributes }}>
+									{%- if block.settings.image != blank -%}
+										{{
+											block.settings.image
+											| image_url: width: block.settings.image.width
+											| image_tag:
+												loading: 'lazy',
+												sizes: sizes,
+												widths: widths,
+												width: 300,
+												height: height,
+												style: style,
+												class: "image-parallax__image",
+												data-shopify: block.shopify_attributes
+										}}
+									{%- endif -%}
+								</div>
+								</div>
+								</div>
+							{% when 3 %}
+								<div class="image-parallax__marquee swiper js-marquee-reverse">
+								<div class="swiper-wrapper">
+							{% when 3 %}
+								<div class="image-parallax__bg-image swiper-slide" {{ block.shopify_attributes }}>
+									{%- if block.settings.image != blank -%}
+										{{
+											block.settings.image
+											| image_url: width: block.settings.image.width
+											| image_tag:
+												loading: 'lazy',
+												sizes: sizes,
+												widths: widths,
+												width: 300,
+												height: height,
+												style: style,
+												class: "image-parallax__image",
+												data-shopify: block.shopify_attributes
+										}}
+									{%- endif -%}
+								</div>
+							{% when 4 %}
+								<div class="image-parallax__bg-image swiper-slide" {{ block.shopify_attributes }}>
+									{%- if block.settings.image != blank -%}
+										{{
+											block.settings.image
+											| image_url: width: block.settings.image.width
+											| image_tag:
+												loading: 'lazy',
+												sizes: sizes,
+												widths: widths,
+												width: 300,
+												height: height,
+												style: style,
+												class: "image-parallax__image",
+												data-shopify: block.shopify_attributes
+										}}
+									{%- endif -%}
+								</div>
+							{% when 3 %}
+								<div class="image-parallax__bg-image swiper-slide" {{ block.shopify_attributes }}>
+									{%- if block.settings.image != blank -%}
+										{{
+											block.settings.image
+											| image_url: width: block.settings.image.width
+											| image_tag:
+												loading: 'lazy',
+												sizes: sizes,
+												widths: widths,
+												width: 300,
+												height: height,
+												style: style,
+												class: "image-parallax__image",
+												data-shopify: block.shopify_attributes
+										}}
+									{%- endif -%}
+								</div>
+							{% when 4 %}
+								<div class="image-parallax__bg-image swiper-slide" {{ block.shopify_attributes }}>
+									{%- if block.settings.image != blank -%}
+										{{
+											block.settings.image
+											| image_url: width: block.settings.image.width
+											| image_tag:
+												loading: 'lazy',
+												sizes: sizes,
+												widths: widths,
+												width: 300,
+												height: height,
+												style: style,
+												class: "image-parallax__image",
+												data-shopify: block.shopify_attributes
+										}}
+									{%- endif -%}
+								</div>
+								</div>
+								</div>
+							{% when 5 %}
+								<div class="image-parallax__marquee swiper js-marquee">
+								<div class="swiper-wrapper">
+							{% when 5 %}
+								<div class="image-parallax__bg-image swiper-slide" {{ block.shopify_attributes }}>
+									{%- if block.settings.image != blank -%}
+										{{
+											block.settings.image
+											| image_url: width: block.settings.image.width
+											| image_tag:
+												loading: 'lazy',
+												sizes: sizes,
+												widths: widths,
+												width: 300,
+												height: height,
+												style: style,
+												class: "image-parallax__image",
+												data-shopify: block.shopify_attributes
+										}}
+									{%- endif -%}
+								</div>
+							{% when 6 %}
+								<div class="image-parallax__bg-image swiper-slide" {{ block.shopify_attributes }}>
+									{%- if block.settings.image != blank -%}
+										{{
+											block.settings.image
+											| image_url: width: block.settings.image.width
+											| image_tag:
+												loading: 'lazy',
+												sizes: sizes,
+												widths: widths,
+												width: 300,
+												height: height,
+												style: style,
+												class: "image-parallax__image",
+												data-shopify: block.shopify_attributes
+										}}
+									{%- endif -%}
+								</div>
+							{% when 5 %}
+								<div class="image-parallax__bg-image swiper-slide" {{ block.shopify_attributes }}>
+									{%- if block.settings.image != blank -%}
+										{{
+											block.settings.image
+											| image_url: width: block.settings.image.width
+											| image_tag:
+												loading: 'lazy',
+												sizes: sizes,
+												widths: widths,
+												width: 300,
+												height: height,
+												style: style,
+												class: "image-parallax__image",
+												data-shopify: block.shopify_attributes
+										}}
+									{%- endif -%}
+								</div>
+							{% when 6 %}
+								<div class="image-parallax__bg-image swiper-slide" {{ block.shopify_attributes }}>
+									{%- if block.settings.image != blank -%}
+										{{
+											block.settings.image
+											| image_url: width: block.settings.image.width
+											| image_tag:
+												loading: 'lazy',
+												sizes: sizes,
+												widths: widths,
+												width: 300,
+												height: height,
+												style: style,
+												class: "image-parallax__image",
+												data-shopify: block.shopify_attributes
+										}}
+									{%- endif -%}
+								</div>
+								</div>
+								</div>
+							{% when 7 %}
+								<div class="image-parallax__marquee swiper js-marquee-reverse">
+								<div class="swiper-wrapper">
+							{% when 7 %}
+								<div class="image-parallax__bg-image swiper-slide" {{ block.shopify_attributes }}>
+									{%- if block.settings.image != blank -%}
+										{{
+											block.settings.image
+											| image_url: width: block.settings.image.width
+											| image_tag:
+												loading: 'lazy',
+												sizes: sizes,
+												widths: widths,
+												width: 300,
+												height: height,
+												style: style,
+												class: "image-parallax__image",
+												data-shopify: block.shopify_attributes
+										}}
+									{%- endif -%}
+								</div>
+							{% when 8 %}
+								<div class="image-parallax__bg-image swiper-slide" {{ block.shopify_attributes }}>
+									{%- if block.settings.image != blank -%}
+										{{
+											block.settings.image
+											| image_url: width: block.settings.image.width
+											| image_tag:
+												loading: 'lazy',
+												sizes: sizes,
+												widths: widths,
+												width: 300,
+												height: height,
+												style: style,
+												class: "image-parallax__image",
+												data-shopify: block.shopify_attributes
+										}}
+									{%- endif -%}
+								</div>
+							{% when 7 %}
+								<div class="image-parallax__bg-image swiper-slide" {{ block.shopify_attributes }}>
+									{%- if block.settings.image != blank -%}
+										{{
+											block.settings.image
+											| image_url: width: block.settings.image.width
+											| image_tag:
+												loading: 'lazy',
+												sizes: sizes,
+												widths: widths,
+												width: 300,
+												height: height,
+												style: style,
+												class: "image-parallax__image",
+												data-shopify: block.shopify_attributes
+										}}
+									{%- endif -%}
+								</div>
+							{% when 8 %}
+								<div class="image-parallax__bg-image swiper-slide" {{ block.shopify_attributes }}>
+									{%- if block.settings.image != blank -%}
+										{{
+											block.settings.image
+											| image_url: width: block.settings.image.width
+											| image_tag:
+												loading: 'lazy',
+												sizes: sizes,
+												widths: widths,
+												width: 300,
+												height: height,
+												style: style,
+												class: "image-parallax__image",
+												data-shopify: block.shopify_attributes
+										}}
+									{%- endif -%}
+								</div>
+								</div>
+								</div>
+							{% when 9 %}
+								<div class="image-parallax__marquee swiper js-marquee">
+								<div class="swiper-wrapper">
+							{% when 9 %}
+								<div class="image-parallax__bg-image swiper-slide" {{ block.shopify_attributes }}>
+									{%- if block.settings.image != blank -%}
+										{{
+											block.settings.image
+											| image_url: width: block.settings.image.width
+											| image_tag:
+												loading: 'lazy',
+												sizes: sizes,
+												widths: widths,
+												width: 300,
+												height: height,
+												style: style,
+												class: "image-parallax__image",
+												data-shopify: block.shopify_attributes
+										}}
+									{%- endif -%}
+								</div>
+							{% when 10 %}
+								<div class="image-parallax__bg-image swiper-slide" {{ block.shopify_attributes }}>
+									{%- if block.settings.image != blank -%}
+										{{
+											block.settings.image
+											| image_url: width: block.settings.image.width
+											| image_tag:
+												loading: 'lazy',
+												sizes: sizes,
+												widths: widths,
+												width: 300,
+												height: height,
+												style: style,
+												class: "image-parallax__image",
+												data-shopify: block.shopify_attributes
+										}}
+									{%- endif -%}
+								</div>
+							{% when 9 %}
+								<div class="image-parallax__bg-image swiper-slide" {{ block.shopify_attributes }}>
+									{%- if block.settings.image != blank -%}
+										{{
+											block.settings.image
+											| image_url: width: block.settings.image.width
+											| image_tag:
+												loading: 'lazy',
+												sizes: sizes,
+												widths: widths,
+												width: 300,
+												height: height,
+												style: style,
+												class: "image-parallax__image",
+												data-shopify: block.shopify_attributes
+										}}
+									{%- endif -%}
+								</div>
+							{% when 10 %}
+								<div class="image-parallax__bg-image swiper-slide" {{ block.shopify_attributes }}>
+									{%- if block.settings.image != blank -%}
+										{{
+											block.settings.image
+											| image_url: width: block.settings.image.width
+											| image_tag:
+												loading: 'lazy',
+												sizes: sizes,
+												widths: widths,
+												width: 300,
+												height: height,
+												style: style,
+												class: "image-parallax__image",
+												data-shopify: block.shopify_attributes
+										}}
+									{%- endif -%}
+								</div>
+								</div>
+								</div>
+						{% endcase %}
+					{%- endfor -%}
+				{% endif %}
+			</div>
+		</div>
+	</div>
+
+	{%- if section.settings.overlay -%}
+		<div class="image-parallax__overlay" style="background-color: rgba(var(--color-overlay), {{ section.settings.opacity_overlay }});"></div>
+	{%- endif -%}
+
+	<div class="container image-parallax__container image-parallax__container--{{ section.settings.collage_type }}">
+		{%- if section.settings.subheading != blank -%}
+			<div class="image-parallax__subtitle subtitle">{{ section.settings.subheading }}</div>
+		{% endif %}
+		{%- if section.settings.heading != blank -%}
+			<div
+				class="image-parallax__title {{ section.settings.heading_size }}">{{ section.settings.heading }}</div>
+		{%- endif -%}
+		<div class="image-parallax__button--container">
+			{%- if section.settings.show_view_all -%}
+				<a {% if section.settings.button_link.url != blank %} href="{{ section.settings.button_link }}"{% endif %}
+					class="button image-parallax__button button--primary-size button--primary" {% if section.settings.button_link.url == blank %}aria-disabled="true"{% endif %}>
+					<span>
+						<span>
+							{{ section.settings.button_label | escape }}
+							{% render 'icon-button-arrow' %}
+						</span>
+						<span>
+							{{ section.settings.button_label | escape }}
+							{% render 'icon-button-arrow' %}
+						</span>
+					</span>
+				</a>
+			{%- endif -%}
+			{%- if section.settings.second_show_view_all -%}
+				<a {% if section.settings.second_button_link.url != blank %} href="{{ section.settings.second_button_link }}"{% endif %}
+					class="button image-parallax__button second_image-parallax__button button--primary-size button--primary" {% if section.settings.second_button_link.url == blank %}aria-disabled="true"{% endif %}>
+					<span>
+						<span>
+							{{ section.settings.second_button_label | escape }}
+							{% render 'icon-button-arrow' %}
+						</span>
+						<span>
+							{{ section.settings.second_button_label | escape }}
+							{% render 'icon-button-arrow' %}
+						</span>
+					</span>
+				</a>
+			{%- endif -%}
+		</div>
+	</div>
+</div>
+
+{% schema %}
+{
+	"name": "t:sections.interactive-section.name",
+	"tag": "section",
+	"class": "interactive-section image-section section--overlay",
+	"limit": 1,
+	"enabled_on": {
+    "templates": ["*"]
+  },
+	"settings": [
+		{
+			"type": "select",
+			"id": "color_scheme",
+			"options": [
+				{
+					"value": "background-1",
+					"label": "t:sections.interactive-section.settings.color_scheme.options__1.label"
+				},
+				{
+					"value": "background-2",
+					"label": "t:sections.interactive-section.settings.color_scheme.options__2.label"
+				},
+				{
+					"value": "background-5",
+					"label": "t:sections.interactive-section.settings.color_scheme.options__5.label"
+				},
+				{
+					"value": "background-3",
+					"label": "t:sections.interactive-section.settings.color_scheme.options__3.label"
+				},
+				{
+					"value": "background-4",
+					"label": "t:sections.interactive-section.settings.color_scheme.options__4.label"
+				}
+			],
+			"default": "background-1",
+			"label": "t:sections.interactive-section.settings.color_scheme.label"
+		},
+		{	
+			"type": "checkbox",
+			"id": "overlay",
+			"default": true,
+			"label": "t:sections.interactive-section.settings.overlay.label"
+		},
+		{
+      "type": "range",
+      "id": "opacity_overlay",
+      "min": 0,
+			"max": 1,
+			"step": 0.1,
+      "label": "t:sections.interactive-section.settings.opacity_overlay.label",
+      "default": 0.7
+    },
+		{
+			"type": "select",
+			"id": "collage_type",
+			"options": [
+				{
+					"value": "on-cursor",
+					"label": "t:sections.interactive-section.settings.collage_type.options__1.label"
+				},
+				{
+					"value": "vertical-marquee",
+					"label": "t:sections.interactive-section.settings.collage_type.options__2.label"
+				}
+			],
+			"default": "on-cursor",
+			"label": "t:sections.interactive-section.settings.collage_type.label",
+			"info": "t:sections.interactive-section.settings.collage_type.info"
+		},
+		{
+			"type": "header",
+			"content": "t:sections.interactive-section.settings.heading_label.content"
+		},
+		{
+			"type": "select",
+			"id": "heading_size",
+			"options": [
+				{
+					"value": "h1",
+					"label": "t:sections.interactive-section.settings.heading_size.options__1.label"
+				},
+				{
+					"value": "h2",
+					"label": "t:sections.interactive-section.settings.heading_size.options__2.label"
+				}
+			],
+			"default": "h1",
+			"label": "t:sections.interactive-section.settings.heading_size.label"
+		},
+		{
+			"type": "text",
+			"id": "subheading",
+			"default": "t:sections.interactive-section.settings.subheading.default",
+			"label": "t:sections.interactive-section.settings.subheading.label"
+		},
+		{
+			"type": "richtext",
+			"id": "heading",
+			"default": "t:sections.interactive-section.settings.heading.default",
+			"label": "t:sections.interactive-section.settings.heading.label"
+		},
+		{
+			"type": "header",
+			"content": "t:sections.interactive-section.settings.header__1.content"
+		},
+		{
+			"type": "checkbox",
+			"id": "show_view_all",
+			"default": true,
+			"label": "t:sections.interactive-section.settings.show_view_all.label"
+		},
+		{
+			"type": "text",
+			"id": "button_label",
+			"default": "t:sections.interactive-section.settings.button_label.default",
+			"label": "t:sections.interactive-section.settings.button_label.label"
+		},
+		{
+			"type": "color",
+			"id": "button_bg_color",
+			"default": "#FFFFFF",
+			"label": "t:sections.interactive-section.settings.button_bg_color.label"
+		},
+		{
+			"type": "color",
+			"id": "button_text_color",
+			"default": "#000000",
+			"label": "t:sections.interactive-section.settings.button_bg_color.label"
+		},
+		{
+			"type": "url",
+			"id": "button_link",
+			"label": "t:sections.interactive-section.settings.button_link.label"
+		},
+		{
+			"type": "header",
+			"content": "t:sections.interactive-section.settings.header__2.content"
+		},
+		{
+			"type": "checkbox",
+			"id": "second_show_view_all",
+			"default": false,
+			"label": "t:sections.interactive-section.settings.show_view_all.label"
+		},
+		{
+			"type": "text",
+			"id": "second_button_label",
+			"default": "t:sections.interactive-section.settings.button_label.default",
+			"label": "t:sections.interactive-section.settings.button_label.label"
+		},
+		{
+			"type": "color",
+			"id": "second_button_bg_color",
+			"default": "#FFFFFF",
+			"label": "t:sections.interactive-section.settings.button_bg_color.label"
+		},
+		{
+			"type": "color",
+			"id": "second_button_text_color",
+			"default": "#000000",
+			"label": "t:sections.interactive-section.settings.button_bg_color.label"
+		},
+		{
+			"type": "url",
+			"id": "second_button_link",
+			"label": "t:sections.interactive-section.settings.button_link.label"
+		}
+	],
+	"blocks": [
+		{
+			"name": "t:sections.interactive-section.blocks.name",
+			"type": "column",
+			"limit": 10,
+			"settings": [
+				{
+					"type": "image_picker",
+					"id": "image",
+					"label": "t:sections.interactive-section.blocks.settings.image.label"
+				}
+			]
+		}
+	],
+	"presets": [
+		{
+			"name": "t:sections.interactive-section.presets.name"
+		}
+	]
+}
+{% endschema %}

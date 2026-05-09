@@ -1,0 +1,291 @@
+{{ 'customer.css' | asset_url | stylesheet_tag }}
+
+<script src="{{ 'parallax.js' | asset_url }}" defer="defer"></script>
+
+<div class="article-template {% if section.settings.color_scheme == 'background-3' or section.settings.color_scheme == 'background-4' %}section--has-overlay{% endif %}">
+  <div class="customer login color-{{ section.settings.color_scheme }}">
+    <div class="login__bg parallax">
+      {%- for block in section.blocks -%}
+        <div
+          class="login__bg-image parallax-layer"
+          {% if forloop.index == 1 or forloop.index == 3 or forloop.index == 5 %}
+            data-parallax-deep="80"
+          {% else %}
+            data-parallax-deep="160"
+          {% endif %}
+        >
+          {%- if block.settings.image != blank -%}
+            {%- capture sizes -%}
+							(min-width: 1100px) calc({{ block.settings.image.width | times: 1920 | divided_by: 100 | round }}vw), (min-width: 990px) calc({{ block.settings.image.width | times: 1920 | divided_by: 100 | round }})vw, (min-width: 750px) calc({{ block.settings.image.width | times: 1920 | divided_by: 100 | round }})vw
+						{%- endcapture -%}
+
+            {%- capture speed -%}
+							{% if forloop.index == 1 or forloop.index == 3 or forloop.index == 5 or forloop.index == 7 %} -80 {% else %} -115 {% endif %}
+						{%- endcapture -%}
+
+            {{
+              block.settings.image.preview_image
+              | image_url: width: 1946
+              | image_tag:
+                data-parallax-property: 'translateY',
+                data-parallax-property-value: speed,
+                data-parallax-steps: '0, 100',
+                class: 'image-parallax__image js-parallax',
+                loading: lazy,
+                sizes: sizes,
+                widths: '246, 493, 600, 713, 823, 990, 1100, 1206, 1346, 1426, 1646, 1946'
+            }}
+          {%- else -%}
+            {{ 'image' | placeholder_svg_tag: 'login__bg-image-placeholder' }}
+          {%- endif -%}
+        </div>
+      {%- endfor -%}
+    </div>
+
+    <div
+      class="login__overlay"
+      style="background-color: rgba(var(--color-overlay), {{ section.settings.opacity_overlay }})"
+    ></div>
+
+    <div class="login__reset">
+      <div class="page-header" id="recover">
+        <div class="page-header__inner">
+          <h1 class="main-page-title page-title title--page" tabindex="-1">
+            {{ 'customer.recover_password.title' | t }}
+          </h1>
+        </div>
+      </div>
+      <div>
+        <p>
+          {{ 'customer.recover_password.subtext' | t }}
+        </p>
+
+        {%- form 'recover_customer_password' -%}
+          {% assign recover_success = form.posted_successfully? %}
+          <div class="field {% if section.settings.color_scheme == 'background-3' or section.settings.color_scheme == 'background-4' %}field--dark{% endif %}">
+            <input
+              dir="ltr"
+              type="email"
+              value=""
+              name="email"
+              id="RecoverEmail"
+              autocorrect="off"
+              autocapitalize="off"
+              autocomplete="email"
+              {% if form.errors %}
+                aria-invalid="true"
+                aria-describedby="RecoverEmail-email-error"
+                autofocus
+              {% endif %}
+              placeholder="{{ 'customer.login_page.email' | t }}"
+            >
+            <label for="RecoverEmail">{{ 'customer.login_page.email' | t }}</label>
+          </div>
+
+          <div class="customer__buttons login__buttons">
+            <button class="button button--primary button--arrow login__sign-in">
+              <span>
+                <span>{{ 'customer.login_page.submit' | t }}</span>
+                <span>{{ 'customer.login_page.submit' | t }}</span>
+              </span>
+            </button>
+
+            <a class="button button--tertiary login__create-acc" href="#login">
+              <span>
+                <span>{{ 'customer.login_page.cancel' | t }}</span>
+                <span>{{ 'customer.login_page.cancel' | t }}</span>
+              </span>
+            </a>
+          </div>
+        {%- endform -%}
+      </div>
+    </div>
+
+    <div class="login__form">
+      <div class="page-header">
+        <div class="page-header__inner">
+          {% if settings.show_breadcrumbs %}
+            <div class="container">
+              <nav class="breadcrumb breadcrumb--center" role="navigation" aria-label="breadcrumbs">
+                <a href="{{ routes.root_url }}" title="{{ 'general.breadcrumbs.home' | t }}" class="link-hover-line">
+                  {{ 'general.breadcrumbs.home' | t }}
+                </a>
+                <div class="breadcrumb__delimiter"></div>
+                <span>{{ page_title }}</span>
+              </nav>
+            </div>
+          {% endif %}
+
+          <h1 class="title--page" id="login" tabindex="-1">
+            {{ 'customer.login_page.title' | t }}
+          </h1>
+
+          {%- if section.settings.subtitle != blank -%}
+            <div class="login__subtitle">
+              {{ section.settings.subtitle }}
+            </div>
+          {%- endif -%}
+        </div>
+      </div>
+      <div class="login__fields">
+        {%- if recover_success == true -%}
+          <h3 class="form__message" tabindex="-1" autofocus>
+            <svg aria-hidden="true" focusable="false" role="presentation" viewBox="0 0 13 13">
+              <path d="M6.5 12.35C9.73087 12.35 12.35 9.73086 12.35 6.5C12.35 3.26913 9.73087 0.65 6.5 0.65C3.26913 0.65 0.65 3.26913 0.65 6.5C0.65 9.73086 3.26913 12.35 6.5 12.35Z" fill="#428445" stroke="white" stroke-width="0.7"/>
+              <path d="M5.53271 8.66357L9.25213 4.68197" stroke="white"/>
+              <path d="M4.10645 6.7688L6.13766 8.62553" stroke="white"/>
+            </svg>
+            {{ 'customer.recover_password.success' | t }}
+          </h3>
+        {%- endif -%}
+        {%- form 'customer_login', novalidate: 'novalidate' -%}
+          <div class="field login__field {% if section.settings.color_scheme == 'background-3' or section.settings.color_scheme == 'background-4' %}field--dark{% endif %}">
+            <input
+              dir="ltr"
+              type="email"
+              name="customer[email]"
+              class="field__input"
+              id="CustomerEmail"
+              autocomplete="email"
+              autocorrect="off"
+              autocapitalize="off"
+              required
+              {% if form.errors contains 'form' %}
+                aria-invalid="true"
+                aria-describedby="LoginForm-email-error"
+              {% endif %}
+              placeholder="{{ 'customer.login_page.email' | t }}"
+            >
+            <label for="CustomerEmail">{{ 'customer.login_page.email' | t }}</label>
+          </div>
+          {% unless template.name == 'register' %}
+            {{ form.errors | default_errors }}
+          {% endunless %}
+
+          {%- if form.password_needed -%}
+            <div class="field login__field {% if section.settings.color_scheme == 'background-3' or section.settings.color_scheme == 'background-4' %}field--dark{% endif %}">
+              <input
+                dir="ltr"
+                type="password"
+                value=""
+                name="customer[password]"
+                class="field__input"
+                id="CustomerPassword"
+                autocomplete="current-password"
+                {% if form.errors contains 'form' %}
+                  aria-invalid="true"
+                {% endif %}
+                required
+                placeholder="{{ 'customer.login_page.password' | t }}"
+              >
+              <label for="CustomerPassword">{{ 'customer.login_page.password' | t }}</label>
+            </div>
+            {% unless template.name == 'register' %}
+              {{ form.errors | default_errors }}
+            {% endunless %}
+
+            <div class="login__forgot-password">
+              <a href="#recover">{{ 'customer.login_page.forgot_password' | t }}</a>
+            </div>
+          {%- endif -%}
+
+          <div class="customer__buttons login__buttons">
+            <button class="button button--primary button--arrow login__sign-in">
+              <span>
+                <span>{{ 'customer.login_page.sign_in' | t }}</span>
+                <span>{{ 'customer.login_page.sign_in' | t }}</span>
+              </span>
+            </button>
+
+            <a class="button button--tertiary login__create-acc" href="{{ routes.account_register_url }}">
+              <span>
+                <span>{{ 'customer.login_page.create_account' | t }}</span>
+                <span>{{ 'customer.login_page.create_account' | t }}</span>
+              </span>
+            </a>
+          </div>
+        {%- endform -%}
+      </div>
+    </div>
+
+    {%- if shop.checkout.guest_login -%}
+      <div>
+        <hr>
+        <h2>{{ 'customer.login_page.guest_title' | t }}</h2>
+
+        {%- form 'guest_login' -%}
+          <button>
+            {{ 'customer.login_page.guest_continue' | t }}
+          </button>
+        {%- endform -%}
+      </div>
+    {%- endif -%}
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "t:sections.main-login.name",
+  "tag": "section",
+  "class": "spaced-section login-section",
+  "settings": [
+    {
+      "type": "select",
+      "id": "color_scheme",
+      "options": [
+        {
+          "value": "background-1",
+          "label": "t:sections.main-login.settings.color_scheme.options__1.label"
+        },
+        {
+          "value": "background-2",
+          "label": "t:sections.main-login.settings.color_scheme.options__2.label"
+        },
+        {
+          "value": "background-5",
+          "label": "t:sections.main-login.settings.color_scheme.options__5.label"
+        },
+        {
+          "value": "background-3",
+          "label": "t:sections.main-login.settings.color_scheme.options__3.label"
+        },
+        {
+          "value": "background-4",
+          "label": "t:sections.main-login.settings.color_scheme.options__4.label"
+        }
+      ],
+      "default": "background-1",
+      "label": "t:sections.main-login.settings.color_scheme.label"
+    },
+    {
+      "type": "range",
+      "id": "opacity_overlay",
+      "min": 0,
+      "max": 1,
+      "step": 0.1,
+      "label": "t:sections.main-login.settings.opacity_overlay.label",
+      "default": 0.5
+    },
+    {
+      "type": "textarea",
+      "id": "subtitle",
+      "default": "t:sections.main-login.settings.subtitle.default",
+      "label": "t:sections.main-login.settings.text.label"
+    }
+  ],
+  "blocks": [
+    {
+      "name": "t:sections.main-login.blocks.name",
+      "type": "column",
+      "limit": 7,
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "t:sections.main-login.blocks.settings.image.label"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

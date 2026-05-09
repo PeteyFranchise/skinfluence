@@ -1,0 +1,278 @@
+{{ 'section-popular-products.css' | asset_url | stylesheet_tag }}
+{{ 'component-badge.css' | asset_url | stylesheet_tag }}
+{{ 'component-price.css' | asset_url | stylesheet_tag }}
+{{ 'component-card.css' | asset_url | stylesheet_tag }}
+
+<script src="{{ 'popular-products.js' | asset_url }}" defer="defer"></script>
+
+{%- style -%}
+  .section-{{ section.id }}-padding {
+    padding-top: {{ section.settings.padding_top | times: 0.25 | round: 0 }}px;
+    padding-bottom: {{ section.settings.padding_bottom | times: 0.25 | round: 0 }}px;
+  }
+
+  @media screen and (min-width: 990px) {
+    .section-{{ section.id }}-padding {
+			padding-top: {{ section.settings.padding_top | times: 0.6 | round: 0 }}px;
+    	padding-bottom: {{ section.settings.padding_bottom | times: 0.6 | round: 0 }}px;
+    }
+  }
+
+	@media screen and (min-width: 1360px) {
+    .section-{{ section.id }}-padding {
+      padding-top: {{ section.settings.padding_top }}px;
+      padding-bottom: {{ section.settings.padding_bottom }}px;
+    }
+  }
+{%- endstyle -%}
+
+{%- assign product_types = section.settings.product_list | map: 'type' | uniq -%}
+
+<div class="popular-products section-{{ section.id }}-padding">
+	<div class="container">
+		<div class="popular-products__top popular-products__top{%- if section.settings.border_top -%}--border{% endif %}">
+			{%- if section.settings.heading != blank -%}
+				<h2 class="h2 popular-products__heading">{{ section.settings.heading }}</h2>
+			{%- endif -%}
+			{% if section.settings.filter == false or product_types.size <= 1 %}
+				<a {% if section.settings.button_link.url != blank %} href="{{ section.settings.button_link.url }}" {% endif %} class="button button--simple-move " 
+					{% if section.settings.button_link.url == blank %}aria-disabled="true"{% endif %}>
+						<span>{{ section.settings.link }}</span>
+					{% render 'icon-button-arrow' %}
+				</a>
+			{% endif %}
+		</div>
+		
+		{% if section.settings.filter %}
+			{%- if product_types.size > 1 -%}
+				<div class="popular-products__filters-wrapper no-js-hidden">
+					<ul class="popular-products__filters filters">
+						<li>
+							<button class="link filters__item subtitle filters__item_active" data-type-target="all">
+								<span>
+									{{ 'products.facets.all' | t }}
+								</span>
+							</button>
+						</li>
+						{% for type in product_types %}
+							{%- if type != blank -%}
+								<li>
+									<button class="link filters__item subtitle" data-type-target="{{ type }}">
+										<span>
+											{{ type }}
+										</span>
+									</button>
+								</li>
+							{%- endif -%}
+						{% endfor %}
+					</ul>
+					<a {% if section.settings.button_link.url != blank %} href="{{ section.settings.button_link.url }}" {% endif %} class="button button--simple-move " 
+						{% if section.settings.button_link.url == blank %}aria-disabled="true"{% endif %}>
+						<span>{{ section.settings.link }}</span>
+						{% render 'icon-button-arrow' %}
+					</a>
+				</div>
+			{%- endif -%}
+		{% endif %}
+
+		{%- liquid
+			assign columns = section.blocks.size
+			if columns > 4
+				assign columns = 4
+			endif
+		-%}
+
+		<ul class="popular-products__wrapper list-unstyled collection-product-list--{{ section.settings.columns_mobile }}-mobile">
+			{%- for product in section.settings.product_list -%}
+				<li data-type="{{ product.type }}" class="collection-product-card collection-popular-card 
+					quickview{%- if settings.quickview_hover -%}--hover{% endif %}
+					show">
+					{% render 'product-card',
+						product_card_product: product,
+						media_size: section.settings.image_ratio,
+						media_fit: section.settings.image_fit,
+						show_secondary_image: section.settings.show_secondary_image,
+						show_vendor: section.settings.show_vendor,
+						show_desc: section.settings.show_desc,
+						section_id: section.id,
+						show_sku: section.settings.show_sku,
+						columns_mobile: section.settings.columns_mobile
+					%}
+				</li>
+			{%- else -%}
+				{%- for i in (1..8) -%}
+					<li class="collection-product-card collection-popular-card collection-popular-card--placeholder">
+						{% render 'product-card-placeholder',
+							media_size: section.settings.image_ratio,
+							show_vendor: section.settings.show_vendor,
+							show_desc: section.settings.show_desc,
+							forloop: forloop
+						%} 
+					</li>
+				{%- endfor -%}
+			{%- endfor -%}
+		</ul>
+	</div>
+</div>
+
+{% schema %}
+{
+	"name": "t:sections.popular-products.name",
+	"tag": "section",
+	"class": "popular-products-section spaced-section",
+	"enabled_on": {
+    "templates": ["*"]
+  },
+	"settings": [
+		{
+			"type": "richtext",
+			"id": "heading",
+			"default": "t:sections.popular-products.settings.heading.default",
+			"label": "t:sections.popular-products.settings.heading.label"
+		},
+		{
+			"type": "text",
+			"id": "link",
+			"default": "t:sections.popular-products.settings.link.default",
+			"label": "t:sections.popular-products.settings.link.label"
+		},
+		{
+			"type": "url",
+			"id": "button_link",
+			"label": "t:sections.product-recommendations.settings.button_link.label"
+		},
+		{
+			"type": "product_list",
+			"id": "product_list",
+			"limit": 12,
+			"label": "t:sections.popular-products.settings.product_list.label"
+		},
+		{
+			"type": "checkbox",
+			"id": "filter",
+			"default": true,
+			"label": "t:sections.popular-products.settings.filter.label",
+			"info": "t:sections.popular-products.settings.filter.info"
+		},
+		{
+			"type": "checkbox",
+			"id": "border_top",
+			"default": false,
+			"label": "t:sections.product-recommendations.settings.border_top.label"
+		},
+		{
+      "type": "header",
+      "content": "t:sections.main-collection-product-grid.settings.header_mobile.content"
+    },
+    {
+      "type": "select",
+      "id": "columns_mobile",
+      "default": "1",
+      "label": "t:sections.main-collection-product-grid.settings.columns_mobile.label",
+      "options": [
+        {
+          "value": "1",
+          "label": "t:sections.main-collection-product-grid.settings.columns_mobile.options__1.label"
+        },
+        {
+          "value": "2",
+          "label": "t:sections.main-collection-product-grid.settings.columns_mobile.options__2.label"
+        }
+      ]
+    },
+		{
+			"type": "header",
+			"content": "t:sections.product-recommendations.settings.header__2.content"
+		},
+		{
+			"type": "select",
+			"id": "image_ratio",
+			"options": [
+				{
+					"value": "landscape",
+					"label": "t:sections.product-recommendations.settings.image_ratio.options__1.label"
+				},
+				{
+					"value": "portrait",
+					"label": "t:sections.product-recommendations.settings.image_ratio.options__2.label"
+				},
+				{
+					"value": "square",
+					"label": "t:sections.product-recommendations.settings.image_ratio.options__3.label"
+				}
+			],
+			"default": "portrait",
+			"label": "t:sections.product-recommendations.settings.image_ratio.label"
+		},
+		{
+			"type": "select",
+			"id": "image_fit",
+			"label": "t:sections.featured-products.settings.image_fit.label",
+			"options": [
+				{
+					"value": "contain",
+					"label": "t:sections.featured-products.settings.image_fit.options__1.label"
+				},
+				{
+					"value": "cover",
+					"label": "t:sections.featured-products.settings.image_fit.options__2.label"
+				}
+			],
+			"default": "cover"
+		},
+		{
+			"type": "checkbox",
+			"id": "show_secondary_image",
+			"default": false,
+			"label": "t:sections.product-recommendations.settings.show_secondary_image.label"
+		},
+		{
+			"type": "checkbox",
+			"id": "show_vendor",
+			"default": true,
+			"label": "t:sections.product-recommendations.settings.show_vendor.label"
+		},
+		{
+			"type": "checkbox",
+			"id": "show_desc",
+			"default": false,
+			"label": "t:sections.product-recommendations.settings.show_desc.label"
+		},
+		{
+			"type": "checkbox",
+			"id": "show_sku",
+			"default": false,
+			"label": "t:sections.product-recommendations.settings.show_sku.label"
+		},
+		{
+			"type": "header",
+			"content": "t:all.section-padding.header.content"
+		},
+		{
+			"type": "range",
+			"id": "padding_top",
+			"min": 0,
+			"max": 200,
+			"step": 10,
+			"default": 160,
+			"unit": "px",
+			"label": "t:all.section-padding.padding_top.label"
+		},
+		{
+			"type": "range",
+			"id": "padding_bottom",
+			"min": 0,
+			"max": 200,
+			"step": 10,
+			"default": 160,
+			"unit": "px",
+			"label": "t:all.section-padding.padding_bottom.label"
+		}
+	],
+	"presets": [
+		{
+			"name": "t:sections.popular-products.presets.name"
+		}
+	]
+}
+{% endschema %}

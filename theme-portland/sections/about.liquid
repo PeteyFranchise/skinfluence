@@ -1,0 +1,182 @@
+{{ 'section-about.css' | asset_url | stylesheet_tag }}
+
+<script src="{{ 'about.js' | asset_url }}" defer="defer"></script>
+
+{%- style -%}
+  .section-{{ section.id }}-padding {
+    padding-top: {{ section.settings.padding_top | times: 0.25 | round: 0 }}px;
+    padding-bottom: {{ section.settings.padding_bottom | times: 0.25 | round: 0 }}px;
+  }
+
+  @media screen and (min-width: 990px) {
+    .section-{{ section.id }}-padding {
+			padding-top: {{ section.settings.padding_top | times: 0.6 | round: 0 }}px;
+    	padding-bottom: {{ section.settings.padding_bottom | times: 0.6 | round: 0 }}px;
+    }
+  }
+
+  @media screen and (min-width: 1360px) {
+    .section-{{ section.id }}-padding {
+      padding-top: {{ section.settings.padding_top }}px;
+      padding-bottom: {{ section.settings.padding_bottom }}px;
+    }
+  }
+{%- endstyle -%}
+
+<div class="about section-{{ section.id }}-padding">
+  {% assign additional = section.blocks | where: 'type', 'additional' %}
+
+  <div class="container">
+    <div class="about__outer">
+      <div class="about__left">
+        <div class="about__subheading subtitle">
+          {{ section.settings.subheading }}
+        </div>
+        <h2 class="about__content">{{ section.settings.heading }}</h2>
+      </div>
+
+      <div class="about__right">
+        <div class="about__wrapper no-js-hidden">
+          {%- if product.description != blank -%}
+            <div class="about__accordion-item" {{ block.shopify_attributes }}>
+              <h2 class="h4 about__accordion-title active">
+                <span>{{ 'about.description' | t }}</span>
+                <div class="about__more-link-wrapper">
+                  <div class="about__more-link">
+                    {% render 'icon-button-arrow' %}
+                    <span>{{ 'about.more' | t }}</span>
+                    <span>{{ 'about.less' | t }}</span>
+                  </div>
+                  <div class="about__more-icon">
+                    {% render 'icon-button-arrow' %}
+                  </div>
+                </div>
+              </h2>
+              <div class="about__accordion-description" style="display: block">
+                {{ product.description }}
+              </div>
+            </div>
+          {%- endif -%}
+          {%- for block in additional -%}
+            <div class="about__accordion-item" {{ block.shopify_attributes }}>
+              <h2 class="{%- if product.description == blank and forloop.index == 1 -%} active{% endif %} h4 about__accordion-title">
+                <span>{{ block.settings.heading }}</span>
+                <div class="about__more-link-wrapper">
+                  <div class="about__more-link">
+                    {% render 'icon-button-arrow' %}
+                    <span>{{ 'about.more' | t }}</span>
+                    <span>{{ 'about.less' | t }}</span>
+                  </div>
+                  <div class="about__more-icon">
+                    {% render 'icon-button-arrow' %}
+                  </div>
+                </div>
+              </h2>
+              <div
+                class="about__accordion-description"
+                {%- if product.description == blank and forloop.index == 1 -%}
+                  style="display: block;"
+                {% endif %}
+              >
+                {{ block.settings.content }}
+              </div>
+            </div>
+          {%- endfor -%}
+        </div>
+
+        <div class="about__wrapper no-js">
+          {%- if product.description != blank -%}
+            <div class="about__accordion-item" {{ block.shopify_attributes }}>
+              <h2 class="h4 about__accordion-title active">
+                <span>{{ 'about.description' | t }}</span>
+              </h2>
+              <div class="about__accordion-description" style="display: block">
+                {{ product.description }}
+              </div>
+            </div>
+          {%- endif -%}
+          {%- for block in additional -%}
+            <div class="about__accordion-item" {{ block.shopify_attributes }}>
+              <h2 class="h4 about__accordion-title active">
+                <span>{{ block.settings.heading }}</span>
+              </h2>
+              <div class="about__accordion-description" style="display: block">
+                {{ block.settings.content }}
+              </div>
+            </div>
+          {%- endfor -%}
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "t:sections.about.name",
+  "tag": "section",
+  "class": "about-section spaced-section color-background-2",
+  "enabled_on": {
+    "templates": ["*"]
+  },
+  "settings": [
+    {
+      "type": "text",
+      "id": "subheading",
+      "default": "t:sections.about.settings.subheading.default",
+      "label": "t:sections.about.settings.subheading.label"
+    },
+    {
+      "type": "richtext",
+      "id": "heading",
+      "default": "t:sections.about.settings.heading.default",
+      "label": "t:sections.about.settings.heading.label"
+    },
+    {
+      "type": "header",
+      "content": "t:all.section-padding.header.content"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 200,
+      "step": 10,
+      "default": 160,
+      "unit": "px",
+      "label": "t:all.section-padding.padding_top.label"
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 200,
+      "step": 10,
+      "default": 160,
+      "unit": "px",
+      "label": "t:all.section-padding.padding_bottom.label"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "additional",
+      "name": "t:sections.about.blocks.additional.name",
+      "limit": 3,
+      "settings": [
+        {
+          "type": "text",
+          "id": "heading",
+          "default": "t:sections.about.blocks.additional.settings.heading.default",
+          "label": "t:sections.about.blocks.additional.settings.heading.label"
+        },
+        {
+          "type": "richtext",
+          "id": "content",
+          "default": "t:sections.about.blocks.additional.settings.content.default",
+          "label": "t:sections.about.blocks.additional.settings.content.label"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

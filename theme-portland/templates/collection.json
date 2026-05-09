@@ -1,0 +1,91 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+	"sections": {
+		"banner": {
+			"type": "main-collection-banner",
+			"settings": {
+				"layout": "overlay",
+				"show_collection_description": true,
+				"show_collection_image": true,
+				"image_ratio": "portrait",
+				"image_fit": "cover",
+				"show_secondary_image": false,
+				"show_vendor": true,
+				"show_sku": false
+			}
+		},
+		"product-grid": {
+			"type": "main-collection-product-grid",
+			"settings": {
+				"products_per_page": 15,
+				"show_large_card": true,
+				"image_ratio": "portrait",
+				"image_fit": "cover",
+				"show_secondary_image": true,
+				"show_vendor": true,
+				"show_sku": false,
+				"show_desc": false,
+				"enable_filtering": true,
+				"enable_sorting": true,
+				"image_filter_ratio": "4/5",
+				"image_filter_fit": "cover",
+				"image_filter_columns": 2,
+				"columns_mobile": "1",
+				"padding_top": 0,
+				"padding_bottom": 0
+			}
+		},
+		"instagram-collage": {
+			"type": "instagram-collage",
+			"blocks": {
+				"be42a297-ccec-4546-b711-7a393aecc81c": {
+					"type": "instagram-collage_image",
+					"settings": {
+						"image_width": 100
+					}
+				},
+				"0070c6f6-c885-45e8-a3cf-1ea320a393c3": {
+					"type": "instagram-collage_image",
+					"settings": {
+						"image_width": 120
+					}
+				},
+				"cfde012e-449f-48e7-853f-8bb9b5adb492": {
+					"type": "instagram-collage_image",
+					"settings": {
+						"image_width": 70
+					}
+				}
+			},
+			"block_order": [
+				"be42a297-ccec-4546-b711-7a393aecc81c",
+				"0070c6f6-c885-45e8-a3cf-1ea320a393c3",
+				"cfde012e-449f-48e7-853f-8bb9b5adb492"
+			],
+			"settings": {
+				"color_scheme": "background-1",
+				"border_top": false,
+				"subheading": "Instagram",
+				"heading": "<p>Follow @portland on Instagram</p>",
+				"description": "Follow to receive tips and tricks to make the most out of this theme.",
+				"account": true,
+				"name_account": "@portland",
+				"desc_account": "150k Followers",
+				"button_label": "Follow Us on Instagram",
+				"button_link": "#",
+				"button_style": "primary",
+				"padding_top": 160,
+				"padding_bottom": 160
+			}
+		}
+	},
+	"order": ["banner", "product-grid", "instagram-collage"]
+}
