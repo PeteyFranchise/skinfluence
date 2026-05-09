@@ -84,6 +84,10 @@ Use this rule for future storefront work:
 - the old custom theme under `theme/` should be treated as a legacy reference/archive for prior logic, content structure, and implementation history
 - no new major storefront feature or visual work should go into the old custom theme unless there is a specific archival or comparison reason
 
+Architecture and deployment reference:
+
+- `docs/storefront/handoff/PORTLAND-ARCHITECTURE-AND-DEPLOYMENT.md`
+
 ## Product model reference
 
 The official launch product and subscription model is documented here:

@@ -24,6 +24,10 @@ Important current split:
 - Portland under `theme-portland/` is the primary active storefront build target
 - future storefront work should default to `theme-portland/`
 
+Architecture reference:
+
+- `docs/storefront/handoff/PORTLAND-ARCHITECTURE-AND-DEPLOYMENT.md`
+
 ## Implemented
 
 ### Layout and assets

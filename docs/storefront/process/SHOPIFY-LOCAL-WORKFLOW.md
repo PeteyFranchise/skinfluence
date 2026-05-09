@@ -12,6 +12,10 @@ The repo now contains real theme files under:
 - `theme/assets/`
 - `theme/config/`
 
+It also now contains the active Portland storefront workspace under:
+
+- `theme-portland/`
+
 The repository is now wired in practice to a specific Shopify development store and theme, even though production launch details are still pending.
 
 ## Goal
@@ -33,11 +37,16 @@ Current development theme:
 - `Development (68b794-Peters-MacBook-Pro)`
 - theme id: `155740799134`
 
+Active Portland theme:
+
+- `Portland`
+- theme id: `155776417950`
+
 ## Recommended workflow shape
 
 1. install Shopify CLI
 2. log in to the target Shopify organization or store
-3. run the theme locally from the `theme/` directory
+3. run or pull the correct active theme locally from the right workspace
 4. preview in a browser
 5. iterate on sections, templates, and styling
 6. push or publish only after review
@@ -59,6 +68,13 @@ shopify theme push --store=skinfluence-3060.myshopify.com --theme=155740799134 -
 shopify theme publish
 ```
 
+Current Portland command pattern:
+
+```bash
+shopify theme pull --store=skinfluence-3060.myshopify.com --theme=155776417950 --path=/Users/peterzora/Desktop/Skinfluence/theme-portland
+shopify theme push --store=skinfluence-3060.myshopify.com --theme=155776417950 --path=/Users/peterzora/Desktop/Skinfluence/theme-portland
+```
+
 ## Before using the workflow
 
 Confirm:
@@ -77,3 +93,7 @@ Continue expanding this file with:
 - exact production-store workflow once that exists
 - theme naming conventions
 - push and publish rule
+
+See also:
+
+- `docs/storefront/handoff/PORTLAND-ARCHITECTURE-AND-DEPLOYMENT.md`
