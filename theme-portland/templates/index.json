@@ -168,6 +168,43 @@
         "padding_bottom": 140
       }
     },
+    "steps_how_it_works": {
+      "type": "steps",
+      "blocks": {
+        "step_1": {
+          "type": "section_slide",
+          "settings": {
+            "slide_heading": "Step 1",
+            "slide_text": "<p><strong>Complete your evaluation</strong><br>Answer a few questions about your skin, goals, and history.</p>"
+          }
+        },
+        "step_2": {
+          "type": "section_slide",
+          "settings": {
+            "slide_heading": "Step 2",
+            "slide_text": "<p><strong>Receive provider review</strong><br>A licensed provider reviews your information and determines whether treatment is appropriate.</p>"
+          }
+        },
+        "step_3": {
+          "type": "section_slide",
+          "settings": {
+            "slide_heading": "Step 3",
+            "slide_text": "<p><strong>Begin monthly care if approved</strong><br>If approved, your treatment is delivered to your door through a simple monthly maintenance model.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "step_1",
+        "step_2",
+        "step_3"
+      ],
+      "name": "How it works",
+      "settings": {
+        "color_scheme": "background-3",
+        "heading": "A simpler way to start anti-aging treatment.",
+        "heading_tag": "h2"
+      }
+    },
     "multicolumn": {
       "type": "multicolumn",
       "blocks": {
@@ -593,6 +630,7 @@
     "trust_marquee_Skinfluence",
     "rich_text_core_problem",
     "premium_split_explanation",
+    "steps_how_it_works",
     "multicolumn",
     "298afee1-8616-4ea9-a596-6524a56b29c0",
     "9aea4a13-404f-4ffd-9d00-150415e26ab3",
