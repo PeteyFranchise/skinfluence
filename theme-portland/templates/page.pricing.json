@@ -19,7 +19,7 @@
         "subheading": "Pricing with clarity",
         "heading": "<p>Premium anti-aging care, priced with clarity.</p>",
         "heading_size": "large",
-        "text_information": "Start with a one-time evaluation, then move into monthly treatment if approved.",
+        "text_information": "Start with a one-time evaluation, then move into monthly treatment if approved. The structure is simple on purpose.",
         "text_align": "left",
         "text_order": "column",
         "show_view_all": true,
@@ -32,6 +32,56 @@
         "padding_bottom": 80
       }
     },
+    "pricing_summary_rail": {
+      "type": "multicolumn",
+      "blocks": {
+        "column_1": {
+          "type": "column",
+          "settings": {
+            "subheading": "Evaluation first",
+            "text": "<p>Begin with a one-time provider-reviewed intake before any treatment begins.</p>",
+            "button_label": "",
+            "button_link": ""
+          }
+        },
+        "column_2": {
+          "type": "column",
+          "settings": {
+            "subheading": "Treatment only if approved",
+            "text": "<p>Monthly care starts only after provider review confirms treatment fit.</p>",
+            "button_label": "",
+            "button_link": ""
+          }
+        },
+        "column_3": {
+          "type": "column",
+          "settings": {
+            "subheading": "Clarity over complexity",
+            "text": "<p>Built to avoid confusing tiers, crowded bundles, and generic marketplace pricing noise.</p>",
+            "button_label": "",
+            "button_link": ""
+          }
+        }
+      },
+      "block_order": [
+        "column_1",
+        "column_2",
+        "column_3"
+      ],
+      "name": "Pricing summary rail",
+      "settings": {
+        "multicolumn_to_show": 3,
+        "object_fit": "contain",
+        "swipe_on_mobile": true,
+        "button_style": "primary",
+        "border_top": true,
+        "border_bottom": true,
+        "padding_top": 50,
+        "padding_bottom": 70,
+        "margin_top": 0,
+        "margin_bottom": 0
+      }
+    },
     "pricing_breakdown": {
       "type": "multicolumn",
       "blocks": {
@@ -39,7 +89,7 @@
           "type": "column",
           "settings": {
             "subheading": "One-time evaluation",
-            "text": "<p>Provider-reviewed intake before treatment begins.</p>",
+            "text": "<p>Provider-reviewed intake before treatment begins. This is the first step into the Skinfluence model.</p>",
             "button_label": "",
             "button_link": ""
           }
@@ -48,7 +98,7 @@
           "type": "column",
           "settings": {
             "subheading": "Monthly treatment if approved",
-            "text": "<p>Ongoing monthly care designed for consistency, maintenance, and ease.</p>",
+            "text": "<p>Ongoing monthly care designed for consistency, maintenance, and refill continuity once treatment is approved.</p>",
             "button_label": "",
             "button_link": ""
           }
@@ -72,6 +122,23 @@
         "margin_bottom": 0
       }
     },
+    "whats_included_split": {
+      "type": "premium-split",
+      "name": "What's included split",
+      "settings": {
+        "eyebrow": "What is included",
+        "heading": "<p>A clearer pricing structure than generic prescription marketplaces.</p>",
+        "body": "<p>Skinfluence pricing is designed around a simpler care path: evaluation first, monthly treatment only if approved, and a more focused anti-aging experience built for continuity.</p><p>What is included is not just a product. It is the review process, the treatment path if appropriate, and the structure needed to make a stronger routine easier to maintain.</p>",
+        "button_label": "Start Evaluation",
+        "button_link": "/pages/start-evaluation",
+        "button_style": "primary",
+        "placeholder_label": "Pricing detail visual",
+        "background": "#f3efe7",
+        "text_color": "#24352f",
+        "padding_top": 80,
+        "padding_bottom": 120
+      }
+    },
     "whats_included": {
       "type": "multicolumn",
       "blocks": {
@@ -88,7 +155,7 @@
           "type": "column",
           "settings": {
             "subheading": "Provider review",
-            "text": "<p>Eligibility depends on review, not automatic checkout.</p>",
+            "text": "<p>Eligibility depends on review, not instant checkout.</p>",
             "button_label": "",
             "button_link": ""
           }
@@ -97,7 +164,7 @@
           "type": "column",
           "settings": {
             "subheading": "Monthly treatment if approved",
-            "text": "<p>Approved users move into ongoing monthly care.</p>",
+            "text": "<p>Approved users move into recurring monthly care designed for continuity.</p>",
             "button_label": "",
             "button_link": ""
           }
@@ -105,8 +172,8 @@
         "item_4": {
           "type": "column",
           "settings": {
-            "subheading": "Ongoing maintenance support",
-            "text": "<p>Designed for continuity and long-term routine consistency.</p>",
+            "subheading": "Maintenance support",
+            "text": "<p>Structured to support routine consistency rather than one-off product buying.</p>",
             "button_label": "",
             "button_link": ""
           }
@@ -132,26 +199,26 @@
         "margin_bottom": 0
       }
     },
-    "why_priced_this_way": {
+    "clarity_frame": {
       "type": "rich-text",
       "blocks": {
         "subheading": {
           "type": "subheading",
           "settings": {
-            "subheading": "Why it is priced this way"
+            "subheading": "Clarity over commodity pricing"
           }
         },
         "heading": {
           "type": "heading",
           "settings": {
-            "heading": "<p>Why this is priced differently than generic tretinoin.</p>",
+            "heading": "<p>This is not positioned as the cheapest tretinoin on the internet.</p>",
             "heading_size": "large"
           }
         },
         "text": {
           "type": "text",
           "settings": {
-            "text": "<p>Skinfluence is not positioned as the cheapest online prescription option. It is positioned as premium anti-aging care with provider review, a more elevated treatment experience, and a routine designed for consistency rather than commodity shopping.</p>"
+            "text": "<p>Skinfluence is designed as premium anti-aging care with provider review, a more elevated treatment experience, and a routine built for consistency rather than marketplace shopping. The pricing should feel clearer, but it should also reflect that this is a more guided care model.</p>"
           }
         }
       },
@@ -160,7 +227,7 @@
         "heading",
         "text"
       ],
-      "name": "Why priced this way",
+      "name": "Clarity frame",
       "settings": {
         "color_scheme": "background-3",
         "full_width": true,
@@ -168,40 +235,56 @@
         "padding_bottom": 140
       }
     },
-    "not_eligible": {
-      "type": "rich-text",
+    "pricing_questions": {
+      "type": "collapsible-content",
       "blocks": {
-        "subheading": {
-          "type": "subheading",
+        "accordion_1": {
+          "type": "accordion",
           "settings": {
-            "subheading": "Not eligible?"
+            "question": "Why is there an evaluation first?",
+            "question_heading_tag": "h3",
+            "answer": "<p>Evaluation comes first because treatment fit should be reviewed before care begins. Skinfluence is designed around provider review, not instant subscription enrollment.</p>"
           }
         },
-        "heading": {
-          "type": "heading",
+        "accordion_2": {
+          "type": "accordion",
           "settings": {
-            "heading": "<p>What if I’m not eligible?</p>",
-            "heading_size": "large"
+            "question": "When does the monthly model begin?",
+            "question_heading_tag": "h3",
+            "answer": "<p>The monthly model only begins if treatment is approved after evaluation and provider review.</p>"
           }
         },
-        "text": {
-          "type": "text",
+        "accordion_3": {
+          "type": "accordion",
           "settings": {
-            "text": "<p>Not every user will be a fit for treatment. If a provider determines treatment is not appropriate, Skinfluence will communicate that clearly and explain any next steps that may be available.</p>"
+            "question": "What if I am not eligible?",
+            "question_heading_tag": "h3",
+            "answer": "<p>Not every user will be a fit for treatment. If treatment is not appropriate, Skinfluence should communicate that clearly and explain any next steps that may be available.</p>"
+          }
+        },
+        "accordion_4": {
+          "type": "accordion",
+          "settings": {
+            "question": "What should subscription language mean here?",
+            "question_heading_tag": "h3",
+            "answer": "<p>Subscription language should only refer to the recurring monthly treatment model if approved. It should never imply that treatment begins before review.</p>"
           }
         }
       },
       "block_order": [
-        "subheading",
-        "heading",
-        "text"
+        "accordion_1",
+        "accordion_2",
+        "accordion_3",
+        "accordion_4"
       ],
-      "name": "Not eligible",
+      "name": "Pricing questions",
       "settings": {
-        "color_scheme": "background-1",
-        "full_width": true,
+        "heading": "Pricing questions, answered clearly",
+        "heading_size": "h2",
+        "heading_tag": "h2",
+        "text": "A more structured explanation of how the Skinfluence pricing model works before numbers, billing details, and final launch policies are fully locked.",
         "padding_top": 120,
-        "padding_bottom": 120
+        "padding_bottom": 140
       }
     },
     "subscription_details": {
@@ -213,6 +296,13 @@
             "subheading": "Subscription details"
           }
         },
+        "heading": {
+          "type": "heading",
+          "settings": {
+            "heading": "<p>Recurring care should feel understandable, not hidden.</p>",
+            "heading_size": "medium"
+          }
+        },
         "text": {
           "type": "text",
           "settings": {
@@ -222,14 +312,15 @@
       },
       "block_order": [
         "subheading",
+        "heading",
         "text"
       ],
       "name": "Subscription details",
       "settings": {
-        "color_scheme": "background-3",
+        "color_scheme": "background-1",
         "full_width": true,
-        "padding_top": 100,
-        "padding_bottom": 100
+        "padding_top": 120,
+        "padding_bottom": 120
       }
     },
     "closing_cta": {
@@ -271,7 +362,7 @@
       ],
       "name": "Closing CTA",
       "settings": {
-        "color_scheme": "background-1",
+        "color_scheme": "background-3",
         "full_width": true,
         "padding_top": 140,
         "padding_bottom": 140
@@ -280,10 +371,12 @@
   },
   "order": [
     "hero",
+    "pricing_summary_rail",
     "pricing_breakdown",
+    "whats_included_split",
     "whats_included",
-    "why_priced_this_way",
-    "not_eligible",
+    "clarity_frame",
+    "pricing_questions",
     "subscription_details",
     "closing_cta"
   ]
