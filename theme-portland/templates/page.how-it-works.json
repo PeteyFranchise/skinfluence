@@ -1,0 +1,211 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "hero": {
+      "type": "image-banner",
+      "name": "How it works hero",
+      "settings": {
+        "full_width": true,
+        "header_overlay": false,
+        "mobile_content_overlay": false,
+        "subheading": "How it works",
+        "heading": "<p>A simpler way to start prescription-led anti-aging care.</p>",
+        "heading_size": "large",
+        "text_information": "Skinfluence is designed to make advanced anti-aging treatment feel clear, guided, and easy to begin.",
+        "text_align": "left",
+        "text_order": "column",
+        "show_view_all": true,
+        "button_label": "Start Evaluation",
+        "button_link": "/pages/start-evaluation",
+        "button_style": "primary",
+        "opacity_overlay": 0.18,
+        "image_ratio": "adapt",
+        "padding_top": 40,
+        "padding_bottom": 80
+      }
+    },
+    "steps": {
+      "type": "steps",
+      "blocks": {
+        "step_1": {
+          "type": "section_slide",
+          "settings": {
+            "slide_heading": "Step 1",
+            "slide_text": "<p><strong>Complete your evaluation</strong><br>Answer a few questions about your skin, goals, and history so a licensed provider can assess whether treatment may be appropriate.</p>"
+          }
+        },
+        "step_2": {
+          "type": "section_slide",
+          "settings": {
+            "slide_heading": "Step 2",
+            "slide_text": "<p><strong>Receive provider review</strong><br>Your evaluation is reviewed by a licensed provider. In some cases, additional information may be needed before a final decision is made.</p>"
+          }
+        },
+        "step_3": {
+          "type": "section_slide",
+          "settings": {
+            "slide_heading": "Step 3",
+            "slide_text": "<p><strong>Begin monthly care if approved</strong><br>If approved, you move into a monthly treatment model designed for consistency, maintenance, and ease.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "step_1",
+        "step_2",
+        "step_3"
+      ],
+      "name": "Process steps",
+      "settings": {
+        "color_scheme": "background-3",
+        "heading": "What to expect from the process.",
+        "heading_tag": "h2"
+      }
+    },
+    "evaluation_includes": {
+      "type": "multicolumn",
+      "blocks": {
+        "include_1": {
+          "type": "column",
+          "settings": {
+            "subheading": "Goals and skin history",
+            "text": "<p>The evaluation is designed to understand your anti-aging goals, relevant skin history, and current routine.</p>",
+            "button_label": "",
+            "button_link": ""
+          }
+        },
+        "include_2": {
+          "type": "column",
+          "settings": {
+            "subheading": "Sensitivity and fit",
+            "text": "<p>Providers review sensitivity considerations and other factors that may affect treatment fit.</p>",
+            "button_label": "",
+            "button_link": ""
+          }
+        },
+        "include_3": {
+          "type": "column",
+          "settings": {
+            "subheading": "Clear next steps",
+            "text": "<p>After review, users may be approved, asked for more information, or told treatment is not appropriate.</p>",
+            "button_label": "",
+            "button_link": ""
+          }
+        }
+      },
+      "block_order": [
+        "include_1",
+        "include_2",
+        "include_3"
+      ],
+      "name": "Evaluation includes",
+      "settings": {
+        "multicolumn_to_show": 3,
+        "object_fit": "contain",
+        "swipe_on_mobile": true,
+        "button_style": "primary",
+        "border_top": false,
+        "border_bottom": false,
+        "padding_top": 80,
+        "padding_bottom": 120,
+        "margin_top": 0,
+        "margin_bottom": 0
+      }
+    },
+    "possible_outcomes": {
+      "type": "rich-text",
+      "blocks": {
+        "subheading": {
+          "type": "subheading",
+          "settings": {
+            "subheading": "Possible outcomes"
+          }
+        },
+        "heading": {
+          "type": "heading",
+          "settings": {
+            "heading": "<p>Clear outcomes after provider review.</p>",
+            "heading_size": "large"
+          }
+        },
+        "text": {
+          "type": "text",
+          "settings": {
+            "text": "<p>After review, your status may be approved, more information needed, or not eligible. Skinfluence is designed to make that process feel clear rather than confusing.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "subheading",
+        "heading",
+        "text"
+      ],
+      "name": "Possible outcomes",
+      "settings": {
+        "color_scheme": "background-1",
+        "full_width": true,
+        "padding_top": 120,
+        "padding_bottom": 120
+      }
+    },
+    "closing_cta": {
+      "type": "rich-text",
+      "blocks": {
+        "subheading": {
+          "type": "subheading",
+          "settings": {
+            "subheading": "Ready to begin?"
+          }
+        },
+        "heading": {
+          "type": "heading",
+          "settings": {
+            "heading": "<p>Start with evaluation before treatment begins.</p>",
+            "heading_size": "large"
+          }
+        },
+        "text": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Move into monthly care only if approved through provider review.</p>"
+          }
+        },
+        "button": {
+          "type": "button",
+          "settings": {
+            "button_label": "Start Evaluation",
+            "button_link": "/pages/start-evaluation",
+            "button_style": "primary"
+          }
+        }
+      },
+      "block_order": [
+        "subheading",
+        "heading",
+        "text",
+        "button"
+      ],
+      "name": "Closing CTA",
+      "settings": {
+        "color_scheme": "background-3",
+        "full_width": true,
+        "padding_top": 140,
+        "padding_bottom": 140
+      }
+    }
+  },
+  "order": [
+    "hero",
+    "steps",
+    "evaluation_includes",
+    "possible_outcomes",
+    "closing_cta"
+  ]
+}
