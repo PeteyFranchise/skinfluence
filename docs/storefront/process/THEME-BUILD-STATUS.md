@@ -4,7 +4,12 @@ This note tracks what has already been implemented in the Shopify theme workspac
 
 ## Current theme scope
 
-The repo now contains an early Shopify storefront foundation under `theme/` with:
+The repo now contains:
+
+- a legacy custom storefront foundation under `theme/`
+- an active Portland storefront workspace under `theme-portland/`
+
+The legacy custom storefront under `theme/` contains:
 
 - a base `theme.liquid` layout
 - a global stylesheet scaffold
@@ -15,9 +20,9 @@ The repo now contains an early Shopify storefront foundation under `theme/` with
 
 Important current split:
 
-- the custom theme under `theme/` is the stable engineering and content reference
-- Portland is the active migration target for future storefront design work
-- until Portland catches up on the core experience, the custom theme remains the implemented source of truth for route logic, CTA architecture, and reusable content structure
+- the custom theme under `theme/` is now a legacy engineering and content reference
+- Portland under `theme-portland/` is the primary active storefront build target
+- future storefront work should default to `theme-portland/`
 
 ## Implemented
 
@@ -154,11 +159,11 @@ It is best described as:
 
 ## Recommended next steps
 
-1. rebuild Portland homepage
-2. rebuild Portland start-evaluation, pricing, FAQ, and support pages
-3. connect the final Bask intake URL
-4. replace placeholder legal text with approved final copy
-5. validate menus and final admin content setup
+1. continue building remaining core pages in `theme-portland/`
+2. connect the final Bask intake URL
+3. replace placeholder legal text with approved final copy
+4. validate menus and final admin content setup
+5. decide when the legacy `theme/` folder should be archived more explicitly
 
 ## Commit milestone summary
 

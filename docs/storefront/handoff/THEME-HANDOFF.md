@@ -9,16 +9,17 @@ Development storefront:
 - preview store domain: `skinfluence-3060.myshopify.com`
 - permanent admin/store auth domain: `ygvwh0-4i.myshopify.com`
 
-Current development theme:
+Legacy custom development theme:
 
 - name: `Development (68b794-Peters-MacBook-Pro)`
 - theme id: `155740799134`
 
-Portland migration target:
+Active Portland theme target:
 
-- Portland trial preview theme exists in the same Shopify store
-- Portland is the active visual migration target for future storefront design work
-- the current custom development theme remains the engineering and content reference until Portland catches up on the core pages
+- Portland exists in the same Shopify store as a purchased unpublished theme
+- local workspace path: `theme-portland/`
+- Portland is now the primary active storefront build target
+- the older custom theme remains a legacy engineering and content reference only
 
 ## Active GitHub repository
 
@@ -78,10 +79,10 @@ Fallback:
 
 Use this rule for future storefront work:
 
-- the current custom development theme remains the stable engineering reference
-- Portland is the active migration target for new major storefront design work
-- no major new visual work should go into the old custom theme unless it supports migration planning, preserves source material, or documents existing logic
-- Portland becomes the primary storefront target once homepage, start-evaluation, pricing, FAQ, and support are rebuilt there with the locked CTA architecture preserved
+- Portland is the primary active storefront build target
+- `theme-portland/` is where new storefront code work should happen
+- the old custom theme under `theme/` should be treated as a legacy reference/archive for prior logic, content structure, and implementation history
+- no new major storefront feature or visual work should go into the old custom theme unless there is a specific archival or comparison reason
 
 ## Product model reference
 

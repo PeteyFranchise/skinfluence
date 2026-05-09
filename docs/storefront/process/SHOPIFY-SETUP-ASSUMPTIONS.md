@@ -21,10 +21,9 @@ It is not assumed to be the clinical system of record.
 
 Current operating assumption:
 
-- the existing custom development theme remains the reference implementation for content structure, template mapping, and locked CTA logic
-- Portland is the active migration target for future storefront design work
-- until Portland catches up on the core pages, it should be treated as a rebuild track rather than the primary implemented storefront
-- once Portland has homepage, start-evaluation, pricing, FAQ, and support rebuilt with the locked CTA architecture preserved, it can become the primary storefront target
+- the existing custom development theme under `theme/` remains a legacy reference implementation for prior content structure, template mapping, and locked CTA logic
+- Portland under `theme-portland/` is now the active primary storefront build target
+- future storefront implementation work should default to Portland unless there is a specific reference or comparison reason to inspect the legacy theme
 
 ## Page-handle assumptions
 
