@@ -131,6 +131,7 @@ Important:
 See:
 
 - `docs/storefront/handoff/EVALUATION-HANDOFF.md`
+- `docs/storefront/handoff/TEMPORARY-EVALUATION-LAUNCH-STATE.md`
 
 ## Current image workflow
 

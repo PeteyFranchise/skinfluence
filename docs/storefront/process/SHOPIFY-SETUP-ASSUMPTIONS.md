@@ -71,6 +71,15 @@ Official rule:
 - public evaluation CTAs go to `/pages/start-evaluation`
 - only the final CTA on the evaluation handoff page should point to Bask
 
+Temporary pre-Bask rule:
+
+- until Bask is connected, `/pages/start-evaluation` remains a polished branded handoff page
+- it should not expose dead-end or placeholder-forward CTA language
+
+See:
+
+- `docs/storefront/handoff/TEMPORARY-EVALUATION-LAUNCH-STATE.md`
+
 ## Menu assumptions
 
 The theme currently assumes a Shopify navigation setup with:

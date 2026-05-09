@@ -50,12 +50,11 @@ Right now:
 - header CTA resolves to `/pages/start-evaluation`
 - sticky mobile CTA resolves to `/pages/start-evaluation`
 - homepage primary evaluation CTAs resolve to `/pages/start-evaluation`
-- the `Start Evaluation` page hero button is intentionally still a placeholder until the real intake destination exists
+- the `Start Evaluation` page is currently the branded temporary handoff layer until the real intake destination exists
 
-Current placeholder button state on `page.evaluation`:
+Temporary-state rule:
 
-- label: `Evaluation Link Pending`
-- URL: `#`
+- see `docs/storefront/handoff/TEMPORARY-EVALUATION-LAUNCH-STATE.md`
 
 ## When the Bask URL is ready
 
