@@ -205,6 +205,56 @@
         "heading_tag": "h2"
       }
     },
+    "multicolumn_who_its_for": {
+      "type": "multicolumn",
+      "blocks": {
+        "column_who_1": {
+          "type": "column",
+          "settings": {
+            "subheading": "More advanced support",
+            "text": "<p>For women who want a stronger anti-aging routine than standard over-the-counter skincare.</p>",
+            "button_label": "",
+            "button_link": ""
+          }
+        },
+        "column_who_2": {
+          "type": "column",
+          "settings": {
+            "subheading": "Guidance over trial and error",
+            "text": "<p>For women who prefer provider review and clearer direction over endless product experimentation.</p>",
+            "button_label": "",
+            "button_link": ""
+          }
+        },
+        "column_who_3": {
+          "type": "column",
+          "settings": {
+            "subheading": "Consistency that lasts",
+            "text": "<p>For women who value simplicity, maintenance, and visible progress over time.</p>",
+            "button_label": "",
+            "button_link": ""
+          }
+        }
+      },
+      "block_order": [
+        "column_who_1",
+        "column_who_2",
+        "column_who_3"
+      ],
+      "name": "Who it's for",
+      "settings": {
+        "multicolumn_to_show": 3,
+        "object_fit": "contain",
+        "swipe_on_mobile": true,
+        "button_style": "primary",
+        "border_top": false,
+        "border_bottom": false,
+        "padding_top": 120,
+        "padding_bottom": 120,
+        "margin_top": 0,
+        "margin_bottom": 0
+      }
+    },
     "multicolumn": {
       "type": "multicolumn",
       "blocks": {
@@ -631,6 +681,7 @@
     "rich_text_core_problem",
     "premium_split_explanation",
     "steps_how_it_works",
+    "multicolumn_who_its_for",
     "multicolumn",
     "298afee1-8616-4ea9-a596-6524a56b29c0",
     "9aea4a13-404f-4ffd-9d00-150415e26ab3",
