@@ -291,6 +291,58 @@
         "padding_bottom": 140
       }
     },
+    "faq_preview_homepage": {
+      "type": "collapsible-content",
+      "blocks": {
+        "faq_1": {
+          "type": "accordion",
+          "settings": {
+            "question": "How much does it cost to get started?",
+            "question_heading_tag": "h3",
+            "answer": "<p>Users begin with a one-time evaluation before any treatment decision is made. Ongoing monthly treatment only begins if approved.</p>"
+          }
+        },
+        "faq_2": {
+          "type": "accordion",
+          "settings": {
+            "question": "What happens if I’m not eligible?",
+            "question_heading_tag": "h3",
+            "answer": "<p>Not every user will be a fit for treatment. If a provider determines treatment is not appropriate, Skinfluence will communicate that clearly.</p>"
+          }
+        },
+        "faq_3": {
+          "type": "accordion",
+          "settings": {
+            "question": "How long until I may see visible improvement?",
+            "question_heading_tag": "h3",
+            "answer": "<p>Anti-aging care is designed for consistency over time. Skinfluence sets expectations around gradual, visible improvement rather than instant transformation.</p>"
+          }
+        },
+        "faq_4": {
+          "type": "accordion",
+          "settings": {
+            "question": "Is Skinfluence a subscription?",
+            "question_heading_tag": "h3",
+            "answer": "<p>If approved, treatment is designed as a recurring monthly model focused on continuity, maintenance, and ease.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "faq_1",
+        "faq_2",
+        "faq_3",
+        "faq_4"
+      ],
+      "name": "FAQ preview",
+      "settings": {
+        "heading": "Questions, answered clearly.",
+        "heading_size": "h2",
+        "heading_tag": "h2",
+        "text": "Everything you need to know, organized by topic.",
+        "padding_top": 140,
+        "padding_bottom": 140
+      }
+    },
     "multicolumn": {
       "type": "multicolumn",
       "blocks": {
@@ -719,6 +771,7 @@
     "steps_how_it_works",
     "multicolumn_who_its_for",
     "rich_text_why_different",
+    "faq_preview_homepage",
     "multicolumn",
     "298afee1-8616-4ea9-a596-6524a56b29c0",
     "9aea4a13-404f-4ffd-9d00-150415e26ab3",
