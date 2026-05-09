@@ -1,0 +1,174 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "hero": {
+      "type": "image-banner",
+      "name": "FAQ hero",
+      "settings": {
+        "full_width": true,
+        "header_overlay": false,
+        "mobile_content_overlay": false,
+        "subheading": "Clear answers",
+        "heading": "<p>Questions, answered clearly.</p>",
+        "heading_size": "large",
+        "text_information": "Everything you need to know, organized by topic.",
+        "text_align": "left",
+        "text_order": "column",
+        "show_view_all": true,
+        "button_label": "Start Evaluation",
+        "button_link": "/pages/start-evaluation",
+        "button_style": "primary",
+        "opacity_overlay": 0.18,
+        "image_ratio": "adapt",
+        "padding_top": 40,
+        "padding_bottom": 80
+      }
+    },
+    "faq_content": {
+      "type": "collapsible-content",
+      "blocks": {
+        "faq_1": {
+          "type": "accordion",
+          "settings": {
+            "question": "Who is Skinfluence for?",
+            "question_heading_tag": "h3",
+            "answer": "<p>Skinfluence is designed for women who want a more advanced anti-aging routine than standard over-the-counter skincare, especially those focused on texture, tone, fine lines, and overall skin quality.</p>"
+          }
+        },
+        "faq_2": {
+          "type": "accordion",
+          "settings": {
+            "question": "Will everyone be approved?",
+            "question_heading_tag": "h3",
+            "answer": "<p>No. Treatment is not appropriate for everyone. Approval depends on provider review of the information submitted during evaluation.</p>"
+          }
+        },
+        "faq_3": {
+          "type": "accordion",
+          "settings": {
+            "question": "What happens during the evaluation?",
+            "question_heading_tag": "h3",
+            "answer": "<p>You answer questions about your skin, goals, and history so a licensed provider can assess whether treatment may be appropriate.</p>"
+          }
+        },
+        "faq_4": {
+          "type": "accordion",
+          "settings": {
+            "question": "How long until I may see visible improvement?",
+            "question_heading_tag": "h3",
+            "answer": "<p>Anti-aging care takes time and consistency. Skinfluence is designed around realistic expectations, not instant transformation.</p>"
+          }
+        },
+        "faq_5": {
+          "type": "accordion",
+          "settings": {
+            "question": "What side effects can happen?",
+            "question_heading_tag": "h3",
+            "answer": "<p>Some users may experience dryness, peeling, irritation, or sensitivity as they adjust. Treatment-related concerns should follow the appropriate care path.</p>"
+          }
+        },
+        "faq_6": {
+          "type": "accordion",
+          "settings": {
+            "question": "Is Skinfluence a subscription?",
+            "question_heading_tag": "h3",
+            "answer": "<p>If approved, treatment is designed as a recurring monthly maintenance model.</p>"
+          }
+        },
+        "faq_7": {
+          "type": "accordion",
+          "settings": {
+            "question": "What if I’m not approved?",
+            "question_heading_tag": "h3",
+            "answer": "<p>If treatment is not appropriate, Skinfluence will communicate that clearly and provide next-step guidance where applicable.</p>"
+          }
+        },
+        "faq_8": {
+          "type": "accordion",
+          "settings": {
+            "question": "How do I get support if I have questions?",
+            "question_heading_tag": "h3",
+            "answer": "<p>Use support for billing, shipping, account, and general questions. Treatment-related concerns should follow the appropriate care-support path.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "faq_1",
+        "faq_2",
+        "faq_3",
+        "faq_4",
+        "faq_5",
+        "faq_6",
+        "faq_7",
+        "faq_8"
+      ],
+      "name": "FAQ content",
+      "settings": {
+        "heading": "Questions by topic",
+        "heading_size": "h2",
+        "heading_tag": "h2",
+        "text": "Fit, provider review, treatment expectations, pricing, subscription details, and support.",
+        "padding_top": 80,
+        "padding_bottom": 140
+      }
+    },
+    "closing_cta": {
+      "type": "rich-text",
+      "blocks": {
+        "subheading": {
+          "type": "subheading",
+          "settings": {
+            "subheading": "Still deciding?"
+          }
+        },
+        "heading": {
+          "type": "heading",
+          "settings": {
+            "heading": "<p>Review pricing and support before moving forward.</p>",
+            "heading_size": "large"
+          }
+        },
+        "text": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Use pricing, support, and the evaluation handoff page to understand what happens next.</p>"
+          }
+        },
+        "button": {
+          "type": "button",
+          "settings": {
+            "button_label": "Start Evaluation",
+            "button_link": "/pages/start-evaluation",
+            "button_style": "primary"
+          }
+        }
+      },
+      "block_order": [
+        "subheading",
+        "heading",
+        "text",
+        "button"
+      ],
+      "name": "Closing CTA",
+      "settings": {
+        "color_scheme": "background-1",
+        "full_width": true,
+        "padding_top": 140,
+        "padding_bottom": 140
+      }
+    }
+  },
+  "order": [
+    "hero",
+    "faq_content",
+    "closing_cta"
+  ]
+}
