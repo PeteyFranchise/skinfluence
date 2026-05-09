@@ -255,6 +255,42 @@
         "margin_bottom": 0
       }
     },
+    "rich_text_why_different": {
+      "type": "rich-text",
+      "blocks": {
+        "subheading_why_different": {
+          "type": "subheading",
+          "settings": {
+            "subheading": "Why Skinfluence feels different"
+          }
+        },
+        "heading_why_different": {
+          "type": "heading",
+          "settings": {
+            "heading": "<p>More guided than skincare. Easier than traditional dermatology.</p>",
+            "heading_size": "large"
+          }
+        },
+        "text_why_different": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Skinfluence is not built like a crowded product line or a generic prescription checkout. It is designed as a premium, provider-reviewed care experience for women who want stronger anti-aging support in a format they can actually stay consistent with.</p><p>This is not about adding more products. It is about moving into a more effective anti-aging routine with greater clarity, support, and consistency.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "subheading_why_different",
+        "heading_why_different",
+        "text_why_different"
+      ],
+      "name": "Why it's different",
+      "settings": {
+        "color_scheme": "background-3",
+        "full_width": true,
+        "padding_top": 140,
+        "padding_bottom": 140
+      }
+    },
     "multicolumn": {
       "type": "multicolumn",
       "blocks": {
@@ -682,6 +718,7 @@
     "premium_split_explanation",
     "steps_how_it_works",
     "multicolumn_who_its_for",
+    "rich_text_why_different",
     "multicolumn",
     "298afee1-8616-4ea9-a596-6524a56b29c0",
     "9aea4a13-404f-4ffd-9d00-150415e26ab3",
