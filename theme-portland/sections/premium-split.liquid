@@ -1,0 +1,270 @@
+{% style %}
+  .section-{{ section.id }}-padding {
+    padding-top: {{ section.settings.padding_top | times: 0.25 | round: 0 }}px;
+    padding-bottom: {{ section.settings.padding_bottom | times: 0.25 | round: 0 }}px;
+  }
+
+  @media screen and (min-width: 990px) {
+    .section-{{ section.id }}-padding {
+      padding-top: {{ section.settings.padding_top | times: 0.6 | round: 0 }}px;
+      padding-bottom: {{ section.settings.padding_bottom | times: 0.6 | round: 0 }}px;
+    }
+  }
+
+  @media screen and (min-width: 1360px) {
+    .section-{{ section.id }}-padding {
+      padding-top: {{ section.settings.padding_top }}px;
+      padding-bottom: {{ section.settings.padding_bottom }}px;
+    }
+  }
+
+  .premium-split-{{ section.id }} {
+    background: {{ section.settings.background }};
+    color: {{ section.settings.text_color }};
+  }
+
+  .premium-split-{{ section.id }} .premium-split__grid {
+    display: grid;
+    gap: 2.4rem;
+    align-items: center;
+  }
+
+  @media screen and (min-width: 990px) {
+    .premium-split-{{ section.id }} .premium-split__grid {
+      grid-template-columns: minmax(0, 1.1fr) minmax(0, 0.9fr);
+      gap: 4rem;
+    }
+  }
+
+  .premium-split-{{ section.id }} .premium-split__media {
+    position: relative;
+    overflow: hidden;
+    border-radius: 1.2rem;
+    background: rgba(32, 51, 44, 0.08);
+    min-height: 340px;
+  }
+
+  .premium-split-{{ section.id }} .premium-split__media img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .premium-split-{{ section.id }} .premium-split__placeholder {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+    text-align: center;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    font-size: 0.78rem;
+    color: rgba(32, 51, 44, 0.65);
+  }
+
+  .premium-split-{{ section.id }} .premium-split__eyebrow {
+    margin: 0 0 1rem;
+    font-size: 0.78rem;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    opacity: 0.72;
+  }
+
+  .premium-split-{{ section.id }} .premium-split__heading {
+    margin: 0;
+    max-width: 16ch;
+  }
+
+  .premium-split-{{ section.id }} .premium-split__body {
+    margin-top: 1.4rem;
+    max-width: 58ch;
+  }
+
+  .premium-split-{{ section.id }} .premium-split__body p {
+    margin: 0;
+  }
+
+  .premium-split-{{ section.id }} .premium-split__cta {
+    margin-top: 1.75rem;
+  }
+{% endstyle %}
+
+<section class="premium-split premium-split-{{ section.id }} section-{{ section.id }}-padding">
+  <div class="container">
+    <div class="premium-split__grid">
+      <div class="premium-split__media">
+        {% if section.settings.image != blank %}
+          {{
+            section.settings.image
+            | image_url: width: 1600
+            | image_tag:
+              loading: 'lazy',
+              widths: '480, 720, 960, 1280, 1600',
+              alt: section.settings.image_alt | escape
+          }}
+        {% else %}
+          <div class="premium-split__placeholder">
+            {{ section.settings.placeholder_label | escape }}
+          </div>
+        {% endif %}
+      </div>
+
+      <div class="premium-split__content">
+        {% if section.settings.eyebrow != blank %}
+          <p class="premium-split__eyebrow">{{ section.settings.eyebrow | escape }}</p>
+        {% endif %}
+
+        {% if section.settings.heading != blank %}
+          <h2 class="premium-split__heading title--section h2">{{ section.settings.heading }}</h2>
+        {% endif %}
+
+        {% if section.settings.body != blank %}
+          <div class="premium-split__body rte{% if settings.rte_type == 'custom' %} rte__container{% endif %}">
+            {{ section.settings.body }}
+          </div>
+        {% endif %}
+
+        {% if section.settings.button_label != blank %}
+          <div class="premium-split__cta">
+            <a
+              {% if section.settings.button_link != blank %}
+                href="{{ section.settings.button_link }}"
+              {% else %}
+                aria-disabled="true"
+              {% endif %}
+              class="button button--primary-size button--{{ section.settings.button_style }}"
+            >
+              <span>
+                <span>{{ section.settings.button_label | escape }}</span>
+                <span>{{ section.settings.button_label | escape }}</span>
+              </span>
+            </a>
+          </div>
+        {% endif %}
+      </div>
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Premium split",
+  "tag": "section",
+  "class": "spaced-section",
+  "enabled_on": {
+    "templates": ["index", "page"]
+  },
+  "settings": [
+    {
+      "type": "text",
+      "id": "eyebrow",
+      "label": "Eyebrow",
+      "default": "Premium anti-aging care"
+    },
+    {
+      "type": "richtext",
+      "id": "heading",
+      "label": "Heading",
+      "default": "<p>Premium anti-aging care, built around provider review.</p>"
+    },
+    {
+      "type": "richtext",
+      "id": "body",
+      "label": "Body",
+      "default": "<p>Skinfluence is a prescription-led monthly treatment designed for women seeking visible improvement in skin quality. If approved, you receive a provider-reviewed anti-aging formula in a streamlined maintenance model designed to support smoother-looking texture, more even-looking tone, and softer-looking fine lines over time.</p>"
+    },
+    {
+      "type": "text",
+      "id": "button_label",
+      "label": "Button label",
+      "default": "Start Evaluation"
+    },
+    {
+      "type": "url",
+      "id": "button_link",
+      "label": "Button link"
+    },
+    {
+      "type": "select",
+      "id": "button_style",
+      "label": "Button style",
+      "options": [
+        {
+          "value": "primary",
+          "label": "Primary"
+        },
+        {
+          "value": "secondary",
+          "label": "Secondary"
+        },
+        {
+          "value": "tertiary",
+          "label": "Tertiary"
+        }
+      ],
+      "default": "primary"
+    },
+    {
+      "type": "image_picker",
+      "id": "image",
+      "label": "Image"
+    },
+    {
+      "type": "text",
+      "id": "image_alt",
+      "label": "Image alt text",
+      "default": "Editorial skincare still life in warm neutral light"
+    },
+    {
+      "type": "text",
+      "id": "placeholder_label",
+      "label": "Placeholder label",
+      "default": "Editorial skincare still life"
+    },
+    {
+      "type": "color",
+      "id": "background",
+      "label": "Background",
+      "default": "#F8F4EF"
+    },
+    {
+      "type": "color",
+      "id": "text_color",
+      "label": "Text color",
+      "default": "#20332C"
+    },
+    {
+      "type": "header",
+      "content": "Section padding"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 200,
+      "step": 10,
+      "default": 140,
+      "unit": "px",
+      "label": "Padding top"
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 200,
+      "step": 10,
+      "default": 140,
+      "unit": "px",
+      "label": "Padding bottom"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Premium split"
+    }
+  ]
+}
+{% endschema %}
