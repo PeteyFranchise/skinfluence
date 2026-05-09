@@ -1,0 +1,253 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "hero": {
+      "type": "image-banner",
+      "name": "Treatment hero",
+      "settings": {
+        "full_width": true,
+        "header_overlay": false,
+        "mobile_content_overlay": false,
+        "subheading": "Treatment",
+        "heading": "<p>A more advanced anti-aging routine, built around provider review.</p>",
+        "heading_size": "large",
+        "text_information": "Skinfluence is designed for women ready to move beyond over-the-counter skincare and into a more guided, more consistent treatment model.",
+        "text_align": "left",
+        "text_order": "column",
+        "show_view_all": true,
+        "button_label": "Start Evaluation",
+        "button_link": "/pages/start-evaluation",
+        "button_style": "primary",
+        "opacity_overlay": 0.18,
+        "image_ratio": "adapt",
+        "padding_top": 40,
+        "padding_bottom": 80
+      }
+    },
+    "what_it_helps": {
+      "type": "multicolumn",
+      "blocks": {
+        "item_1": {
+          "type": "column",
+          "settings": {
+            "subheading": "Fine lines",
+            "text": "<p>Support for softer-looking fine lines over time through a more advanced routine.</p>",
+            "button_label": "",
+            "button_link": ""
+          }
+        },
+        "item_2": {
+          "type": "column",
+          "settings": {
+            "subheading": "Uneven-looking tone",
+            "text": "<p>Designed to support a more even-looking complexion and smoother overall appearance.</p>",
+            "button_label": "",
+            "button_link": ""
+          }
+        },
+        "item_3": {
+          "type": "column",
+          "settings": {
+            "subheading": "Texture and dullness",
+            "text": "<p>Built for women who want improvement in texture, refinement, and visible skin quality.</p>",
+            "button_label": "",
+            "button_link": ""
+          }
+        }
+      },
+      "block_order": [
+        "item_1",
+        "item_2",
+        "item_3"
+      ],
+      "name": "What it helps improve",
+      "settings": {
+        "multicolumn_to_show": 3,
+        "object_fit": "contain",
+        "swipe_on_mobile": true,
+        "button_style": "primary",
+        "border_top": false,
+        "border_bottom": false,
+        "padding_top": 80,
+        "padding_bottom": 120,
+        "margin_top": 0,
+        "margin_bottom": 0
+      }
+    },
+    "why_it_feels_different": {
+      "type": "rich-text",
+      "blocks": {
+        "subheading": {
+          "type": "subheading",
+          "settings": {
+            "subheading": "Why this feels different"
+          }
+        },
+        "heading": {
+          "type": "heading",
+          "settings": {
+            "heading": "<p>More focused than ordinary skincare. Simpler than product stacking.</p>",
+            "heading_size": "large"
+          }
+        },
+        "text": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Most anti-aging skincare asks you to keep adding more products and hoping for better results. Skinfluence begins with evaluation, includes provider review, and turns anti-aging care into a more focused monthly routine built for consistency.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "subheading",
+        "heading",
+        "text"
+      ],
+      "name": "Why it feels different",
+      "settings": {
+        "color_scheme": "background-3",
+        "full_width": true,
+        "padding_top": 140,
+        "padding_bottom": 140
+      }
+    },
+    "who_its_for": {
+      "type": "multicolumn",
+      "blocks": {
+        "column_1": {
+          "type": "column",
+          "settings": {
+            "subheading": "Stronger anti-aging support",
+            "text": "<p>For women who want more than standard skincare can realistically deliver.</p>",
+            "button_label": "",
+            "button_link": ""
+          }
+        },
+        "column_2": {
+          "type": "column",
+          "settings": {
+            "subheading": "Less trial and error",
+            "text": "<p>For women who prefer a guided path over endless product experimentation.</p>",
+            "button_label": "",
+            "button_link": ""
+          }
+        },
+        "column_3": {
+          "type": "column",
+          "settings": {
+            "subheading": "Consistency over hype",
+            "text": "<p>For women who value a routine they can actually stay with over time.</p>",
+            "button_label": "",
+            "button_link": ""
+          }
+        }
+      },
+      "block_order": [
+        "column_1",
+        "column_2",
+        "column_3"
+      ],
+      "name": "Who it's for",
+      "settings": {
+        "multicolumn_to_show": 3,
+        "object_fit": "contain",
+        "swipe_on_mobile": true,
+        "button_style": "primary",
+        "border_top": false,
+        "border_bottom": false,
+        "padding_top": 60,
+        "padding_bottom": 120,
+        "margin_top": 0,
+        "margin_bottom": 0
+      }
+    },
+    "safety": {
+      "type": "rich-text",
+      "blocks": {
+        "subheading": {
+          "type": "subheading",
+          "settings": {
+            "subheading": "Safety and side effects"
+          }
+        },
+        "text": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Prescription-led skincare should come with clear expectations. Common adjustment effects may include dryness, sensitivity, peeling, or irritation. Treatment is not appropriate for everyone, and eligibility is determined through the evaluation process.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "subheading",
+        "text"
+      ],
+      "name": "Safety",
+      "settings": {
+        "color_scheme": "background-1",
+        "full_width": true,
+        "padding_top": 120,
+        "padding_bottom": 120
+      }
+    },
+    "closing_cta": {
+      "type": "rich-text",
+      "blocks": {
+        "subheading": {
+          "type": "subheading",
+          "settings": {
+            "subheading": "Ready to begin?"
+          }
+        },
+        "heading": {
+          "type": "heading",
+          "settings": {
+            "heading": "<p>Start with evaluation before treatment begins.</p>",
+            "heading_size": "large"
+          }
+        },
+        "text": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Move into monthly care only if approved through provider review.</p>"
+          }
+        },
+        "button": {
+          "type": "button",
+          "settings": {
+            "button_label": "Start Evaluation",
+            "button_link": "/pages/start-evaluation",
+            "button_style": "primary"
+          }
+        }
+      },
+      "block_order": [
+        "subheading",
+        "heading",
+        "text",
+        "button"
+      ],
+      "name": "Closing CTA",
+      "settings": {
+        "color_scheme": "background-3",
+        "full_width": true,
+        "padding_top": 140,
+        "padding_bottom": 140
+      }
+    }
+  },
+  "order": [
+    "hero",
+    "what_it_helps",
+    "why_it_feels_different",
+    "who_its_for",
+    "safety",
+    "closing_cta"
+  ]
+}
