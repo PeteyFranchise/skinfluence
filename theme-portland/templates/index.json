@@ -98,6 +98,12 @@
           "settings": {
             "text": "Ongoing maintenance support"
           }
+        },
+        "item_6": {
+          "type": "item",
+          "settings": {
+            "text": "Clear pricing"
+          }
         }
       },
       "block_order": [
@@ -105,7 +111,8 @@
         "item_2",
         "item_3",
         "item_4",
-        "item_5"
+        "item_5",
+        "item_6"
       ],
       "name": "Trust marquee",
       "settings": {

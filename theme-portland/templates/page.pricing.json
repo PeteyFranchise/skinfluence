@@ -1,0 +1,290 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "hero": {
+      "type": "image-banner",
+      "name": "Pricing hero",
+      "settings": {
+        "full_width": true,
+        "header_overlay": false,
+        "mobile_content_overlay": false,
+        "subheading": "Pricing with clarity",
+        "heading": "<p>Premium anti-aging care, priced with clarity.</p>",
+        "heading_size": "large",
+        "text_information": "Start with a one-time evaluation, then move into monthly treatment if approved.",
+        "text_align": "left",
+        "text_order": "column",
+        "show_view_all": true,
+        "button_label": "Start Evaluation",
+        "button_link": "/pages/start-evaluation",
+        "button_style": "primary",
+        "opacity_overlay": 0.18,
+        "image_ratio": "adapt",
+        "padding_top": 40,
+        "padding_bottom": 80
+      }
+    },
+    "pricing_breakdown": {
+      "type": "multicolumn",
+      "blocks": {
+        "column_1": {
+          "type": "column",
+          "settings": {
+            "subheading": "One-time evaluation",
+            "text": "<p>Provider-reviewed intake before treatment begins.</p>",
+            "button_label": "",
+            "button_link": ""
+          }
+        },
+        "column_2": {
+          "type": "column",
+          "settings": {
+            "subheading": "Monthly treatment if approved",
+            "text": "<p>Ongoing monthly care designed for consistency, maintenance, and ease.</p>",
+            "button_label": "",
+            "button_link": ""
+          }
+        }
+      },
+      "block_order": [
+        "column_1",
+        "column_2"
+      ],
+      "name": "Pricing breakdown",
+      "settings": {
+        "multicolumn_to_show": 2,
+        "object_fit": "contain",
+        "swipe_on_mobile": true,
+        "button_style": "primary",
+        "border_top": false,
+        "border_bottom": false,
+        "padding_top": 80,
+        "padding_bottom": 120,
+        "margin_top": 0,
+        "margin_bottom": 0
+      }
+    },
+    "whats_included": {
+      "type": "multicolumn",
+      "blocks": {
+        "item_1": {
+          "type": "column",
+          "settings": {
+            "subheading": "Initial evaluation",
+            "text": "<p>Begin with provider-reviewed intake before treatment decisions are made.</p>",
+            "button_label": "",
+            "button_link": ""
+          }
+        },
+        "item_2": {
+          "type": "column",
+          "settings": {
+            "subheading": "Provider review",
+            "text": "<p>Eligibility depends on review, not automatic checkout.</p>",
+            "button_label": "",
+            "button_link": ""
+          }
+        },
+        "item_3": {
+          "type": "column",
+          "settings": {
+            "subheading": "Monthly treatment if approved",
+            "text": "<p>Approved users move into ongoing monthly care.</p>",
+            "button_label": "",
+            "button_link": ""
+          }
+        },
+        "item_4": {
+          "type": "column",
+          "settings": {
+            "subheading": "Ongoing maintenance support",
+            "text": "<p>Designed for continuity and long-term routine consistency.</p>",
+            "button_label": "",
+            "button_link": ""
+          }
+        }
+      },
+      "block_order": [
+        "item_1",
+        "item_2",
+        "item_3",
+        "item_4"
+      ],
+      "name": "What's included",
+      "settings": {
+        "multicolumn_to_show": 3,
+        "object_fit": "contain",
+        "swipe_on_mobile": true,
+        "button_style": "primary",
+        "border_top": false,
+        "border_bottom": false,
+        "padding_top": 40,
+        "padding_bottom": 120,
+        "margin_top": 0,
+        "margin_bottom": 0
+      }
+    },
+    "why_priced_this_way": {
+      "type": "rich-text",
+      "blocks": {
+        "subheading": {
+          "type": "subheading",
+          "settings": {
+            "subheading": "Why it is priced this way"
+          }
+        },
+        "heading": {
+          "type": "heading",
+          "settings": {
+            "heading": "<p>Why this is priced differently than generic tretinoin.</p>",
+            "heading_size": "large"
+          }
+        },
+        "text": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Skinfluence is not positioned as the cheapest online prescription option. It is positioned as premium anti-aging care with provider review, a more elevated treatment experience, and a routine designed for consistency rather than commodity shopping.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "subheading",
+        "heading",
+        "text"
+      ],
+      "name": "Why priced this way",
+      "settings": {
+        "color_scheme": "background-3",
+        "full_width": true,
+        "padding_top": 140,
+        "padding_bottom": 140
+      }
+    },
+    "not_eligible": {
+      "type": "rich-text",
+      "blocks": {
+        "subheading": {
+          "type": "subheading",
+          "settings": {
+            "subheading": "Not eligible?"
+          }
+        },
+        "heading": {
+          "type": "heading",
+          "settings": {
+            "heading": "<p>What if I’m not eligible?</p>",
+            "heading_size": "large"
+          }
+        },
+        "text": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Not every user will be a fit for treatment. If a provider determines treatment is not appropriate, Skinfluence will communicate that clearly and explain any next steps that may be available.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "subheading",
+        "heading",
+        "text"
+      ],
+      "name": "Not eligible",
+      "settings": {
+        "color_scheme": "background-1",
+        "full_width": true,
+        "padding_top": 120,
+        "padding_bottom": 120
+      }
+    },
+    "subscription_details": {
+      "type": "rich-text",
+      "blocks": {
+        "subheading": {
+          "type": "subheading",
+          "settings": {
+            "subheading": "Subscription details"
+          }
+        },
+        "text": {
+          "type": "text",
+          "settings": {
+            "text": "<p>If approved, treatment is designed as a monthly maintenance model. Billing timing, shipment cadence, and account management details should always be presented clearly.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "subheading",
+        "text"
+      ],
+      "name": "Subscription details",
+      "settings": {
+        "color_scheme": "background-3",
+        "full_width": true,
+        "padding_top": 100,
+        "padding_bottom": 100
+      }
+    },
+    "closing_cta": {
+      "type": "rich-text",
+      "blocks": {
+        "subheading": {
+          "type": "subheading",
+          "settings": {
+            "subheading": "Ready to begin?"
+          }
+        },
+        "heading": {
+          "type": "heading",
+          "settings": {
+            "heading": "<p>Start with evaluation, then move into care if approved.</p>",
+            "heading_size": "large"
+          }
+        },
+        "text": {
+          "type": "text",
+          "settings": {
+            "text": "<p>A more advanced anti-aging routine begins with provider review.</p>"
+          }
+        },
+        "button": {
+          "type": "button",
+          "settings": {
+            "button_label": "Start Evaluation",
+            "button_link": "/pages/start-evaluation",
+            "button_style": "primary"
+          }
+        }
+      },
+      "block_order": [
+        "subheading",
+        "heading",
+        "text",
+        "button"
+      ],
+      "name": "Closing CTA",
+      "settings": {
+        "color_scheme": "background-1",
+        "full_width": true,
+        "padding_top": 140,
+        "padding_bottom": 140
+      }
+    }
+  },
+  "order": [
+    "hero",
+    "pricing_breakdown",
+    "whats_included",
+    "why_priced_this_way",
+    "not_eligible",
+    "subscription_details",
+    "closing_cta"
+  ]
+}
