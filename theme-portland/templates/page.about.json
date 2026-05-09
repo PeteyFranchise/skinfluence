@@ -32,39 +32,70 @@
         "padding_bottom": 80
       }
     },
-    "origin_story": {
-      "type": "rich-text",
+    "brand_rail": {
+      "type": "multicolumn",
       "blocks": {
-        "subheading": {
-          "type": "subheading",
+        "column_1": {
+          "type": "column",
           "settings": {
-            "subheading": "Why Skinfluence exists"
+            "subheading": "Provider-reviewed",
+            "text": "<p>Built around a more clinically grounded anti-aging experience rather than trend-driven product stacking.</p>",
+            "button_label": "",
+            "button_link": ""
           }
         },
-        "heading": {
-          "type": "heading",
+        "column_2": {
+          "type": "column",
           "settings": {
-            "heading": "<p>For the moment when ordinary skincare stops feeling like progress.</p>",
-            "heading_size": "large"
+            "subheading": "Premium by design",
+            "text": "<p>Created for women who want a more elevated experience than ordinary skincare shopping.</p>",
+            "button_label": "",
+            "button_link": ""
           }
         },
-        "text": {
-          "type": "text",
+        "column_3": {
+          "type": "column",
           "settings": {
-            "text": "<p>Many women spend heavily on skincare and still feel like their routine has plateaued. Skinfluence is designed for that moment when the next step should feel more advanced, more considered, and less fragmented.</p>"
+            "subheading": "Built for consistency",
+            "text": "<p>Designed to feel easier to trust, easier to maintain, and more aligned with long-term skin-quality goals.</p>",
+            "button_label": "",
+            "button_link": ""
           }
         }
       },
       "block_order": [
-        "subheading",
-        "heading",
-        "text"
+        "column_1",
+        "column_2",
+        "column_3"
       ],
+      "name": "Brand rail",
+      "settings": {
+        "multicolumn_to_show": 3,
+        "object_fit": "contain",
+        "swipe_on_mobile": true,
+        "button_style": "primary",
+        "border_top": true,
+        "border_bottom": true,
+        "padding_top": 50,
+        "padding_bottom": 70,
+        "margin_top": 0,
+        "margin_bottom": 0
+      }
+    },
+    "origin_story": {
+      "type": "premium-split",
       "name": "Origin story",
       "settings": {
-        "color_scheme": "background-1",
-        "full_width": true,
-        "padding_top": 120,
+        "eyebrow": "Why Skinfluence exists",
+        "heading": "<p>For the moment when ordinary skincare stops feeling like progress.</p>",
+        "body": "<p>Many women spend heavily on skincare and still feel like their routine has plateaued. Skinfluence is designed for that moment when the next step should feel more advanced, more considered, and less fragmented.</p><p>The brand exists to offer a more focused anti-aging path for women who want a stronger routine without turning skincare into a cycle of endless trial and error.</p>",
+        "button_label": "Start Evaluation",
+        "button_link": "/pages/start-evaluation",
+        "button_style": "primary",
+        "placeholder_label": "Brand story visual",
+        "background": "#f3efe7",
+        "text_color": "#24352f",
+        "padding_top": 80,
         "padding_bottom": 120
       }
     },
@@ -154,6 +185,58 @@
         "padding_bottom": 140
       }
     },
+    "about_questions": {
+      "type": "collapsible-content",
+      "blocks": {
+        "accordion_1": {
+          "type": "accordion",
+          "settings": {
+            "question": "Who is Skinfluence for?",
+            "question_heading_tag": "h3",
+            "answer": "<p>Skinfluence is for women who feel ready for a more serious anti-aging approach than ordinary skincare can realistically provide.</p>"
+          }
+        },
+        "accordion_2": {
+          "type": "accordion",
+          "settings": {
+            "question": "What makes it feel different?",
+            "question_heading_tag": "h3",
+            "answer": "<p>The model begins with evaluation, includes provider review, and is built for consistency rather than endless product experimentation.</p>"
+          }
+        },
+        "accordion_3": {
+          "type": "accordion",
+          "settings": {
+            "question": "Is this just another skincare brand?",
+            "question_heading_tag": "h3",
+            "answer": "<p>No. Skinfluence is positioned as a more guided anti-aging care experience, not a broad catalog of trend-driven products.</p>"
+          }
+        },
+        "accordion_4": {
+          "type": "accordion",
+          "settings": {
+            "question": "How do users actually begin?",
+            "question_heading_tag": "h3",
+            "answer": "<p>Users start with evaluation first, then move into monthly care only if treatment is approved.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "accordion_1",
+        "accordion_2",
+        "accordion_3",
+        "accordion_4"
+      ],
+      "name": "About questions",
+      "settings": {
+        "heading": "About Skinfluence, answered clearly",
+        "heading_size": "h2",
+        "heading_tag": "h2",
+        "text": "A more structured explanation of what the brand stands for and why the model exists.",
+        "padding_top": 120,
+        "padding_bottom": 140
+      }
+    },
     "closing_cta": {
       "type": "rich-text",
       "blocks": {
@@ -193,7 +276,7 @@
       ],
       "name": "Closing CTA",
       "settings": {
-        "color_scheme": "background-1",
+        "color_scheme": "background-3",
         "full_width": true,
         "padding_top": 140,
         "padding_bottom": 140
@@ -202,9 +285,11 @@
   },
   "order": [
     "hero",
+    "brand_rail",
     "origin_story",
     "brand_principles",
     "positioning",
+    "about_questions",
     "closing_cta"
   ]
 }
