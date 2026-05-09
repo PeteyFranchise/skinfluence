@@ -32,6 +32,73 @@
         "padding_bottom": 80
       }
     },
+    "faq_rail": {
+      "type": "multicolumn",
+      "blocks": {
+        "column_1": {
+          "type": "column",
+          "settings": {
+            "subheading": "Fit and eligibility",
+            "text": "<p>Understand who Skinfluence is for and why not everyone will be approved.</p>",
+            "button_label": "",
+            "button_link": ""
+          }
+        },
+        "column_2": {
+          "type": "column",
+          "settings": {
+            "subheading": "Evaluation and review",
+            "text": "<p>Get clear about what happens during evaluation and how provider review works.</p>",
+            "button_label": "",
+            "button_link": ""
+          }
+        },
+        "column_3": {
+          "type": "column",
+          "settings": {
+            "subheading": "Pricing and support",
+            "text": "<p>See how the monthly model works and where questions should go if you need help.</p>",
+            "button_label": "",
+            "button_link": ""
+          }
+        }
+      },
+      "block_order": [
+        "column_1",
+        "column_2",
+        "column_3"
+      ],
+      "name": "FAQ rail",
+      "settings": {
+        "multicolumn_to_show": 3,
+        "object_fit": "contain",
+        "swipe_on_mobile": true,
+        "button_style": "primary",
+        "border_top": true,
+        "border_bottom": true,
+        "padding_top": 50,
+        "padding_bottom": 70,
+        "margin_top": 0,
+        "margin_bottom": 0
+      }
+    },
+    "faq_intro": {
+      "type": "premium-split",
+      "name": "FAQ intro",
+      "settings": {
+        "eyebrow": "What to know",
+        "heading": "<p>Answers should feel clear before treatment begins.</p>",
+        "body": "<p>The FAQ is here to reduce uncertainty before evaluation, provider review, and monthly care. It should help users understand fit, pricing, expectations, and support without needing to dig through scattered pages.</p><p>The goal is not just to answer questions. It is to make the whole Skinfluence process feel more understandable.</p>",
+        "button_label": "View Pricing",
+        "button_link": "/pages/pricing",
+        "button_style": "secondary",
+        "placeholder_label": "FAQ overview visual",
+        "background": "#f3efe7",
+        "text_color": "#24352f",
+        "padding_top": 80,
+        "padding_bottom": 120
+      }
+    },
     "faq_content": {
       "type": "collapsible-content",
       "blocks": {
@@ -159,7 +226,7 @@
       ],
       "name": "Closing CTA",
       "settings": {
-        "color_scheme": "background-1",
+        "color_scheme": "background-3",
         "full_width": true,
         "padding_top": 140,
         "padding_bottom": 140
@@ -168,6 +235,8 @@
   },
   "order": [
     "hero",
+    "faq_rail",
+    "faq_intro",
     "faq_content",
     "closing_cta"
   ]
