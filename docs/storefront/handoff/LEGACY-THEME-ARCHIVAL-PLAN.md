@@ -66,6 +66,75 @@ Renaming `theme/` to something like `theme-legacy/` only becomes worth doing aft
 4. Any legacy assets or sections still worth reusing have been intentionally inventoried.
 5. The remaining value of `theme/` is archival more than operational.
 
+## Rename readiness checklist
+
+Use this as the practical go / no-go checklist before renaming the folder.
+
+### Codebase readiness
+
+- Portland remains the only active storefront code workspace.
+- No active implementation work still depends on writing into `theme/`.
+- Any legacy sections or assets worth carrying forward have already been copied or intentionally left behind.
+
+### Documentation readiness
+
+- source-of-truth content docs no longer point to `theme/` as the active working template source
+- handoff docs no longer require `theme/` paths for current operational decisions
+- process docs reference `theme/` only as archive/history, not as an active implementation baseline
+
+### Operational readiness
+
+- the team does not need `theme/` for day-to-day comparison during active Portland builds
+- the Portland page set is stable enough that legacy template comparison is occasional rather than frequent
+- the rename can be done as a pure housekeeping change without coupling it to storefront implementation work
+
+If any of those are still false, wait.
+
+## Current dependency audit
+
+The current repo still depends on legacy `theme/` references in three main ways.
+
+### 1. Historical implementation inventory
+
+These docs still catalog what was built in the earlier custom storefront:
+
+- `docs/storefront/process/THEME-BUILD-STATUS.md`
+- `docs/storefront/handoff/THEME-HANDOFF.md`
+- `docs/storefront/process/SHOPIFY-SETUP-ASSUMPTIONS.md`
+
+These references are expected and not urgent to remove.
+
+### 2. Working content and page-source references
+
+These docs still point at `theme/` paths as the older working source for copy or page structure:
+
+- `docs/storefront/handoff/CONTENT-SOURCE-OF-TRUTH.md`
+- `docs/storefront/handoff/EVALUATION-HANDOFF.md`
+- `docs/storefront/design/CLAUDE-DESIGN-BRIEF.md`
+
+These are the highest-friction references for any future rename because they are closer to active working context.
+
+### 3. Older process / migration documents
+
+These docs still mention `theme/` as part of earlier repo and workflow assumptions:
+
+- `docs/storefront/process/SHOPIFY-LOCAL-WORKFLOW.md`
+- `docs/storefront/process/REPO-SPLIT-CHECKLIST.md`
+
+These are lower-risk to update later, but they still contribute to rename churn.
+
+## Current conclusion from the audit
+
+The repo is already clean enough operationally without renaming the folder now.
+
+The remaining legacy references are understandable and useful.
+
+So the right backend decision today is:
+
+- leave `theme/` in place
+- keep documenting it as legacy
+- postpone the rename until the working docs depend more on Portland than on the earlier custom scaffold
+
 ## Recommended future archive step
 
 When the rename trigger is met, do the cleanup as one explicit housekeeping pass:
@@ -94,6 +163,19 @@ Use this rule:
 
 - **today:** keep `theme/` in place and documented as legacy
 - **later:** rename only after Portland is clearly stable and doc references are ready to be updated in one pass
+
+## Recommended stop point
+
+Backend cleanup should stop here for now.
+
+Further archival work is likely lower leverage than:
+
+- Portland implementation work
+- final store/admin configuration
+- Bask connection
+- legal and operational launch details
+
+Come back to the rename only when the readiness checklist is mostly true.
 
 ## Related documents
 
