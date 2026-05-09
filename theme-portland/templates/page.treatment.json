@@ -17,9 +17,9 @@
         "header_overlay": false,
         "mobile_content_overlay": false,
         "subheading": "Treatment",
-        "heading": "<p>A more advanced anti-aging routine, built around provider review.</p>",
+        "heading": "<p>Provider-reviewed anti-aging treatment for texture, tone, and fine lines.</p>",
         "heading_size": "large",
-        "text_information": "Skinfluence is designed for women ready to move beyond over-the-counter skincare and into a more guided, more consistent treatment model.",
+        "text_information": "Skinfluence is designed for women ready to move beyond over-the-counter skincare and into a more guided treatment model. Start with evaluation first, then move into monthly care only if approved.",
         "text_align": "left",
         "text_order": "column",
         "show_view_all": true,
@@ -32,6 +32,119 @@
         "padding_bottom": 80
       }
     },
+    "benefit_rail": {
+      "type": "multicolumn",
+      "blocks": {
+        "column_1": {
+          "type": "column",
+          "settings": {
+            "subheading": "Smooths texture",
+            "text": "<p>Designed to support a more refined-looking skin surface over time.</p>",
+            "button_label": "",
+            "button_link": ""
+          }
+        },
+        "column_2": {
+          "type": "column",
+          "settings": {
+            "subheading": "Softens fine lines",
+            "text": "<p>Built for women focused on visible anti-aging improvement, not product accumulation.</p>",
+            "button_label": "",
+            "button_link": ""
+          }
+        },
+        "column_3": {
+          "type": "column",
+          "settings": {
+            "subheading": "Improves tone",
+            "text": "<p>Supports a more even-looking complexion and stronger overall skin quality.</p>",
+            "button_label": "",
+            "button_link": ""
+          }
+        },
+        "column_4": {
+          "type": "column",
+          "settings": {
+            "subheading": "Built for consistency",
+            "text": "<p>Monthly care if approved, in a format designed to be easier to stay with long term.</p>",
+            "button_label": "",
+            "button_link": ""
+          }
+        }
+      },
+      "block_order": [
+        "column_1",
+        "column_2",
+        "column_3",
+        "column_4"
+      ],
+      "name": "Benefit rail",
+      "settings": {
+        "multicolumn_to_show": 3,
+        "object_fit": "contain",
+        "swipe_on_mobile": true,
+        "button_style": "primary",
+        "border_top": true,
+        "border_bottom": true,
+        "padding_top": 50,
+        "padding_bottom": 70,
+        "margin_top": 0,
+        "margin_bottom": 0
+      }
+    },
+    "what_this_is": {
+      "type": "premium-split",
+      "name": "What this is",
+      "settings": {
+        "eyebrow": "What this is",
+        "heading": "<p>A more elevated treatment model than ordinary skincare shopping.</p>",
+        "body": "<p>Skinfluence is a provider-reviewed anti-aging treatment experience designed for women who want more visible improvement in skin quality. Instead of stacking product after product, the model begins with evaluation, moves through provider review, and supports a more focused monthly routine if approved.</p><p>It is positioned for women seeking a stronger approach to texture, tone, and fine lines without turning skincare into a full-time project.</p>",
+        "button_label": "Start Evaluation",
+        "button_link": "/pages/start-evaluation",
+        "button_style": "primary",
+        "placeholder_label": "Editorial treatment visual",
+        "background": "#f3efe7",
+        "text_color": "#24352f",
+        "padding_top": 80,
+        "padding_bottom": 120
+      }
+    },
+    "results_frame": {
+      "type": "rich-text",
+      "blocks": {
+        "subheading": {
+          "type": "subheading",
+          "settings": {
+            "subheading": "Visible improvement"
+          }
+        },
+        "heading": {
+          "type": "heading",
+          "settings": {
+            "heading": "<p>Better anti-aging care depends on fit, consistency, and time.</p>",
+            "heading_size": "large"
+          }
+        },
+        "text": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Skinfluence is not built around hype, instant-fix promises, or product stacking. It is built around a steadier treatment model for women who want a more serious path to smoother-looking texture, more even-looking tone, and softer-looking fine lines over time.</p><p>That is why evaluation comes first, provider review matters, and the monthly model only begins if treatment is appropriate.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "subheading",
+        "heading",
+        "text"
+      ],
+      "name": "Results frame",
+      "settings": {
+        "color_scheme": "background-3",
+        "full_width": true,
+        "padding_top": 140,
+        "padding_bottom": 140
+      }
+    },
     "what_it_helps": {
       "type": "multicolumn",
       "blocks": {
@@ -39,7 +152,7 @@
           "type": "column",
           "settings": {
             "subheading": "Fine lines",
-            "text": "<p>Support for softer-looking fine lines over time through a more advanced routine.</p>",
+            "text": "<p>Support for softer-looking fine lines through a more advanced routine built for continuity.</p>",
             "button_label": "",
             "button_link": ""
           }
@@ -47,8 +160,8 @@
         "item_2": {
           "type": "column",
           "settings": {
-            "subheading": "Uneven-looking tone",
-            "text": "<p>Designed to support a more even-looking complexion and smoother overall appearance.</p>",
+            "subheading": "Tone",
+            "text": "<p>Designed to support a more even-looking complexion and a clearer overall skin impression.</p>",
             "button_label": "",
             "button_link": ""
           }
@@ -56,8 +169,8 @@
         "item_3": {
           "type": "column",
           "settings": {
-            "subheading": "Texture and dullness",
-            "text": "<p>Built for women who want improvement in texture, refinement, and visible skin quality.</p>",
+            "subheading": "Texture",
+            "text": "<p>Built for women focused on refinement, smoothness, and visible skin-quality improvement.</p>",
             "button_label": "",
             "button_link": ""
           }
@@ -80,6 +193,58 @@
         "padding_bottom": 120,
         "margin_top": 0,
         "margin_bottom": 0
+      }
+    },
+    "how_treatment_works": {
+      "type": "collapsible-content",
+      "blocks": {
+        "accordion_1": {
+          "type": "accordion",
+          "settings": {
+            "question": "What this treatment model is",
+            "question_heading_tag": "h3",
+            "answer": "<p>Skinfluence is a provider-reviewed anti-aging care model designed to move women into a more focused routine if approved. It is not a broad skincare catalog and it is not meant to feel like generic prescription checkout.</p>"
+          }
+        },
+        "accordion_2": {
+          "type": "accordion",
+          "settings": {
+            "question": "Why provider review comes first",
+            "question_heading_tag": "h3",
+            "answer": "<p>Evaluation happens before treatment because fit matters. Skin history, goals, and other context should be reviewed before monthly care begins. Not every user will be eligible.</p>"
+          }
+        },
+        "accordion_3": {
+          "type": "accordion",
+          "settings": {
+            "question": "What the monthly model includes",
+            "question_heading_tag": "h3",
+            "answer": "<p>If approved, users move into a recurring monthly care format designed for consistency, refill continuity, and a more streamlined anti-aging routine.</p>"
+          }
+        },
+        "accordion_4": {
+          "type": "accordion",
+          "settings": {
+            "question": "What to expect over time",
+            "question_heading_tag": "h3",
+            "answer": "<p>Visible improvement should be understood as a consistency story, not an instant-fix promise. The model is built to support steadier progress over time in texture, tone, and fine lines.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "accordion_1",
+        "accordion_2",
+        "accordion_3",
+        "accordion_4"
+      ],
+      "name": "How treatment works",
+      "settings": {
+        "heading": "What to know before starting",
+        "heading_size": "h2",
+        "heading_tag": "h2",
+        "text": "A product-detail-style overview of how the Skinfluence treatment model works, what makes it different, and what a user should expect before moving into care.",
+        "padding_top": 120,
+        "padding_bottom": 140
       }
     },
     "why_it_feels_different": {
@@ -177,6 +342,13 @@
             "subheading": "Safety and side effects"
           }
         },
+        "heading": {
+          "type": "heading",
+          "settings": {
+            "heading": "<p>Responsible treatment starts with clear expectations.</p>",
+            "heading_size": "medium"
+          }
+        },
         "text": {
           "type": "text",
           "settings": {
@@ -186,6 +358,7 @@
       },
       "block_order": [
         "subheading",
+        "heading",
         "text"
       ],
       "name": "Safety",
@@ -244,7 +417,11 @@
   },
   "order": [
     "hero",
+    "benefit_rail",
+    "what_this_is",
+    "results_frame",
     "what_it_helps",
+    "how_treatment_works",
     "why_it_feels_different",
     "who_its_for",
     "safety",
