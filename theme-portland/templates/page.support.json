@@ -32,44 +32,71 @@
         "padding_bottom": 80
       }
     },
-    "routing_overview": {
+    "support_rail": {
       "type": "multicolumn",
       "blocks": {
-        "general_support": {
+        "column_1": {
           "type": "column",
           "settings": {
-            "subheading": "Billing and general support",
-            "text": "<p>Use this path for billing, shipping, account access, order questions, and general product questions.</p>",
+            "subheading": "General support",
+            "text": "<p>Use the general support path for billing, shipping, account access, and non-clinical questions.</p>",
             "button_label": "",
             "button_link": ""
           }
         },
-        "treatment_support": {
+        "column_2": {
           "type": "column",
           "settings": {
             "subheading": "Treatment-related concerns",
-            "text": "<p>Questions about irritation, treatment use, or care-related issues should follow the appropriate treatment support path.</p>",
+            "text": "<p>Treatment questions should remain visibly distinct and follow the more appropriate care-support path.</p>",
+            "button_label": "",
+            "button_link": ""
+          }
+        },
+        "column_3": {
+          "type": "column",
+          "settings": {
+            "subheading": "Clarity first",
+            "text": "<p>The support experience should feel calm, organized, and clear about where each kind of question belongs.</p>",
             "button_label": "",
             "button_link": ""
           }
         }
       },
       "block_order": [
-        "general_support",
-        "treatment_support"
+        "column_1",
+        "column_2",
+        "column_3"
       ],
-      "name": "Routing overview",
+      "name": "Support rail",
       "settings": {
-        "multicolumn_to_show": 2,
+        "multicolumn_to_show": 3,
         "object_fit": "contain",
         "swipe_on_mobile": true,
         "button_style": "primary",
-        "border_top": false,
-        "border_bottom": false,
-        "padding_top": 80,
-        "padding_bottom": 120,
+        "border_top": true,
+        "border_bottom": true,
+        "padding_top": 50,
+        "padding_bottom": 70,
         "margin_top": 0,
         "margin_bottom": 0
+      }
+    },
+    "routing_overview": {
+      "type": "premium-split",
+      "name": "Routing overview",
+      "settings": {
+        "eyebrow": "Support routing",
+        "heading": "<p>Use the right support path for the right question.</p>",
+        "body": "<p>The support experience should not treat every question the same way. Billing, shipping, account access, and general product questions belong in the general support path.</p><p>Treatment-related questions should remain more carefully framed, since medically sensitive concerns should not be casually treated like a generic inbox conversation.</p>",
+        "button_label": "View FAQs",
+        "button_link": "/pages/faq",
+        "button_style": "secondary",
+        "placeholder_label": "Support routing visual",
+        "background": "#f3efe7",
+        "text_color": "#24352f",
+        "padding_top": 80,
+        "padding_bottom": 120
       }
     },
     "contact_intro": {
@@ -84,7 +111,7 @@
         "heading": {
           "type": "heading",
           "settings": {
-            "heading": "<p>Use the right support path for the right question.</p>",
+            "heading": "<p>General support should feel clear and well-scoped.</p>",
             "heading_size": "large"
           }
         },
@@ -106,6 +133,58 @@
         "full_width": true,
         "padding_top": 120,
         "padding_bottom": 100
+      }
+    },
+    "support_questions": {
+      "type": "collapsible-content",
+      "blocks": {
+        "accordion_1": {
+          "type": "accordion",
+          "settings": {
+            "question": "What should go through general support?",
+            "question_heading_tag": "h3",
+            "answer": "<p>Billing, shipping, account access, order questions, and general non-clinical questions should use the general support path.</p>"
+          }
+        },
+        "accordion_2": {
+          "type": "accordion",
+          "settings": {
+            "question": "What about treatment-related concerns?",
+            "question_heading_tag": "h3",
+            "answer": "<p>Treatment-related concerns should remain visibly distinct and may require a more appropriate care-support path than a standard general inbox.</p>"
+          }
+        },
+        "accordion_3": {
+          "type": "accordion",
+          "settings": {
+            "question": "Can a treatment concern start in the general form?",
+            "question_heading_tag": "h3",
+            "answer": "<p>It may first appear there, but the operating model should still treat medically sensitive concerns more carefully than standard storefront questions.</p>"
+          }
+        },
+        "accordion_4": {
+          "type": "accordion",
+          "settings": {
+            "question": "Where can I get more clarity before reaching out?",
+            "question_heading_tag": "h3",
+            "answer": "<p>The FAQ, Pricing, and Start Evaluation pages should answer many common questions before a user needs support.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "accordion_1",
+        "accordion_2",
+        "accordion_3",
+        "accordion_4"
+      ],
+      "name": "Support questions",
+      "settings": {
+        "heading": "Support questions, answered clearly",
+        "heading_size": "h2",
+        "heading_tag": "h2",
+        "text": "A clearer explanation of how support should work across general storefront questions and treatment-related concerns.",
+        "padding_top": 120,
+        "padding_bottom": 140
       }
     },
     "contact_form": {
@@ -168,8 +247,10 @@
   },
   "order": [
     "hero",
+    "support_rail",
     "routing_overview",
     "contact_intro",
+    "support_questions",
     "contact_form",
     "closing_cta"
   ]
