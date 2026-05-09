@@ -160,6 +160,7 @@ This should be validated against the actual support and care operating model bef
 See:
 
 - `docs/storefront/handoff/SUPPORT-OPERATING-MODEL.md`
+- `docs/storefront/handoff/LAUNCH-STATE-CONTACT-ASSUMPTIONS.md`
 
 ## Legal assumptions
 

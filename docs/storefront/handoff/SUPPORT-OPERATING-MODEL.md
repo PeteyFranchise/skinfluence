@@ -123,3 +123,7 @@ This document should be revised once the business confirms:
 - whether the Shopify form stays in place or is replaced
 
 Until then, this document is the source-of-truth support operating model for storefront work.
+
+Related launch-state contact guidance:
+
+- `docs/storefront/handoff/LAUNCH-STATE-CONTACT-ASSUMPTIONS.md`

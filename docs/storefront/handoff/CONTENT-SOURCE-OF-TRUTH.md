@@ -71,6 +71,7 @@ Working source:
 
 Supporting rule:
 - see `docs/storefront/handoff/EVALUATION-HANDOFF.md`
+- see `docs/storefront/handoff/TEMPORARY-EVALUATION-LAUNCH-STATE.md`
 
 ### Treatment
 
@@ -144,6 +145,7 @@ Working source:
 
 Supporting rule:
 - see `docs/storefront/handoff/SUPPORT-OPERATING-MODEL.md`
+- see `docs/storefront/handoff/LAUNCH-STATE-CONTACT-ASSUMPTIONS.md`
 
 ### About
 
@@ -222,5 +224,6 @@ as the working source of truth.
 - `docs/storefront/handoff/EVALUATION-HANDOFF.md`
 - `docs/storefront/handoff/PRODUCT-SUBSCRIPTION-MODEL.md`
 - `docs/storefront/handoff/SUPPORT-OPERATING-MODEL.md`
+- `docs/storefront/handoff/LAUNCH-STATE-CONTACT-ASSUMPTIONS.md`
 - `docs/storefront/handoff/THEME-HANDOFF.md`
 - `docs/storefront/process/SHOPIFY-SETUP-ASSUMPTIONS.md`
