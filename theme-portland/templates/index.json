@@ -175,6 +175,72 @@
         "padding_bottom": 140
       }
     },
+    "social_proof_video_rail": {
+      "type": "social-proof-video-rail",
+      "blocks": {
+        "video_card_1": {
+          "type": "video_card",
+          "settings": {
+            "proof_type": "Client",
+            "platform": "Instagram",
+            "title": "Real client proof",
+            "quote": "Highlight a short client reel, results-focused story, or real-world anti-aging routine proof here.",
+            "handle": "@skinfluenceclient",
+            "role": "Client",
+            "poster_alt": "Client social proof video preview",
+            "link_label": "Watch post",
+            "placeholder_label": "Add client reel"
+          }
+        },
+        "video_card_2": {
+          "type": "video_card",
+          "settings": {
+            "proof_type": "Influencer",
+            "platform": "TikTok",
+            "title": "Creator perspective",
+            "quote": "Use this slot for an influencer or creator video that explains why the routine feels more elevated and easier to trust.",
+            "handle": "@skinfluencecreator",
+            "role": "Creator",
+            "poster_alt": "Creator social proof video preview",
+            "link_label": "Watch post",
+            "placeholder_label": "Add creator video"
+          }
+        },
+        "video_card_3": {
+          "type": "video_card",
+          "settings": {
+            "proof_type": "Dermatologist",
+            "platform": "Instagram",
+            "title": "Professional credibility",
+            "quote": "Use this slot for a dermatologist or clinically grounded social video explaining why provider review matters.",
+            "handle": "@skinfluencederm",
+            "role": "Dermatologist",
+            "poster_alt": "Dermatologist social proof video preview",
+            "link_label": "Watch post",
+            "placeholder_label": "Add dermatologist video"
+          }
+        }
+      },
+      "block_order": [
+        "video_card_1",
+        "video_card_2",
+        "video_card_3"
+      ],
+      "name": "Social proof video rail",
+      "settings": {
+        "eyebrow": "Seen on social",
+        "heading": "<p>Real reactions from clients, creators, and trusted voices.</p>",
+        "body": "<p>Add Instagram and TikTok-style proof here to show how the Skinfluence experience lands in the real world, from client stories to influencer commentary to dermatologist perspective.</p>",
+        "background": "#F8F4EF",
+        "text_color": "#20332C",
+        "autoplay": false,
+        "loop": true,
+        "show_controls": true,
+        "open_links_new_tab": true,
+        "padding_top": 120,
+        "padding_bottom": 140
+      }
+    },
     "steps_how_it_works": {
       "type": "steps",
       "blocks": {
@@ -820,6 +886,7 @@
     "trust_marquee_Skinfluence",
     "rich_text_core_problem",
     "premium_split_explanation",
+    "social_proof_video_rail",
     "steps_how_it_works",
     "multicolumn_who_its_for",
     "rich_text_why_different",

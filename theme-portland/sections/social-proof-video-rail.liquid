@@ -1,0 +1,601 @@
+{% style %}
+  .section-{{ section.id }}-padding {
+    padding-top: {{ section.settings.padding_top | times: 0.25 | round: 0 }}px;
+    padding-bottom: {{ section.settings.padding_bottom | times: 0.25 | round: 0 }}px;
+  }
+
+  @media screen and (min-width: 990px) {
+    .section-{{ section.id }}-padding {
+      padding-top: {{ section.settings.padding_top | times: 0.6 | round: 0 }}px;
+      padding-bottom: {{ section.settings.padding_bottom | times: 0.6 | round: 0 }}px;
+    }
+  }
+
+  @media screen and (min-width: 1360px) {
+    .section-{{ section.id }}-padding {
+      padding-top: {{ section.settings.padding_top }}px;
+      padding-bottom: {{ section.settings.padding_bottom }}px;
+    }
+  }
+
+  .social-proof-video-rail-{{ section.id }} {
+    background: {{ section.settings.background }};
+    color: {{ section.settings.text_color }};
+  }
+
+  .social-proof-video-rail-{{ section.id }} .social-proof-video-rail__top {
+    display: grid;
+    gap: 1.6rem;
+    margin-bottom: 2.4rem;
+  }
+
+  @media screen and (min-width: 990px) {
+    .social-proof-video-rail-{{ section.id }} .social-proof-video-rail__top {
+      grid-template-columns: minmax(0, 0.95fr) minmax(0, 1.05fr);
+      align-items: end;
+      gap: 3.2rem;
+      margin-bottom: 3.2rem;
+    }
+  }
+
+  .social-proof-video-rail-{{ section.id }} .social-proof-video-rail__eyebrow {
+    margin: 0 0 1rem;
+    font-size: 0.78rem;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    opacity: 0.72;
+  }
+
+  .social-proof-video-rail-{{ section.id }} .social-proof-video-rail__heading {
+    margin: 0;
+    max-width: 14ch;
+  }
+
+  .social-proof-video-rail-{{ section.id }} .social-proof-video-rail__body {
+    max-width: 60ch;
+  }
+
+  .social-proof-video-rail-{{ section.id }} .social-proof-video-rail__body p {
+    margin: 0;
+  }
+
+  .social-proof-video-rail-{{ section.id }} .social-proof-video-rail__track {
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: minmax(18rem, 80vw);
+    gap: 1.6rem;
+    overflow-x: auto;
+    padding-bottom: 0.8rem;
+    padding-right: 0.2rem;
+    scroll-snap-type: x proximity;
+    scrollbar-width: thin;
+  }
+
+  @media screen and (min-width: 750px) {
+    .social-proof-video-rail-{{ section.id }} .social-proof-video-rail__track {
+      grid-auto-columns: minmax(20rem, 32rem);
+      gap: 2rem;
+    }
+  }
+
+  .social-proof-video-rail-{{ section.id }} .social-proof-video-rail__card {
+    display: grid;
+    gap: 0;
+    scroll-snap-align: start;
+    border: 1px solid rgba(32, 51, 44, 0.08);
+    border-radius: 1.6rem;
+    overflow: hidden;
+    background: rgba(255, 255, 255, 0.82);
+    box-shadow: 0 20px 42px rgba(26, 39, 35, 0.08);
+  }
+
+  .social-proof-video-rail-{{ section.id }} .social-proof-video-rail__media {
+    position: relative;
+    overflow: hidden;
+    background: rgba(32, 51, 44, 0.08);
+    aspect-ratio: 9 / 16;
+  }
+
+  .social-proof-video-rail-{{ section.id }} .social-proof-video-rail__media::after {
+    content: "";
+    position: absolute;
+    inset: auto 0 0;
+    height: 32%;
+    background: linear-gradient(to top, rgba(17, 26, 23, 0.42), rgba(17, 26, 23, 0));
+    pointer-events: none;
+  }
+
+  .social-proof-video-rail-{{ section.id }} .social-proof-video-rail__media video,
+  .social-proof-video-rail-{{ section.id }} .social-proof-video-rail__media img,
+  .social-proof-video-rail-{{ section.id }} .social-proof-video-rail__media a {
+    display: block;
+    width: 100%;
+    height: 100%;
+  }
+
+  .social-proof-video-rail-{{ section.id }} .social-proof-video-rail__media video,
+  .social-proof-video-rail-{{ section.id }} .social-proof-video-rail__media img {
+    object-fit: cover;
+  }
+
+  .social-proof-video-rail-{{ section.id }} .social-proof-video-rail__link {
+    position: relative;
+    color: inherit;
+    text-decoration: none;
+  }
+
+  .social-proof-video-rail-{{ section.id }} .social-proof-video-rail__media-labels {
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+    right: 1rem;
+    z-index: 1;
+    display: flex;
+    justify-content: space-between;
+    gap: 0.8rem;
+    pointer-events: none;
+  }
+
+  .social-proof-video-rail-{{ section.id }} .social-proof-video-rail__media-badge,
+  .social-proof-video-rail-{{ section.id }} .social-proof-video-rail__media-platform {
+    display: inline-flex;
+    align-items: center;
+    padding: 0.45rem 0.75rem;
+    border-radius: 999px;
+    background: rgba(255, 255, 255, 0.92);
+    box-shadow: 0 10px 24px rgba(26, 39, 35, 0.08);
+    font-size: 0.68rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: {{ section.settings.text_color }};
+  }
+
+  .social-proof-video-rail-{{ section.id }} .social-proof-video-rail__play {
+    position: absolute;
+    right: 1.4rem;
+    bottom: 1.4rem;
+    z-index: 1;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 3rem;
+    height: 3rem;
+    border-radius: 999px;
+    background: rgba(255, 255, 255, 0.92);
+    color: {{ section.settings.text_color }};
+    box-shadow: 0 12px 28px rgba(26, 39, 35, 0.14);
+  }
+
+  .social-proof-video-rail-{{ section.id }} .social-proof-video-rail__play svg {
+    width: 1rem;
+    height: 1rem;
+  }
+
+  .social-proof-video-rail-{{ section.id }} .social-proof-video-rail__placeholder {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+    text-align: center;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    font-size: 0.78rem;
+    color: rgba(32, 51, 44, 0.65);
+  }
+
+  .social-proof-video-rail-{{ section.id }} .social-proof-video-rail__meta {
+    display: grid;
+    gap: 0.8rem;
+    padding: 1.4rem 1.35rem 1.45rem;
+  }
+
+  .social-proof-video-rail-{{ section.id }} .social-proof-video-rail__kicker-row {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.8rem;
+  }
+
+  .social-proof-video-rail-{{ section.id }} .social-proof-video-rail__badge {
+    display: inline-flex;
+    align-items: center;
+    border: 1px solid rgba(32, 51, 44, 0.16);
+    border-radius: 999px;
+    padding: 0.45rem 0.8rem;
+    font-size: 0.72rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+  }
+
+  .social-proof-video-rail-{{ section.id }} .social-proof-video-rail__platform {
+    font-size: 0.78rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    opacity: 0.68;
+  }
+
+  .social-proof-video-rail-{{ section.id }} .social-proof-video-rail__title {
+    margin: 0;
+    font-size: 1.28rem;
+    line-height: 1.18;
+  }
+
+  .social-proof-video-rail-{{ section.id }} .social-proof-video-rail__quote {
+    margin: 0;
+    max-width: 36ch;
+    opacity: 0.82;
+    font-size: 0.95rem;
+    line-height: 1.55;
+  }
+
+  .social-proof-video-rail-{{ section.id }} .social-proof-video-rail__byline {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    font-size: 0.86rem;
+    opacity: 0.72;
+  }
+
+  .social-proof-video-rail-{{ section.id }} .social-proof-video-rail__handle {
+    font-weight: 600;
+  }
+
+  .social-proof-video-rail-{{ section.id }} .social-proof-video-rail__role::before {
+    content: "•";
+    margin-right: 0.5rem;
+  }
+
+  .social-proof-video-rail-{{ section.id }} .social-proof-video-rail__cta {
+    margin-top: 0.8rem;
+  }
+
+  .social-proof-video-rail-{{ section.id }} .social-proof-video-rail__track::-webkit-scrollbar {
+    height: 0.45rem;
+  }
+
+  .social-proof-video-rail-{{ section.id }} .social-proof-video-rail__track::-webkit-scrollbar-thumb {
+    background: rgba(32, 51, 44, 0.18);
+    border-radius: 999px;
+  }
+{% endstyle %}
+
+<section class="social-proof-video-rail social-proof-video-rail-{{ section.id }} section-{{ section.id }}-padding">
+  <div class="container">
+    <div class="social-proof-video-rail__top">
+      <div>
+        {% if section.settings.eyebrow != blank %}
+          <p class="social-proof-video-rail__eyebrow">{{ section.settings.eyebrow | escape }}</p>
+        {% endif %}
+        {% if section.settings.heading != blank %}
+          <h2 class="social-proof-video-rail__heading title--section h2">{{ section.settings.heading }}</h2>
+        {% endif %}
+      </div>
+
+      {% if section.settings.body != blank %}
+        <div class="social-proof-video-rail__body rte{% if settings.rte_type == 'custom' %} rte__container{% endif %}">
+          {{ section.settings.body }}
+        </div>
+      {% endif %}
+    </div>
+
+    <div class="social-proof-video-rail__track" role="list">
+      {% for block in section.blocks %}
+        <article class="social-proof-video-rail__card" role="listitem" {{ block.shopify_attributes }}>
+          <div class="social-proof-video-rail__media">
+            <div class="social-proof-video-rail__media-labels">
+              {% if block.settings.proof_type != blank %}
+                <span class="social-proof-video-rail__media-badge">{{ block.settings.proof_type | escape }}</span>
+              {% endif %}
+              {% if block.settings.platform != blank %}
+                <span class="social-proof-video-rail__media-platform">{{ block.settings.platform | escape }}</span>
+              {% endif %}
+            </div>
+
+            {% if block.settings.video != blank %}
+              {{
+                block.settings.video
+                | video_tag:
+                  image_size: '900x',
+                  autoplay: section.settings.autoplay,
+                  muted: true,
+                  loop: section.settings.loop,
+                  controls: section.settings.show_controls,
+                  playsinline: true
+              }}
+            {% elsif block.settings.external_url != blank %}
+              <a
+                class="social-proof-video-rail__link"
+                href="{{ block.settings.external_url }}"
+                {% if section.settings.open_links_new_tab %}
+                  target="_blank" rel="noopener noreferrer"
+                {% endif %}
+              >
+                {% if block.settings.poster_image != blank %}
+                  {{
+                    block.settings.poster_image
+                    | image_url: width: 900
+                    | image_tag:
+                      loading: 'lazy',
+                      widths: '360, 540, 720, 900',
+                      alt: block.settings.poster_alt | escape
+                  }}
+                {% else %}
+                  <div class="social-proof-video-rail__placeholder">{{ block.settings.placeholder_label | escape }}</div>
+                {% endif %}
+                <span class="social-proof-video-rail__play" aria-hidden="true">{% render 'icon-play' %}</span>
+              </a>
+            {% elsif block.settings.poster_image != blank %}
+              {{
+                block.settings.poster_image
+                | image_url: width: 900
+                | image_tag:
+                  loading: 'lazy',
+                  widths: '360, 540, 720, 900',
+                  alt: block.settings.poster_alt | escape
+              }}
+            {% else %}
+              <div class="social-proof-video-rail__placeholder">{{ block.settings.placeholder_label | escape }}</div>
+            {% endif %}
+          </div>
+
+          <div class="social-proof-video-rail__meta">
+            <div class="social-proof-video-rail__kicker-row">
+              {% if block.settings.proof_type != blank %}
+                <span class="social-proof-video-rail__badge">{{ block.settings.proof_type | escape }}</span>
+              {% endif %}
+              {% if block.settings.platform != blank %}
+                <span class="social-proof-video-rail__platform">{{ block.settings.platform | escape }}</span>
+              {% endif %}
+            </div>
+
+            {% if block.settings.title != blank %}
+              <h3 class="social-proof-video-rail__title">{{ block.settings.title | escape }}</h3>
+            {% endif %}
+
+            {% if block.settings.quote != blank %}
+              <p class="social-proof-video-rail__quote">{{ block.settings.quote | escape }}</p>
+            {% endif %}
+
+            {% if block.settings.handle != blank or block.settings.role != blank %}
+              <div class="social-proof-video-rail__byline">
+                {% if block.settings.handle != blank %}
+                  <span class="social-proof-video-rail__handle">{{ block.settings.handle | escape }}</span>
+                {% endif %}
+                {% if block.settings.role != blank %}
+                  <span class="social-proof-video-rail__role">{{ block.settings.role | escape }}</span>
+                {% endif %}
+              </div>
+            {% endif %}
+
+            {% if block.settings.external_url != blank and block.settings.link_label != blank %}
+              <div class="social-proof-video-rail__cta">
+                <a
+                  href="{{ block.settings.external_url }}"
+                  class="button button--secondary-size button--secondary"
+                  {% if section.settings.open_links_new_tab %}
+                    target="_blank" rel="noopener noreferrer"
+                  {% endif %}
+                >
+                  <span>
+                    <span>{{ block.settings.link_label | escape }}</span>
+                    <span>{{ block.settings.link_label | escape }}</span>
+                  </span>
+                </a>
+              </div>
+            {% endif %}
+          </div>
+        </article>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Social proof video rail",
+  "tag": "section",
+  "class": "spaced-section",
+  "enabled_on": {
+    "templates": ["index", "page"]
+  },
+  "settings": [
+    {
+      "type": "text",
+      "id": "eyebrow",
+      "label": "Eyebrow",
+      "default": "Seen on social"
+    },
+    {
+      "type": "richtext",
+      "id": "heading",
+      "label": "Heading",
+      "default": "<p>Real reactions from clients, creators, and trusted voices.</p>"
+    },
+    {
+      "type": "richtext",
+      "id": "body",
+      "label": "Body",
+      "default": "<p>Use this rail to highlight short-form proof from customers, influencers, and dermatologists in a format that feels social, current, and easy to scan.</p>"
+    },
+    {
+      "type": "color",
+      "id": "background",
+      "label": "Background",
+      "default": "#F8F4EF"
+    },
+    {
+      "type": "color",
+      "id": "text_color",
+      "label": "Text color",
+      "default": "#20332C"
+    },
+    {
+      "type": "checkbox",
+      "id": "autoplay",
+      "label": "Autoplay hosted videos",
+      "default": false
+    },
+    {
+      "type": "checkbox",
+      "id": "loop",
+      "label": "Loop hosted videos",
+      "default": true
+    },
+    {
+      "type": "checkbox",
+      "id": "show_controls",
+      "label": "Show hosted video controls",
+      "default": true
+    },
+    {
+      "type": "checkbox",
+      "id": "open_links_new_tab",
+      "label": "Open social links in new tab",
+      "default": true
+    },
+    {
+      "type": "header",
+      "content": "Section padding"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 200,
+      "step": 10,
+      "default": 120,
+      "unit": "px",
+      "label": "Padding top"
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 200,
+      "step": 10,
+      "default": 140,
+      "unit": "px",
+      "label": "Padding bottom"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "video_card",
+      "name": "Video card",
+      "settings": [
+        {
+          "type": "text",
+          "id": "proof_type",
+          "label": "Proof type",
+          "default": "Client"
+        },
+        {
+          "type": "text",
+          "id": "platform",
+          "label": "Platform",
+          "default": "Instagram"
+        },
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Title",
+          "default": "A trusted skincare perspective"
+        },
+        {
+          "type": "textarea",
+          "id": "quote",
+          "label": "Caption or quote",
+          "default": "Short-form proof that highlights visible results, trust, or why the experience feels different."
+        },
+        {
+          "type": "text",
+          "id": "handle",
+          "label": "Handle or name",
+          "default": "@creatorname"
+        },
+        {
+          "type": "text",
+          "id": "role",
+          "label": "Role",
+          "default": "Creator"
+        },
+        {
+          "type": "video",
+          "id": "video",
+          "label": "Hosted video"
+        },
+        {
+          "type": "image_picker",
+          "id": "poster_image",
+          "label": "Poster image"
+        },
+        {
+          "type": "text",
+          "id": "poster_alt",
+          "label": "Poster alt text",
+          "default": "Social proof video preview"
+        },
+        {
+          "type": "url",
+          "id": "external_url",
+          "label": "External social link"
+        },
+        {
+          "type": "text",
+          "id": "link_label",
+          "label": "External link label",
+          "default": "Watch post"
+        },
+        {
+          "type": "text",
+          "id": "placeholder_label",
+          "label": "Placeholder label",
+          "default": "Add video or poster"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Social proof video rail",
+      "blocks": [
+        {
+          "type": "video_card",
+          "settings": {
+            "proof_type": "Client",
+            "platform": "Instagram",
+            "title": "Visible texture improvement",
+            "quote": "Use this slot for a short client reel, UGC clip, or creator-style result story.",
+            "handle": "@skinfluenceclient",
+            "role": "Client"
+          }
+        },
+        {
+          "type": "video_card",
+          "settings": {
+            "proof_type": "Influencer",
+            "platform": "TikTok",
+            "title": "A creator perspective on the routine",
+            "quote": "Use this slot for a trusted creator video explaining why the experience feels more elevated.",
+            "handle": "@trustedcreator",
+            "role": "Creator"
+          }
+        },
+        {
+          "type": "video_card",
+          "settings": {
+            "proof_type": "Dermatologist",
+            "platform": "Instagram",
+            "title": "Clinical credibility in a social format",
+            "quote": "Use this slot for a dermatologist or medically credible voice describing why provider review matters.",
+            "handle": "@dermvoice",
+            "role": "Dermatologist"
+          }
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}
