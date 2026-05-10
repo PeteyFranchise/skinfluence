@@ -24,6 +24,12 @@ Important current split:
 - Portland under `theme-portland/` is the primary active storefront build target
 - future storefront work should default to `theme-portland/`
 
+Typography note:
+
+- the current Portland typography is an interim approximation
+- the intended future migration is to a licensed `Graphik Compact` webfont package if Skinfluence obtains the proper web license and source files
+- that migration should be implemented in `theme-portland/` as a self-hosted font integration rather than by copying assets from reference sites
+
 Architecture reference:
 
 - `docs/storefront/handoff/PORTLAND-ARCHITECTURE-AND-DEPLOYMENT.md`

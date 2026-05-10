@@ -123,6 +123,22 @@ The theme also contains:
 - default page fallback: `theme-portland/templates/page.json`
 - contact page template: `theme-portland/templates/page.contact.json`
 
+## Typography intent
+
+The current Portland storefront is using a temporary closer-match typography setup while Skinfluence sources a licensed editorial font package.
+
+The intended future typography migration is:
+
+- licensed `Graphik Compact` webfont files, if obtained legally for web use
+- self-hosted under `theme-portland/assets/`
+- wired globally into the Portland theme so headings, body text, and UI typography can be aligned more closely with the desired reference direction
+
+Until that license and file package are in hand:
+
+- do not copy font files from reference sites
+- treat the current typography as an interim approximation
+- preserve the intent to migrate the full Portland storefront onto the licensed font pack later
+
 ## Store-side template assignment rule
 
 When a Portland template exists for a page, the Shopify page record should use the matching template suffix where possible.

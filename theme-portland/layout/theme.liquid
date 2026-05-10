@@ -55,6 +55,22 @@
     %}
 
     {% style %}
+         @font-face {
+         font-family: 'Graphik Compact';
+         src: url('{{ 'GraphikCompact-Regular-Web.woff2' | asset_url }}') format('woff2');
+         font-weight: 400;
+         font-style: normal;
+         font-display: swap;
+         }
+
+         @font-face {
+         font-family: 'Graphik Compact';
+         src: url('{{ 'GraphikCompact-Semibold-Web.woff2' | asset_url }}') format('woff2');
+         font-weight: 600;
+         font-style: normal;
+         font-display: swap;
+         }
+
          {{ settings.type_body_font | font_face: font_display: 'swap' }}
          {{ settings.type_header_font | font_face: font_display: 'swap' }}
          {{ settings.type_subtitle_font | font_face: font_display: 'swap' }}
@@ -179,6 +195,39 @@
          --color-badge-icon: {{ settings.badge_icon_color }};
          --color-border: {{ settings.color_border.red }}, {{ settings.color_border.green }}, {{ settings.color_border.blue }};
          --color-background-card: {{ settings.background_card.red }}, {{ settings.background_card.green }}, {{ settings.background_card.blue }}
+         }
+
+         :root {
+         --font-body-family: 'Graphik Compact', sans-serif;
+         --font-body-style: normal;
+         --font-body-weight: 400;
+         --font-heading-family: 'Graphik Compact', sans-serif;
+         --font-heading-style: normal;
+         --font-heading-weight: 600;
+         --font-subtitle-family: 'Graphik Compact', sans-serif;
+         --font-subtitle-style: normal;
+         --font-subtitle-weight: 600;
+         --font-heading-card-family: 'Graphik Compact', sans-serif;
+         --font-heading-card-style: normal;
+         --font-heading-card-weight: 600;
+         --font-text-card-family: 'Graphik Compact', sans-serif;
+         --font-text-card-style: normal;
+         --font-text-card-weight: 400;
+         --font-button-family: 'Graphik Compact', sans-serif;
+         --font-button-style: normal;
+         --font-button-weight: 600;
+         --font-header-menu-family: 'Graphik Compact', sans-serif;
+         --font-header-menu-style: normal;
+         --font-header-menu-weight: 600;
+         --font-footer-menu-family: 'Graphik Compact', sans-serif;
+         --font-footer-menu-style: normal;
+         --font-footer-menu-weight: 600;
+         --font-popups-heading-family: 'Graphik Compact', sans-serif;
+         --font-popups-heading-style: normal;
+         --font-popups-heading-weight: 600;
+         --font-popups-text-family: 'Graphik Compact', sans-serif;
+         --font-popups-text-style: normal;
+         --font-popups-text-weight: 400;
          }
 
          @media screen and (min-width: 990px) {
