@@ -14,7 +14,7 @@
     "announcement-bar": {
       "type": "announcement-bar",
       "settings": {
-        "height": 40,
+        "height": 35,
         "color_scheme": "1",
         "text": "<p>Use this space for a store update or special offer</p>"
       }
@@ -44,8 +44,8 @@
         "header-1"
       ],
       "settings": {
-        "height": 130,
-        "logo_width": 90,
+        "height": 100,
+        "logo_width": 80,
         "logo_position": "left",
         "menu": "main-menu",
         "enable_fullscreen_menu": true,
@@ -53,7 +53,7 @@
         "enable_country_selector": true,
         "enable_language_selector": true,
         "enable_menu_item_first_level": false,
-        "sticky_header_type": "on-scroll-up",
+        "sticky_header_type": "none",
         "enable_account_btn": true,
         "account_modal_type": "shopify_based",
         "customer_account_menu": "customer-account-main-menu",
