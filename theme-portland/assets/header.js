@@ -20,7 +20,20 @@
 			header
 				.querySelector(".header-wrapper")
 				.getAttribute("data-sticky-type") === "on-scroll-up";
+		const headerIsStatic = !headerIsAlwaysSticky && !headerIsSticky;
 		const megaMenuLinks = document.querySelectorAll(".list-menu--megamenu");
+
+		if (headerIsStatic) {
+			header.classList.add("shopify-section-header-static");
+			header.classList.remove(
+				"shopify-section-header-sticky",
+				"shopify-section-header-hidden",
+				"shopify-section-header-hidden-mobile",
+				"fixed",
+				"animate",
+				"animated",
+			);
+		}
 
 		const openMenu = (e) => {
 			e.preventDefault();
@@ -172,6 +185,7 @@
 		}
 
 		document.addEventListener("scroll", () => {
+			if (headerIsStatic) return;
 			let scrollTop = window.scrollY;
 
 			if (scrollTop > header.offsetHeight / 2 && headerIsAlwaysSticky) {

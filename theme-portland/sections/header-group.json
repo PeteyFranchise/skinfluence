@@ -14,9 +14,9 @@
     "announcement-bar": {
       "type": "announcement-bar",
       "settings": {
-        "height": 35,
+        "height": 30,
         "color_scheme": "1",
-        "text": "<p>Use this space for a store update or special offer</p>"
+        "text": "<p>It’s time to shine. Your glow-up awaits. <a href=\"/pages/start-evaluation\">Shop now</a></p>"
       }
     },
     "header": {
@@ -44,8 +44,8 @@
         "header-1"
       ],
       "settings": {
-        "height": 100,
-        "logo_width": 80,
+        "height": 90,
+        "logo_width": 65,
         "logo_position": "left",
         "menu": "main-menu",
         "enable_fullscreen_menu": true,
