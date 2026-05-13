@@ -219,12 +219,57 @@
             "link_label": "Watch post",
             "placeholder_label": "Add dermatologist video"
           }
+        },
+        "video_card_4": {
+          "type": "video_card",
+          "settings": {
+            "proof_type": "Before + After",
+            "platform": "Instagram",
+            "title": "Routine transformation",
+            "quote": "Use this slot for a before-and-after style social clip that shows how the Skinfluence routine fits into real life.",
+            "handle": "@skinfluenceresults",
+            "role": "Client",
+            "poster_alt": "Before and after social proof video preview",
+            "link_label": "Watch post",
+            "placeholder_label": "Add before and after video"
+          }
+        },
+        "video_card_5": {
+          "type": "video_card",
+          "settings": {
+            "proof_type": "Expert",
+            "platform": "TikTok",
+            "title": "Treatment education",
+            "quote": "Use this slot for an expert or practitioner video explaining why the routine is structured the way it is.",
+            "handle": "@skinfluenceexpert",
+            "role": "Expert",
+            "poster_alt": "Expert educational video preview",
+            "link_label": "Watch post",
+            "placeholder_label": "Add expert video"
+          }
+        },
+        "video_card_6": {
+          "type": "video_card",
+          "settings": {
+            "proof_type": "Review",
+            "platform": "Instagram",
+            "title": "Client review moment",
+            "quote": "Use this slot for another client testimonial clip that reinforces trust, consistency, and visible improvement over time.",
+            "handle": "@skinfluencereview",
+            "role": "Client",
+            "poster_alt": "Client testimonial video preview",
+            "link_label": "Watch post",
+            "placeholder_label": "Add testimonial video"
+          }
         }
       },
       "block_order": [
         "video_card_1",
         "video_card_2",
-        "video_card_3"
+        "video_card_3",
+        "video_card_4",
+        "video_card_5",
+        "video_card_6"
       ],
       "name": "Social proof video rail",
       "settings": {
