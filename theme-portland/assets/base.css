@@ -3705,11 +3705,11 @@ deferred-media {
 
 .announcement-bar__text {
   padding: 0.42rem 0;
-  font-weight: 700;
+  font-weight: 550;
   line-height: 1.08;
-  font-size: 1.36rem;
+  font-size: 1.22rem;
   color: rgba(255, 255, 255, 1);
-  letter-spacing: -0.07em;
+  letter-spacing: -0.03em;
 }
 .announcement-bar__text p {
   margin: 0;
@@ -3720,9 +3720,9 @@ deferred-media {
   color: rgba(255, 255, 255, 1);
   margin-left: 0.32rem;
   text-decoration: none;
-  font-size: 0.98em;
-  font-weight: 510;
-  letter-spacing: -0.06em;
+  font-size: 1em;
+  font-weight: 550;
+  letter-spacing: -0.03em;
   line-height: 0.82;
   text-transform: uppercase;
   z-index: 2;
@@ -3742,7 +3742,7 @@ deferred-media {
   }
   .announcement-bar__text {
     padding: 0.32rem 0;
-    font-size: 1.48rem;
+    font-size: 1.32rem;
   }
 }
 
@@ -3935,7 +3935,8 @@ body.body--hidden {
   .container.container--header {
     max-width: none;
     width: 100%;
-    padding-inline: 2rem;
+    padding-left: 2.4rem;
+    padding-right: 2rem;
   }
   .header__column {
     margin-right: -0.35rem;
@@ -4060,6 +4061,32 @@ body.body--hidden {
   word-break: break-word;
 }
 
+.header__wordmark-placeholder {
+  display: inline-flex;
+  align-items: center;
+  font-family: "Bodoni Moda", serif;
+  font-size: 1.92rem;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 0.92;
+  color: #000;
+  white-space: nowrap;
+  text-transform: none;
+}
+
+.header__heading-logo--svg {
+  overflow: visible;
+}
+
+.header__heading-logo--svg .wm {
+  fill: #000;
+  font-family: "Bodoni Moda", serif;
+  font-size: 37px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
 .header__heading .header__heading-link {
   display: flex;
   padding: 0;
@@ -4093,16 +4120,27 @@ body.body--hidden {
 }
 @media screen and (min-width: 990px) {
   .header__heading-link {
-    width: 156px;
-    height: 16px;
-    max-width: 156px;
-    min-width: 156px;
+    width: 236px;
+    max-width: 236px;
+    min-width: 236px;
+    height: auto;
+    min-height: 24px;
+    transform: translateY(-0.28rem);
+  }
+  .header__wordmark-placeholder {
+    font-size: 2.5rem;
+    letter-spacing: -0.04rem;
+    line-height: 0.88;
+  }
+  .header__heading-logo--svg .wm {
+    font-size: 42px;
+    letter-spacing: 0.07em;
   }
   .header__heading-logo {
-    width: 156px;
-    max-width: 156px;
-    height: 16px;
-    max-height: 16px;
+    width: 236px;
+    max-width: 236px;
+    height: auto;
+    max-height: none;
     opacity: 1;
   }
 }
@@ -4365,9 +4403,12 @@ details[open] > .header__account-modal {
 }
 
 @media screen and (min-width: 990px) {
-  .header__heading,
+  .header > .header__heading,
+  .header > .header__heading-link {
+    margin-left: -2.5rem;
+  }
   .header__heading-link {
-    margin-left: -2.1rem;
+    margin-left: 0;
   }
   .header__column {
     justify-self: stretch;

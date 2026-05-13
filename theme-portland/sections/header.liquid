@@ -26,6 +26,7 @@
 {{ 'component-card-horizontal.css' | asset_url | stylesheet_tag }}
 {{ 'component-card.css' | asset_url | stylesheet_tag }}
 {{ 'component-newsletter.css' | asset_url | stylesheet_tag }}
+<link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:opsz,wght@6..96,500..700&family=Inter:wght@300&display=swap" rel="stylesheet">
 <script src="{{ 'header.js' | asset_url }}" defer="defer"></script>
 
 <style>
@@ -99,11 +100,11 @@
 	@media screen and (min-width: 990px) {
 		.header__inline-menu .header__menu-item,
 		.header__icon .header__icon-name {
-			font-size: 0.92rem;
-			font-weight: 300;
-			letter-spacing: 0.1em;
+			font-size: 15px;
+			font-weight: 800;
+			letter-spacing: -0.01em;
 			text-transform: uppercase;
-			color: rgba(0, 0, 0, 0.82);
+			color: #000;
 		}
 	}
 </style>
@@ -138,7 +139,13 @@
 				<h1 class="header__heading">
 					{%- endif -%}
 				<a href="{{ routes.root_url }}" class="header__heading-link link link--text focus-inset">
-					{%- if section.settings.logo != blank -%}
+					{%- assign use_svg_wordmark = true -%}
+					{%- if use_svg_wordmark -%}
+						<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 60" class="header__heading-logo header__heading-logo--svg" role="img" aria-label="Skinfluence">
+							<title>Skinfluence</title>
+							<text x="240" y="40" text-anchor="middle" class="wm" textLength="376" lengthAdjust="spacingAndGlyphs">SKINFLUENCE</text>
+						</svg>
+					{%- elsif section.settings.logo != blank -%}
 						{%- assign logo_height = section.settings.logo_width | divided_by: section.settings.logo.aspect_ratio -%}
 						{%- assign logo_alt = section.settings.logo.alt | default: shop.name | escape -%}
 						{%- assign image_size_2x = section.settings.logo_width | times: 2 -%}
@@ -173,77 +180,20 @@
 		{%- endif -%}
 
 		<nav class="header__inline-menu header__inline-menu--js">
-			{%- if section.settings.menu != blank -%}
-				<ul class="list-menu list-menu--inline" role="list">
-					{%- for link in section.settings.menu.links -%}
-						{% assign mega_menu = false %}
-						{% assign mega_menu_2 = false %}
-						{% assign mega_submenu = false %}
-							{%- if link.links != blank -%}
-								{% if section.blocks.size > 0 %}
-									{% for block in section.blocks %}
-										{% liquid
-											assign mega_menu_trigger = block.settings.mega_menu_trigger | handle | strip
-											assign mega_menu_2_trigger = block.settings.mega_menu_2_trigger | handle | strip
-
-											if link.handle == mega_menu_trigger
-												assign mega_menu = true
-												assign mega_menu_2 = false
-												assign shopify_attributes = block.shopify_attributes
-											elsif link.handle == mega_menu_2_trigger
-												assign mega_menu_2 = true
-												assign mega_menu = false
-												assign shopify_attributes = block.shopify_attributes
-											endif
-										%}
-
-										{% assign mega_submenu_trigger = block.settings.mega_submenu_trigger | handle | strip %}
-
-										{% if link.handle == mega_submenu_trigger and block.type == 'mega_submenu' and link.links != blank %}
-											{% assign mega_submenu = true %}
-										{% endif %}
-									{% endfor %}
-								{% endif %}
-								
-								<li class="{% if mega_menu or mega_menu_2 or mega_submenu %}list-menu--megamenu{% endif %} {% if mega_submenu %} list-menu--megasubmenu{% endif %}" {{ shopify_attributes }}>
-									<span class="header__menu-item link-hover-line-outer list-menu__item link focus-inset">
-										<span class="link-hover-line-outer {%- if link.active %} header__active-menu-item{% endif %} "title="{{ link.title | escape }}">
-											{% if section.settings.enable_menu_item_first_level %}
-												<a class="header__menu-link" href="{{link.url}}">
-													{{ link.title | escape }}
-												</a>
-											{% else %}
-												{{ link.title | escape }}
-											{% endif %}
-										</span>
-										{% render 'icon-caret' %}
-									</span>
-									{% if mega_menu %}
-										<div class="header__mega-menu mega-menu color-background-1">
-											{% render 'mega-menu', link: link, blocks: section.blocks %}
-										</div>
-									{% elsif mega_menu_2 %}
-										<div class="header__mega-menu mega-menu mega-menu-collections color-background-1">
-										{% render 'mega-menu-collections', link: link, blocks: section.blocks %}
-										</div>
-									{% elsif mega_submenu %}
-										{% render 'header-mega-submenu', link: link, section: section %}
-									{% else %}
-										{% render 'submenu', link: link, enable_menu_item_first_level: section.settings.enable_menu_item_first_level %}
-									{% endif %}
-								</li>
-							{%- else -%}
-								<li>
-									<a href="{{ link.url }}" class="header__menu-item link-hover-line-outer list-menu__item link focus-inset"{% if link.current %} aria-current="page"{% endif %} aria-label="{{ link.title | escape }}">
-										<span {%- if link.active %} class="header__active-menu-item"{% endif %} title="{{ link.title | escape }}">
-											{{ link.title | escape }}
-										</span>
-									</a>
-								</li>
-							{%- endif -%}
-					{%- endfor -%}
-				</ul>
-			{%- endif -%}
+			{%- assign header_nav_labels = 'SHOP|THE METHOD|EVALUATION|ABOUT US' | split: '|' -%}
+			{%- assign header_nav_urls = '/collections/all|/pages/the-method|/pages/start-evaluation|/pages/about-us' | split: '|' -%}
+			<ul class="list-menu list-menu--inline" role="list">
+				{%- for nav_label in header_nav_labels -%}
+					{%- assign nav_url = header_nav_urls[forloop.index0] -%}
+					<li>
+						<a href="{{ nav_url }}" class="header__menu-item link-hover-line-outer list-menu__item link focus-inset"{% if request.path == nav_url %} aria-current="page"{% endif %} aria-label="{{ nav_label }}">
+							<span{% if request.path == nav_url %} class="header__active-menu-item"{% endif %} title="{{ nav_label }}">
+								{{ nav_label }}
+							</span>
+						</a>
+					</li>
+				{%- endfor -%}
+			</ul>
 		</nav>
 
 		<div class="header__column">
