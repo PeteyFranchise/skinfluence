@@ -3937,7 +3937,7 @@ body.body--hidden {
   .container.container--header {
     max-width: none;
     width: 100%;
-    padding-left: 2.4rem;
+    padding-left: 2rem;
     padding-right: 2rem;
   }
   .header__column {
@@ -4122,9 +4122,9 @@ body.body--hidden {
 }
 @media screen and (min-width: 990px) {
   .header__heading-link {
-    width: 236px;
-    max-width: 236px;
-    min-width: 236px;
+    width: 292px;
+    max-width: 292px;
+    min-width: 292px;
     height: auto;
     min-height: 24px;
     transform: translateY(-0.28rem);
@@ -4135,12 +4135,12 @@ body.body--hidden {
     line-height: 0.88;
   }
   .header__heading-logo--svg .wm {
-    font-size: 42px;
+    font-size: 51px;
     letter-spacing: 0.07em;
   }
   .header__heading-logo {
-    width: 236px;
-    max-width: 236px;
+    width: 292px;
+    max-width: 292px;
     height: auto;
     max-height: none;
     opacity: 1;
@@ -4407,7 +4407,7 @@ details[open] > .header__account-modal {
 @media screen and (min-width: 990px) {
   .header > .header__heading,
   .header > .header__heading-link {
-    margin-left: -2.5rem;
+    margin-left: -4.5rem;
   }
   .header__heading-link {
     margin-left: 0;
