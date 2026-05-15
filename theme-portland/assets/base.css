@@ -4084,9 +4084,20 @@ body.body--hidden {
   fill: #000;
   font-family: "Bodoni Moda", serif;
   font-size: 37px;
-  font-weight: 700;
-  letter-spacing: 0.06em;
+  font-weight: 600;
+  letter-spacing: 0.02em;
   text-transform: uppercase;
+}
+
+.header__heading-logo--svg .wm-mark-bracket {
+  fill: #000;
+  font-family: "Bodoni Moda", serif;
+  font-size: 37px;
+  font-weight: 700;
+}
+
+.header__heading-logo--svg .wm-mark-square {
+  fill: #000;
 }
 
 .header__heading .header__heading-link {
@@ -4136,7 +4147,10 @@ body.body--hidden {
   }
   .header__heading-logo--svg .wm {
     font-size: 51px;
-    letter-spacing: 0.07em;
+    letter-spacing: 0.03em;
+  }
+  .header__heading-logo--svg .wm-mark-bracket {
+    font-size: 51px;
   }
   .header__heading-logo {
     width: 292px;

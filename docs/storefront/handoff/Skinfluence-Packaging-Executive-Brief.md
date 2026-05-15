@@ -36,6 +36,12 @@ The bottle should carry the more complete product story:
 - dose and active details below
 - Skinfluence logo at bottom
 
+Current direction:
+
+- the front-of-pack icon language is being guided by the Midjourney concept imagery rather than the original Claude SVG icon set
+- those icons should be treated as the preferred visual reference for packaging only
+- they should later be redrawn cleanly in vector once the front-of-pack system is finalized
+
 ### Carton
 The carton should feel cleaner and more restrained than the bottle:
 
@@ -85,6 +91,15 @@ Potential uses:
 
 ### 5. Highly disciplined typography
 The design relies on precision. Small text and minimal layout need to print sharply.
+
+### 6. Refined custom icon language
+The icon row should feel distinctive and premium, not generic UI. The current preferred direction is the icon style that emerged in the Midjourney packaging imagery.
+
+That icon language should later be:
+
+- cleaned up
+- redrawn in vector
+- normalized into a reproducible packaging icon set
 
 ## What To Avoid
 

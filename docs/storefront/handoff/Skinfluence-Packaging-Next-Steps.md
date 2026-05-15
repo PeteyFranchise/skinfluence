@@ -28,6 +28,11 @@ Revisit the current Figma front label and confirm:
 
 This should only happen once the chemist or formulation partner confirms what can actually appear on pack.
 
+Also confirm:
+
+- whether the Midjourney-inspired icon style remains the approved packaging icon direction
+- when that icon direction should be redrawn as final vector artwork
+
 ### 2. Design Carton Side Panels
 The carton still needs structured side-panel design for:
 
@@ -85,6 +90,7 @@ Later, convert the concept-stage design into:
 - dieline-ready carton artwork
 - production-ready bottle label artwork
 - print-ready logo files
+- production-ready vector icon set based on the approved packaging icon direction
 - outlined or production-safe typography where needed
 - final packaged asset export set
 

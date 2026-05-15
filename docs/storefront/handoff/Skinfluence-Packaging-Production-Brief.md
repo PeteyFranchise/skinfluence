@@ -42,6 +42,11 @@ Preferred front hierarchy:
 4. Active ingredients list below
 5. Skinfluence logo anchored at bottom
 
+Icon note:
+
+- the current preferred front-of-pack icon language is based on the Midjourney packaging concept imagery, not the earlier Claude SVG icon set
+- those icons should be treated as concept reference only until they are rebuilt as production-ready vector artwork
+
 ### Carton
 The carton should remain cleaner than the bottle:
 
@@ -122,6 +127,15 @@ Production must support:
 - no muddy fill
 - no fuzzy micro-details
 
+### 6. Production-ready icon redraw
+The current icon direction is visually approved at the concept level, but should be rebuilt as a final vector set before print production.
+
+Production partner should expect:
+
+- front-of-pack icon art to be delivered as final vector files later
+- consistency of line weight, spacing, and alignment across icons
+- a packaging-specific icon set that matches the approved concept direction
+
 ## Secondary Panel Expectations
 Side and back panels should feel structured and premium, even when carrying regulatory or formula information.
 
@@ -168,3 +182,9 @@ The goal is not decorative beauty packaging. The goal is premium clinical-luxury
 
 ## Working Notes
 Current front-of-pack formula and actives are provisional and may change after chemist review. Please treat the present hierarchy and finish direction as the main locked concepts, while product-specific copy remains subject to formulary confirmation.
+
+Also note:
+
+- the Midjourney-generated front icon style is currently the preferred packaging reference
+- it is not yet final production art
+- it should be translated into clean vector packaging artwork in a later step

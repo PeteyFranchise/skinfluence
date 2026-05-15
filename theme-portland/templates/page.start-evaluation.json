@@ -17,7 +17,7 @@
         "header_overlay": false,
         "mobile_content_overlay": false,
         "subheading": "Evaluation",
-        "heading": "<p>Begin your Skinfluence evaluation.</p>",
+        "heading": "<p>Begin your PROTOCL evaluation.</p>",
         "heading_size": "large",
         "text_information": "Start with a provider-reviewed intake designed to understand your goals, skin history, and treatment fit before anything moves forward.",
         "text_align": "left",
@@ -39,7 +39,7 @@
           "type": "column",
           "settings": {
             "subheading": "Evaluation first",
-            "text": "<p>This is the first step into the Skinfluence care path before treatment decisions are made.</p>",
+            "text": "<p>This is the first step into the PROTOCL care path before treatment decisions are made.</p>",
             "button_label": "",
             "button_link": ""
           }
@@ -156,7 +156,7 @@
           "type": "section_slide",
           "settings": {
             "slide_heading": "Step 3",
-            "slide_text": "<p><strong>Move into care if approved</strong><br>If approved, users move into the monthly treatment model, onboarding guidance, and the ongoing Skinfluence support experience.</p>"
+            "slide_text": "<p><strong>Move into care if approved</strong><br>If approved, users move into the monthly treatment model, onboarding guidance, and the ongoing PROTOCL support experience.</p>"
           }
         }
       },
@@ -196,7 +196,7 @@
           "settings": {
             "question": "What happens if more information is needed?",
             "question_heading_tag": "h3",
-            "answer": "<p>If a provider needs more information, Skinfluence should communicate that clearly before anything moves forward.</p>"
+            "answer": "<p>If a provider needs more information, PROTOCL should communicate that clearly before anything moves forward.</p>"
           }
         },
         "accordion_4": {

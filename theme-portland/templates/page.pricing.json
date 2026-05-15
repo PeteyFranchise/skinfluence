@@ -17,7 +17,7 @@
         "header_overlay": false,
         "mobile_content_overlay": false,
         "subheading": "Pricing with clarity",
-        "heading": "<p>Premium anti-aging care, priced with clarity.</p>",
+        "heading": "<p>High-Performance anti-aging care, priced with clarity.</p>",
         "heading_size": "large",
         "text_information": "Start with a one-time evaluation, then move into monthly treatment if approved. The structure is simple on purpose.",
         "text_align": "left",
@@ -89,7 +89,7 @@
           "type": "column",
           "settings": {
             "subheading": "One-time evaluation",
-            "text": "<p>Provider-reviewed intake before treatment begins. This is the first step into the Skinfluence model.</p>",
+            "text": "<p>Provider-reviewed intake before treatment begins. This is the first step into the PROTOCL model.</p>",
             "button_label": "",
             "button_link": ""
           }
@@ -128,7 +128,7 @@
       "settings": {
         "eyebrow": "What is included",
         "heading": "<p>A clearer pricing structure than generic prescription marketplaces.</p>",
-        "body": "<p>Skinfluence pricing is designed around a simpler care path: evaluation first, monthly treatment only if approved, and a more focused anti-aging experience built for continuity.</p><p>What is included is not just a product. It is the review process, the treatment path if appropriate, and the structure needed to make a stronger routine easier to maintain.</p>",
+        "body": "<p>PROTOCL pricing is designed around a simpler care path: evaluation first, monthly treatment only if approved, and a more focused anti-aging experience built for continuity.</p><p>What is included is not just a product. It is the review process, the treatment path if appropriate, and the structure needed to make a stronger routine easier to maintain.</p>",
         "button_label": "Start Evaluation",
         "button_link": "/pages/start-evaluation",
         "button_style": "primary",
@@ -218,7 +218,7 @@
         "text": {
           "type": "text",
           "settings": {
-            "text": "<p>Skinfluence is designed as premium anti-aging care with provider review, a more elevated treatment experience, and a routine built for consistency rather than marketplace shopping. The pricing should feel clearer, but it should also reflect that this is a more guided care model.</p>"
+            "text": "<p>PROTOCL is designed as high-performance anti-aging care with provider review, a more elevated treatment experience, and a routine built for consistency rather than marketplace shopping. The pricing should feel clearer, but it should also reflect that this is a more guided care model.</p>"
           }
         }
       },
@@ -243,7 +243,7 @@
           "settings": {
             "question": "Why is there an evaluation first?",
             "question_heading_tag": "h3",
-            "answer": "<p>Evaluation comes first because treatment fit should be reviewed before care begins. Skinfluence is designed around provider review, not instant subscription enrollment.</p>"
+            "answer": "<p>Evaluation comes first because treatment fit should be reviewed before care begins. PROTOCL is designed around provider review, not instant subscription enrollment.</p>"
           }
         },
         "accordion_2": {
@@ -259,7 +259,7 @@
           "settings": {
             "question": "What if I am not eligible?",
             "question_heading_tag": "h3",
-            "answer": "<p>Not every user will be a fit for treatment. If treatment is not appropriate, Skinfluence should communicate that clearly and explain any next steps that may be available.</p>"
+            "answer": "<p>Not every user will be a fit for treatment. If treatment is not appropriate, PROTOCL should communicate that clearly and explain any next steps that may be available.</p>"
           }
         },
         "accordion_4": {
@@ -282,7 +282,7 @@
         "heading": "Pricing questions, answered clearly",
         "heading_size": "h2",
         "heading_tag": "h2",
-        "text": "A more structured explanation of how the Skinfluence pricing model works before numbers, billing details, and final launch policies are fully locked.",
+        "text": "A more structured explanation of how the PROTOCL pricing model works before numbers, billing details, and final launch policies are fully locked.",
         "padding_top": 120,
         "padding_bottom": 140
       }

@@ -19,7 +19,7 @@
         "subheading": "About",
         "heading": "<p>A more serious approach to anti-aging care.</p>",
         "heading_size": "large",
-        "text_information": "Skinfluence exists for women who have outgrown ordinary skincare and want something more focused, more guided, and easier to trust.",
+        "text_information": "PROTOCL exists for women who have outgrown ordinary skincare and want something more focused, more guided, and easier to trust.",
         "text_align": "left",
         "text_order": "column",
         "show_view_all": true,
@@ -47,7 +47,7 @@
         "column_2": {
           "type": "column",
           "settings": {
-            "subheading": "Premium by design",
+            "subheading": "High-Performance by design",
             "text": "<p>Created for women who want a more elevated experience than ordinary skincare shopping.</p>",
             "button_label": "",
             "button_link": ""
@@ -86,9 +86,9 @@
       "type": "premium-split",
       "name": "Origin story",
       "settings": {
-        "eyebrow": "Why Skinfluence exists",
+        "eyebrow": "Why PROTOCL exists",
         "heading": "<p>For the moment when ordinary skincare stops feeling like progress.</p>",
-        "body": "<p>Many women spend heavily on skincare and still feel like their routine has plateaued. Skinfluence is designed for that moment when the next step should feel more advanced, more considered, and less fragmented.</p><p>The brand exists to offer a more focused anti-aging path for women who want a stronger routine without turning skincare into a cycle of endless trial and error.</p>",
+        "body": "<p>Many women spend heavily on skincare and still feel like their routine has plateaued. PROTOCL is designed for that moment when the next step should feel more advanced, more considered, and less fragmented.</p><p>The brand exists to offer a more focused anti-aging path for women who want a stronger routine without turning skincare into a cycle of endless trial and error.</p>",
         "button_label": "Start Evaluation",
         "button_link": "/pages/start-evaluation",
         "button_style": "primary",
@@ -168,7 +168,7 @@
         "text": {
           "type": "text",
           "settings": {
-            "text": "<p>Skinfluence is not about adding more products for the sake of complexity. It is about creating a premium anti-aging experience that feels clinically grounded, easier to maintain, and more aligned with visible skin quality improvement.</p>"
+            "text": "<p>PROTOCL is not about adding more products for the sake of complexity. It is about creating a high-performance anti-aging experience that feels clinically grounded, easier to maintain, and more aligned with visible skin quality improvement.</p>"
           }
         }
       },
@@ -191,9 +191,9 @@
         "accordion_1": {
           "type": "accordion",
           "settings": {
-            "question": "Who is Skinfluence for?",
+            "question": "Who is PROTOCL for?",
             "question_heading_tag": "h3",
-            "answer": "<p>Skinfluence is for women who feel ready for a more serious anti-aging approach than ordinary skincare can realistically provide.</p>"
+            "answer": "<p>PROTOCL is for women who feel ready for a more serious anti-aging approach than ordinary skincare can realistically provide.</p>"
           }
         },
         "accordion_2": {
@@ -209,7 +209,7 @@
           "settings": {
             "question": "Is this just another skincare brand?",
             "question_heading_tag": "h3",
-            "answer": "<p>No. Skinfluence is positioned as a more guided anti-aging care experience, not a broad catalog of trend-driven products.</p>"
+            "answer": "<p>No. PROTOCL is positioned as a more guided anti-aging care experience, not a broad catalog of trend-driven products.</p>"
           }
         },
         "accordion_4": {
@@ -229,7 +229,7 @@
       ],
       "name": "About questions",
       "settings": {
-        "heading": "About Skinfluence, answered clearly",
+        "heading": "About PROTOCL, answered clearly",
         "heading_size": "h2",
         "heading_tag": "h2",
         "text": "A more structured explanation of what the brand stands for and why the model exists.",

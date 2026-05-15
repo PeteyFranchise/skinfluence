@@ -1,0 +1,241 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-product",
+      "blocks": {
+        "eyebrow": {
+          "type": "text",
+          "settings": {
+            "text": "HIGH-PERFORMANCE TREATMENT"
+          }
+        },
+        "title": {
+          "type": "title",
+          "settings": {
+            "title_heading_tag": "h1"
+          }
+        },
+        "price": {
+          "type": "price",
+          "settings": {}
+        },
+        "inventory": {
+          "type": "inventory",
+          "settings": {}
+        },
+        "buy_buttons": {
+          "type": "buy_buttons",
+          "settings": {
+            "show_dynamic_checkout": true,
+            "show_quantity": false,
+            "show_gift_card_recipient": false
+          }
+        },
+        "how_to_use": {
+          "type": "dropdown_information",
+          "settings": {
+            "characteristics": false,
+            "heading": "HOW TO USE",
+            "description": "<p>Apply in the evening to clean, dry skin. Begin with a few nights per week, then build toward daily PM use as tolerated. Follow with a peptide-rich or barrier-supporting moisturizer if needed.</p>",
+            "default_open": true
+          }
+        },
+        "who_its_for": {
+          "type": "dropdown_information",
+          "settings": {
+            "characteristics": false,
+            "heading": "WHO IT'S FOR",
+            "description": "<p>Designed for women focused on texture, tone, and fine lines who want a more serious treatment model than ordinary skincare shopping. Evaluation and provider review come first.</p>",
+            "default_open": false
+          }
+        },
+        "formula_highlights": {
+          "type": "dropdown_information",
+          "settings": {
+            "characteristics": false,
+            "heading": "FORMULA HIGHLIGHTS",
+            "description": "<p>Tretinoin paired with top peptides and barrier-conscious support for a more elevated anti-aging routine. Current concept ingredients include Matrixyl 3000, Argireline, copper peptides, and supportive hydrators.</p>",
+            "default_open": false
+          }
+        },
+        "shipping_popup": {
+          "type": "popup",
+          "settings": {
+            "label": "SHIPPING + RETURNS",
+            "heading": "Shipping + Returns",
+            "heading_tag": "h2",
+            "text": "<p>Packaging and formulas are still being finalized. Use this page as the design direction for the upcoming launch product. Standard shipping, refill cadence, and returns language can be finalized once the product setup is complete.</p>",
+            "page": ""
+          }
+        }
+      },
+      "block_order": [
+        "eyebrow",
+        "title",
+        "price",
+        "inventory",
+        "buy_buttons",
+        "how_to_use",
+        "who_its_for",
+        "formula_highlights",
+        "shipping_popup"
+      ],
+      "settings": {
+        "desktop_alignment": "left",
+        "mobile_alignment": "after",
+        "variant_media_display": "show_all",
+        "image_fit": "contain",
+        "enable_autoheight": true,
+        "fallback_image_1": "protocl-advanced-treatment-hero.png",
+        "fallback_image_2": "protocl-advanced-treatment-packshot.png",
+        "fallback_image_3": "protocl-advanced-treatment-editorial.png",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "benefit_rail": {
+      "type": "multicolumn",
+      "blocks": {
+        "texture": {
+          "type": "column",
+          "settings": {
+            "subheading": "Texture",
+            "text": "<p>Built to support smoother-looking texture through a more focused treatment model.</p>",
+            "button_label": "",
+            "button_link": ""
+          }
+        },
+        "tone": {
+          "type": "column",
+          "settings": {
+            "subheading": "Tone",
+            "text": "<p>Designed to support a more even-looking complexion over time.</p>",
+            "button_label": "",
+            "button_link": ""
+          }
+        },
+        "fine_lines": {
+          "type": "column",
+          "settings": {
+            "subheading": "Fine Lines",
+            "text": "<p>Pairs advanced renewal with peptide support for a stronger anti-aging lane.</p>",
+            "button_label": "",
+            "button_link": ""
+          }
+        },
+        "consistency": {
+          "type": "column",
+          "settings": {
+            "subheading": "Consistency",
+            "text": "<p>Structured for daily PM use and a steadier long-term routine if approved.</p>",
+            "button_label": "",
+            "button_link": ""
+          }
+        }
+      },
+      "block_order": [
+        "texture",
+        "tone",
+        "fine_lines",
+        "consistency"
+      ],
+      "settings": {
+        "multicolumn_to_show": 3,
+        "object_fit": "contain",
+        "swipe_on_mobile": true,
+        "button_style": "primary",
+        "border_top": true,
+        "border_bottom": true,
+        "padding_top": 40,
+        "padding_bottom": 60,
+        "margin_top": 0,
+        "margin_bottom": 0
+      }
+    },
+    "clinical_frame": {
+      "type": "rich-text",
+      "blocks": {
+        "subheading": {
+          "type": "subheading",
+          "settings": {
+            "subheading": "Provider-reviewed anti-aging care"
+          }
+        },
+        "heading": {
+          "type": "heading",
+          "settings": {
+            "heading": "<p>A more elevated treatment model than ordinary skincare shopping.</p>",
+            "heading_size": "large"
+          }
+        },
+        "text": {
+          "type": "text",
+          "settings": {
+            "text": "<p>PROTOCL is positioned between luxury beauty and clinic-guided care. The product direction is intentionally minimal, sharp, and high-performance, while the treatment model begins with evaluation and provider review before monthly use begins.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "subheading",
+        "heading",
+        "text"
+      ],
+      "settings": {
+        "color_scheme": "background-1",
+        "full_width": true,
+        "padding_top": 110,
+        "padding_bottom": 110
+      }
+    },
+    "results_frame": {
+      "type": "rich-text",
+      "blocks": {
+        "subheading": {
+          "type": "subheading",
+          "settings": {
+            "subheading": "Treatment positioning"
+          }
+        },
+        "heading": {
+          "type": "heading",
+          "settings": {
+            "heading": "<p>Designed to feel high-performance enough for luxury beauty retail and credible enough for the spa or clinic shelf.</p>",
+            "heading_size": "large"
+          }
+        },
+        "text": {
+          "type": "text",
+          "settings": {
+            "text": "<p>The packaging direction pairs a matte-black clinical silhouette with restrained typography and focused formula messaging. The result is a sharper, more serious skincare signal than trend-driven wellness packaging or overly technical med-spa branding.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "subheading",
+        "heading",
+        "text"
+      ],
+      "settings": {
+        "color_scheme": "background-3",
+        "full_width": true,
+        "padding_top": 120,
+        "padding_bottom": 120
+      }
+    }
+  },
+  "order": [
+    "main",
+    "benefit_rail",
+    "clinical_frame",
+    "results_frame"
+  ]
+}

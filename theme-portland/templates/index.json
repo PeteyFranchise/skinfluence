@@ -66,7 +66,7 @@
         "second_button_link": ""
       }
     },
-    "trust_marquee_Skinfluence": {
+    "trust_marquee_PROTOCL": {
       "type": "trust-marquee",
       "blocks": {
         "item_1": {
@@ -78,7 +78,7 @@
         "item_2": {
           "type": "item",
           "settings": {
-            "text": "Premium anti-aging treatment"
+            "text": "High-Performance anti-aging treatment"
           }
         },
         "item_3": {
@@ -116,7 +116,7 @@
       ],
       "name": "Trust marquee",
       "settings": {
-        "accessibility_label": "Skinfluence trust highlights",
+        "accessibility_label": "PROTOCL trust highlights",
         "background": "#F1ECE6",
         "text_color": "#20332C",
         "separator": "\u2022",
@@ -141,7 +141,7 @@
         "text_core_problem": {
           "type": "text",
           "settings": {
-            "text": "<p>There comes a point when another serum, another cream, and another expensive routine stop feeling like progress. Skinfluence is for women who want a more serious anti-aging approach without turning skincare into a second job or navigating the friction of traditional dermatology.</p>"
+            "text": "<p>There comes a point when another serum, another cream, and another expensive routine stop feeling like progress. PROTOCL is for women who want a more serious anti-aging approach without turning skincare into a second job or navigating the friction of traditional dermatology.</p>"
           }
         }
       },
@@ -159,11 +159,11 @@
     },
     "premium_split_explanation": {
       "type": "premium-split",
-      "name": "Premium explanation",
+      "name": "High-Performance explanation",
       "settings": {
-        "eyebrow": "Premium anti-aging care",
-        "heading": "<p>Premium anti-aging care, built around provider review.</p>",
-        "body": "<p>Skinfluence is a prescription-led monthly treatment designed for women seeking visible improvement in skin quality. If approved, you receive a provider-reviewed anti-aging formula in a streamlined maintenance model designed to support smoother-looking texture, more even-looking tone, and softer-looking fine lines over time.</p>",
+        "eyebrow": "High-Performance anti-aging care",
+        "heading": "<p>High-Performance anti-aging care, built around provider review.</p>",
+        "body": "<p>PROTOCL is a prescription-led monthly treatment designed for women seeking visible improvement in skin quality. If approved, you receive a provider-reviewed anti-aging formula in a streamlined maintenance model designed to support smoother-looking texture, more even-looking tone, and softer-looking fine lines over time.</p>",
         "button_label": "Start Evaluation",
         "button_link": "/pages/start-evaluation",
         "button_style": "primary",
@@ -185,7 +185,7 @@
             "platform": "Instagram",
             "title": "Real client proof",
             "quote": "Highlight a short client reel, results-focused story, or real-world anti-aging routine proof here.",
-            "handle": "@skinfluenceclient",
+            "handle": "@protoclclient",
             "role": "Client",
             "poster_alt": "Client social proof video preview",
             "link_label": "Watch post",
@@ -199,7 +199,7 @@
             "platform": "TikTok",
             "title": "Creator perspective",
             "quote": "Use this slot for an influencer or creator video that explains why the routine feels more elevated and easier to trust.",
-            "handle": "@skinfluencecreator",
+            "handle": "@protoclcreator",
             "role": "Creator",
             "poster_alt": "Creator social proof video preview",
             "link_label": "Watch post",
@@ -213,7 +213,7 @@
             "platform": "Instagram",
             "title": "Professional credibility",
             "quote": "Use this slot for a dermatologist or clinically grounded social video explaining why provider review matters.",
-            "handle": "@skinfluencederm",
+            "handle": "@protoclderm",
             "role": "Dermatologist",
             "poster_alt": "Dermatologist social proof video preview",
             "link_label": "Watch post",
@@ -226,8 +226,8 @@
             "proof_type": "Before + After",
             "platform": "Instagram",
             "title": "Routine transformation",
-            "quote": "Use this slot for a before-and-after style social clip that shows how the Skinfluence routine fits into real life.",
-            "handle": "@skinfluenceresults",
+            "quote": "Use this slot for a before-and-after style social clip that shows how the PROTOCL routine fits into real life.",
+            "handle": "@protoclresults",
             "role": "Client",
             "poster_alt": "Before and after social proof video preview",
             "link_label": "Watch post",
@@ -241,7 +241,7 @@
             "platform": "TikTok",
             "title": "Treatment education",
             "quote": "Use this slot for an expert or practitioner video explaining why the routine is structured the way it is.",
-            "handle": "@skinfluenceexpert",
+            "handle": "@protoclexpert",
             "role": "Expert",
             "poster_alt": "Expert educational video preview",
             "link_label": "Watch post",
@@ -255,7 +255,7 @@
             "platform": "Instagram",
             "title": "Client review moment",
             "quote": "Use this slot for another client testimonial clip that reinforces trust, consistency, and visible improvement over time.",
-            "handle": "@skinfluencereview",
+            "handle": "@protoclreview",
             "role": "Client",
             "poster_alt": "Client testimonial video preview",
             "link_label": "Watch post",
@@ -275,7 +275,7 @@
       "settings": {
         "eyebrow": "Seen on social",
         "heading": "<p>Real reactions from clients, creators, and trusted voices.</p>",
-        "body": "<p>Add Instagram and TikTok-style proof here to show how the Skinfluence experience lands in the real world, from client stories to influencer commentary to dermatologist perspective.</p>",
+        "body": "<p>Add Instagram and TikTok-style proof here to show how the PROTOCL experience lands in the real world, from client stories to influencer commentary to dermatologist perspective.</p>",
         "background": "#FFFFFF",
         "text_color": "#20332C",
         "autoplay": false,
@@ -379,7 +379,7 @@
         "subheading_why_different": {
           "type": "subheading",
           "settings": {
-            "subheading": "Why Skinfluence feels different"
+            "subheading": "Why PROTOCL feels different"
           }
         },
         "heading_why_different": {
@@ -392,7 +392,7 @@
         "text_why_different": {
           "type": "text",
           "settings": {
-            "text": "<p>Skinfluence is not built like a crowded product line or a generic prescription checkout. It is designed as a premium, provider-reviewed care experience for women who want stronger anti-aging support in a format they can actually stay consistent with.</p><p>This is not about adding more products. It is about moving into a more effective anti-aging routine with greater clarity, support, and consistency.</p>"
+            "text": "<p>PROTOCL is not built like a crowded product line or a generic prescription checkout. It is designed as a high-performance, provider-reviewed care experience for women who want stronger anti-aging support in a format they can actually stay consistent with.</p><p>This is not about adding more products. It is about moving into a more effective anti-aging routine with greater clarity, support, and consistency.</p>"
           }
         }
       },
@@ -425,7 +425,7 @@
           "settings": {
             "question": "What happens if I’m not eligible?",
             "question_heading_tag": "h3",
-            "answer": "<p>Not every user will be a fit for treatment. If a provider determines treatment is not appropriate, Skinfluence will communicate that clearly.</p>"
+            "answer": "<p>Not every user will be a fit for treatment. If a provider determines treatment is not appropriate, PROTOCL will communicate that clearly.</p>"
           }
         },
         "faq_3": {
@@ -433,13 +433,13 @@
           "settings": {
             "question": "How long until I may see visible improvement?",
             "question_heading_tag": "h3",
-            "answer": "<p>Anti-aging care is designed for consistency over time. Skinfluence sets expectations around gradual, visible improvement rather than instant transformation.</p>"
+            "answer": "<p>Anti-aging care is designed for consistency over time. PROTOCL sets expectations around gradual, visible improvement rather than instant transformation.</p>"
           }
         },
         "faq_4": {
           "type": "accordion",
           "settings": {
-            "question": "Is Skinfluence a subscription?",
+            "question": "Is PROTOCL a subscription?",
             "question_heading_tag": "h3",
             "answer": "<p>If approved, treatment is designed as a recurring monthly model focused on continuity, maintenance, and ease.</p>"
           }
@@ -879,7 +879,7 @@
         "column_eJTUWC": {
           "type": "column",
           "settings": {
-            "subheading": "Premium monthly treatment",
+            "subheading": "High-Performance monthly treatment",
             "text": "<p>Showcase craftsmanship, product benefits, or an exclusive offer.</p>",
             "button_label": "Explore More",
             "button_link": ""
@@ -928,7 +928,7 @@
   },
   "order": [
     "4a48dd22-7a83-42ba-ae14-de6aaae18074",
-    "trust_marquee_Skinfluence",
+    "trust_marquee_PROTOCL",
     "rich_text_core_problem",
     "premium_split_explanation",
     "social_proof_video_rail",

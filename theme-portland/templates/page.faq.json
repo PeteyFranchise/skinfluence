@@ -39,7 +39,7 @@
           "type": "column",
           "settings": {
             "subheading": "Fit and eligibility",
-            "text": "<p>Understand who Skinfluence is for and why not everyone will be approved.</p>",
+            "text": "<p>Understand who PROTOCL is for and why not everyone will be approved.</p>",
             "button_label": "",
             "button_link": ""
           }
@@ -88,7 +88,7 @@
       "settings": {
         "eyebrow": "What to know",
         "heading": "<p>Answers should feel clear before treatment begins.</p>",
-        "body": "<p>The FAQ is here to reduce uncertainty before evaluation, provider review, and monthly care. It should help users understand fit, pricing, expectations, and support without needing to dig through scattered pages.</p><p>The goal is not just to answer questions. It is to make the whole Skinfluence process feel more understandable.</p>",
+        "body": "<p>The FAQ is here to reduce uncertainty before evaluation, provider review, and monthly care. It should help users understand fit, pricing, expectations, and support without needing to dig through scattered pages.</p><p>The goal is not just to answer questions. It is to make the whole PROTOCL process feel more understandable.</p>",
         "button_label": "View Pricing",
         "button_link": "/pages/pricing",
         "button_style": "secondary",
@@ -105,9 +105,9 @@
         "faq_1": {
           "type": "accordion",
           "settings": {
-            "question": "Who is Skinfluence for?",
+            "question": "Who is PROTOCL for?",
             "question_heading_tag": "h3",
-            "answer": "<p>Skinfluence is designed for women who want a more advanced anti-aging routine than standard over-the-counter skincare, especially those focused on texture, tone, fine lines, and overall skin quality.</p>"
+            "answer": "<p>PROTOCL is designed for women who want a more advanced anti-aging routine than standard over-the-counter skincare, especially those focused on texture, tone, fine lines, and overall skin quality.</p>"
           }
         },
         "faq_2": {
@@ -131,7 +131,7 @@
           "settings": {
             "question": "How long until I may see visible improvement?",
             "question_heading_tag": "h3",
-            "answer": "<p>Anti-aging care takes time and consistency. Skinfluence is designed around realistic expectations, not instant transformation.</p>"
+            "answer": "<p>Anti-aging care takes time and consistency. PROTOCL is designed around realistic expectations, not instant transformation.</p>"
           }
         },
         "faq_5": {
@@ -145,7 +145,7 @@
         "faq_6": {
           "type": "accordion",
           "settings": {
-            "question": "Is Skinfluence a subscription?",
+            "question": "Is PROTOCL a subscription?",
             "question_heading_tag": "h3",
             "answer": "<p>If approved, treatment is designed as a recurring monthly maintenance model.</p>"
           }
@@ -155,7 +155,7 @@
           "settings": {
             "question": "What if I’m not approved?",
             "question_heading_tag": "h3",
-            "answer": "<p>If treatment is not appropriate, Skinfluence will communicate that clearly and provide next-step guidance where applicable.</p>"
+            "answer": "<p>If treatment is not appropriate, PROTOCL will communicate that clearly and provide next-step guidance where applicable.</p>"
           }
         },
         "faq_8": {

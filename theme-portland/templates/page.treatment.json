@@ -19,7 +19,7 @@
         "subheading": "Treatment",
         "heading": "<p>Provider-reviewed anti-aging treatment for texture, tone, and fine lines.</p>",
         "heading_size": "large",
-        "text_information": "Skinfluence is designed for women ready to move beyond over-the-counter skincare and into a more guided treatment model. Start with evaluation first, then move into monthly care only if approved.",
+        "text_information": "PROTOCL is designed for women ready to move beyond over-the-counter skincare and into a more guided treatment model. Start with evaluation first, then move into monthly care only if approved.",
         "text_align": "left",
         "text_order": "column",
         "show_view_all": true,
@@ -98,7 +98,7 @@
       "settings": {
         "eyebrow": "What this is",
         "heading": "<p>A more elevated treatment model than ordinary skincare shopping.</p>",
-        "body": "<p>Skinfluence is a provider-reviewed anti-aging treatment experience designed for women who want more visible improvement in skin quality. Instead of stacking product after product, the model begins with evaluation, moves through provider review, and supports a more focused monthly routine if approved.</p><p>It is positioned for women seeking a stronger approach to texture, tone, and fine lines without turning skincare into a full-time project.</p>",
+        "body": "<p>PROTOCL is a provider-reviewed anti-aging treatment experience designed for women who want more visible improvement in skin quality. Instead of stacking product after product, the model begins with evaluation, moves through provider review, and supports a more focused monthly routine if approved.</p><p>It is positioned for women seeking a stronger approach to texture, tone, and fine lines without turning skincare into a full-time project.</p>",
         "button_label": "Start Evaluation",
         "button_link": "/pages/start-evaluation",
         "button_style": "primary",
@@ -128,7 +128,7 @@
         "text": {
           "type": "text",
           "settings": {
-            "text": "<p>Skinfluence is not built around hype, instant-fix promises, or product stacking. It is built around a steadier treatment model for women who want a more serious path to smoother-looking texture, more even-looking tone, and softer-looking fine lines over time.</p><p>That is why evaluation comes first, provider review matters, and the monthly model only begins if treatment is appropriate.</p>"
+            "text": "<p>PROTOCL is not built around hype, instant-fix promises, or product stacking. It is built around a steadier treatment model for women who want a more serious path to smoother-looking texture, more even-looking tone, and softer-looking fine lines over time.</p><p>That is why evaluation comes first, provider review matters, and the monthly model only begins if treatment is appropriate.</p>"
           }
         }
       },
@@ -164,7 +164,7 @@
         "text": {
           "type": "text",
           "settings": {
-            "text": "<p>Skinfluence is designed to feel more responsible than trend-driven skincare shopping. Provider review is not a decorative layer. It is part of the treatment model itself, helping ensure that fit, expectations, and care decisions are grounded in clinical judgment before monthly treatment begins.</p><p>That is part of what makes the experience feel more serious, more guided, and more aligned with long-term skin-quality goals.</p>"
+            "text": "<p>PROTOCL is designed to feel more responsible than trend-driven skincare shopping. Provider review is not a decorative layer. It is part of the treatment model itself, helping ensure that fit, expectations, and care decisions are grounded in clinical judgment before monthly treatment begins.</p><p>That is part of what makes the experience feel more serious, more guided, and more aligned with long-term skin-quality goals.</p>"
           }
         }
       },
@@ -239,7 +239,7 @@
           "settings": {
             "question": "What this treatment model is",
             "question_heading_tag": "h3",
-            "answer": "<p>Skinfluence is a provider-reviewed anti-aging care model designed to move women into a more focused routine if approved. It is not a broad skincare catalog and it is not meant to feel like generic prescription checkout.</p>"
+            "answer": "<p>PROTOCL is a provider-reviewed anti-aging care model designed to move women into a more focused routine if approved. It is not a broad skincare catalog and it is not meant to feel like generic prescription checkout.</p>"
           }
         },
         "accordion_2": {
@@ -278,7 +278,7 @@
         "heading": "What to know before starting",
         "heading_size": "h2",
         "heading_tag": "h2",
-        "text": "A product-detail-style overview of how the Skinfluence treatment model works, what makes it different, and what a user should expect before moving into care.",
+        "text": "A product-detail-style overview of how the PROTOCL treatment model works, what makes it different, and what a user should expect before moving into care.",
         "padding_top": 120,
         "padding_bottom": 140
       }
@@ -302,7 +302,7 @@
         "text": {
           "type": "text",
           "settings": {
-            "text": "<p>Most anti-aging skincare asks you to keep adding more products and hoping for better results. Skinfluence begins with evaluation, includes provider review, and turns anti-aging care into a more focused monthly routine built for consistency.</p>"
+            "text": "<p>Most anti-aging skincare asks you to keep adding more products and hoping for better results. PROTOCL begins with evaluation, includes provider review, and turns anti-aging care into a more focused monthly routine built for consistency.</p>"
           }
         }
       },

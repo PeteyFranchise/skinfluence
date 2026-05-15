@@ -19,7 +19,7 @@
         "subheading": "How it works",
         "heading": "<p>A simpler way to start prescription-led anti-aging care.</p>",
         "heading_size": "large",
-        "text_information": "Skinfluence is designed to make advanced anti-aging treatment feel clear, guided, and easy to begin.",
+        "text_information": "PROTOCL is designed to make advanced anti-aging treatment feel clear, guided, and easy to begin.",
         "text_align": "left",
         "text_order": "column",
         "show_view_all": true,
@@ -88,7 +88,7 @@
       "settings": {
         "eyebrow": "How the process works",
         "heading": "<p>A more guided experience than ordinary skincare shopping.</p>",
-        "body": "<p>Skinfluence is designed to make advanced anti-aging treatment feel more understandable from the beginning. The process starts with evaluation, moves through provider review, and only turns into monthly care if treatment is approved.</p><p>The goal is to make the path into care feel clearer, calmer, and easier to trust.</p>",
+        "body": "<p>PROTOCL is designed to make advanced anti-aging treatment feel more understandable from the beginning. The process starts with evaluation, moves through provider review, and only turns into monthly care if treatment is approved.</p><p>The goal is to make the path into care feel clearer, calmer, and easier to trust.</p>",
         "button_label": "Start Evaluation",
         "button_link": "/pages/start-evaluation",
         "button_style": "primary",
@@ -202,7 +202,7 @@
           "settings": {
             "question": "What if I need to provide more information?",
             "question_heading_tag": "h3",
-            "answer": "<p>In some cases, additional information may be needed before a final treatment decision is made. Skinfluence should make that step feel clear, not confusing.</p>"
+            "answer": "<p>In some cases, additional information may be needed before a final treatment decision is made. PROTOCL should make that step feel clear, not confusing.</p>"
           }
         },
         "accordion_3": {
@@ -210,7 +210,7 @@
           "settings": {
             "question": "What if I am not approved?",
             "question_heading_tag": "h3",
-            "answer": "<p>Not every user will be eligible. If treatment is not appropriate, Skinfluence should communicate that clearly rather than leaving users uncertain about what happened.</p>"
+            "answer": "<p>Not every user will be eligible. If treatment is not appropriate, PROTOCL should communicate that clearly rather than leaving users uncertain about what happened.</p>"
           }
         },
         "accordion_4": {
@@ -233,7 +233,7 @@
         "heading": "Process questions, answered clearly",
         "heading_size": "h2",
         "heading_tag": "h2",
-        "text": "A more structured explanation of the Skinfluence care path for users who want clarity before they begin.",
+        "text": "A more structured explanation of the PROTOCL care path for users who want clarity before they begin.",
         "padding_top": 120,
         "padding_bottom": 140
       }
@@ -257,7 +257,7 @@
         "text": {
           "type": "text",
           "settings": {
-            "text": "<p>After review, your status may be approved, more information needed, or not eligible. Skinfluence is designed to make that process feel clear rather than confusing.</p>"
+            "text": "<p>After review, your status may be approved, more information needed, or not eligible. PROTOCL is designed to make that process feel clear rather than confusing.</p>"
           }
         }
       },
