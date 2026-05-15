@@ -33,6 +33,9 @@
 				"animate",
 				"animated",
 			);
+		} else if (headerIsAlwaysSticky) {
+			header.classList.add("shopify-section-header-sticky", "always-fixed");
+			header.classList.remove("shopify-section-header-hidden");
 		}
 
 		const openMenu = (e) => {
@@ -186,21 +189,18 @@
 
 		document.addEventListener("scroll", () => {
 			if (headerIsStatic) return;
-			let scrollTop = window.scrollY;
-
-			if (scrollTop > header.offsetHeight / 2 && headerIsAlwaysSticky) {
-				header.classList.add("fixed", "animate");
-			} else if (scrollTop <= header.offsetHeight && headerIsAlwaysSticky) {
-				header.classList.remove("fixed", "animate");
+			if (headerIsAlwaysSticky) {
+				header.classList.add("shopify-section-header-sticky", "always-fixed");
+				header.classList.remove("shopify-section-header-hidden", "animate", "animated");
+				return;
 			}
+			let scrollTop = window.scrollY;
 		});
 
 		let scrollTop = window.scrollY;
-
-		if (scrollTop > header.offsetHeight / 2 && headerIsAlwaysSticky) {
-			header.classList.add("fixed", "animate");
-		} else if (scrollTop <= header.offsetHeight && headerIsAlwaysSticky) {
-			header.classList.remove("fixed", "animate");
+		if (headerIsAlwaysSticky) {
+			header.classList.add("shopify-section-header-sticky", "always-fixed");
+			header.classList.remove("shopify-section-header-hidden", "animate", "animated");
 		}
 
 		megaMenuLinks.forEach((link) => {

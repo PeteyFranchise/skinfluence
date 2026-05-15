@@ -53,7 +53,7 @@
         "enable_country_selector": true,
         "enable_language_selector": true,
         "enable_menu_item_first_level": false,
-        "sticky_header_type": "none",
+        "sticky_header_type": "always",
         "enable_account_btn": true,
         "account_modal_type": "shopify_based",
         "customer_account_menu": "customer-account-main-menu",

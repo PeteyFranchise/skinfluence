@@ -1104,10 +1104,10 @@ this.headerBounds = {};
 this.currentScrollTop = 0;
 this.preventReveal = false;
 
-//if (this.headerIsAlwaysSticky) {
-//this.header.classList.add('shopify-section-header-sticky');
-//this.header.classList.add('always-fixed');
-//};
+if (this.headerIsAlwaysSticky) {
+this.header.classList.add('shopify-section-header-sticky', 'always-fixed');
+this.header.classList.remove('shopify-section-header-hidden');
+};
 
 this.onScrollHandler = this.onScroll.bind(this);
 this.hideHeaderOnScrollUp = () => this.preventReveal = true;
@@ -1143,13 +1143,12 @@ observer.observe(this.header);
 onScroll() {
 const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
 
-if (this.headerIsAlwaysSticky && scrollTop > this.header.offsetHeight + 50) {
-	this.header.classList.add('shopify-section-header-sticky');
-};
-
-if (this.headerIsAlwaysSticky && scrollTop < this.header.offsetHeight / 2) {
-	this.header.classList.remove('shopify-section-header-sticky');
-};
+if (this.headerIsAlwaysSticky) {
+this.header.classList.add('shopify-section-header-sticky', 'always-fixed');
+this.header.classList.remove('shopify-section-header-hidden');
+this.currentScrollTop = scrollTop;
+return;
+}
 if (scrollTop > this.currentScrollTop && scrollTop > this.headerBounds.bottom) {
 if (this.preventHide) return;
 requestAnimationFrame(this.hide.bind(this));
