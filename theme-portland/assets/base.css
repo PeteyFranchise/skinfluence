@@ -4137,8 +4137,8 @@ body.body--hidden {
     max-width: 292px;
     min-width: 292px;
     height: auto;
-    min-height: 24px;
-    transform: translateY(-0.28rem);
+    min-height: 18px;
+    transform: translateY(0.1rem);
   }
   .header__wordmark-placeholder {
     font-size: 2.5rem;
@@ -4146,11 +4146,11 @@ body.body--hidden {
     line-height: 0.88;
   }
   .header__heading-logo--svg .wm {
-    font-size: 51px;
+    font-size: 42px;
     letter-spacing: 0.03em;
   }
   .header__heading-logo--svg .wm-mark-bracket {
-    font-size: 51px;
+    font-size: 42px;
   }
   .header__heading-logo {
     width: 292px;
@@ -4217,7 +4217,7 @@ body.body--hidden {
 .header__icon--account .icon {
   width: 1.9rem;
   height: 1.9rem;
-  transform: translateY(-0.37rem);
+  transform: translateY(-0.34rem);
 }
 
 .link--text.header__icon:hover .icon {
@@ -4263,13 +4263,13 @@ body.body--hidden {
 .header__icon--cart .icon {
   width: 1.9rem;
   height: 1.9rem;
-  transform: translateY(-0.25rem);
+  transform: translateY(-0.22rem);
 }
 
 .header__icon--search .icon {
   width: 1.78rem;
   height: 1.78rem;
-  transform: translateY(-0.1rem);
+  transform: translateY(-0.12rem);
 }
 
 .header__icon--search,
@@ -4426,6 +4426,13 @@ details[open] > .header__account-modal {
   .header__heading-link {
     margin-left: 0;
   }
+  .header__inline-menu {
+    align-self: center;
+  }
+  .header__inline-menu .header__menu-item {
+    padding-top: 0.215rem;
+    padding-bottom: 0.215rem;
+  }
   .header__column {
     justify-self: stretch;
     width: 100%;
@@ -4438,7 +4445,7 @@ details[open] > .header__account-modal {
     justify-content: flex-end;
     align-items: center;
     gap: 0.01rem;
-    transform: translateY(-0.48rem);
+    transform: translateY(0.36rem);
   }
   .header__icons > details-modal,
   .header__icons > details-disclosure,

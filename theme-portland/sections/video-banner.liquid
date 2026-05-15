@@ -2,6 +2,10 @@
 
 {%- liquid
   assign video_ratio = section.settings.video_ratio
+  assign has_asset_video = false
+  if section.settings.video_asset != blank
+    assign has_asset_video = true
+  endif
 -%}
 
 {%- if video_ratio == 'adapt' and section.settings.video != blank -%}
@@ -19,7 +23,7 @@
       display: block;
     }
   {%- endstyle -%}
-{%- elsif video_ratio == 'adapt' and section.settings.video == blank -%}
+{%- elsif video_ratio == 'adapt' and section.settings.video == blank and has_asset_video == false -%}
   {%- style -%}
     @media screen and (min-width: 750px) {
       #Banner-{{ section.id }}.video--overlay::before {
@@ -93,7 +97,7 @@
     class="
       video-banner__content video--overlay 
       {% if section.settings.full_width %}video-banner--container{% endif %} 
-      {%- if section.settings.video == blank -%} video-banner--no-video {% endif %}
+      {%- if section.settings.video == blank and has_asset_video == false -%} video-banner--no-video {% endif %}
       color-{{ section.settings.color_scheme }}
     "
   >
@@ -107,6 +111,13 @@
             controls: false,
             muted: true
         }}
+        <span class="video-banner__overlay"></span>
+      </div>
+    {%- elsif has_asset_video -%}
+      <div class="video-banner__media media video-banner__media--{{- section.settings.video_fit -}}">
+        <video autoplay muted loop playsinline preload="metadata">
+          <source src="{{ section.settings.video_asset | asset_url }}" type="video/mp4">
+        </video>
         <span class="video-banner__overlay"></span>
       </div>
     {%- endif -%}
@@ -300,6 +311,12 @@
       "type": "video",
       "id": "video",
       "label": "t:sections.video-banner.settings.video.label"
+    },
+    {
+      "type": "text",
+      "id": "video_asset",
+      "label": "Video asset filename",
+      "info": "Optional theme asset filename for an MP4 video."
     },
     {
       "type": "select",

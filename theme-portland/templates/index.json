@@ -10,60 +10,28 @@
 {
   "sections": {
     "4a48dd22-7a83-42ba-ae14-de6aaae18074": {
-      "type": "interactive-section",
-      "blocks": {
-        "40501e6e-b3db-40a2-a272-336dbdef623b": {
-          "type": "column",
-          "settings": {}
-        },
-        "0d468cd0-2939-4112-9c34-ce57f2eafa35": {
-          "type": "column",
-          "settings": {}
-        },
-        "802bedc2-704d-43f9-9a59-abc32f6ff62c": {
-          "type": "column",
-          "settings": {}
-        },
-        "88f6bf1d-80c1-45b7-8aa2-cd36e5cff3a8": {
-          "type": "column",
-          "settings": {}
-        },
-        "0b0b14b3-3692-471c-b669-49be1d563899": {
-          "type": "column",
-          "settings": {}
-        },
-        "1225bc37-4514-41f8-ab6c-f69607d7eb20": {
-          "type": "column",
-          "settings": {}
-        }
-      },
-      "block_order": [
-        "40501e6e-b3db-40a2-a272-336dbdef623b",
-        "0d468cd0-2939-4112-9c34-ce57f2eafa35",
-        "802bedc2-704d-43f9-9a59-abc32f6ff62c",
-        "88f6bf1d-80c1-45b7-8aa2-cd36e5cff3a8",
-        "0b0b14b3-3692-471c-b669-49be1d563899",
-        "1225bc37-4514-41f8-ab6c-f69607d7eb20"
-      ],
-      "name": "Hero Banner",
+      "type": "video-banner",
+      "name": "Hero Video",
       "settings": {
+        "full_width": true,
+        "header_overlay": false,
         "color_scheme": "background-1",
-        "overlay": false,
-        "opacity_overlay": 0.5,
-        "collage_type": "on-cursor",
-        "heading_size": "h1",
         "subheading": "Prescription-led anti-aging care",
         "heading": "<p>Expect more from skincare</p>",
+        "heading_size": "large",
+        "text_information": "",
+        "text_align": "left",
         "show_view_all": true,
         "button_label": "Start Evaluation",
-        "button_bg_color": "#000000",
-        "button_text_color": "#ffffff",
+        "button_style": "primary",
         "button_link": "/pages/start-evaluation",
-        "second_show_view_all": false,
-        "second_button_label": "Shop now",
-        "second_button_bg_color": "#ffffff",
-        "second_button_text_color": "#000000",
-        "second_button_link": ""
+        "video": null,
+        "video_asset": "protocl-hero-backstage.mp4",
+        "video_ratio": "16/9",
+        "video_fit": "cover",
+        "opacity_overlay": 0.2,
+        "padding_top": 0,
+        "padding_bottom": 0
       }
     },
     "trust_marquee_PROTOCL": {
