@@ -117,16 +117,15 @@
                         }}
                       {%- endif -%}
                     {%- else -%}
-                      <span class="h5" style="max-width:{{ block.settings.logo_width }}px">{{ shop.name }}</span>
+                      <span class="h5" style="max-width:{{ block.settings.logo_width }}px">PROTOCL</span>
                     {%- endif -%}
                   </a>
                   <div class="footer__copyright">
                     <small class="copyright__content">&copy; Copyright,</small>
                     <small class="copyright__content">
-                      {{- shop.name | link_to: routes.root_url -}}
+                      {{- 'PROTOCL' | link_to: routes.root_url -}}
                       , {{ 'now' | date: '%Y' -}}
                     </small>
-                    <small class="copyright__content">{{ powered_by_link }}</small>
                   </div>
                   {%- if block.settings.logo_text != blank -%}
                     <div class="footer__text">{{- block.settings.logo_text -}}</div>
