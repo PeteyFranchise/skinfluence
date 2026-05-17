@@ -10,26 +10,26 @@
 {
   "sections": {
     "4a48dd22-7a83-42ba-ae14-de6aaae18074": {
-      "type": "video-banner",
-      "name": "Hero Video",
+      "type": "image-banner",
+      "name": "Hero Image",
       "settings": {
         "full_width": true,
         "header_overlay": false,
-        "color_scheme": "background-1",
+        "mobile_content_overlay": false,
         "subheading": "Prescription-led anti-aging care",
-        "heading": "<p>Expect more from skincare</p>",
+        "heading": "<p>EXPECT MORE FROM SKINCARE</p>",
         "heading_size": "large",
-        "text_information": "",
+        "text_information": "Provider-reviewed monthly treatment designed to feel more serious, more elevated, and easier to trust.",
         "text_align": "left",
         "show_view_all": true,
         "button_label": "Start Evaluation",
         "button_style": "primary",
         "button_link": "/pages/start-evaluation",
-        "video": null,
-        "video_asset": "protocl-hero-backstage.mp4",
-        "video_ratio": "16/9",
-        "video_fit": "cover",
-        "opacity_overlay": 0.2,
+        "image_asset": "protocl-hero-static.png",
+        "image": null,
+        "image_mobile": null,
+        "image_ratio": "landscape",
+        "opacity_overlay": 0.08,
         "padding_top": 0,
         "padding_bottom": 0
       }
@@ -141,6 +141,31 @@
         "text_color": "#20332C",
         "padding_top": 120,
         "padding_bottom": 140
+      }
+    },
+    "backstage_video_proto": {
+      "type": "video-banner",
+      "name": "Backstage Video",
+      "settings": {
+        "full_width": true,
+        "header_overlay": false,
+        "color_scheme": "background-1",
+        "subheading": "",
+        "heading": "",
+        "heading_size": "large",
+        "text_information": "",
+        "text_align": "left",
+        "show_view_all": false,
+        "button_label": "",
+        "button_style": "primary",
+        "button_link": "",
+        "video": null,
+        "video_asset": "protocl-hero-backstage.mp4",
+        "video_ratio": "16/9",
+        "video_fit": "cover",
+        "opacity_overlay": 0,
+        "padding_top": 0,
+        "padding_bottom": 0
       }
     },
     "social_proof_video_rail": {
@@ -899,6 +924,7 @@
     "trust_marquee_PROTOCL",
     "rich_text_core_problem",
     "premium_split_explanation",
+    "backstage_video_proto",
     "social_proof_video_rail",
     "steps_how_it_works",
     "multicolumn_who_its_for",

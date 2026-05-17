@@ -2,6 +2,14 @@
 
 {%- liquid
 	assign image_ratio = section.settings.image_ratio
+  assign asset_image_name = section.settings.image_asset
+  if asset_image_name == blank and section.id == '4a48dd22-7a83-42ba-ae14-de6aaae18074'
+    assign asset_image_name = 'protocl-hero-static.png'
+  endif
+  assign has_asset_image = false
+  if asset_image_name != blank
+    assign has_asset_image = true
+  endif
 	
 	if section.settings.image != blank and section.settings.image_mobile == blank
     assign image = section.settings.image
@@ -9,11 +17,18 @@
   elsif section.settings.image == blank and section.settings.image_mobile != blank
     assign image = section.settings.image_mobile
 		assign aspect_ratio = section.settings.image_mobile.aspect_ratio
-  elsif section.settings.image == blank and section.settings.image_mobile == blank
+  elsif section.settings.image == blank and section.settings.image_mobile == blank and has_asset_image == false
     assign image = blank
+  elsif section.settings.image == blank and section.settings.image_mobile == blank and has_asset_image
+    assign image = 'asset'
   elsif section.settings.image != blank and section.settings.image_mobile != blank
     assign image = 1
 		assign aspect_ratio = section.settings.image.aspect_ratio
+  endif
+
+  assign banner_color_class = 'color-background-3'
+  if has_asset_image
+    assign banner_color_class = 'color-background-1'
   endif
 -%}
 
@@ -65,32 +80,41 @@
 	<div
 		id="Banner-{{ section.id }}"
 		class="banner banner--{{ section.settings.image_ratio }} image--overlay 
-		{% if section.settings.full_width %}banner--container{% else %}{% endif %} {% if  image == blank %}banner--padding{% endif %} color-background-3
+		{% if section.settings.full_width %}banner--container{% else %}{% endif %} {% if  image == blank %}banner--padding{% endif %} {{ banner_color_class }}
 		{% if image == blank -%} image-banner--no-image {% endif %}"
 	>
 		{%if image != blank %}
 			{% if image != 1 %}
-				<div class="banner__media media">
-					<img
-						srcset="
-							{%- if image.width >= 375 -%}{{ image | img_url: '375x' }} 375w,{%- endif -%}
-							{%- if image.width >= 750 -%}{{ image | img_url: '750x' }} 750w,{%- endif -%}
-							{%- if image.width >= 1296 -%}{{ image | img_url: '1296x' }} 1296w,{%- endif -%}
-							{%- if image.width >= 1500 -%}{{ image | img_url: '1500x' }} 1500w,{%- endif -%}
-							{%- if image.width >= 1780 -%}{{ image | img_url: '1780x' }} 1780w,{%- endif -%}
-							{%- if image.width >= 2000 -%}{{ image | img_url: '2000x' }} 2000w,{%- endif -%}
-							{%- if image.width >= 2800 -%}{{ image | img_url: '2800x' }} 2800w{%- endif -%}
-						"
-						src="{{ image | img_url: '1296x' }}"
-						loading="lazy"
-						alt="{{ image.alt | escape }}"
-						width="{{ image.width }}"
-						height="{{ image.width | divided_by: image.aspect_ratio }}"
-						style="object-position: {{ image.presentation.focal_point }}"
-						class="media__image"
-					>
-					<span class="banner__overlay"></span>
-				</div>
+        {% if image == 'asset' %}
+				  <div
+            class="banner__media media media--transparent banner__media--asset"
+            style="background-image: url('{{ asset_image_name | asset_url }}'); background-position: center center; background-repeat: no-repeat; background-size: cover;"
+          >
+            <span class="banner__overlay"></span>
+				  </div>
+        {% else %}
+				  <div class="banner__media media">
+					  <img
+						  srcset="
+							  {%- if image.width >= 375 -%}{{ image | img_url: '375x' }} 375w,{%- endif -%}
+							  {%- if image.width >= 750 -%}{{ image | img_url: '750x' }} 750w,{%- endif -%}
+							  {%- if image.width >= 1296 -%}{{ image | img_url: '1296x' }} 1296w,{%- endif -%}
+							  {%- if image.width >= 1500 -%}{{ image | img_url: '1500x' }} 1500w,{%- endif -%}
+							  {%- if image.width >= 1780 -%}{{ image | img_url: '1780x' }} 1780w,{%- endif -%}
+							  {%- if image.width >= 2000 -%}{{ image | img_url: '2000x' }} 2000w,{%- endif -%}
+							  {%- if image.width >= 2800 -%}{{ image | img_url: '2800x' }} 2800w{%- endif -%}
+						  "
+						  src="{{ image | img_url: '1296x' }}"
+						  loading="lazy"
+						  alt="{{ image.alt | escape }}"
+						  width="{{ image.width }}"
+						  height="{{ image.width | divided_by: image.aspect_ratio }}"
+						  style="object-position: {{ image.presentation.focal_point }}"
+						  class="media__image"
+					  >
+					  <span class="banner__overlay"></span>
+				  </div>
+        {% endif %}
 			{%- elsif image == 1-%}
 				<div class="banner__media media">
 					{% assign desktop_image = section.settings.image %}
@@ -314,6 +338,11 @@
 			"type": "image_picker",
 			"id": "image_mobile",
 			"label": "t:sections.image-banner.settings.image_mobile.label"
+		},
+		{
+			"type": "text",
+			"id": "image_asset",
+			"label": "Image asset filename"
 		},
 		{
 			"type": "select",

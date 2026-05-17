@@ -3,9 +3,18 @@
 {%- liquid
   assign video_ratio = section.settings.video_ratio
   assign has_asset_video = false
+  assign has_asset_image = false
+  assign asset_image_name = section.settings.image_asset
   if section.settings.video_asset != blank
     assign has_asset_video = true
   endif
+  if asset_image_name == blank and section.id == '4a48dd22-7a83-42ba-ae14-de6aaae18074'
+    assign asset_image_name = 'protocl-hero-static.png'
+  endif
+  if asset_image_name != blank
+    assign has_asset_image = true
+  endif
+  assign asset_video_id = 'AssetVideo-' | append: section.id
 -%}
 
 {%- if video_ratio == 'adapt' and section.settings.video != blank -%}
@@ -23,7 +32,7 @@
       display: block;
     }
   {%- endstyle -%}
-{%- elsif video_ratio == 'adapt' and section.settings.video == blank and has_asset_video == false -%}
+{%- elsif video_ratio == 'adapt' and section.settings.video == blank and has_asset_video == false and has_asset_image == false -%}
   {%- style -%}
     @media screen and (min-width: 750px) {
       #Banner-{{ section.id }}.video--overlay::before {
@@ -83,6 +92,22 @@
   .video-banner__overlay {
     background-color: rgba(var(--color-overlay), {{ section.settings.opacity_overlay }});
   }
+
+  {%- if has_asset_image -%}
+    #Banner-{{ section.id }} {
+      background-image: url('{{ asset_image_name | asset_url }}');
+      background-position: center center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      min-height: 32rem;
+    }
+
+    @media screen and (min-width: 750px) {
+      #Banner-{{ section.id }} {
+        min-height: 48rem;
+      }
+    }
+  {%- endif -%}
 {% endstyle %}
 
 <div class="
@@ -97,7 +122,7 @@
     class="
       video-banner__content video--overlay 
       {% if section.settings.full_width %}video-banner--container{% endif %} 
-      {%- if section.settings.video == blank and has_asset_video == false -%} video-banner--no-video {% endif %}
+      {%- if section.settings.video == blank and has_asset_video == false and has_asset_image == false -%} video-banner--no-video {% endif %}
       color-{{ section.settings.color_scheme }}
     "
   >
@@ -115,11 +140,13 @@
       </div>
     {%- elsif has_asset_video -%}
       <div class="video-banner__media media video-banner__media--{{- section.settings.video_fit -}}">
-        <video autoplay muted loop playsinline preload="metadata">
-          <source src="{{ section.settings.video_asset | asset_url }}" type="video/mp4">
+        <video id="{{ asset_video_id }}" autoplay muted loop playsinline preload="none" data-lazy-video>
+          <source data-src="{{ section.settings.video_asset | asset_url }}" type="video/mp4">
         </video>
         <span class="video-banner__overlay"></span>
       </div>
+    {%- elsif has_asset_image -%}
+      <span class="video-banner__overlay"></span>
     {%- endif -%}
     <div class="video-banner__wrapper {% if section.settings.text_align != 'left' %}video-banner__column--center{% endif %} {% if section.settings.full_width %}container{% else %}{% endif %}">
       {%- if section.settings.subheading != blank -%}
@@ -170,6 +197,45 @@
     </div>
   </div>
 </div>
+
+{%- if has_asset_video -%}
+  <script>
+    (() => {
+      const video = document.getElementById('{{ asset_video_id }}');
+      if (!video || video.dataset.loaded === 'true') return;
+
+      const loadVideo = () => {
+        if (video.dataset.loaded === 'true') return;
+        const source = video.querySelector('source[data-src]');
+        if (!source) return;
+        source.src = source.dataset.src;
+        video.load();
+        const playAttempt = video.play();
+        if (playAttempt && typeof playAttempt.catch === 'function') {
+          playAttempt.catch(() => {});
+        }
+        video.dataset.loaded = 'true';
+      };
+
+      if (!('IntersectionObserver' in window)) {
+        loadVideo();
+        return;
+      }
+
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (!entry.isIntersecting) return;
+          loadVideo();
+          observer.disconnect();
+        });
+      }, {
+        rootMargin: '200px 0px'
+      });
+
+      observer.observe(video);
+    })();
+  </script>
+{%- endif -%}
 
 {% schema %}
 {
@@ -317,6 +383,12 @@
       "id": "video_asset",
       "label": "Video asset filename",
       "info": "Optional theme asset filename for an MP4 video."
+    },
+    {
+      "type": "text",
+      "id": "image_asset",
+      "label": "Image asset filename",
+      "info": "Optional theme asset filename for a static hero image."
     },
     {
       "type": "select",
